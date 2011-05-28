@@ -16,4 +16,5 @@ RESOURCES += \
     kamerka.qrc
 
 OTHER_FILES += \
-    kamerka.qml
+    kamerka.qml \
+    image72.png

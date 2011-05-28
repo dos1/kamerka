@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
     QDeclarativeView* ui = new QDeclarativeView;
     w.setCentralWidget(ui);
-    ui->setSource(QUrl("qrc:/helloworld.qml"));
+    ui->setSource(QUrl("qrc:/kamerka.qml"));
     ui->setStyleSheet("background:transparent");
     ui->setResizeMode(QDeclarativeView::SizeRootObjectToView);
 
