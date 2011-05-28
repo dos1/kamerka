@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image72.png</file>
+        <file>kamerka.qml</file>
+    </qresource>
+</RCC>
