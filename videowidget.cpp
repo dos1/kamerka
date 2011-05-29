@@ -20,7 +20,6 @@ void videowidget::paintEvent(QPaintEvent */*event*/) {
     painter->drawText(rect(), Qt::AlignCenter, "Uruchamianie kamery...");
 
     painter->drawPixmap(this->rect(),pixmap);
-    //painter.drawPixmap(((QWidget*)parent())->rect(),pixmap);
     delete painter;
 }
 
@@ -101,10 +100,6 @@ void videowidget::setPicture(QImage i){
     pixmap=QPixmap::fromImage(i);
     update();
     //qApp->processEvents();
-}
-
-videowidget::~videowidget(){
-
 }
 
 void videowidget::setFileName(QString f){

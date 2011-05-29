@@ -12,6 +12,8 @@
 
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
 
+/* This file is a mess. But it works :D */
+
 CaptureThread::CaptureThread(QObject *parent) : QThread(parent)
 {
     devam=false;

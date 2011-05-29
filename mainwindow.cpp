@@ -13,13 +13,13 @@ void MainWindow::photoTaken(){
 }
 
 void MainWindow::timerCounter(int count) {
-  //qDebug(QString::number(count).toStdString().c_str());
+    //qDebug(QString::number(count).toStdString().c_str());
     if (count>0) {
-       system("beep -l 250 &");
-     }
-     else if (count==0) {
-       system("beep -l 1000 -f 1000 &");
-     }
+      system("beep -l 250 &");
+    }
+    else if (count==0) {
+      system("beep -l 1000 -f 1000 &");
+    }
 }
 
 void MainWindow::showDirectory() {
@@ -28,9 +28,8 @@ void MainWindow::showDirectory() {
 }
 
 void MainWindow::resizeEvent(QResizeEvent *e) {
-        // determine the current size of the table
-        videoViewer->resize(this->size());
-        QMainWindow::resizeEvent(e);  // make sure the mask handling stuff is called
+    videoViewer->resize(this->size());
+    QMainWindow::resizeEvent(e);
 }
 
 MainWindow::~MainWindow()

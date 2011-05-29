@@ -12,7 +12,6 @@ public:
     QDeclarativeView* ui;
 private:
     void resizeEvent(QResizeEvent *e);
-    /*void closeEvent(QCloseEvent *e);*/
 public slots:
     void photoTaken();
     void timerCounter(int);

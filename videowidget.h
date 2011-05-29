@@ -13,39 +13,28 @@
 class videowidget : public QWidget
 {
 Q_OBJECT
-public:
+  public:
     videowidget(QWidget *parent = 0);
-    ~videowidget();
 
     QPixmap pixmap;
     CaptureThread thread;
     QDeclarativeView *ui;
     void setFileName(QString);
     void setDeviceName(QString);
-protected:
+  protected:
     void paintEvent(QPaintEvent *event);
 
-signals:
-
-public slots:
+  public slots:
     void setPicture(QImage);
-private:
-
-
 };
 
 class Focia : public QObject {
 Q_OBJECT
-public:
-  QString filename;
-  void setFilename(QString);
-
-signals:
-
-public slots:
-  void openFile(unsigned int);
-private:
-
+  public:
+    QString filename;
+    void setFilename(QString);
+  public slots:
+    void openFile(unsigned int);
 };
 
 #endif // VIDEOWIDGET_H
