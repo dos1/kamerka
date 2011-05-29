@@ -3,7 +3,6 @@ project (kamerka)
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/modules)
 
 find_package(Qt4 REQUIRED)
-#QT_QTDECLARATIVE_INCLUDE_DIR (ADVANCED)
  
 find_package(KDE4 REQUIRED)
 include_directories(${KDE4_INCLUDES})
@@ -17,8 +16,6 @@ set(kamerka_SRCS
   videowidget.cpp
   capturethread.cpp
 )
-
-#kde4_add_ui_files(kamerka_SRCS "kamerka.qml")
 
 SET(kamerka_RCCS kamerka.qrc)
 
