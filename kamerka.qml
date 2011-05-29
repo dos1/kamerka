@@ -21,12 +21,12 @@
         smooth: true;
      }*/
      Rectangle {
-         /*effect: DropShadow {
+         effect: DropShadow {
            blurRadius: 8
            offset.x: 0
            offset.y: 0
            color: "black"
-         }*/
+         }
          id: focia;
          x: -10;
          y: -10;
@@ -84,7 +84,7 @@
                  }
                  opacity: 0.75;
                 anchors.fill: parent;
-                source: "image72.png";
+                source: fileName;
                 smooth: true;
              }*/
              Image {

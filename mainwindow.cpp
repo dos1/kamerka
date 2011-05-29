@@ -39,7 +39,7 @@ MainWindow::~MainWindow()
 
 MainWindow::MainWindow() {
 {
-    //qmlRegisterType<QGraphicsBlurEffect>("Effects",1,0,"Blur");
+    qmlRegisterType<QGraphicsBlurEffect>("Effects",1,0,"Blur");
     qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
 
     ui = new QDeclarativeView;
