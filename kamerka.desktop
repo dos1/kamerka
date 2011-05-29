@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=0.5
+Name=Kamerka
+GenericName=Robienie zdjęć kamerką
+Exec=kamerka
+Comment=Prosta aplikacja dla Agaty :)
+Icon=camera-web
+Terminal=false
+Categories=Qt;KDE;AudioVideo;Video;

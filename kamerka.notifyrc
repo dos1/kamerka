@@ -1,0 +1,8 @@
+[Global]
+Comment=Kamerka
+IconName=camera-web
+
+[Event/takenPhoto]
+Name=Photo
+Comment=New photo was taken
+Action=Popup
