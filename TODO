@@ -1,7 +1,11 @@
-* replace aplay and beep calls with phonon
-* translating support
+* replace "aplay" and "beep" calls with phonon
+* change all labels to english and add translating support
 * basic configuration from file
-  * and then maybe some graphic configrator
+* make "make install" working
+
+* release 0.6
+
 * deal with threads nicely on closing application
   * no more exit(0); hacks!
   * capturethread.cpp definitely needs some love :x
+* add "clickable" configuration
