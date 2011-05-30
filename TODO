@@ -3,3 +3,5 @@
 * basic configuration from file
   * and then maybe some graphic configrator
 * deal with threads nicely on closing application
+  * no more exit(0); hacks!
+  * capturethread.cpp definitely needs some love :x

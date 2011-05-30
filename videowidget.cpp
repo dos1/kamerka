@@ -99,8 +99,8 @@ void videowidget::setPicture(QImage i){
     thread.storeImage=false;
   }
 
-    pixmap=QPixmap::fromImage(i);
-    update();
+  pixmap=QPixmap::fromImage(i);
+  update();
 }
 
 void videowidget::setFileName(QString f){
