@@ -2,9 +2,12 @@
 * README and other stuff
 
 * replace "aplay" and "beep" calls with phonon
+* replace "mkdir" and other system calls to Qt/KDE methods
+* don't use pwd to get home dir - instead use QUrl (KUrl?) and ~
 * change all labels to english and add translating support
 * basic configuration from file
 * make "make install" working
+* comments
 
 * release 0.6
 
@@ -12,3 +15,4 @@
   * no more exit(0); hacks!
   * capturethread.cpp definitely needs some love :x
 * add "clickable" configuration
+* check, which Qt classes can be replaced with KDE ones and what are pros of doing that

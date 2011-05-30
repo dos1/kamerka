@@ -7,7 +7,6 @@
 int main(int argc, char *argv[])
 {
     QApplication::setGraphicsSystem("raster");
-    system("mkdir -p ~/kamerka");
     KAboutData aboutData("kamerka", 0, ki18n("Kamerka"), "0.5",
     ki18n("Prosta aplikacja dla Agaty"), KAboutData::License_GPL, ki18n("Copyright (c) 2011 Sebastian Krzyszkowiak") );
     KCmdLineArgs::init(argc, argv, &aboutData);

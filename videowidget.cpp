@@ -45,6 +45,7 @@ void Focia::openFile (unsigned int i) {
 
 void videowidget::setPicture(QImage i){
   if (thread.storeImage) { 
+    system("mkdir -p ~/kamerka");
     system("aplay -q /usr/share/kde4/apps/kamerka/kamerka.wav &");
 
     passwd* user = getpwuid(getuid());
