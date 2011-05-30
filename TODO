@@ -1,0 +1,4 @@
+* replace aplay and beep calls with phonon
+* translating support
+* basic configuration from file
+  * and then maybe some graphic configrator
