@@ -1,8 +1,8 @@
 #include "videowidget.h"
-#include <fstream>
-#include <pwd.h>
+#include <QFile>
 #include <KNotification>
 #include <KLocale>
+#include <pwd.h>
 
 videowidget::videowidget(QWidget *parent) :
     QWidget(parent)
@@ -47,41 +47,44 @@ void Focia::openFile (unsigned int i) {
 void videowidget::setPicture(QImage i){
   if (thread.storeImage) { 
     system("aplay -q /usr/share/kde4/apps/kamerka/kamerka.wav &");
-    passwd* lol = getpwuid(getuid());
+
+    passwd* user = getpwuid(getuid());
 
     int c = 0;
-    QString qfile;
-    qfile = lol->pw_dir;
-    qfile += "/kamerka/.counter";
-    //const char* cfile = qfile.toStdString().c_str();
-    //qDebug(qfile.toStdString().c_str());
+    QString counterfilename;
+    counterfilename = user->pw_dir;
+    counterfilename += "/kamerka/.counter";
 
-    std::ifstream counter(qfile.toStdString().c_str());
-    if (counter) {
-      counter >> c;
+    QFile counterfile(counterfilename.toStdString().c_str());
+    if (counterfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+          QTextStream counter(&counterfile);
+          counter >> c;
     }
-    else qDebug("fuuuuuuuuu");
+    else qDebug("Could not open .counter file!");
     c++;
-    counter.close();
-    unlink(qfile.toStdString().c_str());
-    std::ofstream count(qfile.toStdString().c_str());
-    count << c;
-    count.close();
-    QString s;
-    s = lol->pw_dir;
-    s += "/kamerka/image";
-    s += QString::number(c);
-    s += ".png";
-    qDebug(s.toStdString().c_str());
-    i.save(s, "PNG");
+    counterfile.close();
+    //unlink(qfile.toStdString().c_str());
 
-    ui->rootContext()->setContextProperty("fileName", "file:"+s);
+    counterfile.open(QIODevice::WriteOnly);
+    QTextStream counter(&counterfile);
+    counter << c;
+    counterfile.close();
+
+    QString imagepath;
+    imagepath = user->pw_dir;
+    imagepath += "/kamerka/image";
+    imagepath += QString::number(c);
+    imagepath += ".png";
+    qDebug(imagepath.toStdString().c_str());
+    i.save(imagepath, "PNG");
+
+    ui->rootContext()->setContextProperty("fileName", "file:"+imagepath);
     QMetaObject::invokeMethod(ui->rootObject(), "fotkaZrobiona");
 
     Focia* fotka = new Focia;
-    fotka->setFilename(s);
+    fotka->setFilename(imagepath);
 
-    s = tr2i18n("Zdj\304\231cie zosta\305\202o zapisane do pliku ", 0) + s;
+    QString s = tr2i18n("Zdj\304\231cie zosta\305\202o zapisane do pliku ", 0) + imagepath;
 
     QPixmap pixmap = QPixmap::fromImage(i);
 
@@ -93,13 +96,12 @@ void videowidget::setPicture(QImage i){
     notification->setActions( lista );
     connect(notification, SIGNAL(activated(unsigned int )), fotka , SLOT(openFile(unsigned int )) );
     notification->sendEvent();
-    //delete notification;
+
     thread.storeImage=false;
   }
 
     pixmap=QPixmap::fromImage(i);
     update();
-    //qApp->processEvents();
 }
 
 void videowidget::setFileName(QString f){
