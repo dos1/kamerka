@@ -173,7 +173,7 @@ std::string tm2="mp4";
         }
         free(asil);
         delete qq;
-        this->msleep(150); //framerate - FIXME
+        this->msleep(50); //framerate - FIXME
         xioctl(fd, VIDIOC_QBUF, &buf);
         di++;
     }
