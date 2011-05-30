@@ -3,14 +3,14 @@
 
  Rectangle {
      property int randdd: 0;
-     //property bool cyknij: false;
      property bool cyknij: false;
      property int timercount: 5;
      property bool timeranim: false;
-     //property string fileName: "";
+
      signal photoTaken();
      signal timerCounter(int count);
      signal showDirectory();
+
      id: page
      width: 640; height: 480
      color: "transparent"
@@ -34,7 +34,6 @@
          width: page.width+20;
          height: page.height+50;
          color: "white";
-         //rotation: 0;
          smooth: true;
          opacity: 0;
 
@@ -44,8 +43,7 @@
                  target: focia;
                  x: page.width-width-20;
                  y: page.height-250;
-                 //rotation: 180*3;
-                 width:180;
+                 width: 180;
                  height: 185;
                  rotation: 180*4+(randdd-30);
                  opacity: 0;
@@ -97,13 +95,12 @@
 
      }
      function robFotke() {
-         cyknij=false;
+       cyknij=false;
        page.photoTaken();
 
        page.randdd=Math.random()*60;
        picture.opacity=0;
        focia.opacity=1;
-        // cyknij=true;
      }
      function fotkaZrobiona() {
          cyknij=true;
@@ -115,7 +112,7 @@
        timerTriggered();
      }
      function timerTriggered() {
-         timerCounter(page.timercount);
+        timerCounter(page.timercount);
         if (page.timercount==-1) {
             timer.running=false;
             robFotke();
@@ -129,12 +126,6 @@
         page.timeranim=true;
      }
 
-     /*MouseArea {
-       id: mouseArea;
-       anchors.fill: parent;
-       onClicked:robFotke();
-     }*/
-
      Rectangle {
          id: toolbar;
          y: page.height-(height/2)
@@ -144,12 +135,12 @@
          color: "#33000000";
          radius: 10;
          opacity: 1;
-         MouseArea {
+         /*MouseArea {
            id: mouseArea2;
            anchors.fill: parent;
            //hoverEnabled: true;
            //preventStealing: true;
-         }
+         }*/
 
          Button {
              id: shot;
@@ -158,8 +149,6 @@
              anchors.bottomMargin: 4;
              anchors.leftMargin: 4;
              width: (parent.width/3)-8;
-             //anchors.right:  parent.horizontalCenter;
-             //anchors.rightMargin:  2;
              text: "Zrób zdjęcie";
              mouse.onClicked:robFotke();
          }
@@ -170,8 +159,6 @@
              anchors.bottomMargin: 4;
              anchors.leftMargin: 2;
              width: (parent.width/3)-8;
-             //anchors.right:  parent.right;
-             //anchors.rightMargin:  4;
              text: "Samowyzwalacz";
              mouse.onClicked:timerGo();
          }
@@ -181,7 +168,6 @@
              anchors.bottom: parent.verticalCenter;
              anchors.bottomMargin: 4;
              anchors.leftMargin: 2;
-             //width: parent.width/3;
              anchors.right:  parent.right;
              anchors.rightMargin:  4;
              text: "Otwórz folder";
