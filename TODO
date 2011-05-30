@@ -1,3 +1,6 @@
+* ADD LICENCE INFO!
+* README and other stuff
+
 * replace "aplay" and "beep" calls with phonon
 * change all labels to english and add translating support
 * basic configuration from file
