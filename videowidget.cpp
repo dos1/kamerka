@@ -74,7 +74,7 @@ void videowidget::setPicture(QImage i){
     imagepath += "/kamerka/image";
     imagepath += QString::number(c);
     imagepath += ".png";
-    qDebug(imagepath.toStdString().c_str());
+    qDebug("%s",imagepath.toStdString().c_str());
     i.save(imagepath, "PNG");
 
     ui->rootContext()->setContextProperty("fileName", "file:"+imagepath);

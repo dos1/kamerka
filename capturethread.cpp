@@ -210,7 +210,7 @@ void CaptureThread::stopUlan()
     closeVideoOut();
     /*try{
     type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    xioctl(fd, VIDIOC_STREAMOFF, &type);
+    xioctl(fd, VIDIOC_STREAMOFF, &type); */
     /*for (int i = 0; i < n_buffers; ++i)
            v4l2_munmap(buffers[i].start, buffers[i].length);*/
 
