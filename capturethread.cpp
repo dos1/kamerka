@@ -1,14 +1,5 @@
-#include <QApplication>
-#include <QDataStream>
-#include <QString>
-#include <QDebug>
-#include <QBuffer>
-#include <QImage>
-#include <typeinfo>
 #include "capturethread.h"
-
-#include <iostream>
-#include <QFile>
+#include <QDebug>
 
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
 

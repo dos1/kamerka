@@ -1,11 +1,4 @@
 #include "mainwindow.h"
-#include <QtGui>
-#include <QtDeclarative>
-#include <KApplication>
-#include <KLocale>
-#include <KCmdLineArgs>
-#include <KAboutData>
-#include <QLayout>
 
 void MainWindow::photoTaken(){
     videoViewer->ui = ui;

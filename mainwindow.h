@@ -1,4 +1,3 @@
-#include <QObject>
 #include <QtGui>
 #include <QtDeclarative>
 #include "videowidget.h"

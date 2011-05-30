@@ -2,3 +2,4 @@
 * translating support
 * basic configuration from file
   * and then maybe some graphic configrator
+* deal with threads nicely on closing application

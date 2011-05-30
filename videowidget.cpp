@@ -1,5 +1,4 @@
 #include "videowidget.h"
-#include <QFile>
 #include <KNotification>
 #include <KLocale>
 #include <pwd.h>

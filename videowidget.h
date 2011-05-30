@@ -3,9 +3,6 @@
 
 #include <QWidget>
 #include <QPainter>
-#include <QQueue>
-#include <QMutex>
-#include <QPixmap>
 #include <QtDeclarative>
 
 #include "capturethread.h"
