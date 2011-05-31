@@ -39,19 +39,12 @@ MainWindow::MainWindow() {
 
     ui = new QDeclarativeView;
     videoViewer = new videowidget(this);
+
     QIcon icon(":/kamerka.png");
 
     videoViewer->show();
     this->setCentralWidget(ui);
     this->setWindowIcon(icon);
-    ui->setSource(QUrl("qrc:/kamerka.qml"));
-    ui->rootContext()->setContextProperty("fileName", "");
-    ui->setStyleSheet("background:transparent");
-    videoViewer->setStyleSheet("background:transparent");
-
-    ui->setResizeMode(QDeclarativeView::SizeRootObjectToView);
-    this->setWindowTitle(QString("Kamerka"));
-
 
     if (videoViewer->thread.startUlan()) {
       QMessageBox msgbox( QMessageBox::Critical, "Error", "Could not... blablabla, nie dziaua :(");
@@ -59,6 +52,14 @@ MainWindow::MainWindow() {
       delete videoViewer;
       exit(0);
     }
+
+    ui->setSource(QUrl("qrc:/kamerka.qml"));
+    ui->rootContext()->setContextProperty("fileName", "");
+    ui->setStyleSheet("background:transparent");
+    videoViewer->setStyleSheet("background:transparent");
+
+    ui->setResizeMode(QDeclarativeView::SizeRootObjectToView);
+    this->setWindowTitle(QString("Kamerka"));
 
     connect(ui->rootObject(), SIGNAL(photoTaken()), this, SLOT(photoTaken()));
     connect(ui->rootObject(), SIGNAL(timerCounter(int)), this, SLOT(timerCounter(int)));
