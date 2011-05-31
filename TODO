@@ -1,7 +1,7 @@
 * ADD LICENCE INFO!
 * README and other stuff
 
-* replace "aplay" and "beep" calls with phonon
+* replace "beep" calls with phonon
 * replace system calls to applications with Qt/KDE methods
 * change all labels to english and add translating support
 * basic configuration from file
@@ -14,4 +14,4 @@
   * no more exit(0); hacks!
   * capturethread.cpp definitely needs some love :x
 * add "clickable" configuration
-* check, which Qt classes can be replaced with KDE ones and what are pros of doing that
+* check, which Qt classes can be replaced with KDE ones and what are the advantages of doing that

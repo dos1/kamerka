@@ -15,6 +15,10 @@ videowidget::videowidget(QWidget *parent) :
     media->setCurrentSource(QUrl("/usr/share/kde4/apps/kamerka/camera_click.ogg"));
 }
 
+videowidget::~videowidget() {
+    delete media;
+}
+
 void videowidget::paintEvent(QPaintEvent */*event*/) {
     QPainter* painter = new QPainter(this);
     painter->setPen(Qt::white);

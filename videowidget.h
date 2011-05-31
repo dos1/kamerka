@@ -13,6 +13,7 @@ class videowidget : public QWidget
 Q_OBJECT
   public:
     videowidget(QWidget *parent = 0);
+    ~videowidget();
 
     QPixmap pixmap;
     CaptureThread thread;

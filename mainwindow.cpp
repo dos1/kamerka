@@ -27,7 +27,7 @@ void MainWindow::resizeEvent(QResizeEvent *e) {
 
 MainWindow::~MainWindow()
 {
-    delete videoViewer->media;
+    delete videoViewer;
     exit(0);
 }
 
