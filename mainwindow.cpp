@@ -8,16 +8,16 @@ void MainWindow::photoTaken(){
 void MainWindow::timerCounter(int count) {
     //qDebug(QString::number(count).toStdString().c_str());
     if (count>0) {
-      system("beep -l 250 &");
+      QProcess::startDetached("beep", QStringList() << "-l" << "250");
     }
     else if (count==0) {
-      system("beep -l 1000 -f 1000 &");
+      QProcess::startDetached("beep", QStringList() << "-l" << "1000" << "-f" << "1000");
     }
 }
 
 void MainWindow::showDirectory() {
-    system("kde-open ~/kamerka &");
-    delete videoViewer;
+    QProcess::startDetached("kde-open", QStringList() << QDir::homePath() + "/kamerka");
+    delete videoViewer->media;
     exit(0);
 }
 

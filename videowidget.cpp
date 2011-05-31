@@ -34,19 +34,21 @@ void Focia::setFilename ( QString name ) {
 }
 
 void Focia::openFile (unsigned int i) {
-   // qDebug(QString::number(i).toStdString().c_str());
-
-  QString cmd;
+  // qDebug(QString::number(i).toStdString().c_str());
+  QString app;
+  QStringList arg;
   if (i==1) {
-    cmd = "dolphin --select " + this->filename + " &";
+    app = "dolphin";
+    arg << "--select";
   }
   else if (i==2) {
-    cmd = "gimp " + this->filename + " &";
+    app = "gimp";
   }
   else {
-      cmd = "inkscape " + this->filename + " &";
+    app = "inkscape";
   }
-  system(cmd.toStdString().c_str());
+  arg << this->filename;
+  QProcess::startDetached(app, arg);
 }
 
 
