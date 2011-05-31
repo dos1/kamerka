@@ -2,8 +2,7 @@
 * README and other stuff
 
 * replace "aplay" and "beep" calls with phonon
-* replace "mkdir" and other system calls to Qt/KDE methods
-* don't use pwd to get home dir - instead use QUrl (KUrl?) and ~
+* replace system calls to applications with Qt/KDE methods
 * change all labels to english and add translating support
 * basic configuration from file
 * make "make install" working

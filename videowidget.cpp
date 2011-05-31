@@ -1,7 +1,6 @@
 #include "videowidget.h"
 #include <KNotification>
 #include <KLocale>
-#include <pwd.h>
 
 videowidget::videowidget(QWidget *parent) :
     QWidget(parent)
@@ -45,25 +44,22 @@ void Focia::openFile (unsigned int i) {
 
 void videowidget::setPicture(QImage i){
   if (thread.storeImage) { 
-    system("mkdir -p ~/kamerka");
+    QDir dir(QDir::homePath());
+    dir.mkdir("kamerka");
     system("aplay -q /usr/share/kde4/apps/kamerka/kamerka.wav &");
-
-    passwd* user = getpwuid(getuid());
 
     int c = 0;
     QString counterfilename;
-    counterfilename = user->pw_dir;
-    counterfilename += "/kamerka/.counter";
+    counterfilename = QDir::homePath() + "/kamerka/.counter";
 
     QFile counterfile(counterfilename.toStdString().c_str());
     if (counterfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
           QTextStream counter(&counterfile);
           counter >> c;
     }
-    else qDebug("Could not open .counter file!");
+    else qWarning("Could not open .counter file!");
     c++;
     counterfile.close();
-    //unlink(qfile.toStdString().c_str());
 
     counterfile.open(QIODevice::WriteOnly);
     QTextStream counter(&counterfile);
@@ -71,8 +67,7 @@ void videowidget::setPicture(QImage i){
     counterfile.close();
 
     QString imagepath;
-    imagepath = user->pw_dir;
-    imagepath += "/kamerka/image";
+    imagepath = QDir::homePath() + "/kamerka/image";
     imagepath += QString::number(c);
     imagepath += ".png";
     qDebug("%s",imagepath.toStdString().c_str());
