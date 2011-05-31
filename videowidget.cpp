@@ -1,6 +1,7 @@
 #include "videowidget.h"
 #include <KNotification>
 #include <KLocale>
+#include <phonon/AudioOutput>
 
 videowidget::videowidget(QWidget *parent) :
     QWidget(parent)
@@ -9,6 +10,9 @@ videowidget::videowidget(QWidget *parent) :
                 this, SLOT(setPicture(QImage)));
 
     setAutoFillBackground(true);
+    media = new Phonon::MediaObject(this);
+    Phonon::createPath(media, new Phonon::AudioOutput(Phonon::NotificationCategory, this));
+    media->setCurrentSource(QUrl("/usr/share/kde4/apps/kamerka/camera_click.ogg"));
 }
 
 void videowidget::paintEvent(QPaintEvent */*event*/) {
@@ -46,7 +50,7 @@ void videowidget::setPicture(QImage i){
   if (thread.storeImage) { 
     QDir dir(QDir::homePath());
     dir.mkdir("kamerka");
-    system("aplay -q /usr/share/kde4/apps/kamerka/kamerka.wav &");
+    media->play();
 
     int c = 0;
     QString counterfilename;

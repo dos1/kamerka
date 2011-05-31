@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QPainter>
 #include <QtDeclarative>
+#include <phonon/MediaObject>
 
 #include "capturethread.h"
 
@@ -16,6 +17,7 @@ Q_OBJECT
     QPixmap pixmap;
     CaptureThread thread;
     QDeclarativeView *ui;
+    Phonon::MediaObject* media;
     void setFileName(QString);
     void setDeviceName(QString);
   protected:
