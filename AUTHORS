@@ -1,0 +1,7 @@
+* Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+Main tester:
+* Agata Kurczewska <kazimiera010595@gmail.com>
+
+v4l handling code was based on qtv4lcapture code from Özkan Pakdil <ozkan.pakdil@gmail.com>
+http://qtv4lcapture.sourceforge.net/
