@@ -2,16 +2,17 @@
 * README and other stuff
 
 * replace "beep" calls with phonon
-* replace system calls to applications with Qt/KDE methods
 * change all labels to english and add translating support
 * basic configuration from file
 * make "make install" working
 * comments
 
-* release 0.6
+* after all above, release 0.6
 
 * deal with threads nicely on closing application
   * no more exit(0); hacks!
   * capturethread.cpp definitely needs some love :x
 * add "clickable" configuration
 * check, which Qt classes can be replaced with KDE ones and what are the advantages of doing that
+
+* after all of those, release 0.8
