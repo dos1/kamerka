@@ -17,6 +17,7 @@ void MainWindow::timerCounter(int count) {
 
 void MainWindow::showDirectory() {
     system("kde-open ~/kamerka &");
+    delete videoViewer;
     exit(0);
 }
 
@@ -55,6 +56,7 @@ MainWindow::MainWindow() {
     if (videoViewer->thread.startUlan()) {
       QMessageBox msgbox( QMessageBox::Critical, "Error", "Could not... blablabla, nie dziaua :(");
       msgbox.exec();
+      delete videoViewer;
       exit(0);
     }
 
