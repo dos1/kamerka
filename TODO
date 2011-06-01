@@ -2,7 +2,7 @@
 * change all labels to english and add translating support
 * basic configuration from file
 * make "make install" working
-* comments
+* code comments
 
 * after all above, release 0.6
 
@@ -12,4 +12,10 @@
 * add "clickable" configuration
 * check, which Qt classes can be replaced with KDE ones and what are the advantages of doing that
 
-* after all of those, release 0.8
+* after all above, release 0.8
+
+* animated preview of already taken photos
+* some basic management of taken photos
+* insert some other cool ideas here
+
+* after all of those, release 1.0
