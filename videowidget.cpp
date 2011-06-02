@@ -30,7 +30,6 @@ videowidget::videowidget(QWidget *parent) :
     setAutoFillBackground(true);
     media = new Phonon::MediaObject(this);
     Phonon::createPath(media, new Phonon::AudioOutput(Phonon::NotificationCategory, this));
-    media->setCurrentSource(QUrl("/usr/share/kde4/apps/kamerka/camera_click.ogg"));
 }
 
 videowidget::~videowidget() {
@@ -74,6 +73,7 @@ void videowidget::setPicture(QImage i){
   if (thread.storeImage) { 
     QDir dir(QDir::homePath());
     dir.mkdir("kamerka");
+    media->setCurrentSource(QUrl("/usr/share/kde4/apps/kamerka/camera_click.ogg"));
     media->play();
 
     int c = 0;
