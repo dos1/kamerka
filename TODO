@@ -1,7 +1,6 @@
-* change all labels to english and add translating support
 * basic configuration from file
-* make "make install" working
 * code comments
+* debian?
 
 * after all above, release 0.6
 

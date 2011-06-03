@@ -19,6 +19,7 @@
 #include <klocalizedstring.h>
 #include <QtScript/QScriptContext>
 #include <kdebug.h>
+#include <kstandarddirs.h>
 
 EngineAccess::EngineAccess()
     : QObject(0)
@@ -59,7 +60,7 @@ void MainWindow::photoTaken(){
 void MainWindow::timerCounter(int count) {
     //qDebug(QString::number(count).toStdString().c_str());
     if (count==5) {
-      videoViewer->media->setCurrentSource(QUrl("/usr/share/kde4/apps/kamerka/timer.ogg"));
+      videoViewer->media->setCurrentSource(KStandardDirs::locate("data", "timer.ogg"));
       videoViewer->media->play();
     }
 }

@@ -2,9 +2,9 @@
 Type=Application
 Version=0.5
 Name=Kamerka
-GenericName=Robienie zdjęć kamerką
+GenericName=Taking photos with webcam
 Exec=kamerka
-Comment=Prosta aplikacja dla Agaty :)
+Comment=Fancy-looking animated application for taking photos from webcam
 Icon=camera-web
 Terminal=false
 Categories=Qt;KDE;AudioVideo;Video;

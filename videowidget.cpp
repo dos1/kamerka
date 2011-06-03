@@ -21,6 +21,7 @@
 #include <KLocale>
 #include <phonon/AudioOutput>
 #include <klocalizedstring.h>
+#include <kstandarddirs.h>
 
 videowidget::videowidget(QWidget *parent) :
     QWidget(parent)
@@ -74,7 +75,7 @@ void videowidget::setPicture(QImage i){
   if (thread.storeImage) { 
     QDir dir(QDir::homePath());
     dir.mkdir("kamerka");
-    media->setCurrentSource(QUrl("/usr/share/kde4/apps/kamerka/camera_click.ogg"));
+    media->setCurrentSource(KStandardDirs::locate("data", "camera_click.ogg"));
     media->play();
 
     int c = 0;
