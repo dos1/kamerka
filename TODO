@@ -1,4 +1,3 @@
-* tweak timer_*.ogg files
 * change all labels to english and add translating support
 * basic configuration from file
 * make "make install" working

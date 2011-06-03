@@ -16,6 +16,40 @@
  */
 
 #include "mainwindow.h"
+#include <klocalizedstring.h>
+#include <QtScript/QScriptContext>
+#include <kdebug.h>
+
+EngineAccess::EngineAccess()
+    : QObject(0)
+{
+}
+
+EngineAccess::~EngineAccess()
+{
+}
+
+void EngineAccess::setEngine(QScriptValue val)
+{
+    this->engine = val.engine();
+}
+
+
+QScriptValue jsi18n(QScriptContext *context, QScriptEngine *engine)
+{
+    Q_UNUSED(engine)
+    if (context->argumentCount() < 1) {
+        kDebug() << i18n("i18n() takes at least one argument");
+        return engine->undefinedValue();
+    }
+    KLocalizedString message = ki18n(context->argument(0).toString().toUtf8());
+    const int numArgs = context->argumentCount();
+    for (int i = 1; i < numArgs; ++i) {
+        message = message.subs(context->argument(i).toString());
+    }
+    return message.toString();
+}
+
 
 void MainWindow::photoTaken(){
     videoViewer->ui = ui;
@@ -62,11 +96,62 @@ MainWindow::MainWindow() {
     this->setWindowIcon(icon);
 
     if (videoViewer->thread.startUlan()) {
-      QMessageBox msgbox( QMessageBox::Critical, "Error", "Could not... blablabla, nie dziaua :(");
+      QMessageBox msgbox( QMessageBox::Critical, i18n("Error"), i18n("Could not connect to V4L device!") );
       msgbox.exec();
       delete videoViewer->media;
       exit(0);
     }
+
+    //Glorious hack:steal the engine - thanks for KDeclarative, from which I stole this code! :)
+    //create the access object
+    EngineAccess *engineAccess = new EngineAccess();
+    ui->engine()->rootContext()->setContextProperty("__engineAccess", engineAccess);
+    //make engineaccess set our engine
+    QDeclarativeExpression *expr = new QDeclarativeExpression(ui->engine()->rootContext(), ui->engine()->rootContext()->contextObject(), "__engineAccess.setEngine(this)");
+    expr->evaluate();
+    delete expr;
+
+    ui->engine()->rootContext()->setContextProperty("__engineAccess", 0);
+
+    //change the old globalobject with a new read/write copy
+    QScriptValue originalGlobalObject = engineAccess->engine->globalObject();
+
+    QScriptValue newGlobalObject = engineAccess->engine->newObject();
+
+    QString eval = QLatin1String("eval");
+    QString version = QLatin1String("version");
+
+    {
+        QScriptValueIterator iter(originalGlobalObject);
+        QVector<QString> names;
+        QVector<QScriptValue> values;
+        QVector<QScriptValue::PropertyFlags> flags;
+        while (iter.hasNext()) {
+            iter.next();
+
+            QString name = iter.name();
+
+            if (name == version) {
+                continue;
+            }
+
+            if (name != eval) {
+                names.append(name);
+                values.append(iter.value());
+                flags.append(iter.flags() | QScriptValue::Undeletable);
+            }
+            newGlobalObject.setProperty(iter.scriptName(), iter.value());
+
+           // m_illegalNames.insert(name);
+        }
+
+    }
+
+    engineAccess->engine->setGlobalObject(newGlobalObject);
+
+    engineAccess->engine->globalObject().setProperty("i18n", engineAccess->engine->newFunction(jsi18n));
+
+    // end of hack
 
     ui->setSource(QUrl("qrc:/kamerka.qml"));
     ui->rootContext()->setContextProperty("fileName", "");
@@ -74,7 +159,7 @@ MainWindow::MainWindow() {
     videoViewer->setStyleSheet("background:transparent");
 
     ui->setResizeMode(QDeclarativeView::SizeRootObjectToView);
-    this->setWindowTitle(QString("Kamerka"));
+    this->setWindowTitle(QString(i18n("Kamerka")));
 
     connect(ui->rootObject(), SIGNAL(photoTaken()), this, SLOT(photoTaken()));
     connect(ui->rootObject(), SIGNAL(timerCounter(int)), this, SLOT(timerCounter(int)));

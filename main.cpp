@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 {
     QApplication::setGraphicsSystem("raster");
     KAboutData aboutData("kamerka", 0, ki18n("Kamerka"), "0.5",
-    ki18n("Prosta aplikacja dla Agaty"), KAboutData::License_GPL, ki18n("Copyright (c) 2011 Sebastian Krzyszkowiak") );
+    ki18n("Simple photo taking application with fancy animated interface"), KAboutData::License_GPL, ki18n("Copyright (c) 2011 Sebastian Krzyszkowiak") );
     KCmdLineArgs::init(argc, argv, &aboutData);
     printf("Kamerka version 0.5\n    Copyright (C) 2011 Sebastian Krzyszkowiak\n");
     printf("    Kamerka comes with ABSOLUTELY NO WARRANTY.\n");

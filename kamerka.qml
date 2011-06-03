@@ -149,7 +149,7 @@
              anchors.bottomMargin: 4;
              anchors.leftMargin: 4;
              width: (parent.width/3)-8;
-             text: "Zrób zdjęcie";
+             text: i18n("Take a photo");
              mouse.onClicked:robFotke();
          }
          Button {
@@ -159,7 +159,7 @@
              anchors.bottomMargin: 4;
              anchors.leftMargin: 2;
              width: (parent.width/3)-8;
-             text: "Samowyzwalacz";
+             text: i18n("Self-timer");
              mouse.onClicked:timerGo();
          }
          Button {
@@ -170,7 +170,7 @@
              anchors.leftMargin: 2;
              anchors.right:  parent.right;
              anchors.rightMargin:  4;
-             text: "Otwórz folder";
+             text: i18n("Open directory");
              mouse.onClicked:showDirectory();
          }
 

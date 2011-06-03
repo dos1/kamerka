@@ -17,7 +17,19 @@
 
 #include <QtGui>
 #include <QtDeclarative>
+#include <QtScript/QScriptEngine>
 #include "videowidget.h"
+
+class EngineAccess : public QObject
+{
+    Q_OBJECT
+public:
+    EngineAccess();
+    ~EngineAccess();
+    Q_INVOKABLE void setEngine(QScriptValue val);
+    QScriptEngine *engine;
+};
+
 
 class MainWindow : public QMainWindow {
     Q_OBJECT

@@ -20,6 +20,7 @@
 #include <KNotification>
 #include <KLocale>
 #include <phonon/AudioOutput>
+#include <klocalizedstring.h>
 
 videowidget::videowidget(QWidget *parent) :
     QWidget(parent)
@@ -40,7 +41,7 @@ void videowidget::paintEvent(QPaintEvent */*event*/) {
     QPainter* painter = new QPainter(this);
     painter->setPen(Qt::white);
     painter->setFont(QFont("Arial", 30));
-    painter->drawText(rect(), Qt::AlignCenter, "Uruchamianie kamery...");
+    painter->drawText(rect(), Qt::AlignCenter, i18n("Starting up webcam..."));
 
     painter->drawPixmap(this->rect(),pixmap);
     delete painter;
@@ -107,7 +108,8 @@ void videowidget::setPicture(QImage i){
     Focia* fotka = new Focia;
     fotka->setFilename(imagepath);
 
-    QString s = tr2i18n("Zdj\304\231cie zosta\305\202o zapisane do pliku ", 0) + imagepath;
+    //QString s = tr2i18n("Zdj\304\231cie zosta\305\202o zapisane do pliku ", 0) + imagepath;
+    QString s = i18n("Photo was stored in file %1", imagepath);
 
     QPixmap pixmap = QPixmap::fromImage(i);
 
@@ -115,7 +117,8 @@ void videowidget::setPicture(QImage i){
     notification->setText( s );
     notification->setPixmap( pixmap );
     QStringList lista;
-    lista << tr2i18n("Poka\305\274 w folderze", 0) << tr2i18n("Otw\303\263rz w GIMPie", 0) << tr2i18n("Otw\303\263rz w Inkscape", 0);
+    //lista << tr2i18n("Poka\305\274 w folderze", 0) << tr2i18n("Otw\303\263rz w GIMPie", 0) << tr2i18n("Otw\303\263rz w Inkscape", 0);
+    lista << i18n("Show in directory") << i18n("Open in GIMP") << i18n("Open in Inkscape");
     notification->setActions( lista );
     connect(notification, SIGNAL(activated(unsigned int )), fotka , SLOT(openFile(unsigned int )) );
     notification->sendEvent();
