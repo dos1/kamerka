@@ -165,6 +165,12 @@ MainWindow::MainWindow() {
     connect(ui->rootObject(), SIGNAL(timerCounter(int)), this, SLOT(timerCounter(int)));
     connect(ui->rootObject(), SIGNAL(showDirectory()), this, SLOT(showDirectory()));
 
+    // hack - i18n is not correctly extracted from QML yet
+    QString hack;
+    hack = i18n("Take a photo");
+    hack = i18n("Self-timer");
+    hack = i18n("Open directory");
+
   }
 
 }

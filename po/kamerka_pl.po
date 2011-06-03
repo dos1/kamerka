@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-03 22:38+0200\n"
-"PO-Revision-Date: 2011-06-03 22:42+0100\n"
+"POT-Creation-Date: 2011-06-03 23:06+0200\n"
+"PO-Revision-Date: 2011-06-03 23:07+0100\n"
 "Last-Translator: Sebastian Krzyszkowiak <seba.dos1@gmail.com>\n"
 "Language-Team: pl_PL <dos@dosowisko.net>\n"
 "Language: \n"
@@ -42,6 +42,18 @@ msgstr "Błąd"
 #: mainwindow.cpp:99
 msgid "Could not connect to V4L device!"
 msgstr "Nie można połączyć się z urządzeniem V4L!"
+
+#: mainwindow.cpp:170
+msgid "Take a photo"
+msgstr "Zrób zdjęcie"
+
+#: mainwindow.cpp:171
+msgid "Self-timer"
+msgstr "Samowyzwalacz"
+
+#: mainwindow.cpp:172
+msgid "Open directory"
+msgstr "Otwórz folder"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
