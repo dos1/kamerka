@@ -24,12 +24,8 @@ void MainWindow::photoTaken(){
 
 void MainWindow::timerCounter(int count) {
     //qDebug(QString::number(count).toStdString().c_str());
-    if (count>0) {
-      videoViewer->media->setCurrentSource(QUrl("/usr/share/kde4/apps/kamerka/timer_beep.ogg"));
-      videoViewer->media->play();
-    }
-    else if (count==0) {
-      videoViewer->media->setCurrentSource(QUrl("/usr/share/kde4/apps/kamerka/timer_go.ogg"));
+    if (count==5) {
+      videoViewer->media->setCurrentSource(QUrl("/usr/share/kde4/apps/kamerka/timer.ogg"));
       videoViewer->media->play();
     }
 }
