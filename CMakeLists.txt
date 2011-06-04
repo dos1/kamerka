@@ -1,8 +1,6 @@
 project (kamerka)
 
-SET(CMAKE_CXX_FLAGS "-Wall") # release
-
-#SET(CMAKE_CXX_FLAGS "-g -Wall") # debug
+SET(CMAKE_CXX_FLAGS "-Wall")
 
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/modules)
 
