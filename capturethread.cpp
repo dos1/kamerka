@@ -157,7 +157,7 @@ std::string tm2="mp4";
         buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
         buf.memory = V4L2_MEMORY_MMAP;
         xioctl(fd, VIDIOC_DQBUF, &buf);
-            
+
         if (v4lconvert_convert(v4lconvert_data,
                                 &src_fmt,
                                 &fmt,
