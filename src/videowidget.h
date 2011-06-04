@@ -38,8 +38,6 @@ Q_OBJECT
     CaptureThread thread;
     QDeclarativeView *ui;
     Phonon::MediaObject* media;
-    void setFileName(QString);
-    void setDeviceName(QString);
   protected:
     void paintEvent(QPaintEvent *event);
 

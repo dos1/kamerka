@@ -42,17 +42,6 @@ public:
     bool storeImage;
     int autoshoot;
 
-    struct v4l2_format              fmt;
-    struct v4l2_buffer              buf;
-    struct v4l2_requestbuffers      req;
-    enum v4l2_buf_type              type;
-    fd_set                          fds;
-    struct timeval                  tv;
-    int                             r, fd;
-    unsigned int                    n_buffers;
-    char                            *dev_name;
-    char                            out_name[256];
-    FILE                            *fout;
     struct buffer {
             void   *start;
             size_t length;
@@ -74,8 +63,6 @@ public:
 
     void stopUlan();
     int startUlan();
-    void setFileName(QString);
-    void setDeviceName(QString);
 protected:
     void run();
 signals:
@@ -85,8 +72,21 @@ private:
     QMutex mutex;
     QWaitCondition condition;
     void closeVideoOut();
-    QString fileName;
-    QString deviceName;
+
+    int width, height;
+
+    struct v4l2_format              fmt;
+    struct v4l2_buffer              buf;
+    struct v4l2_requestbuffers      req;
+    enum v4l2_buf_type              type;
+    fd_set                          fds;
+    struct timeval                  tv;
+    int                             r, fd;
+    unsigned int                    n_buffers;
+    QString                         dev_name;
+    char                            out_name[256];
+    FILE                            *fout;
+
 };
 
 #endif // CAPTURETHREAD_H

@@ -131,11 +131,3 @@ void videowidget::setPicture(QImage i){
   pixmap=QPixmap::fromImage(i);
   update();
 }
-
-void videowidget::setFileName(QString f){
-    thread.setFileName(f);
-}
-
-void videowidget::setDeviceName(QString f){
-    thread.setDeviceName(f);
-}

@@ -18,6 +18,8 @@
  */
 
 #include <KDebug>
+#include <KConfig>
+#include <KConfigGroup>
 
 #include "capturethread.h"
 
@@ -58,8 +60,8 @@ void CaptureThread::run(){
 
     CLEAR(fmt);
     fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    fmt.fmt.pix.width       = 640;
-    fmt.fmt.pix.height      = 480;
+    fmt.fmt.pix.width       = width;
+    fmt.fmt.pix.height      = height;
     fmt.fmt.pix.pixelformat = V4L2_PIX_FMT_RGB24;
     fmt.fmt.pix.field       = V4L2_FIELD_INTERLACED;
     xioctl(fd, VIDIOC_S_FMT, &fmt);
@@ -245,14 +247,17 @@ int CaptureThread::startUlan()
 //        kDebug()<<"start oluo";
     //do real stuff
     fd = -1;
-    dev_name = (char*)"/dev/video0";
 
-    if(!deviceName.isEmpty()){
-        kDebug()<<"dev:"<<deviceName.toAscii().constData();
-        dev_name=(char*)deviceName.toAscii().constData();
-    }
+    KConfig* config = new KConfig("kamerkarc");
+    KConfigGroup group = config->group("Video");
 
-    fd = v4l2_open(dev_name, O_RDWR | O_NONBLOCK, 0);
+    dev_name = group.readEntry("node", "/dev/video0");
+    width    = group.readEntry("width", 640);
+    height   = group.readEntry("height", 480);
+
+    delete config;
+
+    fd = v4l2_open(dev_name.toStdString().c_str(), O_RDWR | O_NONBLOCK, 0);
     if (fd < 0) {
            kError() << "Cannot open device";
            //exit(EXIT_FAILURE);
@@ -272,12 +277,3 @@ void CaptureThread::onStopCapture()
            v4l2_munmap(buffers[i].start, buffers[i].length);
     v4l2_close(fd);
 }*/
-
-
-void CaptureThread::setFileName(QString fileN) {
-    fileName=fileN;
-}
-
-void CaptureThread::setDeviceName(QString fileN) {
-    deviceName=fileN;
-}
