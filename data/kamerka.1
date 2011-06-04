@@ -6,13 +6,25 @@ Kamerka \- take photos using your webcam and shiny animated QML interface
 [\fIQt-options\fR] [\fIKDE-options\fR]
 .SH DESCRIPTION
 Kamerka version 0.5
-.IP
-Copyright (C) 2011 Sebastian Krzyszkowiak
-Kamerka comes with ABSOLUTELY NO WARRANTY.
-This is free software, and you are welcome to redistribute it
-under certain conditions; type `./kamerka \fB\-\-license\fR' for details.
 .PP
 Simple photo taking application with fancy animated interface
+.SS "Configuration options:"
+.PP
+You can use kamerkarc file (usually in ~/.kde/share/config directory) in order
+to set up device node for your webcam and resolution of video stream.
+
+Example file with default config:
+.IP
+[Video]
+
+node=/dev/video0
+
+width=640
+
+height=480
+.PP
+If some option (or even whole file) is not present, then default values are
+used, as seen in example config above.
 .SS "Generic options:"
 .TP
 \fB\-\-help\fR
