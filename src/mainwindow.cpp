@@ -155,8 +155,8 @@ MainWindow::MainWindow() {
 
     // end of hack
 
+    ui->rootContext()->setContextProperty("fileName", "kamerka.png");
     ui->setSource(QUrl("qrc:/kamerka.qml"));
-    ui->rootContext()->setContextProperty("fileName", "");
     ui->setStyleSheet("background:transparent");
     videoViewer->setStyleSheet("background:transparent");
 
