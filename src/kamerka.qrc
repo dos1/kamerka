@@ -2,6 +2,6 @@
     <qresource prefix="/">
         <file>kamerka.qml</file>
         <file>Button.qml</file>
-        <file>kamerka.png</file>
+        <file>../data/kamerka.png</file>
     </qresource>
 </RCC>
