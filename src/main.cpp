@@ -33,6 +33,8 @@ int main(int argc, char *argv[])
     printf("    This is free software, and you are welcome to redistribute it\n");
     printf("    under certain conditions; type `./kamerka --license' for details.\n");
     KApplication a;
+    QIcon icon(":/kamerka.png");
+    a.setWindowIcon(icon);
     MainWindow w;
 
     w.show();

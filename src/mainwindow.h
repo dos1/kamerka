@@ -20,6 +20,7 @@
 #include <QtDeclarative>
 #include <QtScript/QScriptEngine>
 #include "videowidget.h"
+#include "kmainwindow.h"
 
 class EngineAccess : public QObject
 {
@@ -32,7 +33,7 @@ public:
 };
 
 
-class MainWindow : public QMainWindow {
+class MainWindow : public KMainWindow {
     Q_OBJECT
 public:
     MainWindow();

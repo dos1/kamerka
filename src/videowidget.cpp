@@ -23,6 +23,7 @@
 #include <phonon/AudioOutput>
 #include <klocalizedstring.h>
 #include <kstandarddirs.h>
+#include <kdebug.h>
 
 videowidget::videowidget(QWidget *parent) :
     QWidget(parent)
@@ -54,7 +55,7 @@ void Focia::setFilename ( QString name ) {
 }
 
 void Focia::openFile (unsigned int i) {
-  // qDebug(QString::number(i).toStdString().c_str());
+  // kDebug(QString::number(i).toStdString().c_str());
   QString app;
   QStringList arg;
   if (i==1) {
@@ -88,7 +89,7 @@ void videowidget::setPicture(QImage i){
           QTextStream counter(&counterfile);
           counter >> c;
     }
-    else qWarning("Could not open .counter file!");
+    else kWarning() << "Could not open .counter file!";
     c++;
     counterfile.close();
 
@@ -101,7 +102,7 @@ void videowidget::setPicture(QImage i){
     imagepath = QDir::homePath() + "/kamerka/image";
     imagepath += QString::number(c);
     imagepath += ".png";
-    qDebug("%s",imagepath.toStdString().c_str());
+    kDebug() << QString("%s").arg(imagepath);
     i.save(imagepath, "PNG");
 
     ui->rootContext()->setContextProperty("fileName", "file:"+imagepath);

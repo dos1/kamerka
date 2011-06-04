@@ -21,6 +21,8 @@
 #include <QtScript/QScriptContext>
 #include <kdebug.h>
 #include <kstandarddirs.h>
+#include <kmessagebox.h>
+#include <kurl.h>
 
 EngineAccess::EngineAccess()
     : QObject(0)
@@ -41,7 +43,7 @@ QScriptValue jsi18n(QScriptContext *context, QScriptEngine *engine)
 {
     Q_UNUSED(engine)
     if (context->argumentCount() < 1) {
-        kDebug() << i18n("i18n() takes at least one argument");
+        kWarning() << i18n("i18n() takes at least one argument");
         return engine->undefinedValue();
     }
     KLocalizedString message = ki18n(context->argument(0).toString().toUtf8());
@@ -59,7 +61,7 @@ void MainWindow::photoTaken(){
 }
 
 void MainWindow::timerCounter(int count) {
-    //qDebug(QString::number(count).toStdString().c_str());
+    //kDebug(QString::number(count).toStdString().c_str());
     if (count==5) {
       videoViewer->media->setCurrentSource(KStandardDirs::locate("data", "timer.ogg"));
       videoViewer->media->play();
@@ -89,17 +91,14 @@ MainWindow::MainWindow() {
     qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
 
     ui = new QDeclarativeView;
+
     videoViewer = new videowidget(this);
-
-    QIcon icon(":/kamerka.png");
-
     videoViewer->show();
+
     this->setCentralWidget(ui);
-    this->setWindowIcon(icon);
 
     if (videoViewer->thread.startUlan()) {
-      QMessageBox msgbox( QMessageBox::Critical, i18n("Error"), i18n("Could not connect to V4L device!") );
-      msgbox.exec();
+      KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
       delete videoViewer->media;
       exit(0);
     }
@@ -156,7 +155,7 @@ MainWindow::MainWindow() {
     // end of hack
 
     ui->rootContext()->setContextProperty("fileName", "kamerka.png");
-    ui->setSource(QUrl("qrc:/kamerka.qml"));
+    ui->setSource(KUrl("qrc:/kamerka.qml"));
     ui->setStyleSheet("background:transparent");
     videoViewer->setStyleSheet("background:transparent");
 

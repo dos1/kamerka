@@ -6,7 +6,6 @@
   * no more exit(0); hacks!
   * capturethread.cpp definitely needs some love :x
 * add "clickable" configuration
-* check, which Qt classes can be replaced with KDE ones and what are the advantages of doing that
 
 * after all above, release 0.8
 
@@ -15,3 +14,5 @@
 * insert some other cool ideas here
 
 * after all of those, release 1.0
+
+* video recording

@@ -18,7 +18,7 @@
  */
 
 #include "capturethread.h"
-#include <QDebug>
+#include <kdebug.h>
 
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
 
@@ -38,13 +38,13 @@ void CaptureThread::run(){
     dev_name = (char*)"/dev/video0";
 
     if(!deviceName.isEmpty()){
-        qDebug()<<"dev:"<<deviceName.toAscii().constData();
+        kDebug()<<"dev:"<<deviceName.toAscii().constData();
         dev_name=(char*)deviceName.toAscii().constData();
     }
 
     fd = v4l2_open(dev_name, O_RDWR | O_NONBLOCK, 0);
     if (fd < 0) {
-           qDebug("Cannot open device");
+           kDebug("Cannot open device");
            //exit(EXIT_FAILURE);
            quit();
            return;
@@ -68,7 +68,7 @@ void CaptureThread::run(){
            return;
     }
 //    if ((fmt.fmt.pix.width != 640) || (fmt.fmt.pix.height != 480))
-           printf("Driver is sending image at %dx%d\n",
+           kDebug() << QString("Drivers is sending image at %dx%d\n").arg(
                    fmt.fmt.pix.width, fmt.fmt.pix.height);
 
 
@@ -85,9 +85,9 @@ std::string tm2="mp4";
 
     v4lconvert_data = v4lconvert_create(fd);
     if (v4lconvert_data == NULL)
-        qDebug("v4lconvert_create");
+        kDebug() << "v4lconvert_create";
     if (v4lconvert_try_format(v4lconvert_data, &fmt, &src_fmt) != 0)
-        qDebug("v4lconvert_try_format");
+        kDebug() << "v4lconvert_try_format";
     xioctl(fd, VIDIOC_S_FMT, &src_fmt);
     dst_buf = (unsigned char*)malloc(fmt.fmt.pix.sizeimage); 
 
@@ -113,7 +113,7 @@ std::string tm2="mp4";
                          fd, buf.m.offset);
 
            if (MAP_FAILED == buffers[n_buffers].start) {
-                   qDebug("mmap");
+                   kDebug() << "mmap";
                    //exit(EXIT_FAILURE);
                    return;
            }
@@ -128,7 +128,7 @@ std::string tm2="mp4";
     }
     type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
     xioctl(fd, VIDIOC_STREAMON, &type);
-    //qDebug()<<"buf.timecode.type:"<< buf.timecode.type;
+    //kDebug()<<"buf.timecode.type:"<< buf.timecode.type;
 
     // TU JEST ROZNICA Z TUTKIEM
     int di=0;
@@ -149,7 +149,7 @@ std::string tm2="mp4";
                 r = select(fd + 1, &fds, NULL, NULL, &tv);
         } while ((r == -1 && (errno = EINTR)));
         if (r == -1) {
-                qDebug("select");
+                kDebug() << "select";
                 //exit(1) ;
                 return;
         }
@@ -165,7 +165,7 @@ std::string tm2="mp4";
                                 (unsigned char*)buffers[buf.index].start, buf.bytesused,
                                 dst_buf, fmt.fmt.pix.sizeimage) < 0) {
                 if (errno != EAGAIN)
-                        qDebug("v4l_convert");
+                        kDebug() << "v4l_convert";
         }
 
         unsigned char* asil=(unsigned char*)malloc(fmt.fmt.pix.sizeimage+qstrlen(header));
@@ -188,8 +188,8 @@ std::string tm2="mp4";
         di++;
     }
     //mutex.unlock();
-    qDebug()<<"buf.timecode.type:"<< buf.timecode.type;
-    qDebug()<<"totalFrameCount:"<<di;
+    kDebug()<<"buf.timecode.type:"<< buf.timecode.type;
+    kDebug()<<"totalFrameCount:"<<di;
 
     type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
     xioctl(fd, VIDIOC_STREAMOFF, &type);
@@ -241,19 +241,19 @@ void CaptureThread::stopUlan()
 
 int CaptureThread::startUlan()
 {
-//        qDebug()<<"start oluo";
+//        kDebug()<<"start oluo";
     //do real stuff
     fd = -1;
     dev_name = (char*)"/dev/video0";
 
     if(!deviceName.isEmpty()){
-        qDebug()<<"dev:"<<deviceName.toAscii().constData();
+        kDebug()<<"dev:"<<deviceName.toAscii().constData();
         dev_name=(char*)deviceName.toAscii().constData();
     }
 
     fd = v4l2_open(dev_name, O_RDWR | O_NONBLOCK, 0);
     if (fd < 0) {
-           qDebug("Cannot open device");
+           kError() << "Cannot open device";
            //exit(EXIT_FAILURE);
            quit();
            return 1;
