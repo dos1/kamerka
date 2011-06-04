@@ -33,5 +33,5 @@ add_subdirectory(po)
 
 install(TARGETS kamerka DESTINATION ${BIN_INSTALL_DIR})
 install(FILES kamerka.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-install(FILES camera_click.ogg timer.ogg kamerka.notifyrc DESTINATION ${DATA_INSTALL_DIR})
+install(FILES camera_click.ogg timer.ogg kamerka.notifyrc DESTINATION "${DATA_INSTALL_DIR}/kamerka")
 install(FILES kamerka.png DESTINATION ${ICON_INSTALL_DIR})
