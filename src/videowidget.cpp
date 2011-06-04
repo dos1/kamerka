@@ -78,7 +78,7 @@ void videowidget::setPicture(QImage i){
   if (thread.storeImage) {
     QDir dir(QDir::homePath());
     dir.mkdir("kamerka");
-    media->setCurrentSource(KStandardDirs::locate("data", "camera_click.ogg"));
+    media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));
     media->play();
 
     int c = 0;
