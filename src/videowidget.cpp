@@ -17,13 +17,14 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA
  */
 
-#include "videowidget.h"
 #include <KNotification>
 #include <KLocale>
-#include <phonon/AudioOutput>
-#include <klocalizedstring.h>
-#include <kstandarddirs.h>
-#include <kdebug.h>
+#include <Phonon/AudioOutput>
+#include <KLocalizedString>
+#include <KStandardDirs>
+#include <KDebug>
+
+#include "videowidget.h"
 
 videowidget::videowidget(QWidget *parent) :
     QWidget(parent)

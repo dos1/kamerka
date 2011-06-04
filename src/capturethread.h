@@ -37,6 +37,7 @@ class CaptureThread : public QThread
 public:
     CaptureThread(QObject *parent = 0);
     ~CaptureThread();
+
     bool devam;
     bool storeImage;
     int autoshoot;

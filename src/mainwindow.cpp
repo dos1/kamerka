@@ -16,13 +16,14 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA
  */
 
-#include "mainwindow.h"
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <QtScript/QScriptContext>
-#include <kdebug.h>
-#include <kstandarddirs.h>
-#include <kmessagebox.h>
-#include <kurl.h>
+#include <KDebug>
+#include <KStandardDirs>
+#include <KMessageBox>
+#include <KUrl>
+
+#include "mainwindow.h"
 
 EngineAccess::EngineAccess()
     : QObject(0)

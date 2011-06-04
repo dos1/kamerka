@@ -23,7 +23,7 @@
 #include <QWidget>
 #include <QPainter>
 #include <QtDeclarative>
-#include <phonon/MediaObject>
+#include <Phonon/MediaObject>
 
 #include "capturethread.h"
 

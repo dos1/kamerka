@@ -19,8 +19,9 @@
 #include <QtGui>
 #include <QtDeclarative>
 #include <QtScript/QScriptEngine>
+#include "KMainWindow"
+
 #include "videowidget.h"
-#include "kmainwindow.h"
 
 class EngineAccess : public QObject
 {

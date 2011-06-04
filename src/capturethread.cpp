@@ -17,8 +17,9 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA
  */
 
+#include <KDebug>
+
 #include "capturethread.h"
-#include <kdebug.h>
 
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
 

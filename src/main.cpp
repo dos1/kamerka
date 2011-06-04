@@ -20,6 +20,7 @@
 #include <KLocale>
 #include <KCmdLineArgs>
 #include <KAboutData>
+
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
