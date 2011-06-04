@@ -8,7 +8,7 @@ import QtQuick 1.0
      border.width: 1
      radius: 5
      smooth: true
-     opacity: 0.3;
+     opacity: 0.5;
 
      gradient: Gradient {
          GradientStop { position: 0.0; color: "darkGray" }
