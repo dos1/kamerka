@@ -1,0 +1,19 @@
+Source: kamerka
+Section: kde
+Priority: optional
+Maintainer: Sebastian Krzyszkowiak <dos@dosowisko.net>
+Build-Depends: debhelper (>= 7.0.50~), cmake, kdelibs5-dev (>= 4:4.6), libqt4-dev (>= 4:4.7), libv4l-dev, libgcrypt11, pkg-config
+Standards-Version: 3.9.2
+Homepage: http://dos1.github.com/kamerka/
+Vcs-Git: git://github.com/dos1/kamerka.git
+Vcs-Browser: http://github.com/dos1/kamerka
+
+Package: kamerka
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libkdeui5 (>= 4:4.6), libqt4-declarative (>= 4:4.7), libqt4-script (>= 4:4.7), libphonon4 (>= 4:4.6.0really4.4.3), libv4l-0
+Recommends: dolphin, gimp, inkscape
+Suggests: kdebase-workspace-bin
+Description: Take photos using your webcam and shiny animated QML interface
+ Kamerka is an Qt4 app using KDE4 libraries. It uses Video4Linux to get image
+ from webcam and is able to save photos. Interface is based on QML and uses
+ it's possibilities to show easy to use animated UI.
