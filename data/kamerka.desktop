@@ -2,9 +2,11 @@
 Type=Application
 Version=0.5
 Name=Kamerka
-GenericName=Taking photos with webcam
+GenericName=Taking photos with the webcam
+GenericName[pl]=Robienie zdjęć kamerką internetową
 Exec=kamerka
 Comment=Fancy-looking animated application for taking photos from webcam
+Comment[pl]=Fajnie wyglądająca, animowana aplikacja do robienia zdjęć kamerką internetową
 Icon=camera-web
 Terminal=false
 Categories=Qt;KDE;AudioVideo;Video;
