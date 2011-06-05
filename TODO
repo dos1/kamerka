@@ -13,8 +13,10 @@ For 1.0:
  * animated preview of already taken photos
  * some basic management of taken photos
  * some basic effects
+ * consecutive image taking
  * moar configuration:
   * buttons in notifications (for instance to set Krita instead of GIMP)
+  * consecutive image taking
 
 After:
  * video recording
