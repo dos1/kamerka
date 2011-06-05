@@ -1,15 +1,21 @@
-* deal with threads nicely on closing application
+For 0.8:
+ * deal with threads nicely on closing application
   * no more exit(0); hacks!
   * capturethread.cpp definitely needs some love :x
-* add "clickable" configuration
+ * use XDG image folder as default
+ * add "clickable" configuration
+  * device node, resolution
+  * image folder
+  * time for self-timer
+  * notifications on/off
 
-* after all above, release 0.8
+For 1.0:
+ * animated preview of already taken photos
+ * some basic management of taken photos
+ * some basic effects
+ * moar configuration:
+  * buttons in notifications (for instance to set Krita instead of GIMP)
 
-* animated preview of already taken photos
-* some basic management of taken photos
-* some basic effects
-
-* after all of those, release 1.0
-
-* video recording
-* moar effects!
+After:
+ * video recording
+ * moar effects!
