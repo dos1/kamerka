@@ -13,6 +13,9 @@ include_directories(${KDE4_INCLUDES})
 find_package(LibV4L2 REQUIRED)
 include_directories(${LIBV2L2_INCLUDE_DIR})
 
+find_package(LibV4LConvert REQUIRED)
+include_directories(${LIBV2LCONVERT_INCLUDE_DIR})
+
 add_subdirectory(src)
 add_subdirectory(po)
 add_subdirectory(data)
