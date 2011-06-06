@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-04 15:04+0200\n"
+"POT-Creation-Date: 2011-06-06 14:27+0200\n"
 "PO-Revision-Date: 2011-06-06 07:52+0200\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,71 +17,69 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: rc.cpp:1 rc.cpp:1
+#: po/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Pavel Fric"
 
-#: rc.cpp:2 rc.cpp:2
+#: po/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pavelfric@seznam.cz"
 
-#: src/main.cpp:27 src/mainwindow.cpp:163
+#: src/main.cpp:29 src/mainwindow.cpp:166
 msgid "Kamerka"
 msgstr "Kamerka"
 
-#: src/main.cpp:28
+#: src/main.cpp:30
 msgid "Simple photo taking application with fancy animated interface"
 msgstr ""
 "Jednoduchý program na dělání fotografií s vypracovaných kresleným rozhraním"
 
-#: src/main.cpp:28
+#: src/main.cpp:30
 msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
-#: src/mainwindow.cpp:43
+#: src/mainwindow.cpp:47
 msgid "i18n() takes at least one argument"
 msgstr "i18n() bere alespoň jeden argument"
 
-#: src/mainwindow.cpp:100
-msgid "Error"
-msgstr "Chyba"
-
-#: src/mainwindow.cpp:100
+#: src/mainwindow.cpp:104
 msgid "Could not connect to V4L device!"
 msgstr "Nepodařilo se spojit se zařízením V4L!"
 
-#: src/mainwindow.cpp:171
+#: src/mainwindow.cpp:104
+msgid "Error"
+msgstr "Chyba"
+
+#: src/mainwindow.cpp:174
 msgid "Take a photo"
 msgstr "Udělat fotku"
 
-#: src/mainwindow.cpp:172
+#: src/mainwindow.cpp:175
 msgid "Self-timer"
 msgstr "Samospoušť"
 
-#: src/mainwindow.cpp:173
+#: src/mainwindow.cpp:176
 msgid "Open directory"
 msgstr "Otevřít adresář"
 
-#: src/videowidget.cpp:45
+#: src/videowidget.cpp:48
 msgid "Starting up webcam..."
 msgstr "Spouští se kamera..."
 
-#: src/videowidget.cpp:112
+#: src/videowidget.cpp:115
 msgid "Photo was stored in file %1"
 msgstr "Fotografie byla uložena do souboru %1"
 
-#: src/videowidget.cpp:120
+#: src/videowidget.cpp:123
 msgid "Show in directory"
 msgstr "Ukázat v adresáři"
 
-#: src/videowidget.cpp:120
+#: src/videowidget.cpp:123
 msgid "Open in GIMP"
 msgstr "Otevřít v GIMPu"
 
-#: src/videowidget.cpp:120
+#: src/videowidget.cpp:123
 msgid "Open in Inkscape"
 msgstr "Otevřít v Inkscape"
-
-
