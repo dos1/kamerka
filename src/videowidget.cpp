@@ -80,7 +80,6 @@ void videowidget::setPicture(QImage i){
     if ((basepath=="") || (!QDir(basepath).exists())) {
         basepath = QDir::homePath();
     }
-    qDebug() << basepath;
     QDir dir(basepath);
     dir.mkdir("kamerka");
     media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));
