@@ -1,5 +1,5 @@
 Kamerka uses CMake build system.
-It is recommended to build in another directory, than source - for instance, in "build" subdirectory.
+It is recommended to build in another directory than source - for instance, in "build" subdirectory.
 
 To build:
 
