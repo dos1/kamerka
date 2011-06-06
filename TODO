@@ -2,7 +2,6 @@ For 0.8:
  * deal with threads nicely on closing application
   * no more exit(0); hacks!
   * capturethread.cpp definitely needs some love :x
- * use XDG image folder as default
  * add "clickable" configuration
   * device node, resolution
   * image folder
