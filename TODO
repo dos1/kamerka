@@ -3,7 +3,6 @@ For 0.8:
   * no more exit(0); hacks!
   * capturethread.cpp definitely needs some love :x
  * use XDG image folder as default
- * don't show error when trying to show directory which does not-exist
  * add "clickable" configuration
   * device node, resolution
   * image folder

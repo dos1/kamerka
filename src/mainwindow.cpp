@@ -70,6 +70,8 @@ void MainWindow::timerCounter(int count) {
 }
 
 void MainWindow::showDirectory() {
+    QDir dir(QDir::homePath());
+    dir.mkdir("kamerka");
     QProcess::startDetached("kde-open", QStringList() << QDir::homePath() + "/kamerka");
     delete videoViewer->media;
     exit(0);
