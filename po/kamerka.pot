@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-06 14:27+0200\n"
+"POT-Creation-Date: 2011-06-06 14:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgid "Starting up webcam..."
 msgstr ""
 
 #: src/videowidget.cpp:115
-msgid "Photo was stored in file %1"
+msgid "Photo has been stored in file %1"
 msgstr ""
 
 #: src/videowidget.cpp:123

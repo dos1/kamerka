@@ -112,7 +112,7 @@ void videowidget::setPicture(QImage i){
     Focia* fotka = new Focia;
     fotka->setFilename(imagepath);
 
-    QString s = i18n("Photo was stored in file %1", imagepath);
+    QString s = i18n("Photo has been stored in file %1", imagepath);
 
     QPixmap pixmap = QPixmap::fromImage(i);
 

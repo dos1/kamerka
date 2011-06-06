@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-06 14:27+0200\n"
+"POT-Creation-Date: 2011-06-06 14:31+0200\n"
 "PO-Revision-Date: 2011-06-06 07:52+0200\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -69,7 +69,7 @@ msgid "Starting up webcam..."
 msgstr "Spouští se kamera..."
 
 #: src/videowidget.cpp:115
-msgid "Photo was stored in file %1"
+msgid "Photo has been stored in file %1"
 msgstr "Fotografie byla uložena do souboru %1"
 
 #: src/videowidget.cpp:123

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-06 14:27+0200\n"
+"POT-Creation-Date: 2011-06-06 14:31+0200\n"
 "PO-Revision-Date: 2011-06-03 23:07+0100\n"
 "Last-Translator: Sebastian Krzyszkowiak <seba.dos1@gmail.com>\n"
 "Language-Team: pl_PL <dos@dosowisko.net>\n"
@@ -69,7 +69,7 @@ msgid "Starting up webcam..."
 msgstr "Uruchamianie kamerki..."
 
 #: src/videowidget.cpp:115
-msgid "Photo was stored in file %1"
+msgid "Photo has been stored in file %1"
 msgstr "Zdjęcie zostało zapisane w pliku %1"
 
 #: src/videowidget.cpp:123
