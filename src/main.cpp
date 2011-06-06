@@ -26,10 +26,10 @@
 int main(int argc, char *argv[])
 {
     QApplication::setGraphicsSystem("raster");
-    KAboutData aboutData("kamerka", 0, ki18n("Kamerka"), "0.6",
+    KAboutData aboutData("kamerka", 0, ki18n("Kamerka"), "0.7",
     ki18n("Simple photo taking application with fancy animated interface"), KAboutData::License_GPL, ki18n("Copyright (c) 2011 Sebastian Krzyszkowiak") );
     KCmdLineArgs::init(argc, argv, &aboutData);
-    printf("Kamerka version 0.6\n    Copyright (C) 2011 Sebastian Krzyszkowiak\n");
+    printf("Kamerka version 0.7\n    Copyright (C) 2011 Sebastian Krzyszkowiak\n");
     printf("    Kamerka comes with ABSOLUTELY NO WARRANTY.\n");
     printf("    This is free software, and you are welcome to redistribute it\n");
     printf("    under certain conditions; type `./kamerka --license' for details.\n");
