@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-06 14:31+0200\n"
+"POT-Creation-Date: 2011-06-07 13:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: po/rc.cpp:1 rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-
-#: po/rc.cpp:2 rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-
-#: src/main.cpp:29 src/mainwindow.cpp:166
+#: src/main.cpp:29 src/mainwindow.cpp:183
 msgid "Kamerka"
 msgstr ""
 
@@ -43,23 +33,27 @@ msgstr ""
 msgid "i18n() takes at least one argument"
 msgstr ""
 
-#: src/mainwindow.cpp:104
-msgid "Could not connect to V4L device!"
+#: src/mainwindow.cpp:65
+msgid "Could not load QML interface!"
 msgstr ""
 
-#: src/mainwindow.cpp:104
+#: src/mainwindow.cpp:65 src/mainwindow.cpp:121
 msgid "Error"
 msgstr ""
 
-#: src/mainwindow.cpp:174
+#: src/mainwindow.cpp:121
+msgid "Could not connect to V4L device!"
+msgstr ""
+
+#: src/mainwindow.cpp:191
 msgid "Take a photo"
 msgstr ""
 
-#: src/mainwindow.cpp:175
+#: src/mainwindow.cpp:192
 msgid "Self-timer"
 msgstr ""
 
-#: src/mainwindow.cpp:176
+#: src/mainwindow.cpp:193
 msgid "Open directory"
 msgstr ""
 
@@ -67,18 +61,28 @@ msgstr ""
 msgid "Starting up webcam..."
 msgstr ""
 
-#: src/videowidget.cpp:115
+#: src/videowidget.cpp:119
 msgid "Photo has been stored in file %1"
 msgstr ""
 
-#: src/videowidget.cpp:123
+#: src/videowidget.cpp:127
 msgid "Show in directory"
 msgstr ""
 
-#: src/videowidget.cpp:123
+#: src/videowidget.cpp:127
 msgid "Open in GIMP"
 msgstr ""
 
-#: src/videowidget.cpp:123
+#: src/videowidget.cpp:127
 msgid "Open in Inkscape"
+msgstr ""
+
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
 msgstr ""
