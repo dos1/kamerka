@@ -29,6 +29,7 @@
 videowidget::videowidget(QWidget *parent) :
     QWidget(parent)
 {
+    storeImage=false;
     connect(&thread, SIGNAL(renderedImage(QImage)),
                 this, SLOT(setPicture(QImage)));
 
@@ -38,7 +39,7 @@ videowidget::videowidget(QWidget *parent) :
 }
 
 videowidget::~videowidget() {
-    delete media;
+    thread.stop();
 }
 
 void videowidget::paintEvent(QPaintEvent */*event*/) {
@@ -75,7 +76,7 @@ void Focia::openFile (unsigned int i) {
 
 
 void videowidget::setPicture(QImage i){
-  if (thread.storeImage) {
+  if (storeImage) {
     QString basepath = getenv("XDG_PICTURES_DIR");
     if ((basepath=="") || (!QDir(basepath).exists())) {
         basepath = QDir::homePath();
@@ -129,7 +130,7 @@ void videowidget::setPicture(QImage i){
     connect(notification, SIGNAL(activated(unsigned int)), fotka , SLOT(openFile(unsigned int)) );
     notification->sendEvent();
 
-    thread.storeImage=false;
+    storeImage=false;
   }
 
   pixmap=QPixmap::fromImage(i);

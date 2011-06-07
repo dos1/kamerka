@@ -38,6 +38,7 @@ Q_OBJECT
     CaptureThread thread;
     QDeclarativeView *ui;
     Phonon::MediaObject* media;
+    bool storeImage;
   protected:
     void paintEvent(QPaintEvent *event);
 

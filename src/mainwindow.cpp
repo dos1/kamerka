@@ -25,20 +25,10 @@
 
 #include "mainwindow.h"
 
-EngineAccess::EngineAccess()
-    : QObject(0)
-{
-}
-
-EngineAccess::~EngineAccess()
-{
-}
-
 void EngineAccess::setEngine(QScriptValue val)
 {
     this->engine = val.engine();
 }
-
 
 QScriptValue jsi18n(QScriptContext *context, QScriptEngine *engine)
 {
@@ -63,14 +53,14 @@ void MainWindow::QMLStatus(QDeclarativeView::Status status){
         }
 
         KMessageBox::detailedError(this, i18n("Could not load QML interface!"), errors, i18n("Error"), KMessageBox::Dangerous);
-        delete videoViewer->media;
-        exit(0);
+        //delete videoViewer->media;
+        QApplication::quit();
     }
 }
 
 void MainWindow::photoTaken(){
     videoViewer->ui = ui;
-    videoViewer->thread.storeImage=true;
+    videoViewer->storeImage=true;
 }
 
 void MainWindow::timerCounter(int count) {
@@ -89,8 +79,7 @@ void MainWindow::showDirectory() {
     QDir dir(basepath);
     dir.mkdir("kamerka");
     QProcess::startDetached("kde-open", QStringList() << QDir::homePath() + "/kamerka");
-    delete videoViewer->media;
-    exit(0);
+    QApplication::quit();
 }
 
 void MainWindow::resizeEvent(QResizeEvent *e) {
@@ -100,8 +89,7 @@ void MainWindow::resizeEvent(QResizeEvent *e) {
 
 MainWindow::~MainWindow()
 {
-    delete videoViewer->media;
-    exit(0);
+  //qDebug() << "MainWindow";
 }
 
 MainWindow::MainWindow() {
@@ -117,10 +105,10 @@ MainWindow::MainWindow() {
 
     this->setCentralWidget(ui);
 
-    if (videoViewer->thread.startUlan()) {
+    if (videoViewer->thread.start()) {
       KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
-      delete videoViewer->media;
-      exit(0);
+      //delete videoViewer->media;
+      QApplication::quit();
     }
 
     //Glorious hack:steal the engine - thanks for KDeclarative, from which I stole this code! :)
@@ -171,6 +159,8 @@ MainWindow::MainWindow() {
     engineAccess->engine->setGlobalObject(newGlobalObject);
 
     engineAccess->engine->globalObject().setProperty("i18n", engineAccess->engine->newFunction(jsi18n));
+
+    delete engineAccess;
 
     // end of hack
 

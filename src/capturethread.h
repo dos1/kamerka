@@ -23,7 +23,6 @@
 #include <QThread>
 #include <QMutex>
 #include <QImage>
-#include <QWaitCondition>
 #include <fcntl.h>
 #include <errno.h>
 #include <sys/mman.h>
@@ -35,34 +34,8 @@ class CaptureThread : public QThread
     Q_OBJECT
 
 public:
-    CaptureThread(QObject *parent = 0);
-    ~CaptureThread();
-
-    bool devam;
-    bool storeImage;
-    int autoshoot;
-
-    struct buffer {
-            void   *start;
-            size_t length;
-    };
-    static void xioctl(int fh, int request, void *arg)
-    {
-            int r;
-
-            do {
-                    r = v4l2_ioctl(fh, request, arg);
-            } while (r == -1 && ((errno == EINTR) || (errno == EAGAIN)));
-
-            if (r == -1) {
-                    fprintf(stderr, "error %d, %s\n", errno, strerror(errno));
-                    return;
-            }
-    };
-    struct buffer                   *buffers;
-
-    void stopUlan();
-    int startUlan();
+    int stop();
+    int start();
 protected:
     void run();
 signals:
@@ -70,10 +43,17 @@ signals:
 
 private:
     QMutex mutex;
-    QWaitCondition condition;
     void closeVideoOut();
 
     int width, height;
+
+    bool devam;
+
+    struct buffer {
+        void   *start;
+        size_t length;
+    };
+    struct buffer                   *buffers;
 
     struct v4l2_format              fmt;
     struct v4l2_buffer              buf;
@@ -84,9 +64,12 @@ private:
     int                             r, fd;
     unsigned int                    n_buffers;
     QString                         dev_name;
-    char                            out_name[256];
-    FILE                            *fout;
 
+    struct v4l2_format src_fmt;
+    unsigned char *dst_buf;
+    struct v4lconvert_data *v4lconvert_data;
+    int di;
+    char header [50];
 };
 
 #endif // CAPTURETHREAD_H
