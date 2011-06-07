@@ -70,6 +70,12 @@ void MainWindow::timerCounter(int count) {
 }
 
 void MainWindow::showDirectory() {
+    QString basepath = getenv("XDG_PICTURES_DIR");
+    if ((basepath=="") || (!QDir(basepath).exists())) {
+        basepath = QDir::homePath();
+    }
+    QDir dir(basepath);
+    dir.mkdir("kamerka");
     QProcess::startDetached("kde-open", QStringList() << QDir::homePath() + "/kamerka");
     delete videoViewer->media;
     exit(0);

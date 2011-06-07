@@ -5,3 +5,8 @@ Main tester:
 
 v4l handling code was based on qtv4lcapture code from Özkan Pakdil <ozkan.pakdil@gmail.com>
 http://qtv4lcapture.sourceforge.net/
+
+Translations:
+ * Czech: Pavel Fric <pavelfric@seznam.cz>
+ * Polish: Sebastian Krzyszkowiak <dos@dosowisko.net>
+ * Serbian: Mladen Pejaković <pejakm@gmail.com>

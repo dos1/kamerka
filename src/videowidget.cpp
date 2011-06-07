@@ -76,14 +76,18 @@ void Focia::openFile (unsigned int i) {
 
 void videowidget::setPicture(QImage i){
   if (thread.storeImage) {
-    QDir dir(QDir::homePath());
+    QString basepath = getenv("XDG_PICTURES_DIR");
+    if ((basepath=="") || (!QDir(basepath).exists())) {
+        basepath = QDir::homePath();
+    }
+    QDir dir(basepath);
     dir.mkdir("kamerka");
     media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));
     media->play();
 
     int c = 0;
     QString counterfilename;
-    counterfilename = QDir::homePath() + "/kamerka/.counter";
+    counterfilename = basepath + "/kamerka/.counter";
 
     QFile counterfile(counterfilename.toStdString().c_str());
     if (counterfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -100,7 +104,7 @@ void videowidget::setPicture(QImage i){
     counterfile.close();
 
     QString imagepath;
-    imagepath = QDir::homePath() + "/kamerka/image";
+    imagepath = basepath + "/kamerka/image";
     imagepath += QString::number(c);
     imagepath += ".png";
     kDebug() << QString("%s").arg(imagepath);
@@ -112,7 +116,7 @@ void videowidget::setPicture(QImage i){
     Focia* fotka = new Focia;
     fotka->setFilename(imagepath);
 
-    QString s = i18n("Photo was stored in file %1", imagepath);
+    QString s = i18n("Photo has been stored in file %1", imagepath);
 
     QPixmap pixmap = QPixmap::fromImage(i);
 
