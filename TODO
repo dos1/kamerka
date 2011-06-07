@@ -7,8 +7,11 @@ For 0.8:
   * image folder
   * notifications on/off
   * sounds on/off
+ * error handling for loading QML interface
 
 For 1.0:
+ * better scalling ui
+ * start with window size = video resolution
  * animated preview of already taken photos
  * some basic management of taken photos
  * some basic effects
