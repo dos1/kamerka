@@ -55,6 +55,18 @@ QScriptValue jsi18n(QScriptContext *context, QScriptEngine *engine)
     return message.toString();
 }
 
+void MainWindow::QMLStatus(QDeclarativeView::Status status){
+    if (status==QDeclarativeView::Error) {
+        QString errors = "";
+        for(int i=0; i<ui->errors().size(); ++i){
+            errors += ui->errors()[i].toString() +'\n';
+        }
+
+        KMessageBox::detailedError(this, i18n("Could not load QML interface!"), errors, i18n("Error"), KMessageBox::Dangerous);
+        delete videoViewer->media;
+        exit(0);
+    }
+}
 
 void MainWindow::photoTaken(){
     videoViewer->ui = ui;
@@ -98,6 +110,7 @@ MainWindow::MainWindow() {
     qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
 
     ui = new QDeclarativeView;
+    connect(ui, SIGNAL(statusChanged(QDeclarativeView::Status)), this, SLOT(QMLStatus(QDeclarativeView::Status)));
 
     videoViewer = new videowidget(this);
     videoViewer->show();

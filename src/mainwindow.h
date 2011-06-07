@@ -47,5 +47,6 @@ public slots:
     void photoTaken();
     void timerCounter(int);
     void showDirectory();
+    void QMLStatus(QDeclarativeView::Status);
 };
 
