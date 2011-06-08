@@ -61,7 +61,8 @@ videowidget::videowidget(QWidget *parent) : QWidget(parent) {
 }
 
 videowidget::~videowidget() {
-    thread.stop();
+    if (thread.isRunning())
+        thread.stop();
 }
 
 void videowidget::paintEvent(QPaintEvent *) {

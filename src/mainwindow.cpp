@@ -56,7 +56,7 @@ void MainWindow::QMLStatus(QDeclarativeView::Status status) {
         }
 
         KMessageBox::detailedError(this, i18n("Could not load QML interface!"), errors, i18n("Error"), KMessageBox::Dangerous);
-        QApplication::quit();
+        close();
     }
 }
 
@@ -105,7 +105,7 @@ MainWindow::MainWindow() {
     if (videoViewer->thread.start()) {
         // if opening V4L device failed:
         KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
-        QApplication::quit();
+        close();
     }
 
     //Glorious hack:steal the engine - thanks for KDeclarative, from which I stole this code! :)
