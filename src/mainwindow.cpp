@@ -160,7 +160,7 @@ MainWindow::MainWindow() {
 
     // end of hack
 
-    ui->rootContext()->setContextProperty("fileName", ":/icons/kamerka.png");
+    ui->rootContext()->setContextProperty("fileName", "qrc:/icons/kamerka.png");
     ui->setSource(KUrl("qrc:/qml/kamerka.qml"));
 
     // let widgets have transparent background
