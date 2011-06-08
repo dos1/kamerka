@@ -22,6 +22,7 @@
 #include <Phonon/AudioOutput>
 #include <KLocalizedString>
 #include <KStandardDirs>
+#include <KGlobalSettings>
 #include <KDebug>
 
 #include "videowidget.h"
@@ -77,18 +78,14 @@ void Focia::openFile (unsigned int i) {
 
 void videowidget::setPicture(QImage i){
   if (storeImage) {
-    QString basepath = getenv("XDG_PICTURES_DIR");
-    if ((basepath=="") || (!QDir(basepath).exists())) {
-        basepath = QDir::homePath();
-    }
-    QDir dir(basepath);
+    QDir dir(KGlobalSettings::picturesPath());
     dir.mkdir("kamerka");
     media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));
     media->play();
 
     int c = 0;
     QString counterfilename;
-    counterfilename = basepath + "/kamerka/.counter";
+    counterfilename = KGlobalSettings::picturesPath() + "/kamerka/.counter";
 
     QFile counterfile(counterfilename.toStdString().c_str());
     if (counterfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -105,7 +102,7 @@ void videowidget::setPicture(QImage i){
     counterfile.close();
 
     QString imagepath;
-    imagepath = basepath + "/kamerka/image";
+    imagepath = KGlobalSettings::picturesPath() + "/kamerka/image";
     imagepath += QString::number(c);
     imagepath += ".png";
     kDebug() << QString("%s").arg(imagepath);
