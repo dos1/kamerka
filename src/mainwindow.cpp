@@ -170,8 +170,6 @@ MainWindow::MainWindow() {
     // resize QML UI together with window
     ui->setResizeMode(QDeclarativeView::SizeRootObjectToView);
 
-    this->setWindowTitle(QString(i18n("Kamerka")));
-
     // connect UI button signals to slots in this class
     connect(ui->rootObject(), SIGNAL(takePhoto()), this, SLOT(takePhoto()));
     connect(ui->rootObject(), SIGNAL(timerCounter(int)), this, SLOT(timerCounter(int)));
