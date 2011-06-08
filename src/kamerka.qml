@@ -24,6 +24,7 @@
      property bool cyknij: false;
      property int timercount: 5;
      property bool timeranim: false;
+     property bool more: false;
 
      signal takePhoto();
      signal timerCounter(int count);
@@ -143,6 +144,10 @@
         page.timercount--;
         page.timeranim=true;
      }
+     function moreOrLess() {
+         if (more) { more=false; }
+         else { more=true; }
+     }
 
      Rectangle {
          id: toolbar;
@@ -153,12 +158,6 @@
          color: "#33000000";
          radius: 10;
          opacity: 1;
-         /*MouseArea {
-           id: mouseArea2;
-           anchors.fill: parent;
-           //hoverEnabled: true;
-           //preventStealing: true;
-         }*/
 
          Button {
              id: shot;
@@ -168,7 +167,7 @@
              anchors.leftMargin: 4;
              width: (parent.width/3)-8;
              text: i18n("Take a photo");
-             mouse.onClicked:robFotke();
+             mouse.onClicked: robFotke();
          }
          Button {
              id: autoshot;
@@ -178,36 +177,79 @@
              anchors.leftMargin: 2;
              width: (parent.width/3)-8;
              text: i18n("Self-timer");
-             mouse.onClicked:timerGo();
+             mouse.onClicked: timerGo();
          }
          Button {
-             id: dolphin;
+             id: moreBtn;
              anchors.left: autoshot.right;
              anchors.bottom: parent.verticalCenter;
              anchors.bottomMargin: 4;
              anchors.leftMargin: 2;
              anchors.right:  parent.right;
              anchors.rightMargin:  4;
+             text: more ? i18n("Less") : i18n("More");
+             mouse.onClicked: moreOrLess();
+         }
+         Button {
+             id: configure;
+             anchors.top:  parent.verticalCenter;
+             anchors.left: parent.left;
+             anchors.bottom: parent.bottom;
+             anchors.topMargin: 2;
+             anchors.bottomMargin: 4;
+             anchors.leftMargin: 4;
+             width: (parent.width/2)-8;
+             text: i18n("Configure");
+             mouse.onClicked: showConfiguration();
+         }
+         Button {
+             id: dolphin;
+             anchors.top:  parent.verticalCenter;
+             anchors.left: configure.right;
+             anchors.bottom: parent.bottom;
+             anchors.topMargin: 2;
+             anchors.bottomMargin: 4;
+             anchors.leftMargin: 2;
+             anchors.right:  parent.right;
+             anchors.rightMargin:  4;
              text: i18n("Open directory");
-             mouse.onClicked:showDirectory();
+             mouse.onClicked: showDirectory();
          }
 
-         states: State {
-             name: "down"; when: timer.running == true
-             PropertyChanges {
-                 target: toolbar;
-                 y: page.height;
+
+         states: [
+             State {
+                 name: "down"; when: (timer.running == true) || (canvasVisible == true)
+                 PropertyChanges {
+                     target: toolbar;
+                     y: page.height;
+                 }
+             },
+             State {
+                 name: "more"; when: more == true
+                 PropertyChanges {
+                     target: toolbar;
+                     y: page.height-height-4;
+                     color: "#AA000000";
+                 }
              }
-         }
+         ]
 
-         transitions: Transition {
-             from: ""; to: "down"; reversible: false
-             SequentialAnimation {
-                 NumberAnimation { property: "y"; duration: 500; easing.type: Easing.OutQuad; }
+         transitions: [
+             Transition {
+                 to: "down"; reversible: false;
+                 SequentialAnimation {
+                     NumberAnimation { property: "y"; duration: 500; easing.type: Easing.OutQuad; }
+                 }
+             },
+             Transition {
+                 from: ""; to: "more"; reversible: true;
+                 ParallelAnimation {
+                     NumberAnimation { property: "y"; duration: 500; easing.type: Easing.InOutBack; }
+                     ColorAnimation { property: "color"; duration: 500; }
+                 }
              }
-
-         }
-
+         ]
 
      }
 
