@@ -83,7 +83,7 @@ void videowidget::setPicture(QImage i) {
     if (storeImage) {
         // we're taking a photo!
         QDir dir(KGlobalSettings::picturesPath());
-        dir.mkdir("kamerka");
+        dir.mkpath("kamerka");
 
         // play sound
         media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));

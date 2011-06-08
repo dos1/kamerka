@@ -76,7 +76,7 @@ void MainWindow::timerCounter(int count) {
 // slot for UI button - open file manager
 void MainWindow::showDirectory() {
     QDir dir(KGlobalSettings::picturesPath());
-    dir.mkdir("kamerka");
+    dir.mkpath("kamerka");
     QProcess::startDetached("kde-open", QStringList() << KGlobalSettings::picturesPath() + "/kamerka");
     QApplication::quit();
 }
