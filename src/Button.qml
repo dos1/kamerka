@@ -45,6 +45,13 @@ import Qt 4.7
          anchors.centerIn: parent
          font.pointSize: 12
          color: "white"
+         Behavior on text {
+             SequentialAnimation {
+                 NumberAnimation { target: textItem; property: "opacity"; to: 0 }
+                 PropertyAction {}
+                 NumberAnimation { target: textItem; property: "opacity"; to: 1 }
+             }
+         }
      }
 
 
