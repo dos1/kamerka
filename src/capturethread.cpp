@@ -39,6 +39,7 @@ void xioctl(int fh, int request, void *arg)
 }
 
 void CaptureThread::run(){
+    // process video data
     while (devam) {
         mutex.lock();
         do {
@@ -113,6 +114,7 @@ int CaptureThread::start()
     devam=false;
     fd = -1;
 
+    // read config
     KConfig* config = new KConfig("kamerkarc");
     KConfigGroup group = config->group("Video");
 
@@ -122,6 +124,7 @@ int CaptureThread::start()
 
     delete config;
 
+    // open webcam device node
     fd = v4l2_open(dev_name.toStdString().c_str(), O_RDWR | O_NONBLOCK, 0);
     if (fd < 0) {
            kError() << "Cannot open device";
@@ -194,6 +197,7 @@ int CaptureThread::start()
     sprintf(header,"P6\n%d %d 255\n",fmt.fmt.pix.width,fmt.fmt.pix.height);
     devam=true;
 
+    // start processing video data
     QThread::start();
     return 0;
 }

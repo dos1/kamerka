@@ -46,11 +46,11 @@ Q_OBJECT
     void setPicture(QImage);
 };
 
-class Focia : public QObject {
+class Notify : public QObject {
 Q_OBJECT
   public:
     QString filename;
-    void setFilename(QString);
+    Notify(QString);
   public slots:
     void openFile(unsigned int);
 };

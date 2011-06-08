@@ -42,7 +42,7 @@ public:
 private:
     void resizeEvent(QResizeEvent *e);
 public slots:
-    void photoTaken();
+    void takePhoto();
     void timerCounter(int);
     void showDirectory();
     void QMLStatus(QDeclarativeView::Status);

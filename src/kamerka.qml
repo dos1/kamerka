@@ -25,7 +25,7 @@
      property int timercount: 5;
      property bool timeranim: false;
 
-     signal photoTaken();
+     signal takePhoto();
      signal timerCounter(int count);
      signal showDirectory();
 
@@ -114,13 +114,13 @@
      }
      function robFotke() {
        cyknij=false;
-       page.photoTaken();
+       page.takePhoto();
 
        page.randdd=Math.random()*60;
        picture.opacity=0;
        focia.opacity=1;
      }
-     function fotkaZrobiona() {
+     function photoTaken() {
          cyknij=true;
      }
 

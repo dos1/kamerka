@@ -27,6 +27,29 @@
 
 #include "videowidget.h"
 
+Notify::Notify ( QString name ) {
+// this class is used to connect to notification signal
+    this->filename = name;
+}
+
+void Notify::openFile (unsigned int i) {
+    // kDebug(QString::number(i).toStdString().c_str());
+    QString app;
+    QStringList arg;
+    if (i==1) {
+      app = "dolphin";
+      arg << "--select";
+    }
+    else if (i==2) {
+      app = "gimp";
+    }
+    else {
+      app = "inkscape";
+    }
+    arg << this->filename;
+    QProcess::startDetached(app, arg);
+}
+
 videowidget::videowidget(QWidget *parent) :
     QWidget(parent)
 {
@@ -43,93 +66,80 @@ videowidget::~videowidget() {
     thread.stop();
 }
 
-void videowidget::paintEvent(QPaintEvent */*event*/) {
+void videowidget::paintEvent(QPaintEvent *) {
+// draw picture from webcam (pixmap) on repaint
     QPainter* painter = new QPainter(this);
     painter->setPen(Qt::white);
     painter->setFont(QFont("Arial", 30));
     painter->drawText(rect(), Qt::AlignCenter, i18n("Starting up webcam..."));
 
-    painter->drawPixmap(this->rect(),pixmap);
+    painter->drawPixmap(this->rect(), pixmap);
     delete painter;
 }
 
-void Focia::setFilename ( QString name ) {
-  this->filename = name;
-}
+void videowidget::setPicture(QImage i) {
+// image was transfered from capturethread to us - display it and, if requested, store
+    pixmap=QPixmap::fromImage(i);
+    update();
 
-void Focia::openFile (unsigned int i) {
-  // kDebug(QString::number(i).toStdString().c_str());
-  QString app;
-  QStringList arg;
-  if (i==1) {
-    app = "dolphin";
-    arg << "--select";
-  }
-  else if (i==2) {
-    app = "gimp";
-  }
-  else {
-    app = "inkscape";
-  }
-  arg << this->filename;
-  QProcess::startDetached(app, arg);
-}
+    if (storeImage) {
+        // we're taking a photo!
+        QDir dir(KGlobalSettings::picturesPath());
+        dir.mkdir("kamerka");
 
+        // play sound
+        media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));
+        media->play();
 
-void videowidget::setPicture(QImage i){
-  if (storeImage) {
-    QDir dir(KGlobalSettings::picturesPath());
-    dir.mkdir("kamerka");
-    media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));
-    media->play();
+        // check, which number comes next (so we're able to set correct file name)
+        int c = 0;
+        QString counterfilename;
+        counterfilename = KGlobalSettings::picturesPath() + "/kamerka/.counter";
 
-    int c = 0;
-    QString counterfilename;
-    counterfilename = KGlobalSettings::picturesPath() + "/kamerka/.counter";
+        QFile counterfile(counterfilename.toStdString().c_str());
+        if (counterfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+              QTextStream counter(&counterfile);
+              counter >> c;
+        }
+        else kWarning() << "Could not open .counter file!";
+        c++;
+        counterfile.close();
 
-    QFile counterfile(counterfilename.toStdString().c_str());
-    if (counterfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-          QTextStream counter(&counterfile);
-          counter >> c;
+        // store incremented value in counter file
+        counterfile.open(QIODevice::WriteOnly);
+        QTextStream counter(&counterfile);
+        counter << c;
+        counterfile.close();
+
+        // save image
+        QString imagepath;
+        imagepath = KGlobalSettings::picturesPath() + "/kamerka/image";
+        imagepath += QString::number(c);
+        imagepath += ".png";
+        kDebug() << QString("%s").arg(imagepath);
+        i.save(imagepath, "PNG");
+
+        // trigger animation in QML UI
+        ui->rootContext()->setContextProperty("fileName", "file:"+imagepath);
+        QMetaObject::invokeMethod(ui->rootObject(), "photoTaken");
+
+        // display notification
+        Notify* fotka = new Notify(imagepath);
+
+        QString s = i18n("Photo has been stored in file %1", imagepath);
+
+        QPixmap pixmap = QPixmap::fromImage(i);
+
+        KNotification *notification= new KNotification ( "takenPhoto" );
+        notification->setText( s );
+        notification->setPixmap( pixmap );
+        QStringList lista;
+        lista << i18n("Show in directory") << i18n("Open in GIMP") << i18n("Open in Inkscape");
+        notification->setActions( lista );
+        connect(notification, SIGNAL(activated(unsigned int)), fotka , SLOT(openFile(unsigned int)) );
+        notification->sendEvent();
+
+        // we don't want to store next frames too
+        storeImage=false;
     }
-    else kWarning() << "Could not open .counter file!";
-    c++;
-    counterfile.close();
-
-    counterfile.open(QIODevice::WriteOnly);
-    QTextStream counter(&counterfile);
-    counter << c;
-    counterfile.close();
-
-    QString imagepath;
-    imagepath = KGlobalSettings::picturesPath() + "/kamerka/image";
-    imagepath += QString::number(c);
-    imagepath += ".png";
-    kDebug() << QString("%s").arg(imagepath);
-    i.save(imagepath, "PNG");
-
-    ui->rootContext()->setContextProperty("fileName", "file:"+imagepath);
-    QMetaObject::invokeMethod(ui->rootObject(), "fotkaZrobiona");
-
-    Focia* fotka = new Focia;
-    fotka->setFilename(imagepath);
-
-    QString s = i18n("Photo has been stored in file %1", imagepath);
-
-    QPixmap pixmap = QPixmap::fromImage(i);
-
-    KNotification *notification= new KNotification ( "takenPhoto" );
-    notification->setText( s );
-    notification->setPixmap( pixmap );
-    QStringList lista;
-    lista << i18n("Show in directory") << i18n("Open in GIMP") << i18n("Open in Inkscape");
-    notification->setActions( lista );
-    connect(notification, SIGNAL(activated(unsigned int)), fotka , SLOT(openFile(unsigned int)) );
-    notification->sendEvent();
-
-    storeImage=false;
-  }
-
-  pixmap=QPixmap::fromImage(i);
-  update();
 }

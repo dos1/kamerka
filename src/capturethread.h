@@ -43,7 +43,6 @@ signals:
 
 private:
     QMutex mutex;
-    void closeVideoOut();
 
     int width, height;
 
