@@ -20,6 +20,7 @@
 #ifndef VIDEOWIDGET_H
 #define VIDEOWIDGET_H
 
+#include <KNotification>
 #include <QWidget>
 #include <QPainter>
 #include <QtDeclarative>
@@ -46,11 +47,11 @@ Q_OBJECT
     void setPicture(QImage);
 };
 
-class Notify : public QObject {
+class Notification : public KNotification {
 Q_OBJECT
   public:
+    Notification(QString, QString filename);
     QString filename;
-    Notify(QString);
   public slots:
     void openFile(unsigned int);
 };

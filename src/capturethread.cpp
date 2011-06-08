@@ -137,12 +137,12 @@ int CaptureThread::start() {
     fmt.fmt.pix.field       = V4L2_FIELD_INTERLACED;
     xioctl(fd, VIDIOC_S_FMT, &fmt);
     if (fmt.fmt.pix.pixelformat != V4L2_PIX_FMT_RGB24) {
-           printf("Libv4l didn't accept RGB24 format. Can't proceed.\n");
+           kError() << "Libv4l didn't accept RGB24 format. Can't proceed.";
            quit();
            return 1;
     }
-           kDebug() << QString("Driver is sending image at %dx%d\n").arg(
-                   fmt.fmt.pix.width, fmt.fmt.pix.height);
+           kDebug() << QString("Driver is sending image at %1x%2").arg(
+                   QString::number(fmt.fmt.pix.width), QString::number(fmt.fmt.pix.height));
 
     v4lconvert_data = v4lconvert_create(fd);
     if (v4lconvert_data == NULL)

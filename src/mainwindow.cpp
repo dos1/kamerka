@@ -125,7 +125,6 @@ MainWindow::MainWindow() {
 
     QString eval = QLatin1String("eval");
     QString version = QLatin1String("version");
-
     {
         QScriptValueIterator iter(originalGlobalObject);
         QVector<QString> names;
@@ -133,30 +132,21 @@ MainWindow::MainWindow() {
         QVector<QScriptValue::PropertyFlags> flags;
         while (iter.hasNext()) {
             iter.next();
-
             QString name = iter.name();
-
             if (name == version) {
                 continue;
             }
-
             if (name != eval) {
                 names.append(name);
                 values.append(iter.value());
                 flags.append(iter.flags() | QScriptValue::Undeletable);
             }
             newGlobalObject.setProperty(iter.scriptName(), iter.value());
-
         }
-
     }
-
     engineAccess->engine->setGlobalObject(newGlobalObject);
-
     engineAccess->engine->globalObject().setProperty("i18n", engineAccess->engine->newFunction(jsi18n));
-
     delete engineAccess;
-
     // end of hack
 
     ui->rootContext()->setContextProperty("fileName", "qrc:/icons/kamerka.png");

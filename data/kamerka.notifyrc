@@ -2,7 +2,9 @@
 Comment=Kamerka
 IconName=camera-web
 
-[Event/takenPhoto]
+[Event/photoTaken]
 Name=Photo
-Comment=New photo was taken
+Name[pl]=Zdjęcie
+Comment=New photo has been taken
+Comment[pl]=Zostało zrobione nowe zdjęcie
 Action=Popup
