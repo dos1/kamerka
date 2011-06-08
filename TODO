@@ -16,6 +16,11 @@ For 1.0:
   * buttons in notifications (for instance to set Krita instead of GIMP)
   * consecutive image taking
 
-After:
+For 1.x:
+ * photo uploading
+ * moar effects
+ * various fixes and user requests
+
+For 2.0:
  * video recording
- * moar effects!
+ * and moar effects!
