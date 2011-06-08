@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-07 13:23+0200\n"
+"POT-Creation-Date: 2011-06-08 17:56+0200\n"
 "PO-Revision-Date: 2011-06-07 13:26+0100\n"
 "Last-Translator: Sebastian Krzyszkowiak <dos@dosowisko.net>\n"
 "Language-Team: pl_PL <dos@dosowisko.net>\n"
@@ -18,77 +18,72 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: POLAND\n"
 
-#: src/main.cpp:29
-#: src/mainwindow.cpp:183
-msgid "Kamerka"
-msgstr "Kamerka"
-
-#: src/main.cpp:30
-msgid "Simple photo taking application with fancy animated interface"
-msgstr "Prosta aplikacja do robienia zdjęć z ładnym, animowanym interfejsem"
-
-#: src/main.cpp:30
-msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
-msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
-
-#: src/mainwindow.cpp:47
-msgid "i18n() takes at least one argument"
-msgstr "i18n() wymaga conajmniej jednego argumentu"
-
-#: src/mainwindow.cpp:65
-msgid "Could not load QML interface!"
-msgstr "Nie można uruchomić interfejsu QML!"
-
-#: src/mainwindow.cpp:65
-#: src/mainwindow.cpp:121
-msgid "Error"
-msgstr "Błąd"
-
-#: src/mainwindow.cpp:121
-msgid "Could not connect to V4L device!"
-msgstr "Nie można połączyć się z urządzeniem V4L!"
-
-#: src/mainwindow.cpp:191
+#: src/kamerka.qml:170
 msgid "Take a photo"
 msgstr "Zrób zdjęcie"
 
-#: src/mainwindow.cpp:192
+#: src/kamerka.qml:180
 msgid "Self-timer"
 msgstr "Samowyzwalacz"
 
-#: src/mainwindow.cpp:193
+#: src/kamerka.qml:191
 msgid "Open directory"
 msgstr "Otwórz folder"
 
-#: src/videowidget.cpp:48
+#: src/main.cpp:35
+msgid "Kamerka"
+msgstr "Kamerka"
+
+#: src/main.cpp:36
+msgid "Simple photo taking application with fancy animated interface"
+msgstr "Prosta aplikacja do robienia zdjęć z ładnym, animowanym interfejsem"
+
+#: src/main.cpp:37
+msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+
+#: src/mainwindow.cpp:39
+msgid "i18n() takes at least one argument"
+msgstr "i18n() wymaga conajmniej jednego argumentu"
+
+#: src/mainwindow.cpp:58
+msgid "Could not load QML interface!"
+msgstr "Nie można uruchomić interfejsu QML!"
+
+#: src/mainwindow.cpp:58 src/mainwindow.cpp:107
+msgid "Error"
+msgstr "Błąd"
+
+#: src/mainwindow.cpp:107
+msgid "Could not connect to V4L device!"
+msgstr "Nie można połączyć się z urządzeniem V4L!"
+
+#: src/videowidget.cpp:73
 msgid "Starting up webcam..."
 msgstr "Uruchamianie kamerki..."
 
-#: src/videowidget.cpp:119
+#: src/videowidget.cpp:128
 msgid "Photo has been stored in file %1"
 msgstr "Zdjęcie zostało zapisane w pliku %1"
 
-#: src/videowidget.cpp:127
+#: src/videowidget.cpp:136
 msgid "Show in directory"
 msgstr "Pokaż w folderze"
 
-#: src/videowidget.cpp:127
+#: src/videowidget.cpp:136
 msgid "Open in GIMP"
 msgstr "Otwórz w GIMPie"
 
-#: src/videowidget.cpp:127
+#: src/videowidget.cpp:136
 msgid "Open in Inkscape"
 msgstr "Otwórz w Inkscape"
 
-#: tools/rc.cpp:1
-#: rc.cpp:1
+#: tools/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sebastian Krzyszkowiak"
 
-#: tools/rc.cpp:2
-#: rc.cpp:2
+#: tools/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dos@dosowisko.net"
-

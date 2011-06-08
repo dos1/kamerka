@@ -3,12 +3,11 @@
 #
 # Urs Fleisch <dos@dosowisko.net>, 2011.
 # Mladen Pejaković <pejakm@gmail.com>, 2011.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-07 13:23+0200\n"
+"POT-Creation-Date: 2011-06-08 17:56+0200\n"
 "PO-Revision-Date: 2011-06-07 21:24+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
@@ -17,65 +16,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 0.3\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: src/main.cpp:29 src/mainwindow.cpp:183
-msgid "Kamerka"
-msgstr "Камерка"
-
-#: src/main.cpp:30
-msgid "Simple photo taking application with fancy animated interface"
-msgstr "Једноставна апликација за хватање фотографија са лепим анимираним сучељем"
-
-#: src/main.cpp:30
-msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
-msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
-
-#: src/mainwindow.cpp:47
-msgid "i18n() takes at least one argument"
-msgstr "i18n() захтева бар један аргумент"
-
-#: src/mainwindow.cpp:65
-msgid "Could not load QML interface!"
-msgstr "Не могу да учитам QML сучеље!"
-
-#: src/mainwindow.cpp:65 src/mainwindow.cpp:121
-msgid "Error"
-msgstr "Грешка"
-
-#: src/mainwindow.cpp:121
-msgid "Could not connect to V4L device!"
-msgstr "Не могу да се повежем са V4L сучењем!"
-
-#: src/mainwindow.cpp:191
+#: src/kamerka.qml:170
 msgid "Take a photo"
 msgstr "Сликај"
 
-#: src/mainwindow.cpp:192
+#: src/kamerka.qml:180
 msgid "Self-timer"
 msgstr "Тајмер"
 
-#: src/mainwindow.cpp:193
+#: src/kamerka.qml:191
 msgid "Open directory"
 msgstr "Отвори фасциклу"
 
-#: src/videowidget.cpp:48
+#: src/main.cpp:35
+msgid "Kamerka"
+msgstr "Камерка"
+
+#: src/main.cpp:36
+msgid "Simple photo taking application with fancy animated interface"
+msgstr ""
+"Једноставна апликација за хватање фотографија са лепим анимираним сучељем"
+
+#: src/main.cpp:37
+msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+
+#: src/mainwindow.cpp:39
+msgid "i18n() takes at least one argument"
+msgstr "i18n() захтева бар један аргумент"
+
+#: src/mainwindow.cpp:58
+msgid "Could not load QML interface!"
+msgstr "Не могу да учитам QML сучеље!"
+
+#: src/mainwindow.cpp:58 src/mainwindow.cpp:107
+msgid "Error"
+msgstr "Грешка"
+
+#: src/mainwindow.cpp:107
+msgid "Could not connect to V4L device!"
+msgstr "Не могу да се повежем са V4L сучењем!"
+
+#: src/videowidget.cpp:73
 msgid "Starting up webcam..."
 msgstr "Покрећем веб-камеру..."
 
-#: src/videowidget.cpp:119
+#: src/videowidget.cpp:128
 msgid "Photo has been stored in file %1"
 msgstr "Фотографија је смештена у фајл %1"
 
-#: src/videowidget.cpp:127
+#: src/videowidget.cpp:136
 msgid "Show in directory"
 msgstr "Покажи у фасцикли"
 
-#: src/videowidget.cpp:127
+#: src/videowidget.cpp:136
 msgid "Open in GIMP"
 msgstr "Отвори помоћу ГИМПа"
 
-#: src/videowidget.cpp:127
+#: src/videowidget.cpp:136
 msgid "Open in Inkscape"
 msgstr "Отвори помоћи Инкскејпа"
 

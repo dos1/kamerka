@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-07 13:23+0200\n"
+"POT-Creation-Date: 2011-06-08 17:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,63 +17,63 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.cpp:29 src/mainwindow.cpp:183
-msgid "Kamerka"
-msgstr ""
-
-#: src/main.cpp:30
-msgid "Simple photo taking application with fancy animated interface"
-msgstr ""
-
-#: src/main.cpp:30
-msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
-msgstr ""
-
-#: src/mainwindow.cpp:47
-msgid "i18n() takes at least one argument"
-msgstr ""
-
-#: src/mainwindow.cpp:65
-msgid "Could not load QML interface!"
-msgstr ""
-
-#: src/mainwindow.cpp:65 src/mainwindow.cpp:121
-msgid "Error"
-msgstr ""
-
-#: src/mainwindow.cpp:121
-msgid "Could not connect to V4L device!"
-msgstr ""
-
-#: src/mainwindow.cpp:191
+#: src/kamerka.qml:170
 msgid "Take a photo"
 msgstr ""
 
-#: src/mainwindow.cpp:192
+#: src/kamerka.qml:180
 msgid "Self-timer"
 msgstr ""
 
-#: src/mainwindow.cpp:193
+#: src/kamerka.qml:191
 msgid "Open directory"
 msgstr ""
 
-#: src/videowidget.cpp:48
+#: src/main.cpp:35
+msgid "Kamerka"
+msgstr ""
+
+#: src/main.cpp:36
+msgid "Simple photo taking application with fancy animated interface"
+msgstr ""
+
+#: src/main.cpp:37
+msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr ""
+
+#: src/mainwindow.cpp:39
+msgid "i18n() takes at least one argument"
+msgstr ""
+
+#: src/mainwindow.cpp:58
+msgid "Could not load QML interface!"
+msgstr ""
+
+#: src/mainwindow.cpp:58 src/mainwindow.cpp:107
+msgid "Error"
+msgstr ""
+
+#: src/mainwindow.cpp:107
+msgid "Could not connect to V4L device!"
+msgstr ""
+
+#: src/videowidget.cpp:73
 msgid "Starting up webcam..."
 msgstr ""
 
-#: src/videowidget.cpp:119
+#: src/videowidget.cpp:128
 msgid "Photo has been stored in file %1"
 msgstr ""
 
-#: src/videowidget.cpp:127
+#: src/videowidget.cpp:136
 msgid "Show in directory"
 msgstr ""
 
-#: src/videowidget.cpp:127
+#: src/videowidget.cpp:136
 msgid "Open in GIMP"
 msgstr ""
 
-#: src/videowidget.cpp:127
+#: src/videowidget.cpp:136
 msgid "Open in Inkscape"
 msgstr ""
 
