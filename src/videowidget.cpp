@@ -27,7 +27,7 @@
 
 #include "videowidget.h"
 
-Notify::Notify ( QString name ) {
+Notify::Notify (QString name) {
 // this class is used to connect to notification signal
     this->filename = name;
 }
@@ -50,9 +50,7 @@ void Notify::openFile (unsigned int i) {
     QProcess::startDetached(app, arg);
 }
 
-videowidget::videowidget(QWidget *parent) :
-    QWidget(parent)
-{
+videowidget::videowidget(QWidget *parent) : QWidget(parent) {
     storeImage=false;
     connect(&thread, SIGNAL(renderedImage(QImage)),
                 this, SLOT(setPicture(QImage)));

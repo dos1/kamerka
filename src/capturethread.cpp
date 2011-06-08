@@ -25,20 +25,19 @@
 
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
 
-void xioctl(int fh, int request, void *arg)
-{
-        int r;
-        do {
-            r = v4l2_ioctl(fh, request, arg);
-        } while (r == -1 && ((errno == EINTR) || (errno == EAGAIN)));
+void xioctl(int fh, int request, void *arg) {
+    int r;
+    do {
+        r = v4l2_ioctl(fh, request, arg);
+    } while (r == -1 && ((errno == EINTR) || (errno == EAGAIN)));
 
-        if (r == -1) {
-            kError() << "error " << errno << " " << strerror(errno);
-            return;
-        }
+    if (r == -1) {
+        kError() << "error " << errno << " " << strerror(errno);
+        return;
+    }
 }
 
-void CaptureThread::run(){
+void CaptureThread::run() {
     // process video data
     while (devam) {
         mutex.lock();
@@ -91,8 +90,7 @@ void CaptureThread::run(){
      }
 }
 
-int CaptureThread::stop()
-{
+int CaptureThread::stop() {
     devam=false;
     mutex.lock();
     type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
@@ -107,8 +105,7 @@ int CaptureThread::stop()
     return 0;
 }
 
-int CaptureThread::start()
-{
+int CaptureThread::start() {
     wait();
 
     devam=false;
