@@ -20,7 +20,7 @@
  import Effects 1.0
 
  Rectangle {
-     property int randdd: 0;
+     property int rand: 0;
      property bool cyknij: false;
      property int timercount: 5;
      property bool timeranim: false;
@@ -63,7 +63,7 @@
                  y: page.height-250;
                  width: 180;
                  height: 185;
-                 rotation: 180*4+(randdd-30);
+                 rotation: 180*4+(rand-30);
                  opacity: 0;
                  smooth: true;
              }
@@ -116,7 +116,7 @@
        cyknij=false;
        page.takePhoto();
 
-       page.randdd=Math.random()*60;
+       page.rand=Math.random()*60;
        picture.opacity=0;
        focia.opacity=1;
      }

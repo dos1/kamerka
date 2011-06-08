@@ -3,6 +3,8 @@ SET(kamerka_SRCS
   mainwindow.cpp
   videowidget.cpp
   capturethread.cpp
+  kamerka.qml
+  Button.qml
 )
 
 SET(kamerka_RCCS kamerka.qrc)
