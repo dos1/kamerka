@@ -1,5 +1,4 @@
 For 0.8:
- * fix crash on closing window!
  * add "clickable" configuration
   * device node, resolution
   * image folder

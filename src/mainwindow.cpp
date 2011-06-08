@@ -60,8 +60,8 @@ void MainWindow::QMLStatus(QDeclarativeView::Status status) {
     }
 }
 
-void MainWindow::takePhoto(){
-// slot for UI button - sheldule photo to be taken from next processed frame
+void MainWindow::takePhoto() {
+// slot for UI button - scheldule photo to be taken from next processed frame
     videoViewer->storeImage=true;
 }
 
@@ -88,13 +88,7 @@ void MainWindow::resizeEvent(QResizeEvent *e) {
     QMainWindow::resizeEvent(e);
 }
 
-MainWindow::~MainWindow()
-{
-  KCrash::setDrKonqiEnabled(false); // hack - FIXME!
-}
-
 MainWindow::MainWindow() {
-{
     // register QML effects
     qmlRegisterType<QGraphicsBlurEffect>("Effects",1,0,"Blur");
     qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
@@ -188,7 +182,4 @@ MainWindow::MainWindow() {
     hack = i18n("Take a photo");
     hack = i18n("Self-timer");
     hack = i18n("Open directory");
-
-  }
-
 }

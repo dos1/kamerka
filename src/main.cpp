@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     KApplication a;
     QIcon icon(":/kamerka.png");
     a.setWindowIcon(icon);
-    MainWindow w;
-    w.show();
+    MainWindow *w = new MainWindow();
+    w->show();
     return a.exec();
 }

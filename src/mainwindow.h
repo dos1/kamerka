@@ -36,7 +36,6 @@ class MainWindow : public KMainWindow {
     Q_OBJECT
 public:
     MainWindow();
-    ~MainWindow();
     videowidget *videoViewer;
     QDeclarativeView* ui;
 private:
