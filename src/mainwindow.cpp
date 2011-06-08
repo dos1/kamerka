@@ -16,14 +16,13 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <KLocalizedString>
 #include <QtScript/QScriptContext>
-#include <KDebug>
+#include <KLocalizedString>
 #include <KStandardDirs>
 #include <KMessageBox>
 #include <KUrl>
 #include <KGlobalSettings>
-#include <KCrash>
+#include <KDebug>
 
 #include "mainwindow.h"
 
