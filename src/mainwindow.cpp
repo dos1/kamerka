@@ -80,6 +80,13 @@ void MainWindow::showDirectory() {
     QApplication::quit();
 }
 
+// slot for UI button - show canvas layer with configuration
+void MainWindow::showConfiguration() {
+    QMetaObject::invokeMethod(ui->rootObject(), "showCanvasBackground");
+    //sleep(5);
+    //QMetaObject::invokeMethod(ui->rootObject(), "hideCanvasBackground");
+}
+
 // resize video widget together with window
 void MainWindow::resizeEvent(QResizeEvent *e) {
     videoViewer->resize(this->size());
@@ -162,4 +169,5 @@ MainWindow::MainWindow() {
     connect(ui->rootObject(), SIGNAL(takePhoto()), this, SLOT(takePhoto()));
     connect(ui->rootObject(), SIGNAL(timerCounter(int)), this, SLOT(timerCounter(int)));
     connect(ui->rootObject(), SIGNAL(showDirectory()), this, SLOT(showDirectory()));
+    connect(ui->rootObject(), SIGNAL(showConfiguration()), this, SLOT(showConfiguration()));
 }

@@ -25,10 +25,12 @@
      property int timercount: 5;
      property bool timeranim: false;
      property bool more: false;
+     property bool canvasVisible: false;
 
      signal takePhoto();
      signal timerCounter(int count);
      signal showDirectory();
+     signal showConfiguration();
 
      id: page
      width: 640; height: 480
@@ -148,6 +150,39 @@
          if (more) { more=false; }
          else { more=true; }
      }
+     function showCanvasBackground() {
+         canvasVisible=true;
+         testTimer.running=true;
+     }
+     function hideCanvasBackground() {
+         canvasVisible=false;
+     }
+
+     Rectangle {
+         id: canvasBackground;
+         color: "#DD000000";
+         x: 0;
+         y: 0;
+         width: parent.width;
+         height: parent.height;
+         opacity: 0;
+
+         states:
+             State {
+                 name: "visible"; when: canvasVisible == true
+                 PropertyChanges {
+                     target: canvasBackground;
+                     opacity: 1;
+                 }
+             }
+
+         transitions:
+             Transition {
+                 to: "visible"; reversible: true;
+                 NumberAnimation { property: "opacity"; duration: 1000; }
+             }
+
+     }
 
      Rectangle {
          id: toolbar;
@@ -219,10 +254,18 @@
 
          states: [
              State {
-                 name: "down"; when: (timer.running == true) || (canvasVisible == true)
+                 name: "down"; when: timer.running == true
                  PropertyChanges {
                      target: toolbar;
                      y: page.height;
+                 }
+             },
+             State {
+                 name: "hidden"; when: canvasVisible == true
+                 PropertyChanges {
+                     target: toolbar;
+                     y: page.height;
+                     color: "#AA000000";
                  }
              },
              State {
@@ -243,6 +286,12 @@
                  }
              },
              Transition {
+                 to: "hidden"; reversible: true;
+                 SequentialAnimation {
+                     NumberAnimation { property: "y"; duration: 500; easing.type: Easing.InOutBack; }
+                 }
+             },
+             Transition {
                  from: ""; to: "more"; reversible: true;
                  ParallelAnimation {
                      NumberAnimation { property: "y"; duration: 500; easing.type: Easing.InOutBack; }
@@ -253,9 +302,15 @@
 
      }
 
+     Timer { //REMOVE ME
+         id: testTimer;
+         interval: 5000; running: false; repeat: false;
+         onTriggered: hideCanvasBackground()
+     }
+
      Timer {
          id: timer;
-         interval: 1000; running: false; repeat: true
+         interval: 1000; running: false; repeat: true;
          onTriggered: timerTriggered()
      }
 
