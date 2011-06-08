@@ -37,8 +37,8 @@ void xioctl(int fh, int request, void *arg) {
     }
 }
 
+// process video data
 void CaptureThread::run() {
-    // process video data
     while (devam) {
         mutex.lock();
         do {

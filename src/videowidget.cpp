@@ -27,8 +27,8 @@
 
 #include "videowidget.h"
 
-Notify::Notify (QString name) {
 // this class is used to connect to notification signal
+Notify::Notify (QString name) {
     this->filename = name;
 }
 
@@ -65,8 +65,8 @@ videowidget::~videowidget() {
         thread.stop();
 }
 
-void videowidget::paintEvent(QPaintEvent *) {
 // draw picture from webcam (pixmap) on repaint
+void videowidget::paintEvent(QPaintEvent *) {
     QPainter* painter = new QPainter(this);
     painter->setPen(Qt::white);
     painter->setFont(QFont("Arial", 30));
@@ -76,8 +76,8 @@ void videowidget::paintEvent(QPaintEvent *) {
     delete painter;
 }
 
-void videowidget::setPicture(QImage i) {
 // image was transfered from capturethread to us - display it and, if requested, store
+void videowidget::setPicture(QImage i) {
     pixmap=QPixmap::fromImage(i);
     update();
 

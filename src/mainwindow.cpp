@@ -27,13 +27,13 @@
 
 #include "mainwindow.h"
 
-void EngineAccess::setEngine(QScriptValue val) {
 // part of QML hack to access script engine in rw mode
+void EngineAccess::setEngine(QScriptValue val) {
     this->engine = val.engine();
 }
 
-QScriptValue jsi18n(QScriptContext *context, QScriptEngine *engine) {
 // allow QML files to be translated
+QScriptValue jsi18n(QScriptContext *context, QScriptEngine *engine) {
     Q_UNUSED(engine)
     if (context->argumentCount() < 1) {
         kWarning() << i18n("i18n() takes at least one argument");
@@ -47,26 +47,25 @@ QScriptValue jsi18n(QScriptContext *context, QScriptEngine *engine) {
     return message.toString();
 }
 
-void MainWindow::QMLStatus(QDeclarativeView::Status status) {
 // show error when loading QML failed
+void MainWindow::QMLStatus(QDeclarativeView::Status status) {
     if (status==QDeclarativeView::Error) {
         QString errors = "";
-        for(int i=0; i<ui->errors().size(); ++i){
+        for (int i=0; i<ui->errors().size(); i++) {
             errors += ui->errors()[i].toString() +'\n';
         }
-
         KMessageBox::detailedError(this, i18n("Could not load QML interface!"), errors, i18n("Error"), KMessageBox::Dangerous);
         close();
     }
 }
 
-void MainWindow::takePhoto() {
 // slot for UI button - scheldule photo to be taken from next processed frame
+void MainWindow::takePhoto() {
     videoViewer->storeImage=true;
 }
 
-void MainWindow::timerCounter(int count) {
 // slot for UI button - play timer sound
+void MainWindow::timerCounter(int count) {
     //kDebug(QString::number(count).toStdString().c_str());
     if (count==5) {
       videoViewer->media->setCurrentSource(KStandardDirs::locate("data", "kamerka/timer.ogg"));
@@ -74,16 +73,16 @@ void MainWindow::timerCounter(int count) {
     }
 }
 
-void MainWindow::showDirectory() {
 // slot for UI button - open file manager
+void MainWindow::showDirectory() {
     QDir dir(KGlobalSettings::picturesPath());
     dir.mkdir("kamerka");
     QProcess::startDetached("kde-open", QStringList() << KGlobalSettings::picturesPath() + "/kamerka");
     QApplication::quit();
 }
 
-void MainWindow::resizeEvent(QResizeEvent *e) {
 // resize video widget together with window
+void MainWindow::resizeEvent(QResizeEvent *e) {
     videoViewer->resize(this->size());
     QMainWindow::resizeEvent(e);
 }
