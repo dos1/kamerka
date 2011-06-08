@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
                          KAboutData::License_GPL, ki18n("Copyright (c) 2011 Sebastian Krzyszkowiak") );
     KCmdLineArgs::init(argc, argv, &aboutData);
     KApplication a;
-    QIcon icon(":/kamerka.png");
+    QIcon icon(":/icons/kamerka.png");
     a.setWindowIcon(icon);
     MainWindow *w = new MainWindow();
     w->show();

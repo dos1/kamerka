@@ -119,7 +119,7 @@ void videowidget::setPicture(QImage i) {
         kDebug() << QString("%s").arg(imagepath);
         i.save(imagepath, "PNG");
 
-        // trigger animation in QML UI
+        // show taken photo and trigger animation in QML UI
         ui->rootContext()->setContextProperty("fileName", "file:"+imagepath);
         QMetaObject::invokeMethod(ui->rootObject(), "photoTaken");
 

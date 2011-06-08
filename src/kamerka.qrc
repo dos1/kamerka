@@ -1,7 +1,9 @@
 <RCC>
-    <qresource prefix="/">
+    <qresource prefix="/qml">
         <file>kamerka.qml</file>
         <file>Button.qml</file>
+    </qresource>
+    <qresource prefix="/icons">
         <file alias="kamerka.png">../data/kamerka.png</file>
     </qresource>
 </RCC>
