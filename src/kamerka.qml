@@ -32,21 +32,16 @@
      signal showDirectory();
      signal showConfiguration();
 
-     id: page
-     width: 640; height: 480
-     color: "transparent"
-     /*Image {
-        id: canvas;
-        anchors.fill: parent;
-        source: "image72.png";
-        smooth: true;
-     }*/
+     id: page;
+     width: 640; height: 480;
+     color: "transparent";
+
      Rectangle {
          effect: DropShadow {
-           blurRadius: 8
-           offset.x: 0
-           offset.y: 0
-           color: "black"
+           blurRadius: 8;
+           offset.x: 0;
+           offset.y: 0;
+           color: "black";
          }
          id: focia;
          x: -10;
@@ -59,7 +54,7 @@
          opacity: 0;
 
          states: State {
-             name: "down"; when: cyknij == true
+             name: "down"; when: cyknij == true;
              PropertyChanges {
                  target: focia;
                  x: page.width-width-20;
@@ -77,13 +72,13 @@
          }
 
          transitions: Transition {
-             from: ""; to: "down"; reversible: false
+             from: ""; to: "down"; reversible: false;
              SequentialAnimation {
                  id: animacja;
                  NumberAnimation { target: picture; property: "opacity"; duration: 500; }
-                 NumberAnimation { properties: "width,height,x,y,rotation"; duration: 1000; easing.type: Easing.OutQuad }
+                 NumberAnimation { properties: "width,height,x,y,rotation"; duration: 1000; easing.type: Easing.OutQuad; }
                  NumberAnimation { duration: 1000; }
-                 NumberAnimation { target: focia; property: "opacity"; duration: 1500; easing.type:Easing.InQuad;}
+                 NumberAnimation { target: focia; property: "opacity"; duration: 1500; easing.type:Easing.InQuad; }
              }
 
          }
@@ -169,7 +164,7 @@
 
          states:
              State {
-                 name: "visible"; when: canvasVisible == true
+                 name: "visible"; when: canvasVisible == true;
                  PropertyChanges {
                      target: canvasBackground;
                      opacity: 1;
@@ -186,7 +181,7 @@
 
      Rectangle {
          id: toolbar;
-         y: page.height-(height/2)
+         y: page.height-(height/2);
          anchors.horizontalCenter: page.horizontalCenter;
          width: 0.75*page.width;
          height: 75;
@@ -254,22 +249,21 @@
 
          states: [
              State {
-                 name: "down"; when: timer.running == true
+                 name: "down"; when: timer.running == true;
                  PropertyChanges {
                      target: toolbar;
                      y: page.height;
                  }
              },
              State {
-                 name: "hidden"; when: canvasVisible == true
+                 name: "hidden"; when: canvasVisible == true; extend: "more";
                  PropertyChanges {
                      target: toolbar;
                      y: page.height;
-                     color: "#AA000000";
                  }
              },
              State {
-                 name: "more"; when: more == true
+                 name: "more"; when: more == true;
                  PropertyChanges {
                      target: toolbar;
                      y: page.height-height-4;
@@ -305,33 +299,33 @@
      Timer { //REMOVE ME
          id: testTimer;
          interval: 5000; running: false; repeat: false;
-         onTriggered: hideCanvasBackground()
+         onTriggered: hideCanvasBackground();
      }
 
      Timer {
          id: timer;
          interval: 1000; running: false; repeat: true;
-         onTriggered: timerTriggered()
+         onTriggered: timerTriggered();
      }
 
      Text {
-         id: timerText
-         anchors.centerIn: parent
-         font.pointSize: 200
-         color: "white"
+         id: timerText;
+         anchors.centerIn: parent;
+         font.pointSize: 200;
+         color: "white";
          opacity: 0;
          text: "5";
          visible: false;
 
          effect: DropShadow {
-           blurRadius: 8
-           offset.x: 0
-           offset.y: 0
+           blurRadius: 8;
+           offset.x: 0;
+           offset.y: 0;
            color: "black";
          }
 
          states: State {
-             name: "down"; when: page.timeranim == true
+             name: "down"; when: page.timeranim == true;
              PropertyChanges {
                  target: timerText;
                  opacity: 1;
@@ -340,7 +334,7 @@
          }
 
          transitions: Transition {
-             from: ""; to: "down"; reversible: false
+             from: ""; to: "down"; reversible: false;
              SequentialAnimation {
                  NumberAnimation { property: "opacity"; duration: 500; easing.type: Easing.OutQuad; }
              }
