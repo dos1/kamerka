@@ -92,7 +92,8 @@
              height: parent.height-50;
              color: "black";
              smooth: true;
-             /*Image {
+             /*
+             Image {
                  effect: Blur {
                    blurRadius: 8
                  }
@@ -100,7 +101,8 @@
                 anchors.fill: parent;
                 source: fileName;
                 smooth: true;
-             }*/
+             }
+             */
              Image {
                  id: preview;
                 anchors.fill: parent;
@@ -147,7 +149,6 @@
      }
      function showCanvasBackground() {
          canvasVisible=true;
-         testTimer.running=true;
      }
      function hideCanvasBackground() {
          canvasVisible=false;
@@ -296,12 +297,6 @@
              }
          ]
 
-     }
-
-     Timer { //REMOVE ME
-         id: testTimer;
-         interval: 5000; running: false; repeat: false;
-         onTriggered: hideCanvasBackground();
      }
 
      Timer {

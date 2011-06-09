@@ -19,7 +19,7 @@
 #include <QtGui>
 #include <QtDeclarative>
 #include <QtScript/QScriptEngine>
-#include "KMainWindow"
+#include <KMainWindow>
 
 #include "videowidget.h"
 
@@ -37,7 +37,8 @@ class MainWindow : public KMainWindow {
 public:
     MainWindow();
     videowidget *videoViewer;
-    QDeclarativeView* ui;
+    QDeclarativeView *ui;
+    QGraphicsProxyWidget *conf;
 private:
     void resizeEvent(QResizeEvent *e);
 public slots:
@@ -46,5 +47,8 @@ public slots:
     void showDirectory();
     void showConfiguration();
     void QMLStatus(QDeclarativeView::Status);
+    int opacityUpdate(QGraphicsProxyWidget*);
+    void opacityUpdateConf();
+    void closeCanvasLayer();
 };
 
