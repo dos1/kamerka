@@ -1,5 +1,5 @@
 For 0.8:
- * add "clickable" configuration
+ * configuration for:
   * device node, resolution
   * image folder
   * notifications on/off
