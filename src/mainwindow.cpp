@@ -20,6 +20,8 @@
 #include <KLocalizedString>
 #include <KStandardDirs>
 #include <KMessageBox>
+#include <KConfigDialog>
+#include <KConfigSkeleton>
 #include <KUrl>
 #include <KGlobalSettings>
 #include <KDebug>
@@ -80,9 +82,39 @@ void MainWindow::showDirectory() {
     QApplication::quit();
 }
 
+void MainWindow::closeCanvasLayer() {
+    QMetaObject::invokeMethod(ui->rootObject(), "hideCanvasBackground");
+    conf->hide();
+}
+
+int MainWindow::opacityUpdate(QGraphicsProxyWidget *widget) {
+    widget->setOpacity(widget->opacity()+0.05);
+    if (widget->opacity()>=1) return 0;
+    return 1;
+}
+
+void MainWindow::opacityUpdateConf() {
+    if (opacityUpdate(conf)) {
+        QTimer::singleShot(5, this, SLOT(opacityUpdateConf()));
+    }
+}
+
+
+// slot for UI button - show canvas layer with configuration
+void MainWindow::showConfiguration() {
+    QMetaObject::invokeMethod(ui->rootObject(), "showCanvasBackground");
+    conf->setOpacity(0);
+    conf->show();
+    QTimer::singleShot(500, this, SLOT(opacityUpdateConf()));
+    //QTimer *timer = new QTimer(this);
+    //connect(timer, SIGNAL(timeout()), this, SLOT(opacityUpdateConf()));
+    //timer->start(5);
+}
+
 // resize video widget together with window
 void MainWindow::resizeEvent(QResizeEvent *e) {
     videoViewer->resize(this->size());
+    conf->setGeometry(QRectF(QPointF(50,50), QPointF(this->size().rwidth()-50,this->size().rheight()-50)));
     QMainWindow::resizeEvent(e);
 }
 
@@ -162,4 +194,16 @@ MainWindow::MainWindow() {
     connect(ui->rootObject(), SIGNAL(takePhoto()), this, SLOT(takePhoto()));
     connect(ui->rootObject(), SIGNAL(timerCounter(int)), this, SLOT(timerCounter(int)));
     connect(ui->rootObject(), SIGNAL(showDirectory()), this, SLOT(showDirectory()));
+    connect(ui->rootObject(), SIGNAL(showConfiguration()), this, SLOT(showConfiguration()));
+
+    // setup configuration page
+    KConfigSkeleton *confskel = new KConfigSkeleton();
+    KConfigDialog *confdial = new KConfigDialog(0, i18n("Settings"), confskel);
+    confdial->addPage(new QLabel(i18n("Not implemented yet.")), i18n("Video"), "camera-web", i18n("Webcam video settings") );
+    confdial->addPage(new QLabel(i18n("Not implemented yet too.")), i18n("Storage"), "drive-harddisk", i18n("Photo storage settings") );
+    confdial->addPage(new QLabel(i18n("Guess what? Not implemented yet.")), i18n("Behaviour"), "audio-headset", i18n("Behaviour settings") );
+    confdial->showButton(KDialog::Help, false);
+    conf = ui->scene()->addWidget(confdial);
+    conf->hide();
+    connect(confdial, SIGNAL(hidden()), this, SLOT(closeCanvasLayer()));
 }

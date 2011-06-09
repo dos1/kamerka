@@ -16,34 +16,32 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
- import Qt 4.7
- import Effects 1.0
+ import Qt 4.7;
+ import Effects 1.0;
 
  Rectangle {
      property int rand: 0;
      property bool cyknij: false;
      property int timercount: 5;
      property bool timeranim: false;
+     property bool more: false;
+     property bool canvasVisible: false;
 
      signal takePhoto();
      signal timerCounter(int count);
      signal showDirectory();
+     signal showConfiguration();
 
-     id: page
-     width: 640; height: 480
-     color: "transparent"
-     /*Image {
-        id: canvas;
-        anchors.fill: parent;
-        source: "image72.png";
-        smooth: true;
-     }*/
+     id: page;
+     width: 640; height: 480;
+     color: "transparent";
+
      Rectangle {
          effect: DropShadow {
-           blurRadius: 8
-           offset.x: 0
-           offset.y: 0
-           color: "black"
+           blurRadius: 8;
+           offset.x: 0;
+           offset.y: 0;
+           color: "black";
          }
          id: focia;
          x: -10;
@@ -56,7 +54,7 @@
          opacity: 0;
 
          states: State {
-             name: "down"; when: cyknij == true
+             name: "down"; when: cyknij == true;
              PropertyChanges {
                  target: focia;
                  x: page.width-width-20;
@@ -74,13 +72,13 @@
          }
 
          transitions: Transition {
-             from: ""; to: "down"; reversible: false
+             from: ""; to: "down"; reversible: false;
              SequentialAnimation {
                  id: animacja;
                  NumberAnimation { target: picture; property: "opacity"; duration: 500; }
-                 NumberAnimation { properties: "width,height,x,y,rotation"; duration: 1000; easing.type: Easing.OutQuad }
+                 NumberAnimation { properties: "width,height,x,y,rotation"; duration: 1000; easing.type: Easing.OutQuad; }
                  NumberAnimation { duration: 1000; }
-                 NumberAnimation { target: focia; property: "opacity"; duration: 1500; easing.type:Easing.InQuad;}
+                 NumberAnimation { target: focia; property: "opacity"; duration: 1500; easing.type:Easing.InQuad; }
              }
 
          }
@@ -94,7 +92,8 @@
              height: parent.height-50;
              color: "black";
              smooth: true;
-             /*Image {
+             /*
+             Image {
                  effect: Blur {
                    blurRadius: 8
                  }
@@ -102,7 +101,8 @@
                 anchors.fill: parent;
                 source: fileName;
                 smooth: true;
-             }*/
+             }
+             */
              Image {
                  id: preview;
                 anchors.fill: parent;
@@ -143,22 +143,52 @@
         page.timercount--;
         page.timeranim=true;
      }
+     function moreOrLess() {
+         if (more) { more=false; }
+         else { more=true; }
+     }
+     function showCanvasBackground() {
+         canvasVisible=true;
+     }
+     function hideCanvasBackground() {
+         canvasVisible=false;
+     }
+
+     Rectangle {
+         id: canvasBackground;
+         color: "#DD000000";
+         x: 0;
+         y: 0;
+         width: parent.width;
+         height: parent.height;
+         opacity: 0;
+
+         states:
+             State {
+                 name: "visible"; when: canvasVisible == true;
+                 PropertyChanges {
+                     target: canvasBackground;
+                     opacity: 1;
+                 }
+             }
+
+         transitions:
+             Transition {
+                 to: "visible"; reversible: true;
+                 NumberAnimation { property: "opacity"; duration: 1000; }
+             }
+
+     }
 
      Rectangle {
          id: toolbar;
-         y: page.height-(height/2)
+         y: page.height-(height/2);
          anchors.horizontalCenter: page.horizontalCenter;
          width: 0.75*page.width;
          height: 75;
          color: "#33000000";
          radius: 10;
          opacity: 1;
-         /*MouseArea {
-           id: mouseArea2;
-           anchors.fill: parent;
-           //hoverEnabled: true;
-           //preventStealing: true;
-         }*/
 
          Button {
              id: shot;
@@ -168,7 +198,7 @@
              anchors.leftMargin: 4;
              width: (parent.width/3)-8;
              text: i18n("Take a photo");
-             mouse.onClicked:robFotke();
+             mouse.onClicked: robFotke();
          }
          Button {
              id: autoshot;
@@ -178,63 +208,121 @@
              anchors.leftMargin: 2;
              width: (parent.width/3)-8;
              text: i18n("Self-timer");
-             mouse.onClicked:timerGo();
+             mouse.onClicked: timerGo();
          }
          Button {
-             id: dolphin;
+             id: moreBtn;
              anchors.left: autoshot.right;
              anchors.bottom: parent.verticalCenter;
              anchors.bottomMargin: 4;
              anchors.leftMargin: 2;
              anchors.right:  parent.right;
              anchors.rightMargin:  4;
+             text: more ? i18n("Less") : i18n("More");
+             mouse.onClicked: moreOrLess();
+         }
+         Button {
+             id: configure;
+             anchors.top:  parent.verticalCenter;
+             anchors.left: parent.left;
+             anchors.bottom: parent.bottom;
+             anchors.topMargin: 2;
+             anchors.bottomMargin: 4;
+             anchors.leftMargin: 4;
+             width: (parent.width/2)-8;
+             text: i18n("Configure");
+             mouse.onClicked: showConfiguration();
+         }
+         Button {
+             id: dolphin;
+             anchors.top:  parent.verticalCenter;
+             anchors.left: configure.right;
+             anchors.bottom: parent.bottom;
+             anchors.topMargin: 2;
+             anchors.bottomMargin: 4;
+             anchors.leftMargin: 2;
+             anchors.right:  parent.right;
+             anchors.rightMargin:  4;
              text: i18n("Open directory");
-             mouse.onClicked:showDirectory();
+             mouse.onClicked: showDirectory();
          }
 
-         states: State {
-             name: "down"; when: timer.running == true
-             PropertyChanges {
-                 target: toolbar;
-                 y: page.height;
+
+         states: [
+             State {
+                 name: "down"; when: timer.running == true;
+                 PropertyChanges {
+                     target: toolbar;
+                     y: page.height;
+                 }
+             },
+             State {
+                 name: "hidden"; when: canvasVisible == true; extend: "more";
+                 PropertyChanges {
+                     target: toolbar;
+                     y: page.height;
+                 }
+             },
+             State {
+                 name: "more"; when: more == true;
+                 PropertyChanges {
+                     target: toolbar;
+                     y: page.height-height-4;
+                     color: "#AA000000";
+                 }
              }
-         }
+         ]
 
-         transitions: Transition {
-             from: ""; to: "down"; reversible: false
-             SequentialAnimation {
-                 NumberAnimation { property: "y"; duration: 500; easing.type: Easing.OutQuad; }
+         transitions: [
+             Transition {
+                 to: "down"; reversible: false;
+                 SequentialAnimation {
+                     NumberAnimation { property: "y"; duration: 500; easing.type: Easing.OutQuad; }
+                     ColorAnimation { property: "color"; duration: 0; }
+                 }
+             },
+             Transition {
+                 to: "hidden"; reversible: true;
+                 SequentialAnimation {
+                     NumberAnimation { property: "y"; duration: 500; easing.type: Easing.InOutBack; }
+                     ColorAnimation { property: "color"; duration: 500; }
+                 }
+             },
+             Transition {
+                 from: ""; to: "more"; reversible: true;
+                 ParallelAnimation {
+                     NumberAnimation { property: "y"; duration: 500; easing.type: Easing.InOutBack; }
+                     ColorAnimation { property: "color"; duration: 500; }
+                 }
              }
-
-         }
-
+         ]
 
      }
 
      Timer {
          id: timer;
-         interval: 1000; running: false; repeat: true
-         onTriggered: timerTriggered()
+         interval: 1000; running: false; repeat: true;
+         onTriggered: timerTriggered();
      }
 
      Text {
-         id: timerText
-         anchors.centerIn: parent
-         font.pointSize: 200
-         color: "white"
+         id: timerText;
+         anchors.centerIn: parent;
+         font.pointSize: 200;
+         color: "white";
          opacity: 0;
          text: "5";
          visible: false;
 
          effect: DropShadow {
-           blurRadius: 8
-           offset.x: 0
-           offset.y: 0
+           blurRadius: 8;
+           offset.x: 0;
+           offset.y: 0;
            color: "black";
          }
 
          states: State {
-             name: "down"; when: page.timeranim == true
+             name: "down"; when: page.timeranim == true;
              PropertyChanges {
                  target: timerText;
                  opacity: 1;
@@ -243,7 +331,7 @@
          }
 
          transitions: Transition {
-             from: ""; to: "down"; reversible: false
+             from: ""; to: "down"; reversible: false;
              SequentialAnimation {
                  NumberAnimation { property: "opacity"; duration: 500; easing.type: Easing.OutQuad; }
              }
