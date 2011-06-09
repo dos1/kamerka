@@ -16,22 +16,22 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-import Qt 4.7
+import Qt 4.7;
 
  Rectangle {
-     property alias text: textItem.text
-     property alias mouse: mouseArea
+     property alias text: textItem.text;
+     property alias mouse: mouseArea;
      id: button;
-     width: 100; height: 30
-     border.width: 1
-     radius: 5
-     smooth: true
+     width: 100; height: 30;
+     border.width: 1;
+     radius: 5;
+     smooth: true;
      opacity: 0.5;
 
      gradient: Gradient {
-         GradientStop { position: 0.0; color: "darkGray" }
-         GradientStop { position: 0.5; color: "black" }
-         GradientStop { position: 1.0; color: "darkGray" }
+         GradientStop { position: 0.0; color: "darkGray"; }
+         GradientStop { position: 0.5; color: "black"; }
+         GradientStop { position: 1.0; color: "darkGray"; }
      }
 
      MouseArea {
@@ -41,30 +41,30 @@ import Qt 4.7
      }
 
      Text {
-         id: textItem
-         anchors.centerIn: parent
-         font.pointSize: 12
-         color: "white"
+         id: textItem;
+         anchors.centerIn: parent;
+         font.pointSize: 12;
+         color: "white";
          Behavior on text {
              SequentialAnimation {
-                 NumberAnimation { target: textItem; property: "opacity"; to: 0 }
+                 NumberAnimation { target: textItem; property: "opacity"; to: 0; }
                  PropertyAction {}
-                 NumberAnimation { target: textItem; property: "opacity"; to: 1 }
+                 NumberAnimation { target: textItem; property: "opacity"; to: 1; }
              }
          }
      }
 
 
      states: State {
-         name: "down"; when: mouse.containsMouse
+         name: "down"; when: mouse.containsMouse;
          PropertyChanges {
              target: button;
-             opacity: 1
+             opacity: 1;
          }
      }
 
      transitions: Transition {
-         from: ""; to: "down"; reversible: true
+         from: ""; to: "down"; reversible: true;
          SequentialAnimation {
              NumberAnimation { property: "opacity"; duration: 400; easing.type: Easing.OutQuad; }
          }

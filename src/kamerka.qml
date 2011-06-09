@@ -16,8 +16,8 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
- import Qt 4.7
- import Effects 1.0
+ import Qt 4.7;
+ import Effects 1.0;
 
  Rectangle {
      property int rand: 0;
@@ -283,6 +283,7 @@
                  to: "hidden"; reversible: true;
                  SequentialAnimation {
                      NumberAnimation { property: "y"; duration: 500; easing.type: Easing.InOutBack; }
+                     ColorAnimation { property: "color"; duration: 500; }
                  }
              },
              Transition {
