@@ -277,6 +277,7 @@
                  to: "down"; reversible: false;
                  SequentialAnimation {
                      NumberAnimation { property: "y"; duration: 500; easing.type: Easing.OutQuad; }
+                     ColorAnimation { property: "color"; duration: 0; }
                  }
              },
              Transition {
