@@ -206,4 +206,10 @@ MainWindow::MainWindow() {
     conf = ui->scene()->addWidget(confdial);
     conf->hide();
     connect(confdial, SIGNAL(hidden()), this, SLOT(closeCanvasLayer()));
+    // drop shadow
+    QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect();
+    shadow->setOffset(QPointF(0, 0));
+    shadow->setBlurRadius(8);
+    shadow->setColor(QColor(255,255,255));
+    conf->setGraphicsEffect(shadow);
 }
