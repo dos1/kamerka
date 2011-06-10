@@ -15,6 +15,7 @@ For 1.0:
  * moar configuration:
   * buttons in notifications (for instance to set Krita instead of GIMP)
   * consecutive image taking
+  * allow using custom sounds
 
 For 1.x:
  * photo uploading
