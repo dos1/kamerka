@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kamerka\n"
+"Report-Msgid-Bugs-To: dos@dosowisko.net\n"
+"POT-Creation-Date: 2011-06-08 17:56+0200\n"
+"PO-Revision-Date: 2011-06-10 15:51-0000\n"
+"Last-Translator: Daniel Halens Rodriguez <daniel.halens@sabayonlinux.org>\n"
+"Language-Team: es_ES <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/kamerka.qml:170
+msgid "Take a photo"
+msgstr "Tomar una foto"
+
+#: src/kamerka.qml:180
+msgid "Self-timer"
+msgstr "Cuenta atrás"
+
+#: src/kamerka.qml:191
+msgid "Open directory"
+msgstr "Abrir carpeta"
+
+#: src/main.cpp:35
+msgid "Kamerka"
+msgstr "Kamerka"
+
+#: src/main.cpp:36
+msgid "Simple photo taking application with fancy animated interface"
+msgstr "Aplicación sencilla para tomar fotos con un atractivo interfaz animado"
+
+#: src/main.cpp:37
+msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+
+#: src/mainwindow.cpp:39
+msgid "i18n() takes at least one argument"
+msgstr "i18n() requiere de al menos un argumento"
+
+#: src/mainwindow.cpp:58
+msgid "Could not load QML interface!"
+msgstr "¡No se pudo cargar el interfaz QML!"
+
+#: src/mainwindow.cpp:58
+#: src/mainwindow.cpp:107
+msgid "Error"
+msgstr "Error"
+
+#: src/mainwindow.cpp:107
+msgid "Could not connect to V4L device!"
+msgstr "¡No se pudo conectar al dispositivo V4L!"
+
+#: src/videowidget.cpp:73
+msgid "Starting up webcam..."
+msgstr "Iniciando la webcam..."
+
+#: src/videowidget.cpp:128
+msgid "Photo has been stored in file %1"
+msgstr "Foto guardada como %1"
+
+#: src/videowidget.cpp:136
+msgid "Show in directory"
+msgstr "Mostrar en el directorio"
+
+#: src/videowidget.cpp:136
+msgid "Open in GIMP"
+msgstr "Abrir en GIMP"
+
+#: src/videowidget.cpp:136
+msgid "Open in Inkscape"
+msgstr "Abrir con Inkscape"
+
+#: tools/rc.cpp:1
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Tus nombres"
+
+#: tools/rc.cpp:2
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Tus emails"
+
