@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-08 17:56+0200\n"
+"POT-Creation-Date: 2011-06-13 21:43+0200\n"
 "PO-Revision-Date: 2011-06-06 07:52+0200\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,15 +17,27 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/kamerka.qml:170
+#: src/kamerka.qml:200
 msgid "Take a photo"
 msgstr "Udělat fotku"
 
-#: src/kamerka.qml:180
+#: src/kamerka.qml:210
 msgid "Self-timer"
 msgstr "Samospoušť"
 
-#: src/kamerka.qml:191
+#: src/kamerka.qml:221
+msgid "Less"
+msgstr ""
+
+#: src/kamerka.qml:221
+msgid "More"
+msgstr ""
+
+#: src/kamerka.qml:233
+msgid "Configure"
+msgstr ""
+
+#: src/kamerka.qml:246
 msgid "Open directory"
 msgstr "Otevřít adresář"
 
@@ -42,39 +54,118 @@ msgstr ""
 msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
-#: src/mainwindow.cpp:39
+#: src/mainwindow.cpp:43
 msgid "i18n() takes at least one argument"
 msgstr "i18n() bere alespoň jeden argument"
 
-#: src/mainwindow.cpp:58
+#: src/mainwindow.cpp:61
 msgid "Could not load QML interface!"
 msgstr ""
 
-#: src/mainwindow.cpp:58 src/mainwindow.cpp:107
+#: src/mainwindow.cpp:61 src/mainwindow.cpp:137
 msgid "Error"
 msgstr "Chyba"
 
-#: src/mainwindow.cpp:107
+#: src/mainwindow.cpp:137
 msgid "Could not connect to V4L device!"
 msgstr "Nepodařilo se spojit se zařízením V4L!"
 
-#: src/videowidget.cpp:73
+#: src/mainwindow.cpp:200
+msgid "Settings"
+msgstr ""
+
+#: src/mainwindow.cpp:217
+#, fuzzy
+msgid "Camera"
+msgstr "Kamerka"
+
+#: src/mainwindow.cpp:217
+msgid "Camera settings"
+msgstr ""
+
+#: src/mainwindow.cpp:222
+msgid "Device node:"
+msgstr ""
+
+#: src/mainwindow.cpp:227
+msgid "x"
+msgstr ""
+
+#: src/mainwindow.cpp:230
+msgid "px"
+msgstr ""
+
+#: src/mainwindow.cpp:231
+msgid "Resolution:"
+msgstr ""
+
+#: src/mainwindow.cpp:236
+msgid "Disabled"
+msgstr ""
+
+#: src/mainwindow.cpp:237
+msgid " fps"
+msgstr ""
+
+#: src/mainwindow.cpp:238
+msgid "Framerate limit:"
+msgstr ""
+
+#: src/mainwindow.cpp:244
+msgid "Storage"
+msgstr ""
+
+#: src/mainwindow.cpp:244
+msgid "Photo storage"
+msgstr ""
+
+#: src/mainwindow.cpp:247
+msgid "Use default pictures directory"
+msgstr ""
+
+#: src/mainwindow.cpp:252
+#, fuzzy
+msgid "Use subdirectory:"
+msgstr "Otevřít adresář"
+
+#: src/mainwindow.cpp:258
+#, fuzzy
+msgid "Photo directory:"
+msgstr "Ukázat v adresáři"
+
+#: src/mainwindow.cpp:264
+msgid "Behaviour"
+msgstr ""
+
+#: src/mainwindow.cpp:266
+msgid "Play sound on taking photo"
+msgstr ""
+
+#: src/mainwindow.cpp:268
+msgid "Play timer sounds"
+msgstr ""
+
+#: src/mainwindow.cpp:270
+msgid "Show notification on taking photo"
+msgstr ""
+
+#: src/videowidget.cpp:72
 msgid "Starting up webcam..."
 msgstr "Spouští se kamera..."
 
-#: src/videowidget.cpp:128
+#: src/videowidget.cpp:126
 msgid "Photo has been stored in file %1"
 msgstr "Fotografie byla uložena do souboru %1"
 
-#: src/videowidget.cpp:136
+#: src/videowidget.cpp:131
 msgid "Show in directory"
 msgstr "Ukázat v adresáři"
 
-#: src/videowidget.cpp:136
+#: src/videowidget.cpp:131
 msgid "Open in GIMP"
 msgstr "Otevřít v GIMPu"
 
-#: src/videowidget.cpp:136
+#: src/videowidget.cpp:131
 msgid "Open in Inkscape"
 msgstr "Otevřít v Inkscape"
 

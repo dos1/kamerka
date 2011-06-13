@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-08 17:56+0200\n"
-"PO-Revision-Date: 2011-06-07 13:26+0100\n"
+"POT-Creation-Date: 2011-06-13 21:43+0200\n"
+"PO-Revision-Date: 2011-06-13 21:48+0100\n"
 "Last-Translator: Sebastian Krzyszkowiak <dos@dosowisko.net>\n"
 "Language-Team: pl_PL <dos@dosowisko.net>\n"
 "Language: \n"
@@ -18,15 +18,27 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: POLAND\n"
 
-#: src/kamerka.qml:170
+#: src/kamerka.qml:200
 msgid "Take a photo"
 msgstr "Zrób zdjęcie"
 
-#: src/kamerka.qml:180
+#: src/kamerka.qml:210
 msgid "Self-timer"
 msgstr "Samowyzwalacz"
 
-#: src/kamerka.qml:191
+#: src/kamerka.qml:221
+msgid "Less"
+msgstr "Mniej"
+
+#: src/kamerka.qml:221
+msgid "More"
+msgstr "Więcej"
+
+#: src/kamerka.qml:233
+msgid "Configure"
+msgstr "Konfiguracja"
+
+#: src/kamerka.qml:246
 msgid "Open directory"
 msgstr "Otwórz folder"
 
@@ -42,48 +54,128 @@ msgstr "Prosta aplikacja do robienia zdjęć z ładnym, animowanym interfejsem"
 msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
-#: src/mainwindow.cpp:39
+#: src/mainwindow.cpp:43
 msgid "i18n() takes at least one argument"
 msgstr "i18n() wymaga conajmniej jednego argumentu"
 
-#: src/mainwindow.cpp:58
+#: src/mainwindow.cpp:61
 msgid "Could not load QML interface!"
 msgstr "Nie można uruchomić interfejsu QML!"
 
-#: src/mainwindow.cpp:58 src/mainwindow.cpp:107
+#: src/mainwindow.cpp:61
+#: src/mainwindow.cpp:137
 msgid "Error"
 msgstr "Błąd"
 
-#: src/mainwindow.cpp:107
+#: src/mainwindow.cpp:137
 msgid "Could not connect to V4L device!"
 msgstr "Nie można połączyć się z urządzeniem V4L!"
 
-#: src/videowidget.cpp:73
+#: src/mainwindow.cpp:200
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: src/mainwindow.cpp:217
+msgid "Camera"
+msgstr "Kamera"
+
+#: src/mainwindow.cpp:217
+msgid "Camera settings"
+msgstr "Ustawienia kamery"
+
+#: src/mainwindow.cpp:222
+msgid "Device node:"
+msgstr "Plik urządzenia:"
+
+#: src/mainwindow.cpp:227
+msgid "x"
+msgstr "x"
+
+#: src/mainwindow.cpp:230
+msgid "px"
+msgstr "px"
+
+#: src/mainwindow.cpp:231
+msgid "Resolution:"
+msgstr "Rozdzielczość:"
+
+#: src/mainwindow.cpp:236
+msgid "Disabled"
+msgstr "Wyłączone"
+
+#: src/mainwindow.cpp:237
+msgid " fps"
+msgstr " fps"
+
+#: src/mainwindow.cpp:238
+msgid "Framerate limit:"
+msgstr "Limit klatek na sekundę:"
+
+#: src/mainwindow.cpp:244
+msgid "Storage"
+msgstr "Przechowywanie"
+
+#: src/mainwindow.cpp:244
+msgid "Photo storage"
+msgstr "Przechowywanie zdjęć"
+
+#: src/mainwindow.cpp:247
+msgid "Use default pictures directory"
+msgstr "Użyj domyślnego folderu z obrazami"
+
+#: src/mainwindow.cpp:252
+msgid "Use subdirectory:"
+msgstr "Użyj podfolderu:"
+
+#: src/mainwindow.cpp:258
+msgid "Photo directory:"
+msgstr "Folder zdjęć:"
+
+#: src/mainwindow.cpp:264
+msgid "Behaviour"
+msgstr "Zachowanie"
+
+#: src/mainwindow.cpp:266
+msgid "Play sound on taking photo"
+msgstr "Odtwarzaj dźwięk przy robieniu zdjęcia"
+
+#: src/mainwindow.cpp:268
+msgid "Play timer sounds"
+msgstr "Odtwarzaj dźwięki samowyzwalacza"
+
+#: src/mainwindow.cpp:270
+msgid "Show notification on taking photo"
+msgstr "Pokaż powiadomienie przy robieniu zdjęcia"
+
+#: src/videowidget.cpp:72
 msgid "Starting up webcam..."
 msgstr "Uruchamianie kamerki..."
 
-#: src/videowidget.cpp:128
+#: src/videowidget.cpp:126
 msgid "Photo has been stored in file %1"
 msgstr "Zdjęcie zostało zapisane w pliku %1"
 
-#: src/videowidget.cpp:136
+#: src/videowidget.cpp:131
 msgid "Show in directory"
 msgstr "Pokaż w folderze"
 
-#: src/videowidget.cpp:136
+#: src/videowidget.cpp:131
 msgid "Open in GIMP"
 msgstr "Otwórz w GIMPie"
 
-#: src/videowidget.cpp:136
+#: src/videowidget.cpp:131
 msgid "Open in Inkscape"
 msgstr "Otwórz w Inkscape"
 
-#: tools/rc.cpp:1 rc.cpp:1
+#: tools/rc.cpp:1
+#: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sebastian Krzyszkowiak"
 
-#: tools/rc.cpp:2 rc.cpp:2
+#: tools/rc.cpp:2
+#: rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dos@dosowisko.net"
+

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-08 17:56+0200\n"
+"POT-Creation-Date: 2011-06-13 21:43+0200\n"
 "PO-Revision-Date: 2011-06-07 21:24+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
@@ -19,15 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: src/kamerka.qml:170
+#: src/kamerka.qml:200
 msgid "Take a photo"
 msgstr "Сликај"
 
-#: src/kamerka.qml:180
+#: src/kamerka.qml:210
 msgid "Self-timer"
 msgstr "Тајмер"
 
-#: src/kamerka.qml:191
+#: src/kamerka.qml:221
+msgid "Less"
+msgstr ""
+
+#: src/kamerka.qml:221
+msgid "More"
+msgstr ""
+
+#: src/kamerka.qml:233
+msgid "Configure"
+msgstr ""
+
+#: src/kamerka.qml:246
 msgid "Open directory"
 msgstr "Отвори фасциклу"
 
@@ -44,39 +56,118 @@ msgstr ""
 msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
-#: src/mainwindow.cpp:39
+#: src/mainwindow.cpp:43
 msgid "i18n() takes at least one argument"
 msgstr "i18n() захтева бар један аргумент"
 
-#: src/mainwindow.cpp:58
+#: src/mainwindow.cpp:61
 msgid "Could not load QML interface!"
 msgstr "Не могу да учитам QML сучеље!"
 
-#: src/mainwindow.cpp:58 src/mainwindow.cpp:107
+#: src/mainwindow.cpp:61 src/mainwindow.cpp:137
 msgid "Error"
 msgstr "Грешка"
 
-#: src/mainwindow.cpp:107
+#: src/mainwindow.cpp:137
 msgid "Could not connect to V4L device!"
 msgstr "Не могу да се повежем са V4L сучењем!"
 
-#: src/videowidget.cpp:73
+#: src/mainwindow.cpp:200
+msgid "Settings"
+msgstr ""
+
+#: src/mainwindow.cpp:217
+#, fuzzy
+msgid "Camera"
+msgstr "Камерка"
+
+#: src/mainwindow.cpp:217
+msgid "Camera settings"
+msgstr ""
+
+#: src/mainwindow.cpp:222
+msgid "Device node:"
+msgstr ""
+
+#: src/mainwindow.cpp:227
+msgid "x"
+msgstr ""
+
+#: src/mainwindow.cpp:230
+msgid "px"
+msgstr ""
+
+#: src/mainwindow.cpp:231
+msgid "Resolution:"
+msgstr ""
+
+#: src/mainwindow.cpp:236
+msgid "Disabled"
+msgstr ""
+
+#: src/mainwindow.cpp:237
+msgid " fps"
+msgstr ""
+
+#: src/mainwindow.cpp:238
+msgid "Framerate limit:"
+msgstr ""
+
+#: src/mainwindow.cpp:244
+msgid "Storage"
+msgstr ""
+
+#: src/mainwindow.cpp:244
+msgid "Photo storage"
+msgstr ""
+
+#: src/mainwindow.cpp:247
+msgid "Use default pictures directory"
+msgstr ""
+
+#: src/mainwindow.cpp:252
+#, fuzzy
+msgid "Use subdirectory:"
+msgstr "Отвори фасциклу"
+
+#: src/mainwindow.cpp:258
+#, fuzzy
+msgid "Photo directory:"
+msgstr "Покажи у фасцикли"
+
+#: src/mainwindow.cpp:264
+msgid "Behaviour"
+msgstr ""
+
+#: src/mainwindow.cpp:266
+msgid "Play sound on taking photo"
+msgstr ""
+
+#: src/mainwindow.cpp:268
+msgid "Play timer sounds"
+msgstr ""
+
+#: src/mainwindow.cpp:270
+msgid "Show notification on taking photo"
+msgstr ""
+
+#: src/videowidget.cpp:72
 msgid "Starting up webcam..."
 msgstr "Покрећем веб-камеру..."
 
-#: src/videowidget.cpp:128
+#: src/videowidget.cpp:126
 msgid "Photo has been stored in file %1"
 msgstr "Фотографија је смештена у фајл %1"
 
-#: src/videowidget.cpp:136
+#: src/videowidget.cpp:131
 msgid "Show in directory"
 msgstr "Покажи у фасцикли"
 
-#: src/videowidget.cpp:136
+#: src/videowidget.cpp:131
 msgid "Open in GIMP"
 msgstr "Отвори помоћу ГИМПа"
 
-#: src/videowidget.cpp:136
+#: src/videowidget.cpp:131
 msgid "Open in Inkscape"
 msgstr "Отвори помоћи Инкскејпа"
 
