@@ -1,0 +1,5 @@
+# Code generation options for kconfig_compiler
+File=KamerkaSettings.kcfg
+ClassName=KamerkaSettings
+Singleton=true
+Mutators=true
