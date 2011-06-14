@@ -30,6 +30,7 @@
 
 #include "KamerkaSettings.h"
 #include "mainwindow.h"
+#include "settingsdialog.h"
 
 // part of QML hack to access script engine in rw mode
 void EngineAccess::setEngine(QScriptValue val) {
@@ -197,73 +198,7 @@ MainWindow::MainWindow() {
     connect(ui->rootObject(), SIGNAL(showConfiguration()), this, SLOT(showConfiguration()));
 
     // setup configuration window
-    KConfigDialog *confdial = new KConfigDialog(0, i18n("Settings"), KamerkaSettings::self());
-    confdial->showButton(KDialog::Help, false);
-    conf = ui->scene()->addWidget(confdial);
-    conf->hide();
+    SettingsDialog *confdial = new SettingsDialog(0, i18n("Settings"), KamerkaSettings::self(), ui->scene());
+    conf = confdial->proxy;
     connect(confdial, SIGNAL(hidden()), this, SLOT(closeCanvasLayer()));
-
-    // drop shadow
-    QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect();
-    shadow->setOffset(QPointF(0, 0));
-    shadow->setBlurRadius(8);
-    shadow->setColor(QColor(255,255,255));
-    conf->setGraphicsEffect(shadow);
-
-    // camera page
-    QWidget *page = new QWidget(confdial);
-    QFormLayout *layout = new QFormLayout(page);
-    confdial->addPage(page, i18n("Camera"), "camera-web", i18n("Camera settings") );
-
-    KLineEdit *textedit = new KLineEdit();
-    textedit->setObjectName("kcfg_node");
-    textedit->setAccessibleName("kcfg_node");
-    layout->addRow(i18n("Device node:"), textedit);
-
-    QHBoxLayout *hlayout = new QHBoxLayout();
-    QSpinBox *spinbox = new QSpinBox();
-    hlayout->addWidget(spinbox);
-    hlayout->addWidget(new QLabel(i18n("x")));
-    spinbox = new QSpinBox();
-    hlayout->addWidget(spinbox);
-    hlayout->addWidget(new QLabel(i18n("px")));
-    layout->addRow(i18n("Resolution:"), hlayout);
-
-    spinbox = new QSpinBox();
-    spinbox->setMinimum(0);
-    spinbox->setMaximum(1000);
-    spinbox->setSpecialValueText(i18n("Disabled"));
-    spinbox->setSuffix(i18n(" fps"));
-    layout->addRow(i18n("Framerate limit:"), spinbox);
-
-    // storage page
-    page = new QWidget(confdial);
-    layout = new QFormLayout(page);
-    confdial->addPage(page, i18n("Storage"), "drive-harddisk", i18n("Photo storage") );
-
-    QGroupBox *groupbox = new QGroupBox();
-    groupbox->setTitle(i18n("Use default pictures directory"));
-    groupbox->setCheckable(true);
-    QFormLayout *lay = new QFormLayout(groupbox);
-    groupbox->setLayout(lay);
-
-    QCheckBox *checkbox = new QCheckBox(i18n("Use subdirectory:"));
-    textedit = new KLineEdit();
-    lay->addRow(checkbox, textedit);
-
-    layout->addRow(groupbox);
-    KUrlRequester *urledit = new KUrlRequester();
-    layout->addRow(i18n("Photo directory:"), urledit);
-
-    // behaviour page
-    page = new QWidget(confdial);
-    layout = new QFormLayout(page);
-    confdial->addPage(page, i18n("Behaviour"), "audio-headset", i18n("Behaviour") );
-
-    checkbox = new QCheckBox(i18n("Play sound on taking photo"));
-    layout->addRow(checkbox);
-    checkbox = new QCheckBox(i18n("Play timer sounds"));
-    layout->addRow(checkbox);
-    checkbox = new QCheckBox(i18n("Show notification on taking photo"));
-    layout->addRow(checkbox);
 }

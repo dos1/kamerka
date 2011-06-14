@@ -5,12 +5,13 @@ SET(kamerka_SRCS
   capturethread.cpp
   kamerka.qml
   Button.qml
-  KamerkaSettings.kcfg
+  settingsdialog.cpp
+  kamerka.kcfg
 )
 
 SET(kamerka_RCCS kamerka.qrc)
 
-SET(kamerka_KCFGS KamerkaSettings.kcfgc)
+SET(kamerka_KCFGS kamerka.kcfgc)
 
 qt4_add_resources(kamerka_RCC_SRCS ${kamerka_RCCS})
 
