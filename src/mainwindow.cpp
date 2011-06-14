@@ -28,8 +28,8 @@
 #include <KGlobalSettings>
 #include <KDebug>
 
-#include "KamerkaSettings.h"
 #include "mainwindow.h"
+#include "settings.h"
 #include "settingsdialog.h"
 
 // part of QML hack to access script engine in rw mode
@@ -198,7 +198,8 @@ MainWindow::MainWindow() {
     connect(ui->rootObject(), SIGNAL(showConfiguration()), this, SLOT(showConfiguration()));
 
     // setup configuration window
-    SettingsDialog *confdial = new SettingsDialog(0, i18n("Settings"), KamerkaSettings::self());
+    Settings::self()->setCurrentGroup("Video");
+    SettingsDialog *confdial = new SettingsDialog(0, i18n("Settings"), Settings::self());
     connect(confdial, SIGNAL(hidden()), this, SLOT(closeCanvasLayer()));
     conf = ui->scene()->addWidget(confdial);
     conf->hide();

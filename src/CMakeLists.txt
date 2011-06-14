@@ -11,7 +11,7 @@ SET(kamerka_SRCS
 
 SET(kamerka_RCCS kamerka.qrc)
 
-SET(kamerka_KCFGS kamerka.kcfgc)
+SET(kamerka_KCFGS settings.kcfgc)
 
 qt4_add_resources(kamerka_RCC_SRCS ${kamerka_RCCS})
 

@@ -3,8 +3,9 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kamerkarc"/>
   <group name="Video">
-    <entry name="node" type="String">
+    <entry name="node" type="Path">
       <label>Device node for video camera.</label>
       <default>/dev/video0</default>
     </entry>

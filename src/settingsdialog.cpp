@@ -3,7 +3,6 @@
 #include <KUrlRequester>
 #include <KLocale>
 
-#include "KamerkaSettings.h"
 #include "settingsdialog.h"
 
 SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *skeleton) :
@@ -18,16 +17,17 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *s
 
     KLineEdit *textedit = new KLineEdit();
     textedit->setObjectName("kcfg_node");
-    textedit->setAccessibleName("kcfg_node");
     layout->addRow(i18n("Device node:"), textedit);
 
     QHBoxLayout *hlayout = new QHBoxLayout();
     QSpinBox *spinbox = new QSpinBox();
     spinbox->setMaximum(10000);
+    spinbox->setObjectName("kcfg_width");
     hlayout->addWidget(spinbox);
     hlayout->addWidget(new QLabel(i18n("x")));
     spinbox = new QSpinBox();
     spinbox->setMaximum(10000);
+    spinbox->setObjectName("kcfg_height");
     hlayout->addWidget(spinbox);
     hlayout->addWidget(new QLabel(i18n("px")));
     layout->addRow(i18n("Resolution:"), hlayout);
