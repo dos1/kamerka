@@ -211,9 +211,8 @@ MainWindow::MainWindow() {
     conf->setGraphicsEffect(shadow);
 
     // camera page
-    QWidget *page = new QWidget();
-    QFormLayout *layout = new QFormLayout(confdial);
-    page->setLayout(layout);
+    QWidget *page = new QWidget(confdial);
+    QFormLayout *layout = new QFormLayout(page);
     confdial->addPage(page, i18n("Camera"), "camera-web", i18n("Camera settings") );
 
     KLineEdit *textedit = new KLineEdit();
@@ -238,9 +237,8 @@ MainWindow::MainWindow() {
     layout->addRow(i18n("Framerate limit:"), spinbox);
 
     // storage page
-    page = new QWidget();
-    layout = new QFormLayout(confdial);
-    page->setLayout(layout);
+    page = new QWidget(confdial);
+    layout = new QFormLayout(page);
     confdial->addPage(page, i18n("Storage"), "drive-harddisk", i18n("Photo storage") );
 
     QGroupBox *groupbox = new QGroupBox();
@@ -258,9 +256,8 @@ MainWindow::MainWindow() {
     layout->addRow(i18n("Photo directory:"), urledit);
 
     // behaviour page
-    page = new QWidget();
-    layout = new QFormLayout(confdial);
-    page->setLayout(layout);
+    page = new QWidget(confdial);
+    layout = new QFormLayout(page);
     confdial->addPage(page, i18n("Behaviour"), "audio-headset", i18n("Behaviour") );
 
     checkbox = new QCheckBox(i18n("Play sound on taking photo"));
