@@ -198,7 +198,14 @@ MainWindow::MainWindow() {
     connect(ui->rootObject(), SIGNAL(showConfiguration()), this, SLOT(showConfiguration()));
 
     // setup configuration window
-    SettingsDialog *confdial = new SettingsDialog(0, i18n("Settings"), KamerkaSettings::self(), ui->scene());
-    conf = confdial->proxy;
+    SettingsDialog *confdial = new SettingsDialog(0, i18n("Settings"), KamerkaSettings::self());
     connect(confdial, SIGNAL(hidden()), this, SLOT(closeCanvasLayer()));
+    conf = ui->scene()->addWidget(confdial);
+    conf->hide();
+    // drop shadow
+    QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect();
+    shadow->setOffset(QPointF(0, 0));
+    shadow->setBlurRadius(8);
+    shadow->setColor(QColor(255,255,255));
+    conf->setGraphicsEffect(shadow);
 }

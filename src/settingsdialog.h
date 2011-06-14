@@ -8,8 +8,7 @@ class SettingsDialog : public KConfigDialog
 {
     Q_OBJECT
 public:
-    explicit SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *skeleton, QGraphicsScene *scene);
-    QGraphicsProxyWidget *proxy;
+    explicit SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *skeleton);
 signals:
 
 public slots:

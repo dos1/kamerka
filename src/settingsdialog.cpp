@@ -6,19 +6,10 @@
 #include "KamerkaSettings.h"
 #include "settingsdialog.h"
 
-SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *skeleton, QGraphicsScene *scene) :
+SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *skeleton) :
     KConfigDialog(parent, name, skeleton)
 {
     this->showButton(KDialog::Help, false);
-    proxy = scene->addWidget(this);
-    proxy->hide();
-
-    // drop shadow
-    QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect();
-    shadow->setOffset(QPointF(0, 0));
-    shadow->setBlurRadius(8);
-    shadow->setColor(QColor(255,255,255));
-    proxy->setGraphicsEffect(shadow);
 
     // camera page
     QWidget *page = new QWidget(this);
@@ -78,5 +69,4 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *s
     layout->addRow(checkbox);
     checkbox = new QCheckBox(i18n("Show notification on taking photo"));
     layout->addRow(checkbox);
-
 }
