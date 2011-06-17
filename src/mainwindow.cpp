@@ -120,29 +120,28 @@ void MainWindow::resizeEvent(QResizeEvent *e) {
 }
 
 void MainWindow::tryVideoThread() {
-    confdial = new SettingsDialog(0, i18n("Settings"), Settings::self());
-    confdial->showDialog("Settings");
+    confdial = new SettingsDialog(0, "settings", Settings::self());
     if (videoViewer->thread.start()) {
         // if opening V4L device failed:
         KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
         confdial->setFaceType(KConfigDialog::Plain);
-        confdial->show();
+        KConfigDialog::showDialog("settings");
         connect(confdial, SIGNAL(cancelClicked()), this, SLOT(close()));
         connect(confdial, SIGNAL(closeClicked()), this, SLOT(close()));
         connect(confdial, SIGNAL(okClicked()), this, SLOT(tryVideoThread()));
     }
     else {
         conf = ui->scene()->addWidget(confdial);
+        KConfigDialog::showDialog("settings");
         conf->hide();
         connect(confdial, SIGNAL(hidden()), this, SLOT(closeCanvasLayer()));
-
         // drop shadow
         QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect();
         shadow->setOffset(QPointF(0, 0));
         shadow->setBlurRadius(8);
         shadow->setColor(QColor(255,255,255));
         conf->setGraphicsEffect(shadow);
-
+        // show main window
         this->show();
     }
 }
