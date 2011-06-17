@@ -21,6 +21,7 @@
 #include <QtScript/QScriptEngine>
 #include <KMainWindow>
 
+#include "settingsdialog.h"
 #include "videowidget.h"
 
 class EngineAccess : public QObject
@@ -39,6 +40,7 @@ public:
     videowidget *videoViewer;
     QDeclarativeView *ui;
     QGraphicsProxyWidget *conf;
+    SettingsDialog *confdial;
 private:
     void resizeEvent(QResizeEvent *e);
 public slots:
@@ -50,5 +52,6 @@ public slots:
     int opacityUpdate(QGraphicsProxyWidget*);
     void opacityUpdateConf();
     void closeCanvasLayer();
+    void tryVideoThread();
 };
 

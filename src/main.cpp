@@ -39,7 +39,6 @@ int main(int argc, char *argv[]) {
     KApplication a;
     QIcon icon(":/icons/kamerka.png");
     a.setWindowIcon(icon);
-    MainWindow *w = new MainWindow();
-    w->show();
+    new MainWindow();
     return a.exec();
 }

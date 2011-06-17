@@ -30,7 +30,6 @@
 
 #include "mainwindow.h"
 #include "settings.h"
-#include "settingsdialog.h"
 
 // part of QML hack to access script engine in rw mode
 void EngineAccess::setEngine(QScriptValue val) {
@@ -115,15 +114,49 @@ void MainWindow::showConfiguration() {
 // resize video widget together with window
 void MainWindow::resizeEvent(QResizeEvent *e) {
     videoViewer->resize(this->size());
-    conf->setGeometry(QRectF(QPointF(50,50), QPointF(this->size().rwidth()-50,this->size().rheight()-50)));
+    if (conf)
+        conf->setGeometry(QRectF(QPointF(50,50), QPointF(this->size().rwidth()-50,this->size().rheight()-50)));
     QMainWindow::resizeEvent(e);
 }
 
+void MainWindow::tryVideoThread() {
+    confdial = new SettingsDialog(0, i18n("Settings"), Settings::self());
+    confdial->showDialog("Settings");
+    if (videoViewer->thread.start()) {
+        // if opening V4L device failed:
+        KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
+        confdial->setFaceType(KConfigDialog::Plain);
+        confdial->show();
+        connect(confdial, SIGNAL(cancelClicked()), this, SLOT(close()));
+        connect(confdial, SIGNAL(closeClicked()), this, SLOT(close()));
+        connect(confdial, SIGNAL(okClicked()), this, SLOT(tryVideoThread()));
+    }
+    else {
+        conf = ui->scene()->addWidget(confdial);
+        conf->hide();
+        connect(confdial, SIGNAL(hidden()), this, SLOT(closeCanvasLayer()));
+
+        // drop shadow
+        QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect();
+        shadow->setOffset(QPointF(0, 0));
+        shadow->setBlurRadius(8);
+        shadow->setColor(QColor(255,255,255));
+        conf->setGraphicsEffect(shadow);
+
+        this->show();
+    }
+}
+
 MainWindow::MainWindow() {
+    // initialize variables
+    conf = NULL;
+    confdial = NULL;
+
     // register QML effects
     qmlRegisterType<QGraphicsBlurEffect>("Effects",1,0,"Blur");
     qmlRegisterType<QGraphicsDropShadowEffect>("Effects",1,0,"DropShadow");
 
+    // setup user interface
     ui = new QDeclarativeView;
     connect(ui, SIGNAL(statusChanged(QDeclarativeView::Status)), this, SLOT(QMLStatus(QDeclarativeView::Status)));
 
@@ -132,12 +165,6 @@ MainWindow::MainWindow() {
     videoViewer->show();
 
     this->setCentralWidget(ui);
-
-    if (videoViewer->thread.start()) {
-        // if opening V4L device failed:
-        KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
-        close();
-    }
 
     //Glorious hack:steal the engine - thanks for KDeclarative, from which I stole this code! :)
     //create the access object
@@ -197,16 +224,6 @@ MainWindow::MainWindow() {
     connect(ui->rootObject(), SIGNAL(showDirectory()), this, SLOT(showDirectory()));
     connect(ui->rootObject(), SIGNAL(showConfiguration()), this, SLOT(showConfiguration()));
 
-    // setup configuration window
-    Settings::self()->setCurrentGroup("Video");
-    SettingsDialog *confdial = new SettingsDialog(0, i18n("Settings"), Settings::self());
-    connect(confdial, SIGNAL(hidden()), this, SLOT(closeCanvasLayer()));
-    conf = ui->scene()->addWidget(confdial);
-    conf->hide();
-    // drop shadow
-    QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect();
-    shadow->setOffset(QPointF(0, 0));
-    shadow->setBlurRadius(8);
-    shadow->setColor(QColor(255,255,255));
-    conf->setGraphicsEffect(shadow);
+    // capture from webcam & setup configuration
+    tryVideoThread();
 }

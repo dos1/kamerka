@@ -5,8 +5,8 @@
 
 #include "settingsdialog.h"
 
-SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *skeleton) :
-    KConfigDialog(parent, name, skeleton)
+SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *config) :
+    KConfigDialog(parent, name, config)
 {
     this->showButton(KDialog::Help, false);
 

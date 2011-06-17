@@ -8,7 +8,7 @@ class SettingsDialog : public KConfigDialog
 {
     Q_OBJECT
 public:
-    explicit SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *skeleton);
+    explicit SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *config);
 signals:
 
 public slots:
