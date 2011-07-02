@@ -5,6 +5,9 @@ For 0.8:
   * notifications on/off
   * sounds on/off
 
+For 0.8 or 1.0:
+ * configuration for brightness, colors, contrast...
+
 For 1.0:
  * better scalling ui
  * start with window size = video resolution
@@ -18,7 +21,7 @@ For 1.0:
   * allow using custom sounds
 
 For 1.x:
- * photo uploading
+ * photo uploading to social services
  * moar effects
  * various fixes and user requests
 
