@@ -1,4 +1,173 @@
+2011-07-03  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * TODO, po/kamerka.pot, po/kamerka_cs.po, po/kamerka_es.po, po/kamerka_pl.po,
+  po/kamerka_sr.po, po/kamerka_sr@ijekavian.po,
+  po/kamerka_sr@ijekavianlatin.po, po/kamerka_sr@latin.po: update polish
+  translation
+
+  * src/capturethread.cpp, src/mainwindow.cpp, src/videowidget.cpp: respect
+  behavior configuration
+
+  * src/capturethread.cpp, src/capturethread.h, src/kamerka.kcfg,
+  src/mainwindow.cpp, src/mainwindow.h, src/settingsdialog.cpp: make video
+  configuration fully working
+
+  * src/kamerka.kcfg: update config descriptions
+
+  * src/kamerka.kcfg, src/mainwindow.cpp, src/mainwindow.h,
+  src/settingsdialog.cpp: Fix updating config dialog. Finally!
+
+2011-07-02  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * TODO: update TODO
+
+2011-06-17  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * src/mainwindow.cpp: use KConfigDialog::showDialog
+
+  * src/main.cpp, src/mainwindow.cpp, src/mainwindow.h, src/settingsdialog.cpp,
+  src/settingsdialog.h: show camera settings when opening v4l device failed
+
+2011-06-14  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * src/CMakeLists.txt, src/kamerka.kcfg, src/kamerka.kcfgc,
+  src/mainwindow.cpp, src/settings.kcfgc, src/settingsdialog.cpp: various tries
+  ;x
+
+  * src/mainwindow.cpp, src/settingsdialog.cpp, src/settingsdialog.h: move
+  attaching settings dialog back to MainWindow class
+
+  * src/CMakeLists.txt, src/KamerkaSettings.kcfg, src/KamerkaSettings.kcfgc,
+  src/kamerka.kcfg, src/kamerka.kcfgc, src/mainwindow.cpp,
+  src/settingsdialog.cpp, src/settingsdialog.h: move settings dialog to its own
+  class
+
+  * src/mainwindow.cpp: fix layout errors with configuration dialog
+
+2011-06-13  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * po/kamerka.pot, po/kamerka_cs.po, po/kamerka_es.po, po/kamerka_pl.po,
+  po/kamerka_sr.po, po/kamerka_sr@ijekavian.po,
+  po/kamerka_sr@ijekavianlatin.po, po/kamerka_sr@latin.po: update pot file and
+  polish translation
+
+  * src/CMakeLists.txt, src/KamerkaSettings.kcfg, src/KamerkaSettings.kcfgc,
+  src/mainwindow.cpp: add not working yet configuration draft
+
+2011-06-11  Daniel Halens <DanielHalens@gmail.com>
+
+  * AUTHORS, po/kamerka_es.po: add es translation
+
+2011-06-10  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * TODO: TODO++
+
+2011-06-09  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * src/mainwindow.cpp: add drop shadow effect to configuration window
+
+  * TODO: update TODO
+
+  * src/kamerka.qml, src/mainwindow.cpp, src/mainwindow.h: implement dummy
+  config dialog
+
+  * src/kamerka.qml: toolbar animation fix
+
+  * src/Button.qml, src/kamerka.qml: fix for "jumping" color when hiding
+  toolbar at "less" state
+
+  * src/kamerka.qml: cosmetics in qml file
+
+2011-06-08  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * src/kamerka.qml, src/mainwindow.cpp, src/mainwindow.h: implement canvas
+  background
+
+  * src/kamerka.qml: rework toolbar, add configuration button (non-working yet)
+
+  * src/Button.qml: change text on button with opacity animation
+
+  * src/capturethread.cpp, src/mainwindow.cpp, src/videowidget.cpp: clean
+  imports
+
+  * src/CMakeLists.txt, src/kamerka.qml: add QML files to CMakeLists, so they
+  are listed in IDE as part of project
+
+  * src/mainwindow.cpp, src/videowidget.cpp: use mkpath instead of mkdir
+
+  * data/kamerka.notifyrc, src/capturethread.cpp, src/mainwindow.cpp,
+  src/videowidget.cpp, src/videowidget.h: merge Notify and KNotification class
+  (and fix debug messages)
+
+  * src/capturethread.cpp, src/mainwindow.cpp, src/videowidget.cpp: more
+  cosmetics
+
+  * po/kamerka.pot, po/kamerka_cs.po, po/kamerka_pl.po, po/kamerka_sr.po,
+  po/kamerka_sr@ijekavian.po, po/kamerka_sr@ijekavianlatin.po,
+  po/kamerka_sr@latin.po, src/mainwindow.cpp, tools/extract-messages.sh:
+  extract i18n data from QML in proper way
+
+  * src/mainwindow.cpp, src/videowidget.cpp: fix closing app on startup errors
+
+  * src/capturethread.cpp, src/main.cpp, src/videowidget.cpp: cosmetics in
+  formatting
+
+  * ChangeLog, NEWS, debian/rules, debian/watch, tools/gitlog2changelog.py:
+  little fixes for correct Debian packaging
+
+  * src/mainwindow.cpp: be more consistent on QRC URLs
+
+  * src/kamerka.qrc, src/main.cpp, src/mainwindow.cpp, src/videowidget.cpp:
+  reorganize qrc
+
+  * TODO: TODO++
+
+  * src/mainwindow.cpp: remove unnecessary setWindowTitle
+
+  * TODO, src/main.cpp, src/mainwindow.cpp, src/mainwindow.h: fix crash on
+  closing main window
+
+  * src/capturethread.cpp, src/capturethread.h, src/kamerka.qml, src/main.cpp,
+  src/mainwindow.cpp, src/mainwindow.h, src/videowidget.cpp, src/videowidget.h:
+  cleanup, add comments etc.
+
+2011-06-08  Mladen Pejaković <pejakm@gmail.com>
+
+  * data/kamerka.desktop, po/kamerka_sr.po, po/kamerka_sr@ijekavian.po,
+  po/kamerka_sr@ijekavianlatin.po, po/kamerka_sr@latin.po: add serbian
+  translation
+
+2011-06-08  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * src/mainwindow.cpp, src/videowidget.cpp: fix using XDG PICTURES dir
+
+2011-06-07  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * TODO, src/capturethread.cpp, src/capturethread.h, src/main.cpp,
+  src/mainwindow.cpp, src/mainwindow.h, src/videowidget.cpp, src/videowidget.h:
+  rework threading (capturethread)
+
+  * po/kamerka.pot, po/kamerka_pl.po: update pot file and polish translation
+
+  * TODO, src/mainwindow.cpp, src/mainwindow.h: display error when QML
+  interface couldn't be loaded
+
+  * src/Button.qml, src/capturethread.cpp, src/capturethread.h,
+  src/kamerka.qml, src/main.cpp, src/mainwindow.cpp, src/mainwindow.h,
+  src/videowidget.cpp, src/videowidget.h: fix FSF address and other licensing
+  issues
+
+  * TODO: TODO++
+
+  * src/Button.qml, src/kamerka.qml: fix running with Qt 4.7.0
+
 2011-06-06  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * data/kamerka.1: give more love to manpage
+
+  * NEWS, po/extract-messages.sh, tools/extract-messages.sh,
+  tools/gitlog2changelog.py: add gitlog2changelog script (also, add "tools"
+  folder for such usefull scripts)
 
   * data/kamerka.1: remove unnecessary line from manpage with KDE and Qt
   version used on author's PC :]
