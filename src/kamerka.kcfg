@@ -24,29 +24,29 @@
   </group>
   <group name="Storage">
     <entry name="usexdgpictures" type="Bool">
-      <label>Device node for video camera.</label>
+      <label>Tells Kamerka to use XDG Pictures folder to store photos.</label>
       <default>true</default>
     </entry>
     <entry name="subdirectory" type="String">
-      <label>Width of the video transmited by webcam.</label>
+      <label>Subdirectory within XDG Pictures folder.</label>
       <default>kamerka</default>
     </entry>
     <entry name="photodir" type="Path">
-      <label>Height of the video transmited by webcam.</label>
+      <label>Path to directory, in which photos will be stored.</label>
       <default>~/kamerka</default>
     </entry>
   </group>
   <group name="Storage">
     <entry name="soundontaking" type="Bool">
-      <label>Device node for video camera.</label>
+      <label>Play sound on taking photos.</label>
       <default>true</default>
     </entry>
     <entry name="soundontimer" type="Bool">
-      <label>Width of the video transmited by webcam.</label>
+      <label>Play sounds when using self-timer.</label>
       <default>true</default>
     </entry>
     <entry name="notification" type="Bool">
-      <label>Height of the video transmited by webcam.</label>
+      <label>Show desktop notification on taking photo.</label>
       <default>true</default>
     </entry>
   </group>
