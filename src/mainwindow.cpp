@@ -119,6 +119,10 @@ void MainWindow::resizeEvent(QResizeEvent *e) {
     QMainWindow::resizeEvent(e);
 }
 
+void MainWindow::loadSettings() {
+    qDebug() << "SETTING LOADED";
+}
+
 void MainWindow::tryVideoThread() {
     confdial = new SettingsDialog(0, "settings", Settings::self());
     if (videoViewer->thread.start()) {
@@ -144,6 +148,7 @@ void MainWindow::tryVideoThread() {
         // show main window
         this->show();
     }
+    connect(confdial, SIGNAL(settingsChanged(const QString&)), this, SLOT(loadSettings()));
 }
 
 MainWindow::MainWindow() {

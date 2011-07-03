@@ -53,5 +53,6 @@ public slots:
     void opacityUpdateConf();
     void closeCanvasLayer();
     void tryVideoThread();
+    void loadSettings();
 };
 

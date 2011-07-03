@@ -13,7 +13,6 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     // camera page
     QWidget *page = new QWidget(this);
     QFormLayout *layout = new QFormLayout(page);
-    this->addPage(page, i18n("Camera"), "camera-web", i18n("Camera settings") );
 
     KLineEdit *textedit = new KLineEdit();
     textedit->setObjectName("kcfg_node");
@@ -37,36 +36,48 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     spinbox->setMaximum(1000);
     spinbox->setSpecialValueText(i18n("Disabled"));
     spinbox->setSuffix(i18n(" fps"));
+    spinbox->setObjectName("kcfg_fps");
     layout->addRow(i18n("Framerate limit:"), spinbox);
+
+    this->addPage(page, i18n("Camera"), "camera-web", i18n("Camera settings") );
 
     // storage page
     page = new QWidget(this);
     layout = new QFormLayout(page);
-    this->addPage(page, i18n("Storage"), "drive-harddisk", i18n("Photo storage") );
 
     QGroupBox *groupbox = new QGroupBox();
     groupbox->setTitle(i18n("Use default pictures directory"));
     groupbox->setCheckable(true);
+    groupbox->setObjectName("kcfg_usexdgpictures");
     QFormLayout *lay = new QFormLayout(groupbox);
     groupbox->setLayout(lay);
 
     QCheckBox *checkbox = new QCheckBox(i18n("Use subdirectory:"));
     textedit = new KLineEdit();
+    textedit->setObjectName("kcfg_subdirectory");
     lay->addRow(checkbox, textedit);
 
     layout->addRow(groupbox);
     KUrlRequester *urledit = new KUrlRequester();
+    urledit->setObjectName("kcfg_photodir");
+    urledit->setProperty("kcfg_property", QByteArray("text"));
     layout->addRow(i18n("Photo directory:"), urledit);
+
+    this->addPage(page, i18n("Storage"), "drive-harddisk", i18n("Photo storage") );
 
     // behaviour page
     page = new QWidget(this);
     layout = new QFormLayout(page);
-    this->addPage(page, i18n("Behaviour"), "audio-headset", i18n("Behaviour") );
 
     checkbox = new QCheckBox(i18n("Play sound on taking photo"));
+    checkbox->setObjectName("kcfg_soundontaking");
     layout->addRow(checkbox);
     checkbox = new QCheckBox(i18n("Play timer sounds"));
+    checkbox->setObjectName("kcfg_soundontimer");
     layout->addRow(checkbox);
     checkbox = new QCheckBox(i18n("Show notification on taking photo"));
+    checkbox->setObjectName("kcfg_notification");
     layout->addRow(checkbox);
+
+    this->addPage(page, i18n("Behaviour"), "audio-headset", i18n("Behaviour") );
 }

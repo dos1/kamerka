@@ -22,4 +22,32 @@
       <default>0</default>
     </entry>
   </group>
+  <group name="Storage">
+    <entry name="usexdgpictures" type="Bool">
+      <label>Device node for video camera.</label>
+      <default>true</default>
+    </entry>
+    <entry name="subdirectory" type="String">
+      <label>Width of the video transmited by webcam.</label>
+      <default>kamerka</default>
+    </entry>
+    <entry name="photodir" type="Path">
+      <label>Height of the video transmited by webcam.</label>
+      <default>~/kamerka</default>
+    </entry>
+  </group>
+  <group name="Storage">
+    <entry name="soundontaking" type="Bool">
+      <label>Device node for video camera.</label>
+      <default>true</default>
+    </entry>
+    <entry name="soundontimer" type="Bool">
+      <label>Width of the video transmited by webcam.</label>
+      <default>true</default>
+    </entry>
+    <entry name="notification" type="Bool">
+      <label>Height of the video transmited by webcam.</label>
+      <default>true</default>
+    </entry>
+  </group>
 </kcfg>
