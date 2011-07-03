@@ -13,7 +13,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: dolphin, gimp, inkscape
 Suggests: kdebase-workspace-bin
-Description: Take photos using your webcam and shiny animated QML interface
- Kamerka is an Qt4 app using KDE4 libraries. It uses Video4Linux to get image
- from webcam and is able to save photos. Interface is based on QML and uses
- it's possibilities to show easy to use animated UI.
+Description: shiny photo taking application
+ Kamerka is an KDE application, using Video4Linux to get image from webcam
+ and able to save photos. It features easy to use, animated user interface.
