@@ -10,7 +10,7 @@ Vcs-Browser: http://github.com/dos1/kamerka
 
 Package: kamerka
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libkdeui5 (>= 4:4.6), libqt4-declarative (>= 4:4.7), libqt4-script (>= 4:4.7), libphonon4 (>= 4:4.6.0really4.4.3), libv4l-0
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: dolphin, gimp, inkscape
 Suggests: kdebase-workspace-bin
 Description: Take photos using your webcam and shiny animated QML interface

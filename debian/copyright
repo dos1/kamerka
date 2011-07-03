@@ -1,8 +1,7 @@
-Format: http://dep.debian.net/deps/dep5
-Name: kamerka
+Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=174&view=co
 Upstream-Name: kamerka
-Maintainer: Sebastian Krzyszkowiak <dos@dosowisko.net>
 Source: http://github.com/dos1/kamerka
+License: GPL-2.0+
 
 Files: *
 Copyright: 2011 Sebastian Krzyszkowiak <dos@dosowisko.net>
