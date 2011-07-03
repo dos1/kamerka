@@ -17,11 +17,10 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <KConfig>
-#include <KConfigGroup>
 #include <KDebug>
 
 #include "capturethread.h"
+#include "settings.h"
 
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
 
@@ -115,19 +114,14 @@ int CaptureThread::start() {
     fd = -1;
 
     // read config
-    KConfig* config = new KConfig("kamerkarc");
-    KConfigGroup group = config->group("Video");
-
-    dev_name = group.readEntry("node", "/dev/video0");
-    width    = group.readEntry("width", 640);
-    height   = group.readEntry("height", 480);
-    fps      = group.readEntry("fps", 0);
+    dev_name = Settings::node();
+    width    = Settings::width();
+    height   = Settings::height();
+    fps      = Settings::fps();
     if (fps>0) {
       delay = 1000/fps;
     }
     else { delay = 0; }
-
-    delete config;
 
     // open webcam device node
     fd = v4l2_open(dev_name.toStdString().c_str(), O_RDWR | O_NONBLOCK, 0);

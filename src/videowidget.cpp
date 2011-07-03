@@ -24,6 +24,7 @@
 #include <Phonon/AudioOutput>
 #include <KDebug>
 
+#include "settings.h"
 #include "videowidget.h"
 
 // Notification class is used to connect to notification signal
@@ -86,8 +87,10 @@ void videowidget::setPicture(QImage i) {
         dir.mkpath("kamerka");
 
         // play sound
-        media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));
-        media->play();
+        if (Settings::soundontaking()) {
+            media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));
+            media->play();
+        }
 
         // check, which number comes next (so we're able to set correct file name)
         int c = 0;
@@ -122,16 +125,18 @@ void videowidget::setPicture(QImage i) {
         QMetaObject::invokeMethod(ui->rootObject(), "photoTaken");
 
         // display notification
-        Notification* notification = new Notification("photoTaken", imagepath);
-        QString s = i18n("Photo has been stored in file %1", imagepath);
-        QPixmap pixmap = QPixmap::fromImage(i);
-        notification->setText( s );
-        notification->setPixmap( pixmap );
-        QStringList lista;
-        lista << i18n("Show in directory") << i18n("Open in GIMP") << i18n("Open in Inkscape");
-        notification->setActions( lista );
-        connect(notification, SIGNAL(activated(unsigned int)), notification , SLOT(openFile(unsigned int)) );
-        notification->sendEvent();
+        if (Settings::notification()) {
+            Notification* notification = new Notification("photoTaken", imagepath);
+            QString s = i18n("Photo has been stored in file %1", imagepath);
+            QPixmap pixmap = QPixmap::fromImage(i);
+            notification->setText( s );
+            notification->setPixmap( pixmap );
+            QStringList lista;
+            lista << i18n("Show in directory") << i18n("Open in GIMP") << i18n("Open in Inkscape");
+            notification->setActions( lista );
+            connect(notification, SIGNAL(activated(unsigned int)), notification , SLOT(openFile(unsigned int)) );
+            notification->sendEvent();
+        }
 
         // we don't want to store next frames too
         storeImage=false;
