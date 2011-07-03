@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-13 21:43+0200\n"
-"PO-Revision-Date: 2011-06-13 21:48+0100\n"
+"POT-Creation-Date: 2011-07-03 22:02+0200\n"
+"PO-Revision-Date: 2011-07-03 22:04+0100\n"
 "Last-Translator: Sebastian Krzyszkowiak <dos@dosowisko.net>\n"
 "Language-Team: pl_PL <dos@dosowisko.net>\n"
 "Language: \n"
@@ -63,107 +63,114 @@ msgid "Could not load QML interface!"
 msgstr "Nie można uruchomić interfejsu QML!"
 
 #: src/mainwindow.cpp:61
-#: src/mainwindow.cpp:137
+#: src/mainwindow.cpp:136
+#: src/mainwindow.cpp:147
 msgid "Error"
 msgstr "Błąd"
 
-#: src/mainwindow.cpp:137
+#: src/mainwindow.cpp:132
+#: src/mainwindow.cpp:136
+#: src/mainwindow.cpp:147
 msgid "Could not connect to V4L device!"
 msgstr "Nie można połączyć się z urządzeniem V4L!"
 
-#: src/mainwindow.cpp:200
-msgid "Settings"
-msgstr "Ustawienia"
+#: src/mainwindow.cpp:176
+msgid ""
+"Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
+"Please check your configuration."
+msgstr ""
+"Żądana rozdzielczość (%1x%2) nie była dostępna. Sterownik użył rozdzielczości %3x%4.\n"
+"Proszę sprawdzić swoją konfigurację."
 
-#: src/mainwindow.cpp:217
-msgid "Camera"
-msgstr "Kamera"
-
-#: src/mainwindow.cpp:217
-msgid "Camera settings"
-msgstr "Ustawienia kamery"
-
-#: src/mainwindow.cpp:222
+#: src/settingsdialog.cpp:19
 msgid "Device node:"
 msgstr "Plik urządzenia:"
 
-#: src/mainwindow.cpp:227
+#: src/settingsdialog.cpp:26
 msgid "x"
 msgstr "x"
 
-#: src/mainwindow.cpp:230
+#: src/settingsdialog.cpp:31
 msgid "px"
 msgstr "px"
 
-#: src/mainwindow.cpp:231
+#: src/settingsdialog.cpp:32
 msgid "Resolution:"
 msgstr "Rozdzielczość:"
 
-#: src/mainwindow.cpp:236
+#: src/settingsdialog.cpp:37
 msgid "Disabled"
 msgstr "Wyłączone"
 
-#: src/mainwindow.cpp:237
+#: src/settingsdialog.cpp:38
 msgid " fps"
 msgstr " fps"
 
-#: src/mainwindow.cpp:238
+#: src/settingsdialog.cpp:40
 msgid "Framerate limit:"
 msgstr "Limit klatek na sekundę:"
 
-#: src/mainwindow.cpp:244
-msgid "Storage"
-msgstr "Przechowywanie"
+#: src/settingsdialog.cpp:42
+msgid "Camera"
+msgstr "Kamera"
 
-#: src/mainwindow.cpp:244
-msgid "Photo storage"
-msgstr "Przechowywanie zdjęć"
+#: src/settingsdialog.cpp:42
+msgid "Camera settings"
+msgstr "Ustawienia kamery"
 
-#: src/mainwindow.cpp:247
+#: src/settingsdialog.cpp:49
 msgid "Use default pictures directory"
 msgstr "Użyj domyślnego folderu z obrazami"
 
-#: src/mainwindow.cpp:252
+#: src/settingsdialog.cpp:55
 msgid "Use subdirectory:"
 msgstr "Użyj podfolderu:"
 
-#: src/mainwindow.cpp:258
+#: src/settingsdialog.cpp:65
 msgid "Photo directory:"
 msgstr "Folder zdjęć:"
 
-#: src/mainwindow.cpp:264
-msgid "Behaviour"
-msgstr "Zachowanie"
+#: src/settingsdialog.cpp:67
+msgid "Storage"
+msgstr "Przechowywanie"
 
-#: src/mainwindow.cpp:266
+#: src/settingsdialog.cpp:67
+msgid "Photo storage"
+msgstr "Przechowywanie zdjęć"
+
+#: src/settingsdialog.cpp:73
 msgid "Play sound on taking photo"
 msgstr "Odtwarzaj dźwięk przy robieniu zdjęcia"
 
-#: src/mainwindow.cpp:268
+#: src/settingsdialog.cpp:76
 msgid "Play timer sounds"
 msgstr "Odtwarzaj dźwięki samowyzwalacza"
 
-#: src/mainwindow.cpp:270
+#: src/settingsdialog.cpp:79
 msgid "Show notification on taking photo"
 msgstr "Pokaż powiadomienie przy robieniu zdjęcia"
 
-#: src/videowidget.cpp:72
+#: src/settingsdialog.cpp:83
+msgid "Behaviour"
+msgstr "Zachowanie"
+
+#: src/videowidget.cpp:73
 msgid "Starting up webcam..."
 msgstr "Uruchamianie kamerki..."
 
-#: src/videowidget.cpp:126
+#: src/videowidget.cpp:130
 msgid "Photo has been stored in file %1"
 msgstr "Zdjęcie zostało zapisane w pliku %1"
 
-#: src/videowidget.cpp:131
+#: src/videowidget.cpp:135
 msgid "Show in directory"
 msgstr "Pokaż w folderze"
 
-#: src/videowidget.cpp:131
+#: src/videowidget.cpp:135
 msgid "Open in GIMP"
 msgstr "Otwórz w GIMPie"
 
-#: src/videowidget.cpp:131
+#: src/videowidget.cpp:135
 msgid "Open in Inkscape"
 msgstr "Otwórz w Inkscape"
 
@@ -179,3 +186,5 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dos@dosowisko.net"
 
+#~ msgid "Settings"
+#~ msgstr "Ustawienia"

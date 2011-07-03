@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-06-13 21:43+0200\n"
+"POT-Creation-Date: 2011-07-03 22:02+0200\n"
 "PO-Revision-Date: 2011-06-07 21:26+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
@@ -64,110 +64,112 @@ msgstr "i18n() zahteva bar jedan argument"
 msgid "Could not load QML interface!"
 msgstr "Ne mogu da učitam QML sučelje!"
 
-#: src/mainwindow.cpp:61 src/mainwindow.cpp:137
+#: src/mainwindow.cpp:61 src/mainwindow.cpp:136 src/mainwindow.cpp:147
 msgid "Error"
 msgstr "Greška"
 
-#: src/mainwindow.cpp:137
+#: src/mainwindow.cpp:132 src/mainwindow.cpp:136 src/mainwindow.cpp:147
 msgid "Could not connect to V4L device!"
 msgstr "Ne mogu da se povežem sa V4L sučenjem!"
 
-#: src/mainwindow.cpp:200
-msgid "Settings"
+#: src/mainwindow.cpp:176
+msgid ""
+"Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
+"Please check your configuration."
 msgstr ""
 
-#: src/mainwindow.cpp:217
+#: src/settingsdialog.cpp:19
+msgid "Device node:"
+msgstr ""
+
+#: src/settingsdialog.cpp:26
+msgid "x"
+msgstr ""
+
+#: src/settingsdialog.cpp:31
+msgid "px"
+msgstr ""
+
+#: src/settingsdialog.cpp:32
+msgid "Resolution:"
+msgstr ""
+
+#: src/settingsdialog.cpp:37
+msgid "Disabled"
+msgstr ""
+
+#: src/settingsdialog.cpp:38
+msgid " fps"
+msgstr ""
+
+#: src/settingsdialog.cpp:40
+msgid "Framerate limit:"
+msgstr ""
+
+#: src/settingsdialog.cpp:42
 #, fuzzy
 msgid "Camera"
 msgstr "Kamerka"
 
-#: src/mainwindow.cpp:217
+#: src/settingsdialog.cpp:42
 msgid "Camera settings"
 msgstr ""
 
-#: src/mainwindow.cpp:222
-msgid "Device node:"
-msgstr ""
-
-#: src/mainwindow.cpp:227
-msgid "x"
-msgstr ""
-
-#: src/mainwindow.cpp:230
-msgid "px"
-msgstr ""
-
-#: src/mainwindow.cpp:231
-msgid "Resolution:"
-msgstr ""
-
-#: src/mainwindow.cpp:236
-msgid "Disabled"
-msgstr ""
-
-#: src/mainwindow.cpp:237
-msgid " fps"
-msgstr ""
-
-#: src/mainwindow.cpp:238
-msgid "Framerate limit:"
-msgstr ""
-
-#: src/mainwindow.cpp:244
-msgid "Storage"
-msgstr ""
-
-#: src/mainwindow.cpp:244
-msgid "Photo storage"
-msgstr ""
-
-#: src/mainwindow.cpp:247
+#: src/settingsdialog.cpp:49
 msgid "Use default pictures directory"
 msgstr ""
 
-#: src/mainwindow.cpp:252
+#: src/settingsdialog.cpp:55
 #, fuzzy
 msgid "Use subdirectory:"
 msgstr "Otvori fasciklu"
 
-#: src/mainwindow.cpp:258
+#: src/settingsdialog.cpp:65
 #, fuzzy
 msgid "Photo directory:"
 msgstr "Pokaži u fascikli"
 
-#: src/mainwindow.cpp:264
-msgid "Behaviour"
+#: src/settingsdialog.cpp:67
+msgid "Storage"
 msgstr ""
 
-#: src/mainwindow.cpp:266
+#: src/settingsdialog.cpp:67
+msgid "Photo storage"
+msgstr ""
+
+#: src/settingsdialog.cpp:73
 msgid "Play sound on taking photo"
 msgstr ""
 
-#: src/mainwindow.cpp:268
+#: src/settingsdialog.cpp:76
 msgid "Play timer sounds"
 msgstr ""
 
-#: src/mainwindow.cpp:270
+#: src/settingsdialog.cpp:79
 msgid "Show notification on taking photo"
 msgstr ""
 
-#: src/videowidget.cpp:72
+#: src/settingsdialog.cpp:83
+msgid "Behaviour"
+msgstr ""
+
+#: src/videowidget.cpp:73
 msgid "Starting up webcam..."
 msgstr "Pokrećem veb-kameru..."
 
-#: src/videowidget.cpp:126
+#: src/videowidget.cpp:130
 msgid "Photo has been stored in file %1"
 msgstr "Fotografija je smeštena u fajl %1"
 
-#: src/videowidget.cpp:131
+#: src/videowidget.cpp:135
 msgid "Show in directory"
 msgstr "Pokaži u fascikli"
 
-#: src/videowidget.cpp:131
+#: src/videowidget.cpp:135
 msgid "Open in GIMP"
 msgstr "Otvori pomoću GIMPa"
 
-#: src/videowidget.cpp:131
+#: src/videowidget.cpp:135
 msgid "Open in Inkscape"
 msgstr "Otvori pomoći Inkskejpa"
 

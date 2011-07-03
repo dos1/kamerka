@@ -1,12 +1,5 @@
 For 0.8:
- * configuration for:
-  * device node, resolution
-  * image folder
-  * notifications on/off
-  * sounds on/off
-
-For 0.8 or 1.0:
- * configuration for brightness, colors, contrast...
+ * respect image folder configuration
 
 For 1.0:
  * better scalling ui
@@ -19,6 +12,7 @@ For 1.0:
   * buttons in notifications (for instance to set Krita instead of GIMP)
   * consecutive image taking
   * allow using custom sounds
+  * brightness, colors, contrast
 
 For 1.x:
  * photo uploading to social services
