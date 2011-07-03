@@ -39,10 +39,13 @@ public:
     MainWindow();
     videowidget *videoViewer;
     QDeclarativeView *ui;
-    QGraphicsProxyWidget *conf;
+    QGraphicsProxyWidget *conf, *dialog;
     SettingsDialog *confdial;
+    KDialog *kdialog;
+    QLabel *dialoglabel;
 private:
     void resizeEvent(QResizeEvent *e);
+    bool first;
 public slots:
     void takePhoto();
     void timerCounter(int);
@@ -54,5 +57,6 @@ public slots:
     void closeCanvasLayer();
     void tryVideoThread();
     void loadSettings();
+    void startedCapture(int width, int height);
 };
 

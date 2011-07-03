@@ -116,18 +116,36 @@ void MainWindow::resizeEvent(QResizeEvent *e) {
     videoViewer->resize(this->size());
     if (conf)
         conf->setGeometry(QRectF(QPointF(50,50), QPointF(this->size().rwidth()-50,this->size().rheight()-50)));
+    if (dialog)
+        dialog->setGeometry(QRectF(QPointF(0,0), QPointF(this->size().rwidth(), dialog->size().rheight())));
     QMainWindow::resizeEvent(e);
 }
 
 void MainWindow::loadSettings() {
-    qDebug() << "SETTING LOADED";
+    if (videoViewer->thread.running) {
+        videoViewer->thread.stop();
+    }
+    if (videoViewer->thread.start()) {
+        // if opening V4L device failed:
+        //KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
+        if (this->isVisible()) {
+            dialoglabel->setText( i18n("Could not connect to V4L device!") );
+            dialog->show();
+        }
+        else {
+            KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
+        }
+    }
 }
 
 void MainWindow::tryVideoThread() {
     confdial = new SettingsDialog(0, "settings", Settings::self());
-    if (videoViewer->thread.start()) {
+    if ((videoViewer->thread.running==false) && (videoViewer->thread.start())) {
         // if opening V4L device failed:
-        KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
+        if (first) {
+            first = false;
+            KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
+        }
         confdial->setFaceType(KConfigDialog::Plain);
         KConfigDialog::showDialog("settings");
         connect(confdial, SIGNAL(cancelClicked()), this, SLOT(close()));
@@ -149,6 +167,16 @@ void MainWindow::tryVideoThread() {
         this->show();
     }
     connect(confdial, SIGNAL(settingsChanged(const QString&)), this, SLOT(loadSettings()));
+}
+
+void MainWindow::startedCapture(int width, int height) {
+    kDebug() << QString("Driver is sending image at %1x%2").arg(
+            QString::number(width), QString::number(height));
+    if ((width!=Settings::width()) || (height!=Settings::height())) {
+        dialoglabel->setText(i18n("Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\nPlease check your configuration.", Settings::width(), Settings::height(), width, height));
+        dialog->show();
+    }
+    else dialog->hide();
 }
 
 MainWindow::MainWindow() {
@@ -222,12 +250,30 @@ MainWindow::MainWindow() {
     // resize QML UI together with window
     ui->setResizeMode(QDeclarativeView::SizeRootObjectToView);
 
+    // setup info dialog on top of screen
+    kdialog = new KDialog( this );
+    kdialog->setButtons( KDialog::Ok );
+    dialoglabel = new QLabel();
+    dialoglabel->setWordWrap(true);
+    dialoglabel->setAlignment(Qt::AlignCenter);
+    kdialog->setMainWidget( dialoglabel );
+    kdialog->setStyleSheet("QDialog { background-color: rgba(64,64,64,64); border-bottom: 1px solid white; } QLabel { color: white; }");
+    dialog = ui->scene()->addWidget(kdialog);
+    dialog->hide();
+    QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect();
+    shadow->setOffset(QPointF(0, 0));
+    shadow->setBlurRadius(8);
+    dialog->setGraphicsEffect(shadow);
+
     // connect UI button signals to slots in this class
     connect(ui->rootObject(), SIGNAL(takePhoto()), this, SLOT(takePhoto()));
     connect(ui->rootObject(), SIGNAL(timerCounter(int)), this, SLOT(timerCounter(int)));
     connect(ui->rootObject(), SIGNAL(showDirectory()), this, SLOT(showDirectory()));
     connect(ui->rootObject(), SIGNAL(showConfiguration()), this, SLOT(showConfiguration()));
 
+    connect(&(videoViewer->thread), SIGNAL(startedCapture(int, int)), this, SLOT(startedCapture(int, int)));
+
     // capture from webcam & setup configuration
+    first = true;
     tryVideoThread();
 }

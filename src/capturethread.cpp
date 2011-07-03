@@ -83,7 +83,9 @@ void CaptureThread::run() {
         }
         free(asil);
         delete qq;
-        this->msleep(50); //framerate - FIXME
+        if (delay>0) {
+          this->msleep(delay);
+        }
         xioctl(fd, VIDIOC_QBUF, &buf);
         di++;
         mutex.unlock();
@@ -91,6 +93,7 @@ void CaptureThread::run() {
 }
 
 int CaptureThread::stop() {
+    running = false;
     devam=false;
     mutex.lock();
     type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
@@ -118,6 +121,11 @@ int CaptureThread::start() {
     dev_name = group.readEntry("node", "/dev/video0");
     width    = group.readEntry("width", 640);
     height   = group.readEntry("height", 480);
+    fps      = group.readEntry("fps", 0);
+    if (fps>0) {
+      delay = 1000/fps;
+    }
+    else { delay = 0; }
 
     delete config;
 
@@ -141,8 +149,7 @@ int CaptureThread::start() {
            quit();
            return 1;
     }
-           kDebug() << QString("Driver is sending image at %1x%2").arg(
-                   QString::number(fmt.fmt.pix.width), QString::number(fmt.fmt.pix.height));
+    emit startedCapture(fmt.fmt.pix.width, fmt.fmt.pix.height);
 
     v4lconvert_data = v4lconvert_create(fd);
     if (v4lconvert_data == NULL)
@@ -195,6 +202,7 @@ int CaptureThread::start() {
     devam=true;
 
     // start processing video data
+    running = true;
     QThread::start();
     return 0;
 }

@@ -36,15 +36,17 @@ class CaptureThread : public QThread
 public:
     int stop();
     int start();
+    bool running;
 protected:
     void run();
 signals:
     void renderedImage(const QImage &image);
+    void startedCapture(int width, int height);
 
 private:
     QMutex mutex;
 
-    int width, height;
+    int width, height, fps, delay;
 
     bool devam;
 

@@ -27,13 +27,17 @@
       <label>Tells Kamerka to use XDG Pictures folder to store photos.</label>
       <default>true</default>
     </entry>
+    <entry name="ifsubdirectory" type="Bool">
+      <label>Tells Kamerka to use subdirectory within XDG Pictures folder.</label>
+      <default>true</default>
+    </entry>
     <entry name="subdirectory" type="String">
       <label>Subdirectory within XDG Pictures folder.</label>
       <default>kamerka</default>
     </entry>
     <entry name="photodir" type="Path">
       <label>Path to directory, in which photos will be stored.</label>
-      <default>~/kamerka</default>
+      <default></default>
     </entry>
   </group>
   <group name="Storage">

@@ -53,6 +53,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     groupbox->setLayout(lay);
 
     QCheckBox *checkbox = new QCheckBox(i18n("Use subdirectory:"));
+    checkbox->setObjectName("kcfg_ifsubdirectory");
     textedit = new KLineEdit();
     textedit->setObjectName("kcfg_subdirectory");
     lay->addRow(checkbox, textedit);
