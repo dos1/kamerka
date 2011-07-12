@@ -17,6 +17,7 @@
  */
 
 #include <KConfigSkeleton>
+#include <KMessageBox>
 #include <KLocale>
 
 #include "settingsdialog.h"
@@ -36,7 +37,11 @@ void SettingsDialog::updateUrl() {
 }
 
 void SettingsDialog::checkDir() {
-    // TODO
+    QDir dir;
+    if (!(dir.exists(config->findItem("photodir")->property().toString()))) {
+        int ret = KMessageBox::questionYesNo(0, i18n("Selected path does not exists. Do you want to create it?"));
+        if (ret==KMessageBox::Yes) dir.mkpath(config->findItem("photodir")->property().toString());
+    }
 }
 
 SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *conf) :
