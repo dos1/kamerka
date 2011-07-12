@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-07-03 22:02+0200\n"
+"POT-Creation-Date: 2011-07-12 23:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,75 +75,79 @@ msgid ""
 "Please check your configuration."
 msgstr ""
 
-#: src/settingsdialog.cpp:19
+#: src/settingsdialog.cpp:42
+msgid "Selected path does not exists. Do you want to create it?"
+msgstr ""
+
+#: src/settingsdialog.cpp:59
 msgid "Device node:"
 msgstr ""
 
-#: src/settingsdialog.cpp:26
+#: src/settingsdialog.cpp:66
 msgid "x"
 msgstr ""
 
-#: src/settingsdialog.cpp:31
+#: src/settingsdialog.cpp:71
 msgid "px"
 msgstr ""
 
-#: src/settingsdialog.cpp:32
+#: src/settingsdialog.cpp:72
 msgid "Resolution:"
 msgstr ""
 
-#: src/settingsdialog.cpp:37
+#: src/settingsdialog.cpp:77
 msgid "Disabled"
 msgstr ""
 
-#: src/settingsdialog.cpp:38
+#: src/settingsdialog.cpp:78
 msgid " fps"
 msgstr ""
 
-#: src/settingsdialog.cpp:40
+#: src/settingsdialog.cpp:80
 msgid "Framerate limit:"
 msgstr ""
 
-#: src/settingsdialog.cpp:42
+#: src/settingsdialog.cpp:82
 msgid "Camera"
 msgstr ""
 
-#: src/settingsdialog.cpp:42
+#: src/settingsdialog.cpp:82
 msgid "Camera settings"
 msgstr ""
 
-#: src/settingsdialog.cpp:49
+#: src/settingsdialog.cpp:89
 msgid "Use default pictures directory"
 msgstr ""
 
-#: src/settingsdialog.cpp:55
+#: src/settingsdialog.cpp:96
 msgid "Use subdirectory:"
 msgstr ""
 
-#: src/settingsdialog.cpp:65
+#: src/settingsdialog.cpp:108
 msgid "Photo directory:"
 msgstr ""
 
-#: src/settingsdialog.cpp:67
+#: src/settingsdialog.cpp:110
 msgid "Storage"
 msgstr ""
 
-#: src/settingsdialog.cpp:67
+#: src/settingsdialog.cpp:110
 msgid "Photo storage"
 msgstr ""
 
-#: src/settingsdialog.cpp:73
+#: src/settingsdialog.cpp:116
 msgid "Play sound on taking photo"
 msgstr ""
 
-#: src/settingsdialog.cpp:76
+#: src/settingsdialog.cpp:119
 msgid "Play timer sounds"
 msgstr ""
 
-#: src/settingsdialog.cpp:79
+#: src/settingsdialog.cpp:122
 msgid "Show notification on taking photo"
 msgstr ""
 
-#: src/settingsdialog.cpp:83
+#: src/settingsdialog.cpp:126
 msgid "Behaviour"
 msgstr ""
 
