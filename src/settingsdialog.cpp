@@ -17,16 +17,33 @@
  */
 
 #include <KConfigSkeleton>
-#include <KLineEdit>
-#include <KUrlRequester>
 #include <KLocale>
 
 #include "settingsdialog.h"
 
-SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *config) :
-    KConfigDialog(parent, name, config)
+void SettingsDialog::updateUrl() {
+    if (xdggroupbox->isChecked()) {
+      QDir dir(KGlobalSettings::picturesPath());
+      QString sub = "";
+      if (subdircheck->isChecked()) {
+          sub = subdir->text();
+          subdir->setEnabled(true);
+      } else subdir->setEnabled(false);
+      config->findItem("photodir")->setProperty(dir.absoluteFilePath(sub));
+      urledit->setText(dir.absoluteFilePath(sub));
+      urledit->setEnabled(false);
+    } else urledit->setEnabled(true);
+}
+
+void SettingsDialog::checkDir() {
+    // TODO
+}
+
+SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *conf) :
+    KConfigDialog(parent, name, conf)
 {
     this->showButton(KDialog::Help, false);
+    config=conf;
 
     // camera page
     QWidget *page = new QWidget(this);
@@ -63,21 +80,24 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     page = new QWidget(this);
     layout = new QFormLayout(page);
 
-    QGroupBox *groupbox = new QGroupBox();
-    groupbox->setTitle(i18n("Use default pictures directory"));
-    groupbox->setCheckable(true);
-    groupbox->setObjectName("kcfg_usexdgpictures");
-    QFormLayout *lay = new QFormLayout(groupbox);
-    groupbox->setLayout(lay);
+    xdggroupbox = new QGroupBox();
+    xdggroupbox->setTitle(i18n("Use default pictures directory"));
+    xdggroupbox->setCheckable(true);
+    xdggroupbox->setObjectName("kcfg_usexdgpictures");
+    connect(xdggroupbox, SIGNAL(toggled(bool)), this, SLOT(updateUrl()));
+    QFormLayout *lay = new QFormLayout(xdggroupbox);
+    xdggroupbox->setLayout(lay);
 
-    QCheckBox *checkbox = new QCheckBox(i18n("Use subdirectory:"));
-    checkbox->setObjectName("kcfg_ifsubdirectory");
-    textedit = new KLineEdit();
-    textedit->setObjectName("kcfg_subdirectory");
-    lay->addRow(checkbox, textedit);
+    subdircheck = new QCheckBox(i18n("Use subdirectory:"));
+    subdircheck->setObjectName("kcfg_ifsubdirectory");
+    subdir = new KLineEdit();
+    connect(subdir, SIGNAL(textChanged(QString)), this, SLOT(updateUrl()));
+    subdir->setObjectName("kcfg_subdirectory");
+    connect(subdircheck, SIGNAL(stateChanged(int)), this, SLOT(updateUrl()));
+    lay->addRow(subdircheck, subdir);
 
-    layout->addRow(groupbox);
-    KUrlRequester *urledit = new KUrlRequester();
+    layout->addRow(xdggroupbox);
+    urledit = new KUrlRequester();
     urledit->setObjectName("kcfg_photodir");
     urledit->setProperty("kcfg_property", QByteArray("text"));
     layout->addRow(i18n("Photo directory:"), urledit);
@@ -88,7 +108,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     page = new QWidget(this);
     layout = new QFormLayout(page);
 
-    checkbox = new QCheckBox(i18n("Play sound on taking photo"));
+    QCheckBox *checkbox = new QCheckBox(i18n("Play sound on taking photo"));
     checkbox->setObjectName("kcfg_soundontaking");
     layout->addRow(checkbox);
     checkbox = new QCheckBox(i18n("Play timer sounds"));
@@ -99,4 +119,8 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     layout->addRow(checkbox);
 
     this->addPage(page, i18n("Behaviour"), "audio-headset", i18n("Behaviour") );
+
+    updateUrl();
+    connect(this, SIGNAL(settingsChanged(const QString&)), this, SLOT(updateUrl()));
+    connect(this, SIGNAL(settingsChanged(const QString&)), this, SLOT(checkDir()));
 }
