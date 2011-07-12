@@ -36,6 +36,10 @@ void xioctl(int fh, int request, void *arg) {
     }
 }
 
+CaptureThread::CaptureThread() {
+    running = false;
+}
+
 // process video data
 void CaptureThread::run() {
     while (devam) {

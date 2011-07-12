@@ -34,6 +34,7 @@ class CaptureThread : public QThread
     Q_OBJECT
 
 public:
+    CaptureThread();
     int stop();
     int start();
     bool running;
