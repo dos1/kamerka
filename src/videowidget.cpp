@@ -18,11 +18,8 @@
  */
 
 #include <KLocale>
-#include <KLocalizedString>
 #include <KStandardDirs>
-#include <KGlobalSettings>
 #include <Phonon/AudioOutput>
-#include <KDebug>
 
 #include "settings.h"
 #include "videowidget.h"

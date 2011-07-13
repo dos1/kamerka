@@ -20,12 +20,6 @@
 #include <KLocalizedString>
 #include <KStandardDirs>
 #include <KMessageBox>
-#include <KConfigDialog>
-#include <KConfigSkeleton>
-#include <KLineEdit>
-#include <KUrlRequester>
-#include <KUrl>
-#include <KDebug>
 
 #include "mainwindow.h"
 #include "settings.h"
