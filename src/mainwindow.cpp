@@ -25,7 +25,6 @@
 #include <KLineEdit>
 #include <KUrlRequester>
 #include <KUrl>
-#include <KGlobalSettings>
 #include <KDebug>
 
 #include "mainwindow.h"
@@ -79,9 +78,10 @@ void MainWindow::timerCounter(int count) {
 
 // slot for UI button - open file manager
 void MainWindow::showDirectory() {
-    QDir dir(KGlobalSettings::picturesPath());
-    dir.mkpath("kamerka");
-    QProcess::startDetached("kde-open", QStringList() << KGlobalSettings::picturesPath() + "/kamerka");
+    QDir dir;
+    dir.mkpath(Settings::photodir());
+    dir.setPath(Settings::photodir());
+    QProcess::startDetached("kde-open", QStringList() << dir.absolutePath());
     QApplication::quit();
 }
 

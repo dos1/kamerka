@@ -83,8 +83,9 @@ void videowidget::setPicture(QImage i) {
 
     if (storeImage) {
         // we're taking a photo!
-        QDir dir(KGlobalSettings::picturesPath());
-        dir.mkpath("kamerka");
+        QDir dir;
+        dir.mkpath(Settings::photodir());
+        dir.setPath(Settings::photodir());
 
         // play sound
         if (Settings::soundontaking()) {
@@ -95,7 +96,7 @@ void videowidget::setPicture(QImage i) {
         // check, which number comes next (so we're able to set correct file name)
         int c = 0;
         QString counterfilename;
-        counterfilename = KGlobalSettings::picturesPath() + "/kamerka/.counter";
+        counterfilename = dir.absoluteFilePath(".counter");
 
         QFile counterfile(counterfilename.toStdString().c_str());
         if (counterfile.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -114,9 +115,10 @@ void videowidget::setPicture(QImage i) {
 
         // save image
         QString imagepath;
-        imagepath = KGlobalSettings::picturesPath() + "/kamerka/image";
+        imagepath = "image";
         imagepath += QString::number(c);
         imagepath += ".png";
+        imagepath = dir.absoluteFilePath(imagepath);
         kDebug() << QString("%1").arg(imagepath);
         i.save(imagepath, "PNG");
 
