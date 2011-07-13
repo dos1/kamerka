@@ -2,7 +2,7 @@ Source: kamerka
 Section: kde
 Priority: optional
 Maintainer: Sebastian Krzyszkowiak <dos@dosowisko.net>
-Build-Depends: debhelper (>= 7.0.50~), cmake, kdelibs5-dev (>= 4:4.6), libqt4-dev (>= 4:4.7), libv4l-dev, libgcrypt11, pkg-config
+Build-Depends: debhelper (>= 8), cmake, kdelibs5-dev (>= 4:4.6), libqt4-dev (>= 4:4.7), libv4l-dev, pkg-config
 Standards-Version: 3.9.2
 Homepage: http://dos1.github.com/kamerka/
 Vcs-Git: git://github.com/dos1/kamerka.git
@@ -13,5 +13,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, xdg-utils
 Suggests: dolphin, gimp, inkscape
 Description: shiny photo taking application
- Kamerka is an KDE application, using Video4Linux to get image from webcam
- and able to save photos. It features easy to use, animated user interface.
+ Kamerka is a KDE application which uses Video4Linux to get image from
+ webcam, with ability to save photos. It features easy to use, animated
+ and well-integrated user interface.
