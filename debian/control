@@ -10,9 +10,8 @@ Vcs-Browser: http://github.com/dos1/kamerka
 
 Package: kamerka
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: dolphin, gimp, inkscape
-Suggests: kdebase-workspace-bin
+Depends: ${shlibs:Depends}, ${misc:Depends}, xdg-utils
+Suggests: dolphin, gimp, inkscape
 Description: shiny photo taking application
  Kamerka is an KDE application, using Video4Linux to get image from webcam
  and able to save photos. It features easy to use, animated user interface.
