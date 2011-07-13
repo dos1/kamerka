@@ -21,7 +21,7 @@ msgstr ""
 
 #: src/kamerka.qml:200
 msgid "Take a photo"
-msgstr "Сликај"
+msgstr "Фотографиши"
 
 #: src/kamerka.qml:210
 msgid "Self-timer"
@@ -29,15 +29,15 @@ msgstr "Тајмер"
 
 #: src/kamerka.qml:221
 msgid "Less"
-msgstr ""
+msgstr "Мање"
 
 #: src/kamerka.qml:221
 msgid "More"
-msgstr ""
+msgstr "Више"
 
 #: src/kamerka.qml:233
 msgid "Configure"
-msgstr ""
+msgstr "Подеси"
 
 #: src/kamerka.qml:246
 msgid "Open directory"
@@ -49,8 +49,7 @@ msgstr "Камерка"
 
 #: src/main.cpp:36
 msgid "Simple photo taking application with fancy animated interface"
-msgstr ""
-"Једноставна апликација за хватање фотографија са лепим анимираним сучељем"
+msgstr "Једноставна апликација за хватање фотографија са лепим анимираним сучељем"
 
 #: src/main.cpp:37
 msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
@@ -77,85 +76,84 @@ msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
 msgstr ""
+"Захтевана резолуција (%1x%2) није доступна. Драјвер је користио %3x%4.\n"
+"Проверите подешавања."
 
 #: src/settingsdialog.cpp:42
 msgid "Selected path does not exists. Do you want to create it?"
-msgstr ""
+msgstr "Изабрана путања не постоји. Да ли желите да је направите?"
 
 #: src/settingsdialog.cpp:59
 msgid "Device node:"
-msgstr ""
+msgstr "Чвор уређаја:"
 
 #: src/settingsdialog.cpp:66
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: src/settingsdialog.cpp:71
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: src/settingsdialog.cpp:72
 msgid "Resolution:"
-msgstr ""
+msgstr "Резолуција"
 
 #: src/settingsdialog.cpp:77
 msgid "Disabled"
-msgstr ""
+msgstr "Онемогућено"
 
 #: src/settingsdialog.cpp:78
 msgid " fps"
-msgstr ""
+msgstr " fps"
 
 #: src/settingsdialog.cpp:80
 msgid "Framerate limit:"
-msgstr ""
+msgstr "Ограничење брзине кадрова:"
 
 #: src/settingsdialog.cpp:82
-#, fuzzy
 msgid "Camera"
-msgstr "Камерка"
+msgstr "Камера"
 
 #: src/settingsdialog.cpp:82
 msgid "Camera settings"
-msgstr ""
+msgstr "Подешавања камере"
 
 #: src/settingsdialog.cpp:89
 msgid "Use default pictures directory"
-msgstr ""
+msgstr "Користи подразумевану фасциклу слика"
 
 #: src/settingsdialog.cpp:96
-#, fuzzy
 msgid "Use subdirectory:"
-msgstr "Отвори фасциклу"
+msgstr "Отвори подфасциклу"
 
 #: src/settingsdialog.cpp:108
-#, fuzzy
 msgid "Photo directory:"
-msgstr "Покажи у фасцикли"
+msgstr "Фасцикла фотографија:"
 
 #: src/settingsdialog.cpp:110
 msgid "Storage"
-msgstr ""
+msgstr "Спремиште"
 
 #: src/settingsdialog.cpp:110
 msgid "Photo storage"
-msgstr ""
+msgstr "Спремиште фотографија"
 
 #: src/settingsdialog.cpp:116
 msgid "Play sound on taking photo"
-msgstr ""
+msgstr "Пусти звук при фотографисању"
 
 #: src/settingsdialog.cpp:119
 msgid "Play timer sounds"
-msgstr ""
+msgstr "Пуштај звуке тајмера"
 
 #: src/settingsdialog.cpp:122
 msgid "Show notification on taking photo"
-msgstr ""
+msgstr "Прикажи обавештење при фотографисању"
 
 #: src/settingsdialog.cpp:126
 msgid "Behaviour"
-msgstr ""
+msgstr "Понашање"
 
 #: src/videowidget.cpp:73
 msgid "Starting up webcam..."
@@ -175,7 +173,7 @@ msgstr "Отвори помоћу ГИМПа"
 
 #: src/videowidget.cpp:135
 msgid "Open in Inkscape"
-msgstr "Отвори помоћи Инкскејпа"
+msgstr "Отвори помоћу Инкскејпа"
 
 #: tools/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
