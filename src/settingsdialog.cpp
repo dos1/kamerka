@@ -126,6 +126,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     this->addPage(page, i18n("Behaviour"), "audio-headset", i18n("Behaviour") );
 
     updateUrl();
+    config->writeConfig();
     connect(this, SIGNAL(settingsChanged(const QString&)), this, SLOT(updateUrl()));
     connect(this, SIGNAL(settingsChanged(const QString&)), this, SLOT(checkDir()));
 }
