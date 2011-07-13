@@ -81,7 +81,7 @@ void MainWindow::showDirectory() {
     QDir dir;
     dir.mkpath(Settings::photodir());
     dir.setPath(Settings::photodir());
-    QProcess::startDetached("kde-open", QStringList() << dir.absolutePath());
+    QProcess::startDetached("xdg-open", QStringList() << dir.absolutePath());
     QApplication::quit();
 }
 
