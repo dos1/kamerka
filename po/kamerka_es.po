@@ -1,20 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Daniel Halens Rodriguez <DanielHalens@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
 "POT-Creation-Date: 2011-07-12 23:24+0200\n"
-"PO-Revision-Date: 2011-06-10 15:51-0000\n"
-"Last-Translator: Daniel Halens Rodriguez <daniel.halens@sabayonlinux.org>\n"
-"Language-Team: es_ES <LL@li.org>\n"
+"PO-Revision-Date: 2011-07-13 17:30+0100\n"
+"Last-Translator: Daniel Halens Rodriguez <DanielHalens@gmail.com>\n"
+"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/kamerka.qml:200
 msgid "Take a photo"
@@ -26,15 +27,15 @@ msgstr "Cuenta atrás"
 
 #: src/kamerka.qml:221
 msgid "Less"
-msgstr ""
+msgstr "Menos"
 
 #: src/kamerka.qml:221
 msgid "More"
-msgstr ""
+msgstr "Más"
 
 #: src/kamerka.qml:233
 msgid "Configure"
-msgstr ""
+msgstr "Configurar"
 
 #: src/kamerka.qml:246
 msgid "Open directory"
@@ -73,85 +74,84 @@ msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
 msgstr ""
+"La resolución solicitada (%1x%2) no está disponible. El driver usó %3x%4.\n"
+"Compruebe la configuración."
 
 #: src/settingsdialog.cpp:42
 msgid "Selected path does not exists. Do you want to create it?"
-msgstr ""
+msgstr "La ruta elegida no existe. ¿Desea crearla?"
 
 #: src/settingsdialog.cpp:59
 msgid "Device node:"
-msgstr ""
+msgstr "Dispositivo:"
 
 #: src/settingsdialog.cpp:66
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: src/settingsdialog.cpp:71
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: src/settingsdialog.cpp:72
 msgid "Resolution:"
-msgstr ""
+msgstr "Resolución:"
 
 #: src/settingsdialog.cpp:77
 msgid "Disabled"
-msgstr ""
+msgstr "Inhabilitado"
 
 #: src/settingsdialog.cpp:78
 msgid " fps"
-msgstr ""
+msgstr " fps"
 
 #: src/settingsdialog.cpp:80
 msgid "Framerate limit:"
-msgstr ""
+msgstr "Tasa de fotogramas:"
 
 #: src/settingsdialog.cpp:82
-#, fuzzy
 msgid "Camera"
-msgstr "Kamerka"
+msgstr "Cámara"
 
 #: src/settingsdialog.cpp:82
 msgid "Camera settings"
-msgstr ""
+msgstr "Ajustes de cámara"
 
 #: src/settingsdialog.cpp:89
 msgid "Use default pictures directory"
-msgstr ""
+msgstr "Usar el directorio de imágenes por defecto"
 
 #: src/settingsdialog.cpp:96
-#, fuzzy
 msgid "Use subdirectory:"
-msgstr "Abrir carpeta"
+msgstr "Usar subdirectorio:"
 
 #: src/settingsdialog.cpp:108
-#, fuzzy
 msgid "Photo directory:"
-msgstr "Mostrar en el directorio"
+msgstr "Directorio de imágenes:"
 
 #: src/settingsdialog.cpp:110
 msgid "Storage"
-msgstr ""
+msgstr "Almacenamiento"
 
 #: src/settingsdialog.cpp:110
 msgid "Photo storage"
-msgstr ""
+msgstr "Almacenamiento de imágenes"
 
 #: src/settingsdialog.cpp:116
 msgid "Play sound on taking photo"
-msgstr ""
+msgstr "Reproducir sonido al tomar una foto"
 
 #: src/settingsdialog.cpp:119
 msgid "Play timer sounds"
-msgstr ""
+msgstr "Reproducir sonido en la cuenta atrás"
 
 #: src/settingsdialog.cpp:122
 msgid "Show notification on taking photo"
-msgstr ""
+msgstr "Mostrar nota al tomar una foto"
 
 #: src/settingsdialog.cpp:126
 msgid "Behaviour"
-msgstr ""
+msgstr "Comportamiento"
 
 #: src/videowidget.cpp:73
 msgid "Starting up webcam..."
@@ -182,3 +182,4 @@ msgstr "Tus nombres"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Tus emails"
+
