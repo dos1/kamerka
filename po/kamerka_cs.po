@@ -2,13 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Pavel Fric <pavelfric@seznam.cz>, 2011.
+# Pavel Fric <fripohled.blogspot.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
 "POT-Creation-Date: 2011-07-12 23:24+0200\n"
-"PO-Revision-Date: 2011-06-06 07:52+0200\n"
-"Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
+"PO-Revision-Date: 2011-07-14 10:10+0200\n"
+"Last-Translator: Pavel Fric <fripohled.blogspot.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -27,15 +28,15 @@ msgstr "Samospoušť"
 
 #: src/kamerka.qml:221
 msgid "Less"
-msgstr ""
+msgstr "Méně"
 
 #: src/kamerka.qml:221
 msgid "More"
-msgstr ""
+msgstr "Více"
 
 #: src/kamerka.qml:233
 msgid "Configure"
-msgstr ""
+msgstr "Nastavit"
 
 #: src/kamerka.qml:246
 msgid "Open directory"
@@ -60,7 +61,7 @@ msgstr "i18n() bere alespoň jeden argument"
 
 #: src/mainwindow.cpp:61
 msgid "Could not load QML interface!"
-msgstr ""
+msgstr "Nepodařilo se nahrát rozhraní QML!"
 
 #: src/mainwindow.cpp:61 src/mainwindow.cpp:136 src/mainwindow.cpp:147
 msgid "Error"
@@ -75,85 +76,85 @@ msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
 msgstr ""
+"Požadované rozlišení (%1x%2) nebylo dostupné. Místo toho použit ovladač %3x%4."
+"\n"
+"Ověřte, prosím, své nastavení"
 
 #: src/settingsdialog.cpp:42
 msgid "Selected path does not exists. Do you want to create it?"
-msgstr ""
+msgstr "Vybraná cesta neexistuje. Chcete ji vytvořit?"
 
 #: src/settingsdialog.cpp:59
 msgid "Device node:"
-msgstr ""
+msgstr "Uzel zařízení:"
 
 #: src/settingsdialog.cpp:66
 msgid "x"
-msgstr ""
+msgstr "x"
 
 #: src/settingsdialog.cpp:71
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: src/settingsdialog.cpp:72
 msgid "Resolution:"
-msgstr ""
+msgstr "Rozlišení:"
 
 #: src/settingsdialog.cpp:77
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázáno"
 
 #: src/settingsdialog.cpp:78
 msgid " fps"
-msgstr ""
+msgstr " snímků za sekundu (fps)"
 
 #: src/settingsdialog.cpp:80
 msgid "Framerate limit:"
-msgstr ""
+msgstr "Omezení snímkování"
 
 #: src/settingsdialog.cpp:82
-#, fuzzy
 msgid "Camera"
-msgstr "Kamerka"
+msgstr "Kamera"
 
 #: src/settingsdialog.cpp:82
 msgid "Camera settings"
-msgstr ""
+msgstr "Nastavení kamery"
 
 #: src/settingsdialog.cpp:89
 msgid "Use default pictures directory"
-msgstr ""
+msgstr "Použít výchozí adresář s obrázky"
 
 #: src/settingsdialog.cpp:96
-#, fuzzy
 msgid "Use subdirectory:"
-msgstr "Otevřít adresář"
+msgstr "Použít podadresář"
 
 #: src/settingsdialog.cpp:108
-#, fuzzy
 msgid "Photo directory:"
-msgstr "Ukázat v adresáři"
+msgstr "Adresář s fotografiemi"
 
 #: src/settingsdialog.cpp:110
 msgid "Storage"
-msgstr ""
+msgstr "Úložiště"
 
 #: src/settingsdialog.cpp:110
 msgid "Photo storage"
-msgstr ""
+msgstr "Úložiště fotografií"
 
 #: src/settingsdialog.cpp:116
 msgid "Play sound on taking photo"
-msgstr ""
+msgstr "Při udělání fotky přehrát zvuk"
 
 #: src/settingsdialog.cpp:119
 msgid "Play timer sounds"
-msgstr ""
+msgstr "Přehrát zvuk časovače"
 
 #: src/settingsdialog.cpp:122
 msgid "Show notification on taking photo"
-msgstr ""
+msgstr "Po udělání fotky ukázat oznámení"
 
 #: src/settingsdialog.cpp:126
 msgid "Behaviour"
-msgstr ""
+msgstr "Chování"
 
 #: src/videowidget.cpp:73
 msgid "Starting up webcam..."
@@ -184,3 +185,4 @@ msgstr "Pavel Fric"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pavelfric@seznam.cz"
+
