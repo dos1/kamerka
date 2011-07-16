@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-07-12 23:24+0200\n"
+"POT-Creation-Date: 2011-07-16 16:29+0200\n"
 "PO-Revision-Date: 2011-07-14 10:10+0200\n"
 "Last-Translator: Pavel Fric <fripohled.blogspot.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -55,29 +55,29 @@ msgstr ""
 msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
-#: src/mainwindow.cpp:43
+#: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
 msgstr "i18n() bere alespoň jeden argument"
 
-#: src/mainwindow.cpp:61
+#: src/mainwindow.cpp:54
 msgid "Could not load QML interface!"
 msgstr "Nepodařilo se nahrát rozhraní QML!"
 
-#: src/mainwindow.cpp:61 src/mainwindow.cpp:136 src/mainwindow.cpp:147
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:141
 msgid "Error"
 msgstr "Chyba"
 
-#: src/mainwindow.cpp:132 src/mainwindow.cpp:136 src/mainwindow.cpp:147
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:141
 msgid "Could not connect to V4L device!"
 msgstr "Nepodařilo se spojit se zařízením V4L!"
 
-#: src/mainwindow.cpp:176
+#: src/mainwindow.cpp:170
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
 msgstr ""
-"Požadované rozlišení (%1x%2) nebylo dostupné. Místo toho použit ovladač %3x%4."
-"\n"
+"Požadované rozlišení (%1x%2) nebylo dostupné. Místo toho použit ovladač %3x"
+"%4.\n"
 "Ověřte, prosím, své nastavení"
 
 #: src/settingsdialog.cpp:42
@@ -156,23 +156,23 @@ msgstr "Po udělání fotky ukázat oznámení"
 msgid "Behaviour"
 msgstr "Chování"
 
-#: src/videowidget.cpp:73
+#: src/videowidget.cpp:70
 msgid "Starting up webcam..."
 msgstr "Spouští se kamera..."
 
-#: src/videowidget.cpp:130
+#: src/videowidget.cpp:129
 msgid "Photo has been stored in file %1"
 msgstr "Fotografie byla uložena do souboru %1"
 
-#: src/videowidget.cpp:135
+#: src/videowidget.cpp:134
 msgid "Show in directory"
 msgstr "Ukázat v adresáři"
 
-#: src/videowidget.cpp:135
+#: src/videowidget.cpp:134
 msgid "Open in GIMP"
 msgstr "Otevřít v GIMPu"
 
-#: src/videowidget.cpp:135
+#: src/videowidget.cpp:134
 msgid "Open in Inkscape"
 msgstr "Otevřít v Inkscape"
 
@@ -185,4 +185,3 @@ msgstr "Pavel Fric"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pavelfric@seznam.cz"
-

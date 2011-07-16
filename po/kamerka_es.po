@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-07-12 23:24+0200\n"
+"POT-Creation-Date: 2011-07-16 16:29+0200\n"
 "PO-Revision-Date: 2011-07-13 17:30+0100\n"
 "Last-Translator: Daniel Halens Rodriguez <DanielHalens@gmail.com>\n"
 "Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
@@ -53,23 +53,23 @@ msgstr "Aplicación sencilla para tomar fotos con un atractivo interfaz animado"
 msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
-#: src/mainwindow.cpp:43
+#: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
 msgstr "i18n() requiere de al menos un argumento"
 
-#: src/mainwindow.cpp:61
+#: src/mainwindow.cpp:54
 msgid "Could not load QML interface!"
 msgstr "¡No se pudo cargar el interfaz QML!"
 
-#: src/mainwindow.cpp:61 src/mainwindow.cpp:136 src/mainwindow.cpp:147
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:141
 msgid "Error"
 msgstr "Error"
 
-#: src/mainwindow.cpp:132 src/mainwindow.cpp:136 src/mainwindow.cpp:147
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:141
 msgid "Could not connect to V4L device!"
 msgstr "¡No se pudo conectar al dispositivo V4L!"
 
-#: src/mainwindow.cpp:176
+#: src/mainwindow.cpp:170
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
@@ -153,23 +153,23 @@ msgstr "Mostrar nota al tomar una foto"
 msgid "Behaviour"
 msgstr "Comportamiento"
 
-#: src/videowidget.cpp:73
+#: src/videowidget.cpp:70
 msgid "Starting up webcam..."
 msgstr "Iniciando la webcam..."
 
-#: src/videowidget.cpp:130
+#: src/videowidget.cpp:129
 msgid "Photo has been stored in file %1"
 msgstr "Foto guardada como %1"
 
-#: src/videowidget.cpp:135
+#: src/videowidget.cpp:134
 msgid "Show in directory"
 msgstr "Mostrar en el directorio"
 
-#: src/videowidget.cpp:135
+#: src/videowidget.cpp:134
 msgid "Open in GIMP"
 msgstr "Abrir en GIMP"
 
-#: src/videowidget.cpp:135
+#: src/videowidget.cpp:134
 msgid "Open in Inkscape"
 msgstr "Abrir con Inkscape"
 
@@ -182,4 +182,3 @@ msgstr "Tus nombres"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Tus emails"
-

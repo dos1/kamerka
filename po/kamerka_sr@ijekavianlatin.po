@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-07-12 23:24+0200\n"
+"POT-Creation-Date: 2011-07-16 16:29+0200\n"
 "PO-Revision-Date: 2011-06-07 21:27+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
@@ -49,29 +49,30 @@ msgstr "Kamerka"
 
 #: src/main.cpp:36
 msgid "Simple photo taking application with fancy animated interface"
-msgstr "Jednostavna aplikacija za hvatanje fotografija sa lijepim animiranim sučeljem"
+msgstr ""
+"Jednostavna aplikacija za hvatanje fotografija sa lijepim animiranim sučeljem"
 
 #: src/main.cpp:37
 msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
-#: src/mainwindow.cpp:43
+#: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
 msgstr "i18n() zahtijeva bar jedan argument"
 
-#: src/mainwindow.cpp:61
+#: src/mainwindow.cpp:54
 msgid "Could not load QML interface!"
 msgstr "Ne mogu da učitam QML sučelje!"
 
-#: src/mainwindow.cpp:61 src/mainwindow.cpp:136 src/mainwindow.cpp:147
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:141
 msgid "Error"
 msgstr "Greška"
 
-#: src/mainwindow.cpp:132 src/mainwindow.cpp:136 src/mainwindow.cpp:147
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:141
 msgid "Could not connect to V4L device!"
 msgstr "Ne mogu da se povežem sa V4L sučenjem!"
 
-#: src/mainwindow.cpp:176
+#: src/mainwindow.cpp:170
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
@@ -155,23 +156,23 @@ msgstr "Prikaži obavještenje pri fotografisanju"
 msgid "Behaviour"
 msgstr "Ponašanje"
 
-#: src/videowidget.cpp:73
+#: src/videowidget.cpp:70
 msgid "Starting up webcam..."
 msgstr "Pokrećem veb-kameru..."
 
-#: src/videowidget.cpp:130
+#: src/videowidget.cpp:129
 msgid "Photo has been stored in file %1"
 msgstr "Fotografija je smještena u fajl %1"
 
-#: src/videowidget.cpp:135
+#: src/videowidget.cpp:134
 msgid "Show in directory"
 msgstr "Pokaži u fascikli"
 
-#: src/videowidget.cpp:135
+#: src/videowidget.cpp:134
 msgid "Open in GIMP"
 msgstr "Otvori pomoću GIMPa"
 
-#: src/videowidget.cpp:135
+#: src/videowidget.cpp:134
 msgid "Open in Inkscape"
 msgstr "Otvori pomoću Inkskejpa"
 

@@ -1,4 +1,69 @@
+2011-07-16  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * TODO: update TODO
+
+2011-07-14  Pavel Fric <pavelfric@seznam.cz>
+
+  * po/kamerka_cs.po: update czech translation
+
+2011-07-13  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * src/capturethread.cpp, src/mainwindow.cpp, src/videowidget.cpp: clean up
+  includes
+
+2011-07-13  Mladen Pejaković <pejakm@gmail.com>
+
+  * po/kamerka_sr.po, po/kamerka_sr@ijekavian.po,
+  po/kamerka_sr@ijekavianlatin.po, po/kamerka_sr@latin.po: update serbian
+  translations
+
+2011-07-13  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * debian/control: [debian] update control file
+
+2011-07-13  Daniel Halens Rodríguez <danielhalens@gmail.com>
+
+  * po/kamerka_es.po: update spanish translation
+
+2011-07-13  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * debian/control: [debian] change dependences to be less demanding
+
+  * src/mainwindow.cpp: use xdg-open instead of kde-open
+
+  * data/kamerka.1, data/kamerka.desktop, src/main.cpp: Kamerka 0.8 RC1
+  (translations not included yet)
+
+  * TODO, src/mainwindow.cpp, src/videowidget.cpp: respect configured photo
+  directory
+
+  * src/settingsdialog.cpp: write config on start to update photodir with XDG
+  settings
+
+2011-07-12  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * po/kamerka.pot, po/kamerka_cs.po, po/kamerka_es.po, po/kamerka_pl.po,
+  po/kamerka_sr.po, po/kamerka_sr@ijekavian.po,
+  po/kamerka_sr@ijekavianlatin.po, po/kamerka_sr@latin.po: update polish
+  translation and pot file
+
+  * src/settingsdialog.cpp: [config] ask if user wants to create non-existent
+  directory in storage settings
+
+  * src/settingsdialog.cpp, src/settingsdialog.h: photo storage settings
+
+  * src/capturethread.cpp, src/capturethread.h: fix uninitialized variable in
+  capture thread leading to false reports on thread state
+
 2011-07-03  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * debian/control: change description in debian package
+
+  * debian/compat, debian/control, debian/copyright: fex fixes for debian
+  packaging
+
+  * ChangeLog, src/settingsdialog.cpp, src/settingsdialog.h,
+  tools/extract-messages.sh, tools/gitlog2changelog.py: fix license issues
 
   * TODO, po/kamerka.pot, po/kamerka_cs.po, po/kamerka_es.po, po/kamerka_pl.po,
   po/kamerka_sr.po, po/kamerka_sr@ijekavian.po,
