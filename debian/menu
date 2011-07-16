@@ -1,2 +1,0 @@
-?package(kamerka):needs="X11" section="Applications/Graphics"\
-  title="Kamerka" command="/usr/bin/kamerka"
