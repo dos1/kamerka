@@ -5,6 +5,7 @@ For 1.0:
  * some basic management of taken photos
  * some basic effects
  * consecutive image taking
+ * "About Kamerka" button (probably in configuration dialog)
  * moar configuration:
   * buttons in notifications (for instance to set Krita instead of GIMP)
   * consecutive image taking
