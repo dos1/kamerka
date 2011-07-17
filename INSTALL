@@ -4,8 +4,8 @@ It is recommended to build in another directory than source - for instance, in "
 To build:
 
 mkdir build
-cmake build
 cd build
+cmake ..
 make
 
 
