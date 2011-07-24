@@ -1,8 +1,8 @@
-kamerka (0.8-1) unstable; urgency=low
+kamerka (0.8.1-1) unstable; urgency=low
 
   * New upstream release (Closes: #634074)
 
- -- Sebastian Krzyszkowiak <dos@dosowisko.net>  Sat, 16 Jul 2011 17:16:50 +0200
+ -- Sebastian Krzyszkowiak <dos@dosowisko.net>  Sat, 24 Jul 2011 15:01:45 +0200
 
 kamerka (0.6-1) unstable; urgency=low
 
