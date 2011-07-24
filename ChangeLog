@@ -1,4 +1,42 @@
+2011-07-24  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * debian/changelog, debian/compat, debian/control, debian/copyright,
+  debian/docs, debian/menu, debian/rules, debian/source/format, debian/watch:
+  prerelease rm -rf debian
+
+2011-07-23  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * src/CMakeLists.txt: install kcfg file instead of kcfgc (oops...)
+
+2011-07-18  Frank Schäfer <fschaefer.oss@googlemail.com>
+
+  * AUTHORS, po/kamerka_de.po: Add german translation
+
+2011-07-17  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * TODO: TODO++
+
+  * CMakeLists.txt: add cmake_minimum_required to CMakeLists
+
+  * INSTALL: fix INSTALL instructions
+
 2011-07-16  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * debian/changelog: [debian] update ticket number in changelog
+
+  * TODO: another idea for TODO
+
+  * debian/changelog, debian/compat, debian/control, debian/copyright,
+  debian/docs, debian/menu, debian/rules, debian/source/format, debian/watch:
+  bring debian packaging data back
+
+  * debian/changelog, debian/compat, debian/control, debian/copyright,
+  debian/docs, debian/menu, debian/rules, debian/source/format, debian/watch:
+  This is Kamerka 0.8
+
+  * ChangeLog, po/kamerka.pot, po/kamerka_cs.po, po/kamerka_es.po,
+  po/kamerka_pl.po, po/kamerka_sr.po, po/kamerka_sr@ijekavian.po,
+  po/kamerka_sr@ijekavianlatin.po, po/kamerka_sr@latin.po: pre-release updates
 
   * TODO: update TODO
 
