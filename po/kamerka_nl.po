@@ -1,0 +1,187 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kenny Verstraete <verstraete_kenny@skynet.be>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: dos@dosowisko.net\n"
+"POT-Creation-Date: 2011-07-24 14:19+0200\n"
+"PO-Revision-Date: 2011-08-07 23:05+0200\n"
+"Last-Translator: Kenny Verstraete <verstraete_kenny@skynet.be>\n"
+"Language-Team: Dutch <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/kamerka.qml:200
+msgid "Take a photo"
+msgstr "Neem een foto"
+
+#: src/kamerka.qml:210
+msgid "Self-timer"
+msgstr "Zelfontspanner"
+
+#: src/kamerka.qml:221
+msgid "Less"
+msgstr "Minder"
+
+#: src/kamerka.qml:221
+msgid "More"
+msgstr "Meer"
+
+#: src/kamerka.qml:233
+msgid "Configure"
+msgstr "Configureer"
+
+#: src/kamerka.qml:246
+msgid "Open directory"
+msgstr "Map openen"
+
+#: src/main.cpp:35
+msgid "Kamerka"
+msgstr "Kamerka"
+
+#: src/main.cpp:36
+msgid "Simple photo taking application with fancy animated interface"
+msgstr "Simpele toepassing om foto's te nemen met een geanimeerde interface"
+
+#: src/main.cpp:37
+msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+
+#: src/mainwindow.cpp:36
+msgid "i18n() takes at least one argument"
+msgstr "i18n() neemt op zijn minst één argument"
+
+#: src/mainwindow.cpp:54
+msgid "Could not load QML interface!"
+msgstr "Kon QML interface niet laden!"
+
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:141
+msgid "Error"
+msgstr "Fout"
+
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:141
+msgid "Could not connect to V4L device!"
+msgstr "Kon niet verbinden met V4L apparaat!"
+
+#: src/mainwindow.cpp:170
+msgid ""
+"Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
+"Please check your configuration."
+msgstr ""
+"Gevraagde resolutie (%1x%2) was niet beschikbaar. De driver gebruikte %3x%4 "
+"in de plaats.\n"
+"Kijk uw configuratie na."
+
+#: src/settingsdialog.cpp:42
+msgid "Selected path does not exists. Do you want to create it?"
+msgstr "Geselecteerde pad bestaat niet. Wilt u het nu aanmaken?"
+
+#: src/settingsdialog.cpp:59
+msgid "Device node:"
+msgstr "Aankoppelingspunt apparaat:"
+
+#: src/settingsdialog.cpp:66
+msgid "x"
+msgstr "x"
+
+#: src/settingsdialog.cpp:71
+msgid "px"
+msgstr "px"
+
+#: src/settingsdialog.cpp:72
+msgid "Resolution:"
+msgstr "Resolutie:"
+
+#: src/settingsdialog.cpp:77
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+#: src/settingsdialog.cpp:78
+msgid " fps"
+msgstr " fps"
+
+#: src/settingsdialog.cpp:80
+msgid "Framerate limit:"
+msgstr "Framerate limiet:"
+
+#: src/settingsdialog.cpp:82
+msgid "Camera"
+msgstr "Camera"
+
+#: src/settingsdialog.cpp:82
+msgid "Camera settings"
+msgstr "Camera instellingen"
+
+#: src/settingsdialog.cpp:89
+msgid "Use default pictures directory"
+msgstr "Gebruik de standaardmap voor afbeeldingen"
+
+#: src/settingsdialog.cpp:96
+msgid "Use subdirectory:"
+msgstr "Gebruik submap:"
+
+#: src/settingsdialog.cpp:108
+msgid "Photo directory:"
+msgstr "fotomap:"
+
+#: src/settingsdialog.cpp:110
+msgid "Storage"
+msgstr "Opslag"
+
+#: src/settingsdialog.cpp:110
+msgid "Photo storage"
+msgstr "Foto opslag"
+
+#: src/settingsdialog.cpp:116
+msgid "Play sound on taking photo"
+msgstr "Speel geluid af bij het nemen van een foto"
+
+#: src/settingsdialog.cpp:119
+msgid "Play timer sounds"
+msgstr "Speel timer geluiden af"
+
+#: src/settingsdialog.cpp:122
+msgid "Show notification on taking photo"
+msgstr "Toon notificatie bij het nemen van een foto"
+
+#: src/settingsdialog.cpp:126
+msgid "Behaviour"
+msgstr "Gedrag"
+
+#: src/videowidget.cpp:70
+msgid "Starting up webcam..."
+msgstr "Webcam aan het starten..."
+
+#: src/videowidget.cpp:129
+msgid "Photo has been stored in file %1"
+msgstr "Foto is opgeslagen in bestand %1"
+
+#: src/videowidget.cpp:134
+msgid "Show in directory"
+msgstr "Geef weer in map"
+
+#: src/videowidget.cpp:134
+msgid "Open in GIMP"
+msgstr "Openen in GIMP"
+
+#: src/videowidget.cpp:134
+msgid "Open in Inkscape"
+msgstr "Openen in Inkscape"
+
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kenny Verstraete"
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "verstraete_kenny@skynet.be"
+
+
