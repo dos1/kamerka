@@ -1,6 +1,7 @@
 For 1.0:
  * better scalling ui
  * start with window size = video resolution
+ * ability to lock window aspect ratio
  * animated preview of already taken photos
  * some basic management of taken photos
  * some basic effects
