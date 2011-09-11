@@ -26,6 +26,7 @@
      property bool timeranim: false;
      property bool more: false;
      property bool canvasVisible: false;
+     property bool recording: false;
 
      signal takePhoto();
      signal timerCounter(int count);
@@ -336,6 +337,83 @@
                  NumberAnimation { property: "opacity"; duration: 500; easing.type: Easing.OutQuad; }
              }
 
+         }
+     }
+
+     Text {
+         id: recText;
+         anchors.right: parent.right;
+         anchors.top: parent.top;
+         anchors.topMargin: 25;
+         anchors.rightMargin: 25;
+         font.pointSize: 40;
+         font.bold: true;
+         font.family: "Sans";
+         color: "red";
+         opacity: 0;
+         text: "REC";
+
+         states: State {
+             name: "down"; when: page.recording == true;
+             PropertyChanges {
+                 target: recText;
+                 opacity: 1;
+             }
+         }
+
+         transitions: Transition {
+             from: ""; to: "down"; reversible: true;
+             SequentialAnimation {
+                 NumberAnimation { property: "opacity"; duration: 500; easing.type: Easing.OutQuad; }
+             }
+
+         }
+     }
+
+     Text {
+         id: recCircle;
+         anchors.right: recText.left;
+         anchors.top: parent.top;
+         anchors.topMargin: 20;
+         anchors.rightMargin: 10;
+         font.pointSize: 40;
+         font.bold: true;
+         font.family: "Sans";
+         color: "red";
+         opacity: 1;
+         text: "●";
+         visible: true;
+
+         states: State {
+             name: "down"; when: page.recording == false;
+             PropertyChanges {
+                 target: recCircle;
+                 opacity: 0;
+                 visible: false;
+             }
+             StateChangeScript {
+                 name: "playRecAnim";
+                 script: animateOpacity.start();
+             }
+         }
+
+         SequentialAnimation {
+           id: animateOpacity;
+           NumberAnimation {
+             target: recCircle;
+             properties: "opacity";
+             from: 1.0;
+             to: 0.8;
+             duration: 5000;
+           }
+           NumberAnimation {
+             target: recCircle;
+             properties: "opacity";
+             from: 0.8;
+             to: 1.0;
+             duration: 5000;
+           }
+           loops: Animation.Infinite;
          }
      }
 
