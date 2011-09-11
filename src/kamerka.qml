@@ -399,19 +399,21 @@
 
          SequentialAnimation {
            id: animateOpacity;
+           PauseAnimation { duration: 1000; }
            NumberAnimation {
              target: recCircle;
              properties: "opacity";
              from: 1.0;
              to: 0.8;
-             duration: 5000;
+             duration: 4000;
            }
+           PauseAnimation { duration: 1000; }
            NumberAnimation {
              target: recCircle;
              properties: "opacity";
              from: 0.8;
              to: 1.0;
-             duration: 5000;
+             duration: 4000;
            }
            loops: Animation.Infinite;
          }
