@@ -1,0 +1,185 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Max Lin <max7442@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: dos@dosowisko.net\n"
+"POT-Creation-Date: 2011-07-24 14:19+0200\n"
+"PO-Revision-Date: 2011-10-28 12:53+0800\n"
+"Last-Translator: Max Lin <max7442@gmail.com>\n"
+"Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: src/kamerka.qml:200
+msgid "Take a photo"
+msgstr "拍張照片"
+
+#: src/kamerka.qml:210
+msgid "Self-timer"
+msgstr "自拍"
+
+#: src/kamerka.qml:221
+msgid "Less"
+msgstr "顯示較少"
+
+#: src/kamerka.qml:221
+msgid "More"
+msgstr "顯示更多"
+
+#: src/kamerka.qml:233
+msgid "Configure"
+msgstr "配置"
+
+#: src/kamerka.qml:246
+msgid "Open directory"
+msgstr "開啟目錄"
+
+#: src/main.cpp:35
+msgid "Kamerka"
+msgstr "Kamerka"
+
+#: src/main.cpp:36
+msgid "Simple photo taking application with fancy animated interface"
+msgstr "簡易的拍照應用程式與花俏的動畫介面"
+
+#: src/main.cpp:37
+msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+
+#: src/mainwindow.cpp:36
+msgid "i18n() takes at least one argument"
+msgstr "i18n() 至少需要一個參數"
+
+#: src/mainwindow.cpp:54
+msgid "Could not load QML interface!"
+msgstr "不能載入 QML 介面!"
+
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:141
+msgid "Error"
+msgstr "錯誤"
+
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:141
+msgid "Could not connect to V4L device!"
+msgstr "不能連結到 V4L 設備!"
+
+#: src/mainwindow.cpp:170
+msgid ""
+"Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
+"Please check your configuration."
+msgstr ""
+"請求的解析度 (%1x%2) 不可用。驅動程式使用 %3x%4 代替。\n"
+"請檢查您的配置。"
+
+#: src/settingsdialog.cpp:42
+msgid "Selected path does not exists. Do you want to create it?"
+msgstr "選擇的路徑不存在。您想建立它嗎？"
+
+#: src/settingsdialog.cpp:59
+msgid "Device node:"
+msgstr "設備節點:"
+
+#: src/settingsdialog.cpp:66
+msgid "x"
+msgstr "x"
+
+#: src/settingsdialog.cpp:71
+msgid "px"
+msgstr "px"
+
+#: src/settingsdialog.cpp:72
+msgid "Resolution:"
+msgstr "解析度:"
+
+#: src/settingsdialog.cpp:77
+msgid "Disabled"
+msgstr "關閉"
+
+#: src/settingsdialog.cpp:78
+msgid " fps"
+msgstr "fps"
+
+#: src/settingsdialog.cpp:80
+msgid "Framerate limit:"
+msgstr "幀率限制:"
+
+#: src/settingsdialog.cpp:82
+msgid "Camera"
+msgstr "攝影機"
+
+#: src/settingsdialog.cpp:82
+msgid "Camera settings"
+msgstr "攝影機設定"
+
+#: src/settingsdialog.cpp:89
+msgid "Use default pictures directory"
+msgstr "使用預設的圖片目錄"
+
+#: src/settingsdialog.cpp:96
+msgid "Use subdirectory:"
+msgstr "使用子目錄:"
+
+#: src/settingsdialog.cpp:108
+msgid "Photo directory:"
+msgstr "照片目錄:"
+
+#: src/settingsdialog.cpp:110
+msgid "Storage"
+msgstr "儲存"
+
+#: src/settingsdialog.cpp:110
+msgid "Photo storage"
+msgstr "照片儲存"
+
+#: src/settingsdialog.cpp:116
+msgid "Play sound on taking photo"
+msgstr "拍照時播放音效"
+
+#: src/settingsdialog.cpp:119
+msgid "Play timer sounds"
+msgstr "播放計時音效"
+
+#: src/settingsdialog.cpp:122
+msgid "Show notification on taking photo"
+msgstr "拍照時顯示通知"
+
+#: src/settingsdialog.cpp:126
+msgid "Behaviour"
+msgstr "行為"
+
+#: src/videowidget.cpp:70
+msgid "Starting up webcam..."
+msgstr "啟動網路攝影機..."
+
+#: src/videowidget.cpp:129
+msgid "Photo has been stored in file %1"
+msgstr "照片已儲存在檔案 %1"
+
+#: src/videowidget.cpp:134
+msgid "Show in directory"
+msgstr "在目錄中顯示"
+
+#: src/videowidget.cpp:134
+msgid "Open in GIMP"
+msgstr "在GIMP中開啟"
+
+#: src/videowidget.cpp:134
+msgid "Open in Inkscape"
+msgstr "在Inkscape中開啟"
+
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Max Lin"
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "max7442@gmail.com"
+
