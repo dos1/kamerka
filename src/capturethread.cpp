@@ -79,7 +79,19 @@ void CaptureThread::run() {
         memcpy(asil,header,qstrlen(header));
 
         QImage *qq=new QImage();
-        if(qq->loadFromData(asil,fmt.fmt.pix.sizeimage+qstrlen(header), "PPM")){
+        if(qq->loadFromData(asil,fmt.fmt.pix.sizeimage+qstrlen(header), "PPM")){            
+            QTransform outTransform;
+            if(Settings::mirror()){
+                // scaling x * -1 - making the output image mirror.
+                outTransform.scale(-1, 1);
+            }
+
+            if(Settings::flip()){
+                // flipping y * -1
+                outTransform.scale(1, -1);
+            }
+
+            *qq = qq->transformed(outTransform);
             emit renderedImage(*qq);
         }
         free(asil);
