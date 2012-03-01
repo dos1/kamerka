@@ -79,6 +79,13 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     spinbox->setObjectName("kcfg_fps");
     layout->addRow(i18n("Framerate limit:"), spinbox);
 
+    QCheckBox *checkbox = new QCheckBox(i18n("Mirror output"));
+    checkbox->setObjectName("kcfg_mirror");
+    layout->addRow(checkbox);
+    checkbox = new QCheckBox(i18n("Flip output"));
+    checkbox->setObjectName("kcfg_flip");
+    layout->addRow(checkbox);
+
     this->addPage(page, i18n("Camera"), "camera-web", i18n("Camera settings") );
 
     // storage page
@@ -113,7 +120,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     page = new QWidget(this);
     layout = new QFormLayout(page);
 
-    QCheckBox *checkbox = new QCheckBox(i18n("Play sound on taking photo"));
+    checkbox = new QCheckBox(i18n("Play sound on taking photo"));
     checkbox->setObjectName("kcfg_soundontaking");
     layout->addRow(checkbox);
     checkbox = new QCheckBox(i18n("Play timer sounds"));
