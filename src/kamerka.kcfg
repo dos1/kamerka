@@ -21,6 +21,10 @@
       <label>Framerate limit.</label>
       <default>0</default>
     </entry>
+    <entry name="mirror" type="Bool">
+      <label>Mirrored output</label>
+      <default>false</default>
+    </entry>
   </group>
   <group name="Storage">
     <entry name="usexdgpictures" type="Bool">

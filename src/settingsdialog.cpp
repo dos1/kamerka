@@ -79,6 +79,10 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
     spinbox->setObjectName("kcfg_fps");
     layout->addRow(i18n("Framerate limit:"), spinbox);
 
+    QCheckBox *mirror = new QCheckBox(i18n("Mirror output"));
+    mirror->setObjectName("kcfg_mirror");
+    layout->addRow(mirror);
+
     this->addPage(page, i18n("Camera"), "camera-web", i18n("Camera settings") );
 
     // storage page
