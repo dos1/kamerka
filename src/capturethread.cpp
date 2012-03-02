@@ -93,8 +93,7 @@ void CaptureThread::run() {
                 outTransform.scale(1, -1);
             }
 
-            *qq = qq->transformed(outTransform);
-            emit renderedImage(*qq);
+            emit renderedImage(qq->transformed(outTransform));
         }
         free(asil);
         delete qq;
