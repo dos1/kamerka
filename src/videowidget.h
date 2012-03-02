@@ -40,6 +40,7 @@ Q_OBJECT
     QDeclarativeView *ui;
     Phonon::MediaObject* media;
     bool storeImage;
+    int effect;
   protected:
     void paintEvent(QPaintEvent *event);
 

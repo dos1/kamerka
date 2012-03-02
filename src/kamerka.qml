@@ -19,6 +19,7 @@
  import Qt 4.7;
  import Effects 1.0;
 
+
  Rectangle {
      property int rand: 0;
      property bool cyknij: false;
@@ -27,11 +28,13 @@
      property bool more: false;
      property bool canvasVisible: false;
      property bool recording: false;
+     property bool effects: false;
 
      signal takePhoto();
      signal timerCounter(int count);
      signal showDirectory();
      signal showConfiguration();
+     signal applyEffect(int efx);
 
      id: page;
      width: 640; height: 480;
@@ -93,7 +96,7 @@
              height: parent.height-50;
              color: "black";
              smooth: true;
-             /*
+
              Image {
                  effect: Blur {
                    blurRadius: 8
@@ -103,7 +106,7 @@
                 source: fileName;
                 smooth: true;
              }
-             */
+
              Image {
                  id: preview;
                 anchors.fill: parent;
@@ -153,6 +156,10 @@
      }
      function hideCanvasBackground() {
          canvasVisible=false;
+     }
+     function toggleEffects(){
+         if (effects) { effects=false; }
+         else { effects=true; }
      }
 
      Rectangle {
@@ -224,28 +231,34 @@
          }
          Button {
              id: configure;
-             anchors.top:  parent.verticalCenter;
              anchors.left: parent.left;
-             anchors.bottom: parent.bottom;
-             anchors.topMargin: 2;
-             anchors.bottomMargin: 4;
+             anchors.top: parent.verticalCenter;
+             anchors.topMargin: 4;
              anchors.leftMargin: 4;
-             width: (parent.width/2)-8;
+             width: (parent.width/3)-8;
              text: i18n("Configure");
              mouse.onClicked: showConfiguration();
          }
          Button {
              id: dolphin;
-             anchors.top:  parent.verticalCenter;
              anchors.left: configure.right;
-             anchors.bottom: parent.bottom;
-             anchors.topMargin: 2;
-             anchors.bottomMargin: 4;
+             anchors.top: parent.verticalCenter;
+             anchors.topMargin: 4;
+             anchors.leftMargin: 2;
+             width: (parent.width/3)-8;
+             text: i18n("Open directory");
+             mouse.onClicked: showDirectory();
+         }
+         Button {
+             id: effectsBtn;
+             anchors.left: dolphin.right;
+             anchors.top: parent.verticalCenter;
+             anchors.topMargin: 4;
              anchors.leftMargin: 2;
              anchors.right:  parent.right;
              anchors.rightMargin:  4;
-             text: i18n("Open directory");
-             mouse.onClicked: showDirectory();
+             text: effects ? i18n("Hide EFX") : i18n("Show EFX");
+             mouse.onClicked: toggleEffects();
          }
 
 
@@ -417,6 +430,118 @@
            }
            loops: Animation.Infinite;
          }
+     }
+
+     Rectangle {
+         id: effectHolder;
+         x: 0 - effectHolder.width;
+         y: 20;
+         height: 210;
+         width: 110;
+         color: "#AA000000";
+         radius: 10;
+
+         Button {
+             id: effect_none;
+             x: 0;
+             anchors.top: parent.top;
+             anchors.topMargin: 10;
+             anchors.right: parent.right;
+             anchors.rightMargin: 5;
+             text: i18n("No Effect");
+             mouse.onClicked: applyEffect(0);
+         }
+
+         Button {
+             id: effect_grey;
+             x: 0;
+             anchors.top: effect_none.bottom;
+             anchors.topMargin: 10;
+             anchors.right: parent.right;
+             anchors.rightMargin: 5;
+             text: i18n("Grey");
+             mouse.onClicked: applyEffect(1);
+         }
+
+         Button {
+             id: effect_invert;
+             x: 0;
+             anchors.top: effect_grey.bottom;
+             anchors.topMargin: 10;
+             anchors.right: parent.right;
+             anchors.rightMargin: 5;
+             text: i18n("Invert");
+             mouse.onClicked: applyEffect(2);
+         }
+
+         Button {
+             id: effect_mono;
+             x: 0;
+             anchors.top: effect_invert.bottom;
+             anchors.topMargin: 10;
+             anchors.right: parent.right;
+             anchors.rightMargin: 5;
+             text: i18n("Mono");
+             mouse.onClicked: applyEffect(3);
+         }
+
+         Button {
+             id: effect_smurf;
+             x: 0;
+             anchors.top: effect_mono.bottom;
+             anchors.topMargin: 10;
+             anchors.left: parent.left;
+             anchors.leftMargin: 5;
+             anchors.right: parent.right;
+             anchors.rightMargin: 5;
+             text: i18n("Smurf");
+             mouse.onClicked: applyEffect(4);
+         }
+
+         states: [
+             State {
+                 name: "left"; when: timer.running == true;
+                 PropertyChanges {
+                     target: effectHolder;
+                     x: 0 - effectHolder.width;
+                 }
+             },
+             State {
+                 name: "hidden"; when: canvasVisible == true; extend: "more";
+                 PropertyChanges {
+                     target: effectHolder;
+                     x: 0 - effectHolder.width;
+                 }
+             },
+             State {
+                 name: "effects"; when: effects == true;
+                 PropertyChanges {
+                     target: effectHolder;
+                     x: 0;
+                 }
+             }
+         ]
+
+         transitions: [
+             Transition {
+                 to: "left"; reversible: false;
+                 SequentialAnimation {
+                     NumberAnimation { property: "x"; duration: 500; easing.type: Easing.OutQuad; }
+                 }
+             },
+             Transition {
+                 to: "hidden"; reversible: true;
+                 SequentialAnimation {
+                     NumberAnimation { property: "x"; duration: 500; easing.type: Easing.InOutBack; }
+                 }
+             },
+             Transition {
+                 from: ""; to: "effects"; reversible: true;
+                 ParallelAnimation {
+                     NumberAnimation { property: "x"; duration: 500; easing.type: Easing.InOutBack; }
+                 }
+             }
+         ]
      }
 
  }
