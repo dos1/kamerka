@@ -96,7 +96,7 @@
              height: parent.height-50;
              color: "black";
              smooth: true;
-
+             /*
              Image {
                  effect: Blur {
                    blurRadius: 8
@@ -106,7 +106,7 @@
                 source: fileName;
                 smooth: true;
              }
-
+             */
              Image {
                  id: preview;
                 anchors.fill: parent;
