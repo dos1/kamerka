@@ -132,6 +132,10 @@ void MainWindow::loadSettings() {
     }
 }
 
+void MainWindow::applyEffect(int effect) {
+    videoViewer -> effect = effect;
+}
+
 void MainWindow::tryVideoThread() {
     confdial = new SettingsDialog(0, "settings", Settings::self());
     if ((videoViewer->thread.running==false) && (videoViewer->thread.start())) {
@@ -264,6 +268,7 @@ MainWindow::MainWindow() {
     connect(ui->rootObject(), SIGNAL(timerCounter(int)), this, SLOT(timerCounter(int)));
     connect(ui->rootObject(), SIGNAL(showDirectory()), this, SLOT(showDirectory()));
     connect(ui->rootObject(), SIGNAL(showConfiguration()), this, SLOT(showConfiguration()));
+    connect(ui->rootObject(), SIGNAL(applyEffect(int)), this, SLOT(applyEffect(int)));
 
     connect(&(videoViewer->thread), SIGNAL(startedCapture(int, int)), this, SLOT(startedCapture(int, int)));
 
