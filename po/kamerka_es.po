@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-07-24 14:19+0200\n"
+"POT-Creation-Date: 2012-03-03 00:43+0100\n"
 "PO-Revision-Date: 2011-07-13 17:30+0100\n"
 "Last-Translator: Daniel Halens Rodriguez <DanielHalens@gmail.com>\n"
 "Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
@@ -17,29 +17,57 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/kamerka.qml:200
+#: src/kamerka.qml:208
 msgid "Take a photo"
 msgstr "Tomar una foto"
 
-#: src/kamerka.qml:210
+#: src/kamerka.qml:218
 msgid "Self-timer"
 msgstr "Cuenta atrás"
 
-#: src/kamerka.qml:221
+#: src/kamerka.qml:229
 msgid "Less"
 msgstr "Menos"
 
-#: src/kamerka.qml:221
+#: src/kamerka.qml:229
 msgid "More"
 msgstr "Más"
 
-#: src/kamerka.qml:233
+#: src/kamerka.qml:239
 msgid "Configure"
 msgstr "Configurar"
 
-#: src/kamerka.qml:246
+#: src/kamerka.qml:249
+msgid "Hide effects"
+msgstr ""
+
+#: src/kamerka.qml:249
+msgid "Show effects"
+msgstr ""
+
+#: src/kamerka.qml:260
 msgid "Open directory"
 msgstr "Abrir carpeta"
+
+#: src/kamerka.qml:451
+msgid "No Effect"
+msgstr ""
+
+#: src/kamerka.qml:462
+msgid "Grey"
+msgstr ""
+
+#: src/kamerka.qml:473
+msgid "Invert"
+msgstr ""
+
+#: src/kamerka.qml:484
+msgid "Mono"
+msgstr ""
+
+#: src/kamerka.qml:497
+msgid "Smurf"
+msgstr ""
 
 #: src/main.cpp:35
 msgid "Kamerka"
@@ -61,15 +89,15 @@ msgstr "i18n() requiere de al menos un argumento"
 msgid "Could not load QML interface!"
 msgstr "¡No se pudo cargar el interfaz QML!"
 
-#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:141
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:145
 msgid "Error"
 msgstr "Error"
 
-#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:141
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:145
 msgid "Could not connect to V4L device!"
 msgstr "¡No se pudo conectar al dispositivo V4L!"
 
-#: src/mainwindow.cpp:170
+#: src/mainwindow.cpp:174
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
@@ -110,66 +138,74 @@ msgid "Framerate limit:"
 msgstr "Tasa de fotogramas:"
 
 #: src/settingsdialog.cpp:82
+msgid "Mirror output"
+msgstr ""
+
+#: src/settingsdialog.cpp:85
+msgid "Flip output"
+msgstr ""
+
+#: src/settingsdialog.cpp:89
 msgid "Camera"
 msgstr "Cámara"
 
-#: src/settingsdialog.cpp:82
+#: src/settingsdialog.cpp:89
 msgid "Camera settings"
 msgstr "Ajustes de cámara"
 
-#: src/settingsdialog.cpp:89
+#: src/settingsdialog.cpp:96
 msgid "Use default pictures directory"
 msgstr "Usar el directorio de imágenes por defecto"
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:103
 msgid "Use subdirectory:"
 msgstr "Usar subdirectorio:"
 
-#: src/settingsdialog.cpp:108
+#: src/settingsdialog.cpp:115
 msgid "Photo directory:"
 msgstr "Directorio de imágenes:"
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:117
 msgid "Storage"
 msgstr "Almacenamiento"
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:117
 msgid "Photo storage"
 msgstr "Almacenamiento de imágenes"
 
-#: src/settingsdialog.cpp:116
+#: src/settingsdialog.cpp:123
 msgid "Play sound on taking photo"
 msgstr "Reproducir sonido al tomar una foto"
 
-#: src/settingsdialog.cpp:119
+#: src/settingsdialog.cpp:126
 msgid "Play timer sounds"
 msgstr "Reproducir sonido en la cuenta atrás"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:129
 msgid "Show notification on taking photo"
 msgstr "Mostrar nota al tomar una foto"
 
-#: src/settingsdialog.cpp:126
+#: src/settingsdialog.cpp:133
 msgid "Behaviour"
 msgstr "Comportamiento"
 
-#: src/videowidget.cpp:70
+#: src/videowidget.cpp:72
 msgid "Starting up webcam..."
 msgstr "Iniciando la webcam..."
 
-#: src/videowidget.cpp:129
+#: src/videowidget.cpp:134
 msgid "Photo has been stored in file %1"
 msgstr "Foto guardada como %1"
 
-#: src/videowidget.cpp:134
+#: src/videowidget.cpp:139
 msgid "Show in directory"
 msgstr "Mostrar en el directorio"
 
-#: src/videowidget.cpp:134
+#: src/videowidget.cpp:139
 msgid "Open in GIMP"
 msgstr "Abrir en GIMP"
 
-#: src/videowidget.cpp:134
+#: src/videowidget.cpp:139
 msgid "Open in Inkscape"
 msgstr "Abrir con Inkscape"
 

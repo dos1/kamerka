@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2011-07-24 14:19+0200\n"
+"POT-Creation-Date: 2012-03-03 00:43+0100\n"
 "PO-Revision-Date: 2011-06-07 21:25+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
@@ -19,29 +19,57 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: src/kamerka.qml:200
+#: src/kamerka.qml:208
 msgid "Take a photo"
 msgstr "Фотографиши"
 
-#: src/kamerka.qml:210
+#: src/kamerka.qml:218
 msgid "Self-timer"
 msgstr "Тајмер"
 
-#: src/kamerka.qml:221
+#: src/kamerka.qml:229
 msgid "Less"
 msgstr "Мање"
 
-#: src/kamerka.qml:221
+#: src/kamerka.qml:229
 msgid "More"
 msgstr "Више"
 
-#: src/kamerka.qml:233
+#: src/kamerka.qml:239
 msgid "Configure"
 msgstr "Подеси"
 
-#: src/kamerka.qml:246
+#: src/kamerka.qml:249
+msgid "Hide effects"
+msgstr ""
+
+#: src/kamerka.qml:249
+msgid "Show effects"
+msgstr ""
+
+#: src/kamerka.qml:260
 msgid "Open directory"
 msgstr "Отвори фасциклу"
+
+#: src/kamerka.qml:451
+msgid "No Effect"
+msgstr ""
+
+#: src/kamerka.qml:462
+msgid "Grey"
+msgstr ""
+
+#: src/kamerka.qml:473
+msgid "Invert"
+msgstr ""
+
+#: src/kamerka.qml:484
+msgid "Mono"
+msgstr ""
+
+#: src/kamerka.qml:497
+msgid "Smurf"
+msgstr ""
 
 #: src/main.cpp:35
 msgid "Kamerka"
@@ -64,15 +92,15 @@ msgstr "i18n() захтијева бар један аргумент"
 msgid "Could not load QML interface!"
 msgstr "Не могу да учитам QML сучеље!"
 
-#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:141
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:145
 msgid "Error"
 msgstr "Грешка"
 
-#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:141
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:145
 msgid "Could not connect to V4L device!"
 msgstr "Не могу да се повежем са V4L сучењем!"
 
-#: src/mainwindow.cpp:170
+#: src/mainwindow.cpp:174
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
@@ -113,66 +141,74 @@ msgid "Framerate limit:"
 msgstr "Ограничење брзине кадрова:"
 
 #: src/settingsdialog.cpp:82
+msgid "Mirror output"
+msgstr ""
+
+#: src/settingsdialog.cpp:85
+msgid "Flip output"
+msgstr ""
+
+#: src/settingsdialog.cpp:89
 msgid "Camera"
 msgstr "Камера"
 
-#: src/settingsdialog.cpp:82
+#: src/settingsdialog.cpp:89
 msgid "Camera settings"
 msgstr "Подешавања камере"
 
-#: src/settingsdialog.cpp:89
+#: src/settingsdialog.cpp:96
 msgid "Use default pictures directory"
 msgstr "Користи подразумијевану фасциклу слика"
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:103
 msgid "Use subdirectory:"
 msgstr "Отвори подфасциклу"
 
-#: src/settingsdialog.cpp:108
+#: src/settingsdialog.cpp:115
 msgid "Photo directory:"
 msgstr "Фасцикла фотографија:"
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:117
 msgid "Storage"
 msgstr "Спремиште"
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:117
 msgid "Photo storage"
 msgstr "Спремиште фотографија"
 
-#: src/settingsdialog.cpp:116
+#: src/settingsdialog.cpp:123
 msgid "Play sound on taking photo"
 msgstr "Пусти звук при фотографисању"
 
-#: src/settingsdialog.cpp:119
+#: src/settingsdialog.cpp:126
 msgid "Play timer sounds"
 msgstr "Пуштај звуке тајмера"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:129
 msgid "Show notification on taking photo"
 msgstr "Прикажи обавјештење при фотографисању"
 
-#: src/settingsdialog.cpp:126
+#: src/settingsdialog.cpp:133
 msgid "Behaviour"
 msgstr "Понашање"
 
-#: src/videowidget.cpp:70
+#: src/videowidget.cpp:72
 msgid "Starting up webcam..."
 msgstr "Покрећем веб-камеру..."
 
-#: src/videowidget.cpp:129
+#: src/videowidget.cpp:134
 msgid "Photo has been stored in file %1"
 msgstr "Фотографија је смјештена у фајл %1"
 
-#: src/videowidget.cpp:134
+#: src/videowidget.cpp:139
 msgid "Show in directory"
 msgstr "Покажи у фасцикли"
 
-#: src/videowidget.cpp:134
+#: src/videowidget.cpp:139
 msgid "Open in GIMP"
 msgstr "Отвори помоћу ГИМПа"
 
-#: src/videowidget.cpp:134
+#: src/videowidget.cpp:139
 msgid "Open in Inkscape"
 msgstr "Отвори помоћу Инкскејпа"
 
