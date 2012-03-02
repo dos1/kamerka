@@ -240,25 +240,25 @@
              mouse.onClicked: showConfiguration();
          }
          Button {
-             id: dolphin;
+             id: effectsBtn;
              anchors.left: configure.right;
              anchors.top: parent.verticalCenter;
              anchors.topMargin: 4;
              anchors.leftMargin: 2;
              width: (parent.width/3)-8;
-             text: i18n("Open directory");
-             mouse.onClicked: showDirectory();
+             text: effects ? i18n("Hide effects") : i18n("Show effects");
+             mouse.onClicked: toggleEffects();
          }
          Button {
-             id: effectsBtn;
-             anchors.left: dolphin.right;
+             id: dolphin;
+             anchors.left: effectsBtn.right;
              anchors.top: parent.verticalCenter;
              anchors.topMargin: 4;
              anchors.leftMargin: 2;
              anchors.right:  parent.right;
              anchors.rightMargin:  4;
-             text: effects ? i18n("Hide EFX") : i18n("Show EFX");
-             mouse.onClicked: toggleEffects();
+             text: i18n("Open directory");
+             mouse.onClicked: showDirectory();
          }
 
 
@@ -517,7 +517,7 @@
                  name: "effects"; when: effects == true;
                  PropertyChanges {
                      target: effectHolder;
-                     x: 0;
+                     x: 4;
                  }
              }
          ]
