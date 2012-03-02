@@ -57,6 +57,7 @@ public slots:
     void closeCanvasLayer();
     void tryVideoThread();
     void loadSettings();
+    void applyEffect(int effect);
     void startedCapture(int width, int height);
 };
 
