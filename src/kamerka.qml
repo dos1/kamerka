@@ -148,7 +148,7 @@
         page.timeranim=true;
      }
      function moreOrLess() {
-         if (more) { more=false; }
+         if (more) { more=false; effects=false; }
          else { more=true; }
      }
      function showCanvasBackground() {
