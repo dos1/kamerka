@@ -26,20 +26,20 @@
 
 class SettingsDialog : public KConfigDialog
 {
-    Q_OBJECT
-public:
-    explicit SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *config);
-private:
-    KLineEdit *subdir;
-    KUrlRequester *urledit;
-    KConfigSkeleton *config;
-    QCheckBox *subdircheck;
-    QGroupBox *xdggroupbox;
-signals:
+		Q_OBJECT
+	public:
+		explicit SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *config);
+	private:
+		KLineEdit *subdir;
+		KUrlRequester *urledit;
+		KConfigSkeleton *config;
+		QCheckBox *subdircheck;
+		QGroupBox *xdggroupbox;
+	signals:
 
-public slots:
-    void updateUrl();
-    void checkDir();
+	public slots:
+		void updateUrl();
+		void checkDir();
 };
 
 #endif // SETTINGSDIALOG_H

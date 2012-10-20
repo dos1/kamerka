@@ -26,38 +26,38 @@
 
 class EngineAccess : public QObject
 {
-    Q_OBJECT
-public:
-    Q_INVOKABLE void setEngine(QScriptValue val);
-    QScriptEngine *engine;
+		Q_OBJECT
+	public:
+		Q_INVOKABLE void setEngine(QScriptValue val);
+		QScriptEngine *engine;
 };
 
 
 class MainWindow : public KMainWindow {
-    Q_OBJECT
-public:
-    MainWindow();
-    videowidget *videoViewer;
-    QDeclarativeView *ui;
-    QGraphicsProxyWidget *conf, *dialog;
-    SettingsDialog *confdial;
-    KDialog *kdialog;
-    QLabel *dialoglabel;
-private:
-    void resizeEvent(QResizeEvent *e);
-    bool first;
-public slots:
-    void takePhoto();
-    void timerCounter(int);
-    void showDirectory();
-    void showConfiguration();
-    void QMLStatus(QDeclarativeView::Status);
-    int opacityUpdate(QGraphicsProxyWidget*);
-    void opacityUpdateConf();
-    void closeCanvasLayer();
-    void tryVideoThread();
-    void loadSettings();
-    void applyEffect(int effect);
-    void startedCapture(int width, int height);
+		Q_OBJECT
+	public:
+		MainWindow();
+		videowidget *videoViewer;
+		QDeclarativeView *ui;
+		QGraphicsProxyWidget *conf, *dialog;
+		SettingsDialog *confdial;
+		KDialog *kdialog;
+		QLabel *dialoglabel;
+	private:
+		void resizeEvent(QResizeEvent *e);
+		bool first;
+	public slots:
+		void takePhoto();
+		void timerCounter(int);
+		void showDirectory();
+		void showConfiguration();
+		void QMLStatus(QDeclarativeView::Status);
+		int opacityUpdate(QGraphicsProxyWidget*);
+		void opacityUpdateConf();
+		void closeCanvasLayer();
+		void tryVideoThread();
+		void loadSettings();
+		void applyEffect(int effect);
+		void startedCapture(int width, int height);
 };
 

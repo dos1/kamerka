@@ -30,31 +30,31 @@
 
 class videowidget : public QWidget
 {
-Q_OBJECT
-  public:
-    videowidget(QWidget *parent = 0);
-    ~videowidget();
+		Q_OBJECT
+	public:
+		videowidget(QWidget *parent = 0);
+		~videowidget();
 
-    QPixmap pixmap;
-    CaptureThread thread;
-    QDeclarativeView *ui;
-    Phonon::MediaObject* media;
-    bool storeImage;
-    int effect;
-  protected:
-    void paintEvent(QPaintEvent *event);
+		QPixmap pixmap;
+		CaptureThread thread;
+		QDeclarativeView *ui;
+		Phonon::MediaObject* media;
+		bool storeImage;
+		int effect;
+	protected:
+		void paintEvent(QPaintEvent *event);
 
-  public slots:
-    void setPicture(QImage);
+	public slots:
+		void setPicture(QImage);
 };
 
 class Notification : public KNotification {
-Q_OBJECT
-  public:
-    Notification(QString, QString filename);
-    QString filename;
-  public slots:
-    void openFile(unsigned int);
+		Q_OBJECT
+	public:
+		Notification(QString, QString filename);
+		QString filename;
+	public slots:
+		void openFile(unsigned int);
 };
 
 #endif // VIDEOWIDGET_H
