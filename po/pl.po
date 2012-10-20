@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2012-03-03 00:43+0100\n"
+"POT-Creation-Date: 2012-10-20 02:31+0200\n"
 "PO-Revision-Date: 2012-03-03 00:45+0100\n"
 "Last-Translator: Sebastian Krzyszkowiak <dos@dosowisko.net>\n"
 "Language-Team: pl_PL <dos@dosowisko.net>\n"
@@ -90,15 +90,11 @@ msgstr "i18n() wymaga conajmniej jednego argumentu"
 msgid "Could not load QML interface!"
 msgstr "Nie można uruchomić interfejsu QML!"
 
-#: src/mainwindow.cpp:54
-#: src/mainwindow.cpp:130
-#: src/mainwindow.cpp:145
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:145
 msgid "Error"
 msgstr "Błąd"
 
-#: src/mainwindow.cpp:126
-#: src/mainwindow.cpp:130
-#: src/mainwindow.cpp:145
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:145
 msgid "Could not connect to V4L device!"
 msgstr "Nie można połączyć się z urządzeniem V4L!"
 
@@ -107,7 +103,8 @@ msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
 msgstr ""
-"Żądana rozdzielczość (%1x%2) nie była dostępna. Sterownik użył rozdzielczości %3x%4.\n"
+"Żądana rozdzielczość (%1x%2) nie była dostępna. Sterownik użył "
+"rozdzielczości %3x%4.\n"
 "Proszę sprawdzić swoją konfigurację."
 
 #: src/settingsdialog.cpp:42
@@ -214,14 +211,12 @@ msgstr "Otwórz w GIMPie"
 msgid "Open in Inkscape"
 msgstr "Otwórz w Inkscape"
 
-#: tools/rc.cpp:1
-#: rc.cpp:1
+#: tools/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Sebastian Krzyszkowiak"
 
-#: tools/rc.cpp:2
-#: rc.cpp:2
+#: tools/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dos@dosowisko.net"
