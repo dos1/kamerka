@@ -55,9 +55,35 @@ videowidget::videowidget(QWidget *parent) : QWidget(parent) {
 					this, SLOT(setPicture(QImage)));
 
 	setAutoFillBackground(true);
+
+	QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+	sizePolicy.setHeightForWidth(true);
+	setSizePolicy(sizePolicy);
+
 	media = new Phonon::MediaObject(this);
 	Phonon::createPath(media, new Phonon::AudioOutput(Phonon::NotificationCategory, this));
 }
+
+void videowidget::resize(const QSize& size) {
+	if (Settings::aspectlock()) {
+		QSize s(size);
+
+		double aspect = Settings::width()/(double)Settings::height();
+
+		if (s.width()>s.height()*aspect) {
+			s.setWidth(s.height()*aspect);
+		} else {
+			s.setHeight(s.width()/aspect);
+		}
+
+		QSize p = this->parentWidget()->size();
+		QWidget::setGeometry((p.width()-s.width())/2,(p.height()-s.height())/2, s.width(), s.height());
+	} else {
+		QWidget::setGeometry(0, 0, size.width(), size.height());
+		//QWidget::resize(size);
+	}
+}
+
 
 videowidget::~videowidget() {
 	if (thread.isRunning())

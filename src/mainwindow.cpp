@@ -130,6 +130,7 @@ void MainWindow::loadSettings() {
 			KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
 		}
 	}
+	videoViewer->resize(this->size());
 }
 
 void MainWindow::applyEffect(int effect) {
@@ -196,7 +197,7 @@ MainWindow::MainWindow() {
 
 	this->setCentralWidget(ui);
 
-	//Glorious hack:steal the engine - thanks for KDeclarative, from which I stole this code! :)
+	//Glorious hack:steal the engine - thanks to KDeclarative, from which I stole this code! :)
 	//create the access object
 	EngineAccess *engineAccess = new EngineAccess();
 	ui->engine()->rootContext()->setContextProperty("__engineAccess", engineAccess);

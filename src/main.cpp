@@ -30,6 +30,7 @@ int main(int argc, char *argv[]) {
 	printf("    Kamerka comes with ABSOLUTELY NO WARRANTY.\n");
 	printf("    This is free software, and you are welcome to redistribute it\n");
 	printf("    under certain conditions; type `./kamerka --license' for details.\n");
+	fflush(stdout);
 
 	QApplication::setGraphicsSystem("raster"); // improves performance a lot, should be default on modern systems
 	KAboutData aboutData("kamerka", 0, ki18n("Kamerka"), VERSION,

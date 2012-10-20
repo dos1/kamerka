@@ -29,6 +29,10 @@
       <label>Flipped output (upside down)</label>
       <default>false</default>
     </entry>
+    <entry name="aspectlock" type="Bool">
+      <label>Lock aspect ratio</label>
+        <default>false</default>
+    </entry>
   </group>
   <group name="Storage">
     <entry name="usexdgpictures" type="Bool">

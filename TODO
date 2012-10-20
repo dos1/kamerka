@@ -1,10 +1,9 @@
 For 0.8.5:
  * start with window size = video resolution
- * ability to lock window aspect ratio
- * brightness, colors, contrast
 
 For 1.0:
  * investigate using phonon for getting video data
+ * brightness, colors, contrast
  * better scalling ui
  * animated preview of already taken photos
  * some basic management of taken photos
@@ -17,6 +16,7 @@ For 1.0:
   * allow using custom sounds
   * time of previews
   * image format
+ * better object oriented application design
 
 For 1.x:
  * photo uploading to social services

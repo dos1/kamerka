@@ -41,6 +41,7 @@ class videowidget : public QWidget
 		Phonon::MediaObject* media;
 		bool storeImage;
 		int effect;
+		void resize(const QSize& size);
 	protected:
 		void paintEvent(QPaintEvent *event);
 
