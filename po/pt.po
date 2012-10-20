@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kamerka\n"
+"Report-Msgid-Bugs-To: dos@dosowisko.net\n"
+"POT-Creation-Date: 2011-07-24 14:19+0200\n"
+"PO-Revision-Date: 2012-10-18 22:15-0300\n"
+"Last-Translator: JuraSampaio <jura_sampaio@hotmail.com>\n"
+"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+
+msgid " fps"
+msgstr " fps"
+
+msgid "Behaviour"
+msgstr "Comportamento"
+
+msgid "Camera"
+msgstr "Cámara"
+
+msgid "Camera settings"
+msgstr "Ajustes de cámara"
+
+msgid "Configure"
+msgstr "Configurar"
+
+msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+
+msgid "Could not connect to V4L device!"
+msgstr "¡Não foi possível se conectar ao dispositivo V4L!"
+
+msgid "Could not load QML interface!"
+msgstr "¡Não foi possível carregar a  interface QML!"
+
+msgid "Device node:"
+msgstr "Dispositivo:"
+
+msgid "Disabled"
+msgstr "Desabilitado"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Seu email"
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "Framerate limit:"
+msgstr "Limite de frames"
+
+msgid "Kamerka"
+msgstr "Kamerka"
+
+msgid "Less"
+msgstr "Menos"
+
+msgid "More"
+msgstr "Mais"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Seus nomes"
+
+msgid "Open directory"
+msgstr "Abrir diretorio"
+
+msgid "Open in GIMP"
+msgstr "Abrir com GIMP"
+
+msgid "Open in Inkscape"
+msgstr "Abrir com Inkscape"
+
+msgid "Photo directory:"
+msgstr "Diretório de imagens:"
+
+msgid "Photo has been stored in file %1"
+msgstr "Foto guardada como %1"
+
+msgid "Photo storage"
+msgstr "Armazenamento de imágenes"
+
+msgid "Play sound on taking photo"
+msgstr "Reproduzir som ao tirar uma foto"
+
+msgid "Play timer sounds"
+msgstr "Reproduzir sons temporizados"
+
+msgid ""
+"Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
+"Please check your configuration."
+msgstr ""
+"A resolução solicitada (%1x%2) não está disponivel. O driver usará %3x%4.\n"
+"Compruebe la configuración."
+
+msgid "Resolution:"
+msgstr "Resolução:"
+
+msgid "Selected path does not exists. Do you want to create it?"
+msgstr "O caminho escolhido não existe. Deseja criar?"
+
+msgid "Self-timer"
+msgstr "Temporizador"
+
+msgid "Show in directory"
+msgstr "Mostrar no diretório"
+
+msgid "Show notification on taking photo"
+msgstr "Mostrar notificação ao tomar foto"
+
+msgid "Simple photo taking application with fancy animated interface"
+msgstr "Simples foto tomando aplicação com interface animada fantasia"
+
+msgid "Starting up webcam..."
+msgstr "Iniciando a webcam..."
+
+msgid "Storage"
+msgstr "Armazenamento"
+
+msgid "Take a photo"
+msgstr "Tomar uma foto"
+
+msgid "Use default pictures directory"
+msgstr "Use o diretório de imagens padrão"
+
+msgid "Use subdirectory:"
+msgstr "Usar subdiretório:"
+
+msgid "i18n() takes at least one argument"
+msgstr "i18n() requer ao menos um argumento"
+
+msgid "px"
+msgstr "px"
+
+msgid "x"
+msgstr "x"
+
