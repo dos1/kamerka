@@ -1,7 +1,11 @@
-For 1.0:
- * better scalling ui
+For 0.8.5:
  * start with window size = video resolution
  * ability to lock window aspect ratio
+ * brightness, colors, contrast
+
+For 1.0:
+ * investigate using phonon for getting video data
+ * better scalling ui
  * animated preview of already taken photos
  * some basic management of taken photos
  * maybe some moar effects
@@ -11,7 +15,6 @@ For 1.0:
   * buttons in notifications (for instance to set Krita instead of GIMP)
   * consecutive image taking
   * allow using custom sounds
-  * brightness, colors, contrast
   * time of previews
   * image format
 
