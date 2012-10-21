@@ -1,20 +1,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Frank Schäfer <fschaefer.oss@googlemail.com>, 2011.
+# Frank Schäfer <fschaefer.oss@googlemail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
 "POT-Creation-Date: 2012-10-21 02:02+0200\n"
-"PO-Revision-Date: 2011-07-18 11:54+0200\n"
-"Last-Translator: Frank Schäfer <fschaefer.oss@googlemail.com>\n"
-"Language-Team: \n"
-"Language: \n"
+"PO-Revision-Date: 2012-10-21 12:37+0300\n"
+"Last-Translator: Frank Schäfer\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/kamerka.qml:208
@@ -39,11 +39,11 @@ msgstr "Konfigurieren"
 
 #: src/kamerka.qml:249
 msgid "Hide effects"
-msgstr ""
+msgstr "Effekte ausblenden"
 
 #: src/kamerka.qml:249
 msgid "Show effects"
-msgstr ""
+msgstr "Zeige Effekte"
 
 #: src/kamerka.qml:260
 msgid "Open directory"
@@ -51,23 +51,24 @@ msgstr "Verzeichnis öffnen"
 
 #: src/kamerka.qml:449
 msgid "No Effect"
-msgstr ""
+msgstr "Kein Effekt"
 
 #: src/kamerka.qml:460
 msgid "Grey"
-msgstr ""
+msgstr "Grau"
 
 #: src/kamerka.qml:471
 msgid "Invert"
-msgstr ""
+msgstr "Invertiert"
 
 #: src/kamerka.qml:482
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
+# Schlumpf
 #: src/kamerka.qml:495
 msgid "Smurf"
-msgstr ""
+msgstr "Smurf"
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -80,9 +81,8 @@ msgstr ""
 "Benutzeroberfläche"
 
 #: src/main.cpp:38
-#, fuzzy
 msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
-msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
 
 #: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
@@ -142,15 +142,15 @@ msgstr "Bildraten-Limit:"
 
 #: src/settingsdialog.cpp:82
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Festes Bildseitenverhältnis"
 
 #: src/settingsdialog.cpp:85
 msgid "Mirror output"
-msgstr ""
+msgstr "Vertikal spiegeln"
 
 #: src/settingsdialog.cpp:88
 msgid "Flip output"
-msgstr ""
+msgstr "Horizontal spiegeln"
 
 #: src/settingsdialog.cpp:93
 msgid "Camera"
@@ -225,3 +225,5 @@ msgstr "Frank Schäfer"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "fschaefer.oss@googlemail.com"
+
+
