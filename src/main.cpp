@@ -29,13 +29,13 @@ int main(int argc, char *argv[]) {
 	printf("Kamerka version %s\n    Copyright (C) 2011-2012 Sebastian Krzyszkowiak\n", VERSION);
 	printf("    Kamerka comes with ABSOLUTELY NO WARRANTY.\n");
 	printf("    This is free software, and you are welcome to redistribute it\n");
-	printf("    under certain conditions; type `./kamerka --license' for details.\n");
+	printf("    under certain conditions; type `./kamerka --license' for details.\n\n");
 	fflush(stdout);
 
 	QApplication::setGraphicsSystem("raster"); // improves performance a lot, should be default on modern systems
 	KAboutData aboutData("kamerka", 0, ki18n("Kamerka"), VERSION,
 											 ki18n("Simple photo taking application with fancy animated interface"),
-											 KAboutData::License_GPL, ki18n("Copyright (c) 2011-2012 Sebastian Krzyszkowiak") );
+											 KAboutData::License_GPL, ki18n("Copyright (C) 2011-2012 Sebastian Krzyszkowiak") );
 	KCmdLineArgs::init(argc, argv, &aboutData);
 	KApplication a;
 	QIcon icon(":/icons/kamerka.png");
