@@ -273,6 +273,8 @@ MainWindow::MainWindow() {
 
 	connect(&(videoViewer->thread), SIGNAL(startedCapture(int, int)), this, SLOT(startedCapture(int, int)));
 
+	resize(Settings::width(), Settings::height());
+
 	// capture from webcam & setup configuration
 	first = true;
 	tryVideoThread();
