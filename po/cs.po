@@ -2,20 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Pavel Fric <pavelfric@seznam.cz>, 2011.
-# Pavel Fric <fripohled.blogspot.com>, 2011.
+# Pavel Fric <fripohled.blogspot.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
 "POT-Creation-Date: 2012-10-21 02:02+0200\n"
-"PO-Revision-Date: 2011-07-14 10:10+0200\n"
-"Last-Translator: Pavel Fric <fripohled.blogspot.com>\n"
+"PO-Revision-Date: 2012-10-21 20:37+0200\n"
+"Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/kamerka.qml:208
@@ -40,11 +40,11 @@ msgstr "Nastavit"
 
 #: src/kamerka.qml:249
 msgid "Hide effects"
-msgstr ""
+msgstr "Skrýt efekty"
 
 #: src/kamerka.qml:249
 msgid "Show effects"
-msgstr ""
+msgstr "Ukázat efekty"
 
 #: src/kamerka.qml:260
 msgid "Open directory"
@@ -52,23 +52,23 @@ msgstr "Otevřít adresář"
 
 #: src/kamerka.qml:449
 msgid "No Effect"
-msgstr ""
+msgstr "Žádný efekt"
 
 #: src/kamerka.qml:460
 msgid "Grey"
-msgstr ""
+msgstr "Šedá"
 
 #: src/kamerka.qml:471
 msgid "Invert"
-msgstr ""
+msgstr "Obrátit"
 
 #: src/kamerka.qml:482
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 #: src/kamerka.qml:495
 msgid "Smurf"
-msgstr ""
+msgstr "Šmoula"
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -80,9 +80,8 @@ msgstr ""
 "Jednoduchý program na dělání fotografií s vypracovaných kresleným rozhraním"
 
 #: src/main.cpp:38
-#, fuzzy
 msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
-msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
 
 #: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
@@ -143,15 +142,15 @@ msgstr "Omezení snímkování"
 
 #: src/settingsdialog.cpp:82
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Zamknout poměr stran"
 
 #: src/settingsdialog.cpp:85
 msgid "Mirror output"
-msgstr ""
+msgstr "Zrcadlit výstup"
 
 #: src/settingsdialog.cpp:88
 msgid "Flip output"
-msgstr ""
+msgstr "Převrátit výstup"
 
 #: src/settingsdialog.cpp:93
 msgid "Camera"
