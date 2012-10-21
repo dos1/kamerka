@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2012-10-20 02:31+0200\n"
+"POT-Creation-Date: 2012-10-21 02:02+0200\n"
 "PO-Revision-Date: 2011-08-07 23:05+0200\n"
 "Last-Translator: Kenny Verstraete <verstraete_kenny@skynet.be>\n"
 "Language-Team: Dutch <kde-i18n-doc@kde.org>\n"
@@ -49,36 +49,37 @@ msgstr ""
 msgid "Open directory"
 msgstr "Map openen"
 
-#: src/kamerka.qml:451
+#: src/kamerka.qml:449
 msgid "No Effect"
 msgstr ""
 
-#: src/kamerka.qml:462
+#: src/kamerka.qml:460
 msgid "Grey"
 msgstr ""
 
-#: src/kamerka.qml:473
+#: src/kamerka.qml:471
 msgid "Invert"
 msgstr ""
 
-#: src/kamerka.qml:484
+#: src/kamerka.qml:482
 msgid "Mono"
 msgstr ""
 
-#: src/kamerka.qml:497
+#: src/kamerka.qml:495
 msgid "Smurf"
 msgstr ""
 
-#: src/main.cpp:35
+#: src/main.cpp:36
 msgid "Kamerka"
 msgstr "Kamerka"
 
-#: src/main.cpp:36
+#: src/main.cpp:37
 msgid "Simple photo taking application with fancy animated interface"
 msgstr "Simpele toepassing om foto's te nemen met een geanimeerde interface"
 
-#: src/main.cpp:37
-msgid "Copyright (c) 2011 Sebastian Krzyszkowiak"
+#: src/main.cpp:38
+#, fuzzy
+msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
 #: src/mainwindow.cpp:36
@@ -89,15 +90,15 @@ msgstr "i18n() neemt op zijn minst één argument"
 msgid "Could not load QML interface!"
 msgstr "Kon QML interface niet laden!"
 
-#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:145
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:146
 msgid "Error"
 msgstr "Fout"
 
-#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:145
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:146
 msgid "Could not connect to V4L device!"
 msgstr "Kon niet verbinden met V4L apparaat!"
 
-#: src/mainwindow.cpp:174
+#: src/mainwindow.cpp:175
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
@@ -139,74 +140,78 @@ msgid "Framerate limit:"
 msgstr "Framerate limiet:"
 
 #: src/settingsdialog.cpp:82
-msgid "Mirror output"
+msgid "Lock aspect ratio"
 msgstr ""
 
 #: src/settingsdialog.cpp:85
+msgid "Mirror output"
+msgstr ""
+
+#: src/settingsdialog.cpp:88
 msgid "Flip output"
 msgstr ""
 
-#: src/settingsdialog.cpp:89
+#: src/settingsdialog.cpp:93
 msgid "Camera"
 msgstr "Camera"
 
-#: src/settingsdialog.cpp:89
+#: src/settingsdialog.cpp:93
 msgid "Camera settings"
 msgstr "Camera instellingen"
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:100
 msgid "Use default pictures directory"
 msgstr "Gebruik de standaardmap voor afbeeldingen"
 
-#: src/settingsdialog.cpp:103
+#: src/settingsdialog.cpp:107
 msgid "Use subdirectory:"
 msgstr "Gebruik submap:"
 
-#: src/settingsdialog.cpp:115
+#: src/settingsdialog.cpp:119
 msgid "Photo directory:"
 msgstr "fotomap:"
 
-#: src/settingsdialog.cpp:117
+#: src/settingsdialog.cpp:121
 msgid "Storage"
 msgstr "Opslag"
 
-#: src/settingsdialog.cpp:117
+#: src/settingsdialog.cpp:121
 msgid "Photo storage"
 msgstr "Foto opslag"
 
-#: src/settingsdialog.cpp:123
+#: src/settingsdialog.cpp:127
 msgid "Play sound on taking photo"
 msgstr "Speel geluid af bij het nemen van een foto"
 
-#: src/settingsdialog.cpp:126
+#: src/settingsdialog.cpp:130
 msgid "Play timer sounds"
 msgstr "Speel timer geluiden af"
 
-#: src/settingsdialog.cpp:129
+#: src/settingsdialog.cpp:133
 msgid "Show notification on taking photo"
 msgstr "Toon notificatie bij het nemen van een foto"
 
-#: src/settingsdialog.cpp:133
+#: src/settingsdialog.cpp:137
 msgid "Behaviour"
 msgstr "Gedrag"
 
-#: src/videowidget.cpp:72
+#: src/videowidget.cpp:98
 msgid "Starting up webcam..."
 msgstr "Webcam aan het starten..."
 
-#: src/videowidget.cpp:134
+#: src/videowidget.cpp:160
 msgid "Photo has been stored in file %1"
 msgstr "Foto is opgeslagen in bestand %1"
 
-#: src/videowidget.cpp:139
+#: src/videowidget.cpp:165
 msgid "Show in directory"
 msgstr "Geef weer in map"
 
-#: src/videowidget.cpp:139
+#: src/videowidget.cpp:165
 msgid "Open in GIMP"
 msgstr "Openen in GIMP"
 
-#: src/videowidget.cpp:139
+#: src/videowidget.cpp:165
 msgid "Open in Inkscape"
 msgstr "Openen in Inkscape"
 
