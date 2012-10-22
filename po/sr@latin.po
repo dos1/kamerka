@@ -41,11 +41,11 @@ msgstr "Podesi"
 
 #: src/kamerka.qml:249
 msgid "Hide effects"
-msgstr ""
+msgstr "Sakrij efekte"
 
 #: src/kamerka.qml:249
 msgid "Show effects"
-msgstr ""
+msgstr "Prikaži efekte"
 
 #: src/kamerka.qml:260
 msgid "Open directory"
@@ -53,23 +53,23 @@ msgstr "Otvori fasciklu"
 
 #: src/kamerka.qml:449
 msgid "No Effect"
-msgstr ""
+msgstr "Bez efekta"
 
 #: src/kamerka.qml:460
 msgid "Grey"
-msgstr ""
+msgstr "Sivilo"
 
 #: src/kamerka.qml:471
 msgid "Invert"
-msgstr ""
+msgstr "Izvrnuto"
 
 #: src/kamerka.qml:482
 msgid "Mono"
-msgstr ""
+msgstr "Jednobojno"
 
 #: src/kamerka.qml:495
 msgid "Smurf"
-msgstr ""
+msgstr "Štrumf"
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -81,9 +81,8 @@ msgstr ""
 "Jednostavna aplikacija za hvatanje fotografija sa lepim animiranim sučeljem"
 
 #: src/main.cpp:38
-#, fuzzy
 msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
-msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "© 2011-2012 Sebastijan Kriškovijak (Sebastian Krzyszkowiak)"
 
 #: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
@@ -143,15 +142,15 @@ msgstr "Ograničenje brzine kadrova:"
 
 #: src/settingsdialog.cpp:82
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Zadrži razmeru"
 
 #: src/settingsdialog.cpp:85
 msgid "Mirror output"
-msgstr ""
+msgstr "Preslikano"
 
 #: src/settingsdialog.cpp:88
 msgid "Flip output"
-msgstr ""
+msgstr "Obrnuto"
 
 #: src/settingsdialog.cpp:93
 msgid "Camera"
