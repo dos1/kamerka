@@ -216,11 +216,9 @@ msgstr "Abrir con Inkscape"
 #: tools/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tus nombres"
+msgstr "Daniel Halens Rodríguez"
 
 #: tools/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "Tus emails"
-
-
+msgstr "DanielHalens@gmail.com"
