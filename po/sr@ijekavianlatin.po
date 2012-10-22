@@ -82,7 +82,7 @@ msgstr ""
 
 #: src/main.cpp:38
 msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
-msgstr "© 2011-2012 Sebastijan Kriškovijak (Sebastian Krzyszkowiak)"
+msgstr "© 2011-2012 Sebastijan Kšiškovijak (Sebastian Krzyszkowiak)"
 
 #: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
