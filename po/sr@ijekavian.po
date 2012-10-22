@@ -41,11 +41,11 @@ msgstr "Подеси"
 
 #: src/kamerka.qml:249
 msgid "Hide effects"
-msgstr ""
+msgstr "Сакриј ефекте"
 
 #: src/kamerka.qml:249
 msgid "Show effects"
-msgstr ""
+msgstr "Прикажи ефекте"
 
 #: src/kamerka.qml:260
 msgid "Open directory"
@@ -53,23 +53,23 @@ msgstr "Отвори фасциклу"
 
 #: src/kamerka.qml:449
 msgid "No Effect"
-msgstr ""
+msgstr "Без ефекта"
 
 #: src/kamerka.qml:460
 msgid "Grey"
-msgstr ""
+msgstr "Сивило"
 
 #: src/kamerka.qml:471
 msgid "Invert"
-msgstr ""
+msgstr "Изврнуто"
 
 #: src/kamerka.qml:482
 msgid "Mono"
-msgstr ""
+msgstr "Једнобојно"
 
 #: src/kamerka.qml:495
 msgid "Smurf"
-msgstr ""
+msgstr "Штрумф"
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -81,9 +81,8 @@ msgstr ""
 "Једноставна апликација за хватање фотографија са лијепим анимираним сучељем"
 
 #: src/main.cpp:38
-#, fuzzy
 msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
-msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "© 2011-2012 Себастијан Кришковијак (Sebastian Krzyszkowiak)"
 
 #: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
@@ -143,15 +142,15 @@ msgstr "Ограничење брзине кадрова:"
 
 #: src/settingsdialog.cpp:82
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Задржи размјеру"
 
 #: src/settingsdialog.cpp:85
 msgid "Mirror output"
-msgstr ""
+msgstr "Пресликано"
 
 #: src/settingsdialog.cpp:88
 msgid "Flip output"
-msgstr ""
+msgstr "Обрнуто"
 
 #: src/settingsdialog.cpp:93
 msgid "Camera"
