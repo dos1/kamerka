@@ -1,20 +1,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Daniel Halens Rodriguez <DanielHalens@gmail.com>, 2011.
+# Daniel Halens Rodriguez <DanielHalens@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
 "POT-Creation-Date: 2012-10-21 02:02+0200\n"
-"PO-Revision-Date: 2011-07-13 17:30+0100\n"
-"Last-Translator: Daniel Halens Rodriguez <DanielHalens@gmail.com>\n"
+"PO-Revision-Date: 2012-10-22 01:09+0100\n"
+"Last-Translator: \n"
 "Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
-"Language: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/kamerka.qml:208
@@ -39,11 +39,11 @@ msgstr "Configurar"
 
 #: src/kamerka.qml:249
 msgid "Hide effects"
-msgstr ""
+msgstr "Ocultar efectos"
 
 #: src/kamerka.qml:249
 msgid "Show effects"
-msgstr ""
+msgstr "Mostrar efectos"
 
 #: src/kamerka.qml:260
 msgid "Open directory"
@@ -51,23 +51,23 @@ msgstr "Abrir carpeta"
 
 #: src/kamerka.qml:449
 msgid "No Effect"
-msgstr ""
+msgstr "Ninguno"
 
 #: src/kamerka.qml:460
 msgid "Grey"
-msgstr ""
+msgstr "Gris"
 
 #: src/kamerka.qml:471
 msgid "Invert"
-msgstr ""
+msgstr "Invertir"
 
 #: src/kamerka.qml:482
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 #: src/kamerka.qml:495
 msgid "Smurf"
-msgstr ""
+msgstr "Pitufo"
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -78,7 +78,6 @@ msgid "Simple photo taking application with fancy animated interface"
 msgstr "Aplicación sencilla para tomar fotos con un atractivo interfaz animado"
 
 #: src/main.cpp:38
-#, fuzzy
 msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
@@ -140,15 +139,15 @@ msgstr "Tasa de fotogramas:"
 
 #: src/settingsdialog.cpp:82
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Bloquear relación de aspecto"
 
 #: src/settingsdialog.cpp:85
 msgid "Mirror output"
-msgstr ""
+msgstr "Vista en espejo"
 
 #: src/settingsdialog.cpp:88
 msgid "Flip output"
-msgstr ""
+msgstr "Bocabajo"
 
 #: src/settingsdialog.cpp:93
 msgid "Camera"
@@ -223,3 +222,5 @@ msgstr "Tus nombres"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Tus emails"
+
+
