@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
 "POT-Creation-Date: 2012-10-21 02:02+0200\n"
-"PO-Revision-Date: 2012-10-18 22:15-0300\n"
-"Last-Translator: JuraSampaio <jura_sampaio@hotmail.com>\n"
-"Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2012-10-23 03:29-0300\n"
+"Last-Translator: Jurasampaio <jura_sampaio@hotmail.com>\n"
+"Language-Team: Jurasampaio <jur_sampaio@hotmail.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/kamerka.qml:208
 msgid "Take a photo"
-msgstr "Tomar uma foto"
+msgstr "Tirar uma foto"
 
 #: src/kamerka.qml:218
 msgid "Self-timer"
@@ -37,11 +37,11 @@ msgstr "Configurar"
 
 #: src/kamerka.qml:249
 msgid "Hide effects"
-msgstr ""
+msgstr "Esconder efeitos"
 
 #: src/kamerka.qml:249
 msgid "Show effects"
-msgstr ""
+msgstr "Mostrar efeitos"
 
 #: src/kamerka.qml:260
 msgid "Open directory"
@@ -49,23 +49,23 @@ msgstr "Abrir diretorio"
 
 #: src/kamerka.qml:449
 msgid "No Effect"
-msgstr ""
+msgstr "Sem efeitos"
 
 #: src/kamerka.qml:460
 msgid "Grey"
-msgstr ""
+msgstr "Cinza"
 
 #: src/kamerka.qml:471
 msgid "Invert"
-msgstr ""
+msgstr "Inverter"
 
 #: src/kamerka.qml:482
 msgid "Mono"
-msgstr ""
+msgstr "Mono"
 
 #: src/kamerka.qml:495
 msgid "Smurf"
-msgstr ""
+msgstr "Smurf"
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -73,7 +73,7 @@ msgstr "Kamerka"
 
 #: src/main.cpp:37
 msgid "Simple photo taking application with fancy animated interface"
-msgstr "Simples foto tomando aplicação com interface animada fantasia"
+msgstr "Simples foto com aplicação de fantasia animada"
 
 #: src/main.cpp:38
 #, fuzzy
@@ -86,13 +86,17 @@ msgstr "i18n() requer ao menos um argumento"
 
 #: src/mainwindow.cpp:54
 msgid "Could not load QML interface!"
-msgstr "¡Não foi possível carregar a  interface QML!"
+msgstr "¡Não foi possível carregar a interface QML!"
 
-#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:146
+#: src/mainwindow.cpp:54
+#: src/mainwindow.cpp:130
+#: src/mainwindow.cpp:146
 msgid "Error"
 msgstr "Erro"
 
-#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:146
+#: src/mainwindow.cpp:126
+#: src/mainwindow.cpp:130
+#: src/mainwindow.cpp:146
 msgid "Could not connect to V4L device!"
 msgstr "¡Não foi possível se conectar ao dispositivo V4L!"
 
@@ -138,15 +142,15 @@ msgstr "Limite de frames"
 
 #: src/settingsdialog.cpp:82
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Bloquear proporção"
 
 #: src/settingsdialog.cpp:85
 msgid "Mirror output"
-msgstr ""
+msgstr "Saída espelhada"
 
 #: src/settingsdialog.cpp:88
 msgid "Flip output"
-msgstr ""
+msgstr "Saida fip"
 
 #: src/settingsdialog.cpp:93
 msgid "Camera"
@@ -212,12 +216,15 @@ msgstr "Abrir com GIMP"
 msgid "Open in Inkscape"
 msgstr "Abrir com Inkscape"
 
-#: tools/rc.cpp:1 rc.cpp:1
+#: tools/rc.cpp:1
+#: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Seus nomes"
 
-#: tools/rc.cpp:2 rc.cpp:2
+#: tools/rc.cpp:2
+#: rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Seu email"
+
