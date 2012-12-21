@@ -22,7 +22,7 @@ import Effects 1.0;
 
 Rectangle {
     property int rand: 0;
-    property bool take: false;
+    property bool take: true;
     property int timercount: 5;
     property bool timeranim: false;
     property bool more: false;
@@ -37,7 +37,7 @@ Rectangle {
     signal applyEffect(int efx);
 
     id: page;
-    width: 640; height: 480;
+    width: parent.width; height: parent.height;
     color: "transparent";
 
     Rectangle {
