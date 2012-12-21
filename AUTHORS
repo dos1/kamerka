@@ -1,9 +1,6 @@
 * Sebastian Krzyszkowiak <dos@dosowisko.net>
 * Dejan Noveski <dr.mote@gmail.com>
 
-Main tester:
-* Agata Kurczewska <kazimiera010595@gmail.com>
-
 v4l handling code was based on qtv4lcapture code from Özkan Pakdil <ozkan.pakdil@gmail.com>
 http://qtv4lcapture.sourceforge.net/
 
@@ -12,6 +9,7 @@ Translations:
  * Dutch: Kenny Verstraete <verstraete_kenny@skynet.be>
  * German: Frank Schäfer <fschaefer.oss@googlemail.com>
  * Polish: Sebastian Krzyszkowiak <dos@dosowisko.net>
+ * Portuguese: Jurasampaio <jur_sampaio@hotmail.com>
  * Serbian: Mladen Pejaković <pejakm@gmail.com>
  * Spanish: Daniel Halens <DanielHalens@gmail.com>
  * Traditional Chinese: Max Lin <max7442@gmail.com>

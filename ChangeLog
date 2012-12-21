@@ -1,30 +1,92 @@
+2012-10-22  Mladen Pejaković <pejakm@gmail.com>
+
+  * po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po:
+  Serbian translation update
+
+  * po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po:
+  Serbian translation updates
+
+2012-10-22  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * debian/changelog, debian/compat, debian/control, debian/copyright,
+  debian/docs, debian/menu, debian/rules, debian/source/format, debian/watch:
+  Remove Debian packaging data.  It has been moved to pkg-kde-extras repo:
+  http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kamerka.git;a=summary
+
+2012-10-21  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * CMakeLists.txt, src/main.cpp: minor code cosmetics
+
+  * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
+  po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po,
+  po/zh_TW.po: update i18n template and polish translation
+
+  * TODO, src/mainwindow.cpp: set default window size to video resolution
+
+  * TODO, src/kamerka.kcfg, src/main.cpp, src/mainwindow.cpp,
+  src/settingsdialog.cpp, src/videowidget.cpp, src/videowidget.h: add
+  configuration option for aspect ratio locking
+
+  * src/Button.qml, src/capturethread.cpp, src/capturethread.h,
+  src/kamerka.qml, src/main.cpp, src/mainwindow.cpp, src/mainwindow.h,
+  src/settingsdialog.cpp, src/settingsdialog.h, src/videowidget.cpp,
+  src/videowidget.h: variable names in polish? am i fscking kidding me? :/
+  also, reindentation
+
+2012-10-20  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
+  po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po,
+  po/zh_TW.po: regenerate pot file and update po files
+
+2012-07-26  Michael Palimaka <kensington@gentoo.org>
+
+  * po/cs.po, po/de.po, po/es.po, po/kamerka_cs.po, po/kamerka_de.po,
+  po/kamerka_es.po, po/kamerka_nl.po, po/kamerka_pl.po, po/kamerka_sr.po,
+  po/kamerka_sr@ijekavian.po, po/kamerka_sr@ijekavianlatin.po,
+  po/kamerka_sr@latin.po, po/kamerka_zh_TW.po, po/nl.po, po/pl.po, po/sr.po,
+  po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po, po/zh_TW.po:
+  Rename PO files as per KDE convention.
+
+2012-03-03  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * AUTHORS, TODO, po/kamerka.pot, po/kamerka_cs.po, po/kamerka_de.po,
+  po/kamerka_es.po, po/kamerka_nl.po, po/kamerka_pl.po, po/kamerka_sr.po,
+  po/kamerka_sr@ijekavian.po, po/kamerka_sr@ijekavianlatin.po,
+  po/kamerka_sr@latin.po, po/kamerka_zh_TW.po: update polish translation,
+  AUTHORS and TODO
+
+2012-03-02  Dejan Noveski <dr.mote@gmail.com>
+
+  * src/imageeffect.cpp, src/imageeffect.h, src/kamerka.qml,
+  src/mainwindow.cpp, src/mainwindow.h, src/videowidget.cpp, src/videowidget.h:
+  Added 4 simple effects (filters) with QML component and toolbar toggle button
+
+2012-03-01  Dejan Noveski <dr.mote@gmail.com>
+
+  * src/capturethread.cpp, src/kamerka.kcfg, src/settingsdialog.cpp: Added
+  mirror and flip output functionality and settings
+
+  * src/capturethread.cpp, src/kamerka.kcfg, src/settingsdialog.cpp: Added
+  Mirror output option in settings and functionality
+
 2011-07-24  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * ChangeLog, data/kamerka.1, data/kamerka.desktop, po/kamerka.pot,
+  po/kamerka_cs.po, po/kamerka_de.po, po/kamerka_es.po, po/kamerka_pl.po,
+  po/kamerka_sr.po, po/kamerka_sr@ijekavian.po,
+  po/kamerka_sr@ijekavianlatin.po, po/kamerka_sr@latin.po, src/main.cpp: This
+  is Kamerka 0.8.1
 
   * debian/changelog, debian/compat, debian/control, debian/copyright,
   debian/docs, debian/menu, debian/rules, debian/source/format, debian/watch:
   prerelease rm -rf debian
 
-2011-07-23  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * src/CMakeLists.txt: install kcfg file instead of kcfgc (oops...)
-
 2011-07-18  Frank Schäfer <fschaefer.oss@googlemail.com>
 
   * AUTHORS, po/kamerka_de.po: Add german translation
 
-2011-07-17  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * TODO: TODO++
-
-  * CMakeLists.txt: add cmake_minimum_required to CMakeLists
-
-  * INSTALL: fix INSTALL instructions
-
 2011-07-16  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * debian/changelog: [debian] update ticket number in changelog
-
-  * TODO: another idea for TODO
 
   * debian/changelog, debian/compat, debian/control, debian/copyright,
   debian/docs, debian/menu, debian/rules, debian/source/format, debian/watch:
@@ -37,12 +99,6 @@
   * ChangeLog, po/kamerka.pot, po/kamerka_cs.po, po/kamerka_es.po,
   po/kamerka_pl.po, po/kamerka_sr.po, po/kamerka_sr@ijekavian.po,
   po/kamerka_sr@ijekavianlatin.po, po/kamerka_sr@latin.po: pre-release updates
-
-  * TODO: update TODO
-
-2011-07-14  Pavel Fric <pavelfric@seznam.cz>
-
-  * po/kamerka_cs.po: update czech translation
 
 2011-07-13  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
@@ -57,26 +113,11 @@
 
 2011-07-13  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
-  * debian/control: [debian] update control file
-
-2011-07-13  Daniel Halens Rodríguez <danielhalens@gmail.com>
-
-  * po/kamerka_es.po: update spanish translation
-
-2011-07-13  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * debian/control: [debian] change dependences to be less demanding
-
-  * src/mainwindow.cpp: use xdg-open instead of kde-open
-
   * data/kamerka.1, data/kamerka.desktop, src/main.cpp: Kamerka 0.8 RC1
   (translations not included yet)
 
   * TODO, src/mainwindow.cpp, src/videowidget.cpp: respect configured photo
   directory
-
-  * src/settingsdialog.cpp: write config on start to update photodir with XDG
-  settings
 
 2011-07-12  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
@@ -85,17 +126,12 @@
   po/kamerka_sr@ijekavianlatin.po, po/kamerka_sr@latin.po: update polish
   translation and pot file
 
-  * src/settingsdialog.cpp: [config] ask if user wants to create non-existent
-  directory in storage settings
-
   * src/settingsdialog.cpp, src/settingsdialog.h: photo storage settings
 
   * src/capturethread.cpp, src/capturethread.h: fix uninitialized variable in
   capture thread leading to false reports on thread state
 
 2011-07-03  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * debian/control: change description in debian package
 
   * debian/compat, debian/control, debian/copyright: fex fixes for debian
   packaging
@@ -115,18 +151,10 @@
   src/mainwindow.cpp, src/mainwindow.h, src/settingsdialog.cpp: make video
   configuration fully working
 
-  * src/kamerka.kcfg: update config descriptions
-
   * src/kamerka.kcfg, src/mainwindow.cpp, src/mainwindow.h,
   src/settingsdialog.cpp: Fix updating config dialog. Finally!
 
-2011-07-02  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * TODO: update TODO
-
 2011-06-17  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * src/mainwindow.cpp: use KConfigDialog::showDialog
 
   * src/main.cpp, src/mainwindow.cpp, src/mainwindow.h, src/settingsdialog.cpp,
   src/settingsdialog.h: show camera settings when opening v4l device failed
@@ -145,8 +173,6 @@
   src/settingsdialog.cpp, src/settingsdialog.h: move settings dialog to its own
   class
 
-  * src/mainwindow.cpp: fix layout errors with configuration dialog
-
 2011-06-13  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
   * po/kamerka.pot, po/kamerka_cs.po, po/kamerka_es.po, po/kamerka_pl.po,
@@ -161,34 +187,18 @@
 
   * AUTHORS, po/kamerka_es.po: add es translation
 
-2011-06-10  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * TODO: TODO++
-
 2011-06-09  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * src/mainwindow.cpp: add drop shadow effect to configuration window
-
-  * TODO: update TODO
 
   * src/kamerka.qml, src/mainwindow.cpp, src/mainwindow.h: implement dummy
   config dialog
 
-  * src/kamerka.qml: toolbar animation fix
-
   * src/Button.qml, src/kamerka.qml: fix for "jumping" color when hiding
   toolbar at "less" state
-
-  * src/kamerka.qml: cosmetics in qml file
 
 2011-06-08  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
   * src/kamerka.qml, src/mainwindow.cpp, src/mainwindow.h: implement canvas
   background
-
-  * src/kamerka.qml: rework toolbar, add configuration button (non-working yet)
-
-  * src/Button.qml: change text on button with opacity animation
 
   * src/capturethread.cpp, src/mainwindow.cpp, src/videowidget.cpp: clean
   imports
@@ -218,14 +228,8 @@
   * ChangeLog, NEWS, debian/rules, debian/watch, tools/gitlog2changelog.py:
   little fixes for correct Debian packaging
 
-  * src/mainwindow.cpp: be more consistent on QRC URLs
-
   * src/kamerka.qrc, src/main.cpp, src/mainwindow.cpp, src/videowidget.cpp:
   reorganize qrc
-
-  * TODO: TODO++
-
-  * src/mainwindow.cpp: remove unnecessary setWindowTitle
 
   * TODO, src/main.cpp, src/mainwindow.cpp, src/mainwindow.h: fix crash on
   closing main window
@@ -260,25 +264,16 @@
   src/videowidget.cpp, src/videowidget.h: fix FSF address and other licensing
   issues
 
-  * TODO: TODO++
-
   * src/Button.qml, src/kamerka.qml: fix running with Qt 4.7.0
 
 2011-06-06  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * data/kamerka.1: give more love to manpage
 
   * NEWS, po/extract-messages.sh, tools/extract-messages.sh,
   tools/gitlog2changelog.py: add gitlog2changelog script (also, add "tools"
   folder for such usefull scripts)
 
-  * data/kamerka.1: remove unnecessary line from manpage with KDE and Qt
-  version used on author's PC :]
-
   * data/kamerka.1, data/kamerka.desktop, src/main.cpp: bump version number to
   testing 0.7 Odd minor numbers are testing, even are stable :)
-
-  * src/videowidget.cpp: debug--
 
   * TODO, src/mainwindow.cpp, src/videowidget.cpp: if possible, use XDG
   Pictures directory
@@ -289,24 +284,8 @@
   * po/extract-messages.sh, po/kamerka.pot, po/kamerka_cs.po, po/kamerka_pl.po:
   little fix to extract-messages.sh
 
-  * AUTHORS: add translators to AUTHORS file
-
   * TODO, src/mainwindow.cpp: create directory if it does not exist when
   pressing "Show directory"
-
-  * TODO: TODO++
-
-  * INSTALL: remove unneccessary coma
-
-2011-06-06  Pavel Fric <pavelfric@seznam.cz>
-
-  * po/kamerka_cs.po: add czech translation
-
-2011-06-06  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * INSTALL: add INSTALL file
-
-  * TODO: KISS
 
 2011-06-05  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
@@ -314,12 +293,6 @@
   cmake macro to find libv4lconvert
 
   * TODO, src/CMakeLists.txt: link to Phonon from KDE, not Qt one
-
-  * TODO: and once again
-
-  * TODO: moar TODO++
-
-  * TODO: TODO++
 
 2011-06-04  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
@@ -336,8 +309,6 @@
   * src/capturethread.cpp, src/capturethread.h, src/main.cpp,
   src/mainwindow.cpp, src/mainwindow.h, src/videowidget.cpp, src/videowidget.h:
   unify style of #include declarations
-
-  * data/kamerka.desktop: add polish translation to .desktop file
 
   * TODO, src/capturethread.cpp, src/main.cpp, src/mainwindow.cpp,
   src/mainwindow.h, src/videowidget.cpp: use KDE classes
@@ -356,8 +327,6 @@
   src/mainwindow.cpp, src/mainwindow.h, src/videowidget.cpp, src/videowidget.h:
   better wording on GPL2+ license in code
 
-  * README: README: typo
-
   * Button.qml, CMakeLists.txt, camera_click.ogg, capturethread.cpp,
   capturethread.h, data/CMakeLists.txt, data/camera_click.ogg,
   data/kamerka.desktop, data/kamerka.notifyrc, data/kamerka.png,
@@ -369,11 +338,7 @@
   src/mainwindow.cpp, src/mainwindow.h, src/videowidget.cpp, src/videowidget.h,
   timer.ogg, videowidget.cpp, videowidget.h: reorganize source directories
 
-  * CMakeLists.txt: fix installing files to app data dir
-
   * capturethread.cpp, videowidget.cpp: cosmetics
-
-  * Button.qml: make inactive button less transculent
 
 2011-06-03  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
@@ -382,8 +347,6 @@
 
   * kamerka.pot, mainwindow.cpp, po/kamerka.pot, po/kamerka_pl.po: update
   translations with QML strings (dirty hack :()
-
-  * po/kamerka_pl.po: add polish translation
 
   * CMakeLists.txt, extract-messages.sh, po/CMakeLists.txt, po/kamerka.pot:
   teach cmake how to compile translations
@@ -399,10 +362,6 @@
   * TODO, mainwindow.cpp, timer_beep.ogg, timer_go.ogg, videowidget.cpp:
   Replace beep calls with Phonon and audio files
 
-2011-06-01  Sebastian Krzyszkowiak <dos@dosowisko.net>
-
-  * TODO: TODO++
-
 2011-05-31  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
   * capturethread.h, mainwindow.h, videowidget.h: add licence information to
@@ -413,18 +372,7 @@
   * AUTHORS, COPYING, capturethread.cpp, main.cpp, mainwindow.cpp,
   videowidget.cpp: add AUTHORS and licencing informations
 
-  * mainwindow.cpp: delete only phonon instance instead of whole viewer widget
-  dirty hack, but with current threading - necessary to avoid running crash
-  handler on every exit :(
-
-  * mainwindow.cpp: try turning camera on earlier
-
-  * TODO: TODO++
-
   * mainwindow.cpp, videowidget.cpp: replace system() calls with QProcess
-
-  * mainwindow.cpp: delete videoViewer before all exit(0) calls This exit()
-  madness has to be fixed :(
 
   * TODO, mainwindow.cpp, videowidget.cpp, videowidget.h: move deleting phonon
   object to videowidget destructor and call it on closing app
@@ -436,10 +384,6 @@
   * TODO, videowidget.cpp: replace mkdir system call and pwd functions with Qt
   methods
 
-  * .gitignore: add QT Creator config file to .gitignore
-
-  * kamerka.qml: cosmetics in qml file
-
   * TODO, main.cpp, videowidget.cpp: mkdir on taking photo instead of on app
   start
 
@@ -450,12 +394,6 @@
 
 2011-05-30  Sebastian Krzyszkowiak <seba.dos1@gmail.com>
 
-  * TODO: TODO++
-
-  * TODO: TODO++
-
-  * CMakeLists.txt: -Wall
-
   * TODO, videowidget.cpp: update TODO
 
   * CMakeLists.txt, capturethread.cpp, videowidget.cpp: Remove -fexceptions
@@ -463,23 +401,12 @@
   * TODO, capturethread.cpp, capturethread.h, mainwindow.cpp, mainwindow.h,
   videowidget.cpp, videowidget.h: clean up imports
 
-  * TODO: add TODO file
-
-  * videowidget.cpp: replace iostreams with QFile when dealing with .counter
-  file
-
-  * capturethread.cpp: make framerate higher (it should be configurable!)
-
 2011-05-29  Sebastian Krzyszkowiak <seba.dos1@gmail.com>
 
   * kamerka.qml, mainwindow.cpp: add drop shadow to photo preview
 
-  * main.cpp: require raster graphics system
-
   * capturethread.cpp, mainwindow.cpp, mainwindow.h, videowidget.cpp,
   videowidget.h: little clean up
-
-  * CMakeLists.txt: cosmetic changes in cmake build system
 
   * Button.qml, CMakeLists.txt, capturethread.cpp, capturethread.h,
   image72.png, kamerka.desktop, kamerka.notifyrc, kamerka.png, kamerka.pro,
