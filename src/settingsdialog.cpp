@@ -19,7 +19,7 @@
 #include <KConfigSkeleton>
 #include <KMessageBox>
 #include <KLocale>
-
+#include <KFile>
 #include "settingsdialog.h"
 
 void SettingsDialog::updateUrl() {
@@ -114,6 +114,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
 
 	layout->addRow(xdggroupbox);
 	urledit = new KUrlRequester();
+    urledit->setMode(KFile::Directory);
 	urledit->setObjectName("kcfg_photodir");
 	urledit->setProperty("kcfg_property", QByteArray("text"));
 	layout->addRow(i18n("Photo directory:"), urledit);
