@@ -1,0 +1,225 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# zcj <zcjsjz@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: dos@dosowisko.net\n"
+"POT-Creation-Date: 2012-10-21 02:02+0200\n"
+"PO-Revision-Date: 2011-10-28 12:53+0800\n"
+"Last-Translator: zcj <zcjsjz@gmail.com>\n"
+"Language-Team: Chinese Simplified <kde-i18n-doc@kde.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: src/kamerka.qml:208
+msgid "Take a photo"
+msgstr "拍照"
+
+#: src/kamerka.qml:218
+msgid "Self-timer"
+msgstr "自拍"
+
+#: src/kamerka.qml:229
+msgid "Less"
+msgstr "较少显示"
+
+#: src/kamerka.qml:229
+msgid "More"
+msgstr "显示更多"
+
+#: src/kamerka.qml:239
+msgid "Configure"
+msgstr "设置"
+
+#: src/kamerka.qml:249
+msgid "Hide effects"
+msgstr "隐藏效果"
+
+#: src/kamerka.qml:249
+msgid "Show effects"
+msgstr "显示效果"
+
+#: src/kamerka.qml:260
+msgid "Open directory"
+msgstr "打开目录"
+
+#: src/kamerka.qml:449
+msgid "No Effect"
+msgstr "无效果"
+
+#: src/kamerka.qml:460
+msgid "Grey"
+msgstr "灰度"
+
+#: src/kamerka.qml:471
+msgid "Invert"
+msgstr "底片"
+
+#: src/kamerka.qml:482
+msgid "Mono"
+msgstr "单色"
+
+#: src/kamerka.qml:495
+msgid "Smurf"
+msgstr "蓝精灵"
+
+#: src/main.cpp:36
+msgid "Kamerka"
+msgstr "Kamerka"
+
+#: src/main.cpp:37
+msgid "Simple photo taking application with fancy animated interface"
+msgstr "一个漂亮动画界面的简单拍照程序"
+
+#: src/main.cpp:38
+#, fuzzy
+msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
+msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+
+#: src/mainwindow.cpp:36
+msgid "i18n() takes at least one argument"
+msgstr "i18n() 至少需要一个参数"
+
+#: src/mainwindow.cpp:54
+msgid "Could not load QML interface!"
+msgstr "不能载入 QML 界面！"
+
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:146
+msgid "Error"
+msgstr "错误"
+
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:146
+msgid "Could not connect to V4L device!"
+msgstr "不能连接到 V4L 设备！"
+
+#: src/mainwindow.cpp:175
+msgid ""
+"Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
+"Please check your configuration."
+msgstr ""
+"请求的分辨率 (%1x%2) 不可用。驱动程序使用 %3x%4 代替。\n"
+"请检查您的配置。"
+
+#: src/settingsdialog.cpp:42
+msgid "Selected path does not exists. Do you want to create it?"
+msgstr "选择的路径不存在。您想建立它吗？"
+
+#: src/settingsdialog.cpp:59
+msgid "Device node:"
+msgstr "设备节点:"
+
+#: src/settingsdialog.cpp:66
+msgid "x"
+msgstr "x"
+
+#: src/settingsdialog.cpp:71
+msgid "px"
+msgstr "px"
+
+#: src/settingsdialog.cpp:72
+msgid "Resolution:"
+msgstr "分辨率:"
+
+#: src/settingsdialog.cpp:77
+msgid "Disabled"
+msgstr "关闭"
+
+#: src/settingsdialog.cpp:78
+msgid " fps"
+msgstr "fps"
+
+#: src/settingsdialog.cpp:80
+msgid "Framerate limit:"
+msgstr "帧率限制:"
+
+#: src/settingsdialog.cpp:82
+msgid "Lock aspect ratio"
+msgstr "锁定纵横比"
+
+#: src/settingsdialog.cpp:85
+msgid "Mirror output"
+msgstr "镜面输出"
+
+#: src/settingsdialog.cpp:88
+msgid "Flip output"
+msgstr "翻转输出"
+
+#: src/settingsdialog.cpp:93
+msgid "Camera"
+msgstr "摄像头"
+
+#: src/settingsdialog.cpp:93
+msgid "Camera settings"
+msgstr "摄像头设置"
+
+#: src/settingsdialog.cpp:100
+msgid "Use default pictures directory"
+msgstr "使用默认的图片目录"
+
+#: src/settingsdialog.cpp:107
+msgid "Use subdirectory:"
+msgstr "使用子目录:"
+
+#: src/settingsdialog.cpp:119
+msgid "Photo directory:"
+msgstr "照片目录:"
+
+#: src/settingsdialog.cpp:121
+msgid "Storage"
+msgstr "存储"
+
+#: src/settingsdialog.cpp:121
+msgid "Photo storage"
+msgstr "照片存储"
+
+#: src/settingsdialog.cpp:127
+msgid "Play sound on taking photo"
+msgstr "拍照时播放音效"
+
+#: src/settingsdialog.cpp:130
+msgid "Play timer sounds"
+msgstr "播放计时音效"
+
+#: src/settingsdialog.cpp:133
+msgid "Show notification on taking photo"
+msgstr "拍照时显示通知"
+
+#: src/settingsdialog.cpp:137
+msgid "Behaviour"
+msgstr "行为"
+
+#: src/videowidget.cpp:98
+msgid "Starting up webcam..."
+msgstr "启动摄像头..."
+
+#: src/videowidget.cpp:160
+msgid "Photo has been stored in file %1"
+msgstr "照片已存储到文件 %1"
+
+#: src/videowidget.cpp:165
+msgid "Show in directory"
+msgstr "在目录中显示"
+
+#: src/videowidget.cpp:165
+msgid "Open in GIMP"
+msgstr "用GIMP打开"
+
+#: src/videowidget.cpp:165
+msgid "Open in Inkscape"
+msgstr "用Inkscape打开"
+
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "zcj"
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zcjsjz@gmail.com"
