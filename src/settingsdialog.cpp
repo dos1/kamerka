@@ -79,7 +79,10 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
 	spinbox->setObjectName("kcfg_fps");
 	layout->addRow(i18n("Framerate limit:"), spinbox);
 
-	QCheckBox *checkbox = new QCheckBox(i18n("Lock aspect ratio"));
+	QCheckBox *checkbox = new QCheckBox(i18n("Enhance contrast"));
+	checkbox->setObjectName("kcfg_normalize");
+	layout->addRow(checkbox);
+	checkbox = new QCheckBox(i18n("Lock aspect ratio"));
 	checkbox->setObjectName("kcfg_aspectlock");
 	layout->addRow(checkbox);
 	checkbox = new QCheckBox(i18n("Mirror output"));
@@ -114,7 +117,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
 
 	layout->addRow(xdggroupbox);
 	urledit = new KUrlRequester();
-    urledit->setMode(KFile::Directory);
+	urledit->setMode(KFile::Directory);
 	urledit->setObjectName("kcfg_photodir");
 	urledit->setProperty("kcfg_property", QByteArray("text"));
 	layout->addRow(i18n("Photo directory:"), urledit);
