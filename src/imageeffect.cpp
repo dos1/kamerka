@@ -23,94 +23,88 @@
 #include <qimageblitz/qimageblitz.h>
 
 void ImageEffect::grey(QImage &i) {
-
-    QRgb *px;
-    int g;
-
-    for(int y = 0;y < i.height();y++) {
-        px = (QRgb*)i.scanLine(y);
-
-        for(int x = 0;x < i.width();x++) {
-            g = (int)(qRed(*px) * 30 + qGreen(*px) * 59 + qRed(*px) * 11)/100;
-            *px = qRgb(g, g, g);
-            px++;
-        }
-    }
+	Blitz::grayscale(i, true);
 }
 
 void ImageEffect::invert(QImage &i) {
-    i.invertPixels();
+	Blitz::invert(i);
 }
 
 void ImageEffect::mono(QImage &i) {
-    i = i.convertToFormat(QImage::Format_Mono);
+	i = i.convertToFormat(QImage::Format_Mono);
 }
 
+//void ImageEffect::equalize(QImage &i) {
+//	Blitz::equalize(i);
+//}
+
 void ImageEffect::smurf(QImage &i) {
-    i = i.rgbSwapped();
+	i = i.rgbSwapped();
 }
 
 void ImageEffect::implode(QImage &i) {
-    i = Blitz::implode(i, 0.3);
+	i = Blitz::implode(i, 0.3);
 }
 
 void ImageEffect::explode(QImage &i) {
-    i = Blitz::implode(i, -0.3);
+	i = Blitz::implode(i, -0.3);
 }
 
 void ImageEffect::charcoal(QImage &i) {
-    i = Blitz::charcoal(i);
+	i = Blitz::charcoal(i);
 }
 
 void ImageEffect::edge(QImage &i) {
-    i = Blitz::edge(i);
+	i = Blitz::edge(i);
 }
 
 void ImageEffect::emboss(QImage &i) {
-    i = Blitz::emboss(i, 0, 0.8, Blitz::Low);
+	i = Blitz::emboss(i, 0, 0.8, Blitz::Low);
 }
 
 void ImageEffect::swirl(QImage &i) {
-    i = Blitz::swirl(i);
+	i = Blitz::swirl(i);
 }
 
 void ImageEffect::oilPaint(QImage &i) {
-    i = Blitz::oilPaint(i, 0, Blitz::Low);
+	i = Blitz::oilPaint(i, 0, Blitz::Low);
 }
 
 void ImageEffect::wave(QImage &i) {
-    i = Blitz::wave(i);
+	i = Blitz::wave(i);
 }
 
 void ImageEffect::applyEffect(QImage &i, int effect) {
-    switch(effect)
-    {
-        case ImageEffect::Effect_None:
-            break;
-        case ImageEffect::Effect_Grey:
-            grey(i); break;
-        case ImageEffect::Effect_Invert:
-            invert(i); break;
-        case ImageEffect::Effect_Mono:
-            mono(i); break;
-        case ImageEffect::Effect_Smurf:
-            smurf(i); break;
-        case ImageEffect::Effect_Implode:
-            implode(i); break;
-        case ImageEffect::Effect_Explode:
-            explode(i); break;
-        case ImageEffect::Effect_Charcoal:
-            charcoal(i); break;
-        case ImageEffect::Effect_Edge:
-            edge(i); break;
-        case ImageEffect::Effect_Emboss:
-            emboss(i); break;
-        case ImageEffect::Effect_Swirl:
-            swirl(i); break;
-        case ImageEffect::Effect_OilPaint:
-            oilPaint(i); break;
-        case ImageEffect::Effect_Wave:
-            wave(i); break;
-    }
+	switch(effect)
+	{
+		case ImageEffect::Effect_None:
+			break;
+		case ImageEffect::Effect_Grey:
+			grey(i); break;
+		case ImageEffect::Effect_Invert:
+			invert(i); break;
+		case ImageEffect::Effect_Mono:
+			mono(i); break;
+		case ImageEffect::Effect_Smurf:
+			smurf(i); break;
+		//case ImageEffect::Effect_Equalize:
+		//	equalize(i); break;
+		case ImageEffect::Effect_Implode:
+			implode(i); break;
+		case ImageEffect::Effect_Explode:
+			explode(i); break;
+		case ImageEffect::Effect_Charcoal:
+			charcoal(i); break;
+		case ImageEffect::Effect_Edge:
+			edge(i); break;
+		case ImageEffect::Effect_Emboss:
+			emboss(i); break;
+		case ImageEffect::Effect_Swirl:
+			swirl(i); break;
+		case ImageEffect::Effect_OilPaint:
+			oilPaint(i); break;
+		case ImageEffect::Effect_Wave:
+			wave(i); break;
+	}
 }
 
