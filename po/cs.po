@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-25 17:05+0100\n"
+"POT-Creation-Date: 2014-03-25 20:04+0100\n"
 "PO-Revision-Date: 2012-10-21 20:37+0200\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -28,79 +28,79 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pavelfric@seznam.cz"
 
-#: src/kamerka.qml:211
+#: src/kamerka.qml:203
 msgid "Take a photo"
 msgstr "Udělat fotku"
 
-#: src/kamerka.qml:226
+#: src/kamerka.qml:218
 msgid "Self-timer"
 msgstr "Samospoušť"
 
-#: src/kamerka.qml:242
-msgid "Configure"
-msgstr "Nastavit"
-
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Hide effects"
 msgstr "Skrýt efekty"
 
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Show effects"
 msgstr "Ukázat efekty"
 
-#: src/kamerka.qml:272
+#: src/kamerka.qml:250
 msgid "Open directory"
 msgstr "Otevřít adresář"
+
+#: src/kamerka.qml:265
+msgid "Configure"
+msgstr "Nastavit"
 
 #: src/kamerka.qml:464
 msgid "No Effect"
 msgstr "Žádný efekt"
 
-#: src/kamerka.qml:475
+#: src/kamerka.qml:479
 msgid "Grey"
 msgstr "Šedá"
 
-#: src/kamerka.qml:486
+#: src/kamerka.qml:494
 msgid "Invert"
 msgstr "Obrátit"
 
-#: src/kamerka.qml:497
-msgid "Mono"
-msgstr "Mono"
+#: src/kamerka.qml:509
+msgid "Equalize"
+msgstr ""
 
-#: src/kamerka.qml:510
+#: src/kamerka.qml:524
 msgid "Smurf"
 msgstr "Šmoula"
 
-#: src/kamerka.qml:522
+#: src/kamerka.qml:538
 msgid "Implode"
 msgstr ""
 
-#: src/kamerka.qml:534
+#: src/kamerka.qml:552
 msgid "Explode"
 msgstr ""
 
-#: src/kamerka.qml:546
+#: src/kamerka.qml:566
 msgid "Charcoal"
 msgstr ""
 
-#: src/kamerka.qml:558
+#: src/kamerka.qml:580
 msgid "Edge"
 msgstr ""
 
-#: src/kamerka.qml:570
+#: src/kamerka.qml:594
 msgid "Emboss"
 msgstr ""
 
-#: src/kamerka.qml:582
+#: src/kamerka.qml:608
 msgid "Swirl"
 msgstr ""
 
-#: src/kamerka.qml:594
+#: src/kamerka.qml:622
 msgid "Oil Paint"
 msgstr ""
 
-#: src/kamerka.qml:606
+#: src/kamerka.qml:636
 msgid "Wave"
 msgstr ""
 
@@ -176,58 +176,62 @@ msgid "Framerate limit:"
 msgstr "Omezení snímkování"
 
 #: src/settingsdialog.cpp:82
+msgid "Enhance contrast"
+msgstr ""
+
+#: src/settingsdialog.cpp:85
 msgid "Lock aspect ratio"
 msgstr "Zamknout poměr stran"
 
-#: src/settingsdialog.cpp:85
+#: src/settingsdialog.cpp:88
 msgid "Mirror output"
 msgstr "Zrcadlit výstup"
 
-#: src/settingsdialog.cpp:88
+#: src/settingsdialog.cpp:91
 msgid "Flip output"
 msgstr "Převrátit výstup"
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera"
 msgstr "Kamera"
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera settings"
 msgstr "Nastavení kamery"
 
-#: src/settingsdialog.cpp:100
+#: src/settingsdialog.cpp:103
 msgid "Use default pictures directory"
 msgstr "Použít výchozí adresář s obrázky"
 
-#: src/settingsdialog.cpp:107
+#: src/settingsdialog.cpp:110
 msgid "Use subdirectory:"
 msgstr "Použít podadresář"
 
-#: src/settingsdialog.cpp:120
+#: src/settingsdialog.cpp:123
 msgid "Photo directory:"
 msgstr "Adresář s fotografiemi"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Storage"
 msgstr "Úložiště"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Photo storage"
 msgstr "Úložiště fotografií"
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:131
 msgid "Play sound on taking photo"
 msgstr "Při udělání fotky přehrát zvuk"
 
-#: src/settingsdialog.cpp:131
+#: src/settingsdialog.cpp:134
 msgid "Play timer sounds"
 msgstr "Přehrát zvuk časovače"
 
-#: src/settingsdialog.cpp:134
+#: src/settingsdialog.cpp:137
 msgid "Show notification on taking photo"
 msgstr "Po udělání fotky ukázat oznámení"
 
-#: src/settingsdialog.cpp:138
+#: src/settingsdialog.cpp:141
 msgid "Behaviour"
 msgstr "Chování"
 
@@ -250,6 +254,9 @@ msgstr "Otevřít v GIMPu"
 #: src/videowidget.cpp:165
 msgid "Open in Inkscape"
 msgstr "Otevřít v Inkscape"
+
+#~ msgid "Mono"
+#~ msgstr "Mono"
 
 #~ msgid "Less"
 #~ msgstr "Méně"

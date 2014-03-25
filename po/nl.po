@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-25 17:05+0100\n"
+"POT-Creation-Date: 2014-03-25 20:04+0100\n"
 "PO-Revision-Date: 2011-08-07 23:05+0200\n"
 "Last-Translator: Kenny Verstraete <verstraete_kenny@skynet.be>\n"
 "Language-Team: Dutch <kde-i18n-doc@kde.org>\n"
@@ -27,79 +27,79 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "verstraete_kenny@skynet.be"
 
-#: src/kamerka.qml:211
+#: src/kamerka.qml:203
 msgid "Take a photo"
 msgstr "Neem een foto"
 
-#: src/kamerka.qml:226
+#: src/kamerka.qml:218
 msgid "Self-timer"
 msgstr "Zelfontspanner"
 
-#: src/kamerka.qml:242
-msgid "Configure"
-msgstr "Configureer"
-
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Hide effects"
 msgstr ""
 
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Show effects"
 msgstr ""
 
-#: src/kamerka.qml:272
+#: src/kamerka.qml:250
 msgid "Open directory"
 msgstr "Map openen"
+
+#: src/kamerka.qml:265
+msgid "Configure"
+msgstr "Configureer"
 
 #: src/kamerka.qml:464
 msgid "No Effect"
 msgstr ""
 
-#: src/kamerka.qml:475
+#: src/kamerka.qml:479
 msgid "Grey"
 msgstr ""
 
-#: src/kamerka.qml:486
+#: src/kamerka.qml:494
 msgid "Invert"
 msgstr ""
 
-#: src/kamerka.qml:497
-msgid "Mono"
+#: src/kamerka.qml:509
+msgid "Equalize"
 msgstr ""
 
-#: src/kamerka.qml:510
+#: src/kamerka.qml:524
 msgid "Smurf"
 msgstr ""
 
-#: src/kamerka.qml:522
+#: src/kamerka.qml:538
 msgid "Implode"
 msgstr ""
 
-#: src/kamerka.qml:534
+#: src/kamerka.qml:552
 msgid "Explode"
 msgstr ""
 
-#: src/kamerka.qml:546
+#: src/kamerka.qml:566
 msgid "Charcoal"
 msgstr ""
 
-#: src/kamerka.qml:558
+#: src/kamerka.qml:580
 msgid "Edge"
 msgstr ""
 
-#: src/kamerka.qml:570
+#: src/kamerka.qml:594
 msgid "Emboss"
 msgstr ""
 
-#: src/kamerka.qml:582
+#: src/kamerka.qml:608
 msgid "Swirl"
 msgstr ""
 
-#: src/kamerka.qml:594
+#: src/kamerka.qml:622
 msgid "Oil Paint"
 msgstr ""
 
-#: src/kamerka.qml:606
+#: src/kamerka.qml:636
 msgid "Wave"
 msgstr ""
 
@@ -174,58 +174,62 @@ msgid "Framerate limit:"
 msgstr "Framerate limiet:"
 
 #: src/settingsdialog.cpp:82
-msgid "Lock aspect ratio"
+msgid "Enhance contrast"
 msgstr ""
 
 #: src/settingsdialog.cpp:85
-msgid "Mirror output"
+msgid "Lock aspect ratio"
 msgstr ""
 
 #: src/settingsdialog.cpp:88
+msgid "Mirror output"
+msgstr ""
+
+#: src/settingsdialog.cpp:91
 msgid "Flip output"
 msgstr ""
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera"
 msgstr "Camera"
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera settings"
 msgstr "Camera instellingen"
 
-#: src/settingsdialog.cpp:100
+#: src/settingsdialog.cpp:103
 msgid "Use default pictures directory"
 msgstr "Gebruik de standaardmap voor afbeeldingen"
 
-#: src/settingsdialog.cpp:107
+#: src/settingsdialog.cpp:110
 msgid "Use subdirectory:"
 msgstr "Gebruik submap:"
 
-#: src/settingsdialog.cpp:120
+#: src/settingsdialog.cpp:123
 msgid "Photo directory:"
 msgstr "fotomap:"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Storage"
 msgstr "Opslag"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Photo storage"
 msgstr "Foto opslag"
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:131
 msgid "Play sound on taking photo"
 msgstr "Speel geluid af bij het nemen van een foto"
 
-#: src/settingsdialog.cpp:131
+#: src/settingsdialog.cpp:134
 msgid "Play timer sounds"
 msgstr "Speel timer geluiden af"
 
-#: src/settingsdialog.cpp:134
+#: src/settingsdialog.cpp:137
 msgid "Show notification on taking photo"
 msgstr "Toon notificatie bij het nemen van een foto"
 
-#: src/settingsdialog.cpp:138
+#: src/settingsdialog.cpp:141
 msgid "Behaviour"
 msgstr "Gedrag"
 

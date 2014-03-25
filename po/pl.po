@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-25 17:05+0100\n"
-"PO-Revision-Date: 2014-03-25 17:11+0100\n"
+"POT-Creation-Date: 2014-03-25 20:04+0100\n"
+"PO-Revision-Date: 2014-03-25 20:04+0100\n"
 "Last-Translator: Sebastian Krzyszkowiak <dos@dosowisko.net>\n"
 "Language-Team: pl_PL <dos@dosowisko.net>\n"
 "Language: pl\n"
@@ -27,79 +27,79 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dos@dosowisko.net"
 
-#: src/kamerka.qml:211
+#: src/kamerka.qml:203
 msgid "Take a photo"
 msgstr "Zrób zdjęcie"
 
-#: src/kamerka.qml:226
+#: src/kamerka.qml:218
 msgid "Self-timer"
 msgstr "Samowyzwalacz"
 
-#: src/kamerka.qml:242
-msgid "Configure"
-msgstr "Konfiguracja"
-
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Hide effects"
 msgstr "Schowaj efekty"
 
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Show effects"
 msgstr "Pokaż efekty"
 
-#: src/kamerka.qml:272
+#: src/kamerka.qml:250
 msgid "Open directory"
 msgstr "Otwórz folder"
+
+#: src/kamerka.qml:265
+msgid "Configure"
+msgstr "Konfiguracja"
 
 #: src/kamerka.qml:464
 msgid "No Effect"
 msgstr "Bez efektów"
 
-#: src/kamerka.qml:475
+#: src/kamerka.qml:479
 msgid "Grey"
 msgstr "Szarość"
 
-#: src/kamerka.qml:486
+#: src/kamerka.qml:494
 msgid "Invert"
 msgstr "Inwersja"
 
-#: src/kamerka.qml:497
-msgid "Mono"
-msgstr "Mono"
+#: src/kamerka.qml:509
+msgid "Equalize"
+msgstr "Wyrównanie"
 
-#: src/kamerka.qml:510
+#: src/kamerka.qml:524
 msgid "Smurf"
 msgstr "Smerf"
 
-#: src/kamerka.qml:522
+#: src/kamerka.qml:538
 msgid "Implode"
 msgstr "Implozja"
 
-#: src/kamerka.qml:534
+#: src/kamerka.qml:552
 msgid "Explode"
 msgstr "Eksplozja"
 
-#: src/kamerka.qml:546
+#: src/kamerka.qml:566
 msgid "Charcoal"
 msgstr "Rysunek węglem"
 
-#: src/kamerka.qml:558
+#: src/kamerka.qml:580
 msgid "Edge"
 msgstr "Krawędzie"
 
-#: src/kamerka.qml:570
+#: src/kamerka.qml:594
 msgid "Emboss"
 msgstr "Płaskorzeźba"
 
-#: src/kamerka.qml:582
+#: src/kamerka.qml:608
 msgid "Swirl"
 msgstr "Wir"
 
-#: src/kamerka.qml:594
+#: src/kamerka.qml:622
 msgid "Oil Paint"
 msgstr "Farba olejna"
 
-#: src/kamerka.qml:606
+#: src/kamerka.qml:636
 msgid "Wave"
 msgstr "Fala"
 
@@ -173,58 +173,62 @@ msgid "Framerate limit:"
 msgstr "Limit klatek na sekundę:"
 
 #: src/settingsdialog.cpp:82
+msgid "Enhance contrast"
+msgstr "Popraw kontrast"
+
+#: src/settingsdialog.cpp:85
 msgid "Lock aspect ratio"
 msgstr "Zachowaj proporcje"
 
-#: src/settingsdialog.cpp:85
+#: src/settingsdialog.cpp:88
 msgid "Mirror output"
 msgstr "Odbij obraz poziomo"
 
-#: src/settingsdialog.cpp:88
+#: src/settingsdialog.cpp:91
 msgid "Flip output"
 msgstr "Odbij obraz pionowo"
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera"
 msgstr "Kamera"
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera settings"
 msgstr "Ustawienia kamery"
 
-#: src/settingsdialog.cpp:100
+#: src/settingsdialog.cpp:103
 msgid "Use default pictures directory"
 msgstr "Użyj domyślnego folderu z obrazami"
 
-#: src/settingsdialog.cpp:107
+#: src/settingsdialog.cpp:110
 msgid "Use subdirectory:"
 msgstr "Użyj podfolderu:"
 
-#: src/settingsdialog.cpp:120
+#: src/settingsdialog.cpp:123
 msgid "Photo directory:"
 msgstr "Folder zdjęć:"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Storage"
 msgstr "Przechowywanie"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Photo storage"
 msgstr "Przechowywanie zdjęć"
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:131
 msgid "Play sound on taking photo"
 msgstr "Odtwarzaj dźwięk przy robieniu zdjęcia"
 
-#: src/settingsdialog.cpp:131
+#: src/settingsdialog.cpp:134
 msgid "Play timer sounds"
 msgstr "Odtwarzaj dźwięki samowyzwalacza"
 
-#: src/settingsdialog.cpp:134
+#: src/settingsdialog.cpp:137
 msgid "Show notification on taking photo"
 msgstr "Pokaż powiadomienie przy robieniu zdjęcia"
 
-#: src/settingsdialog.cpp:138
+#: src/settingsdialog.cpp:141
 msgid "Behaviour"
 msgstr "Zachowanie"
 
@@ -247,6 +251,9 @@ msgstr "Otwórz w GIMPie"
 #: src/videowidget.cpp:165
 msgid "Open in Inkscape"
 msgstr "Otwórz w Inkscape"
+
+#~ msgid "Mono"
+#~ msgstr "Mono"
 
 #~ msgid "Less"
 #~ msgstr "Mniej"

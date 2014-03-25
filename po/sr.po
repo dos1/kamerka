@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-25 17:05+0100\n"
+"POT-Creation-Date: 2014-03-25 20:04+0100\n"
 "PO-Revision-Date: 2011-06-07 21:24+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
@@ -29,79 +29,79 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pejakm@gmail.com"
 
-#: src/kamerka.qml:211
+#: src/kamerka.qml:203
 msgid "Take a photo"
 msgstr "Фотографиши"
 
-#: src/kamerka.qml:226
+#: src/kamerka.qml:218
 msgid "Self-timer"
 msgstr "Тајмер"
 
-#: src/kamerka.qml:242
-msgid "Configure"
-msgstr "Подеси"
-
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Hide effects"
 msgstr "Сакриј ефекте"
 
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Show effects"
 msgstr "Прикажи ефекте"
 
-#: src/kamerka.qml:272
+#: src/kamerka.qml:250
 msgid "Open directory"
 msgstr "Отвори фасциклу"
+
+#: src/kamerka.qml:265
+msgid "Configure"
+msgstr "Подеси"
 
 #: src/kamerka.qml:464
 msgid "No Effect"
 msgstr "Без ефекта"
 
-#: src/kamerka.qml:475
+#: src/kamerka.qml:479
 msgid "Grey"
 msgstr "Сивило"
 
-#: src/kamerka.qml:486
+#: src/kamerka.qml:494
 msgid "Invert"
 msgstr "Изврнуто"
 
-#: src/kamerka.qml:497
-msgid "Mono"
-msgstr "Једнобојно"
+#: src/kamerka.qml:509
+msgid "Equalize"
+msgstr ""
 
-#: src/kamerka.qml:510
+#: src/kamerka.qml:524
 msgid "Smurf"
 msgstr "Штрумф"
 
-#: src/kamerka.qml:522
+#: src/kamerka.qml:538
 msgid "Implode"
 msgstr ""
 
-#: src/kamerka.qml:534
+#: src/kamerka.qml:552
 msgid "Explode"
 msgstr ""
 
-#: src/kamerka.qml:546
+#: src/kamerka.qml:566
 msgid "Charcoal"
 msgstr ""
 
-#: src/kamerka.qml:558
+#: src/kamerka.qml:580
 msgid "Edge"
 msgstr ""
 
-#: src/kamerka.qml:570
+#: src/kamerka.qml:594
 msgid "Emboss"
 msgstr ""
 
-#: src/kamerka.qml:582
+#: src/kamerka.qml:608
 msgid "Swirl"
 msgstr ""
 
-#: src/kamerka.qml:594
+#: src/kamerka.qml:622
 msgid "Oil Paint"
 msgstr ""
 
-#: src/kamerka.qml:606
+#: src/kamerka.qml:636
 msgid "Wave"
 msgstr ""
 
@@ -176,58 +176,62 @@ msgid "Framerate limit:"
 msgstr "Ограничење брзине кадрова:"
 
 #: src/settingsdialog.cpp:82
+msgid "Enhance contrast"
+msgstr ""
+
+#: src/settingsdialog.cpp:85
 msgid "Lock aspect ratio"
 msgstr "Задржи размеру"
 
-#: src/settingsdialog.cpp:85
+#: src/settingsdialog.cpp:88
 msgid "Mirror output"
 msgstr "Пресликано"
 
-#: src/settingsdialog.cpp:88
+#: src/settingsdialog.cpp:91
 msgid "Flip output"
 msgstr "Обрнуто"
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera"
 msgstr "Камера"
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera settings"
 msgstr "Подешавања камере"
 
-#: src/settingsdialog.cpp:100
+#: src/settingsdialog.cpp:103
 msgid "Use default pictures directory"
 msgstr "Користи подразумевану фасциклу слика"
 
-#: src/settingsdialog.cpp:107
+#: src/settingsdialog.cpp:110
 msgid "Use subdirectory:"
 msgstr "Отвори подфасциклу"
 
-#: src/settingsdialog.cpp:120
+#: src/settingsdialog.cpp:123
 msgid "Photo directory:"
 msgstr "Фасцикла фотографија:"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Storage"
 msgstr "Спремиште"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Photo storage"
 msgstr "Спремиште фотографија"
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:131
 msgid "Play sound on taking photo"
 msgstr "Пусти звук при фотографисању"
 
-#: src/settingsdialog.cpp:131
+#: src/settingsdialog.cpp:134
 msgid "Play timer sounds"
 msgstr "Пуштај звуке тајмера"
 
-#: src/settingsdialog.cpp:134
+#: src/settingsdialog.cpp:137
 msgid "Show notification on taking photo"
 msgstr "Прикажи обавештење при фотографисању"
 
-#: src/settingsdialog.cpp:138
+#: src/settingsdialog.cpp:141
 msgid "Behaviour"
 msgstr "Понашање"
 
@@ -250,6 +254,9 @@ msgstr "Отвори помоћу ГИМПа"
 #: src/videowidget.cpp:165
 msgid "Open in Inkscape"
 msgstr "Отвори помоћу Инкскејпа"
+
+#~ msgid "Mono"
+#~ msgstr "Једнобојно"
 
 #~ msgid "Less"
 #~ msgstr "Мање"

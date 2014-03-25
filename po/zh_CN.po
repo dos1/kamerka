@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-25 17:05+0100\n"
+"POT-Creation-Date: 2014-03-25 20:04+0100\n"
 "PO-Revision-Date: 2011-10-28 12:53+0800\n"
 "Last-Translator: zcj <zcjsjz@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-i18n-doc@kde.org>\n"
@@ -27,79 +27,79 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zcjsjz@gmail.com"
 
-#: src/kamerka.qml:211
+#: src/kamerka.qml:203
 msgid "Take a photo"
 msgstr "拍照"
 
-#: src/kamerka.qml:226
+#: src/kamerka.qml:218
 msgid "Self-timer"
 msgstr "自拍"
 
-#: src/kamerka.qml:242
-msgid "Configure"
-msgstr "设置"
-
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Hide effects"
 msgstr "隐藏效果"
 
-#: src/kamerka.qml:257
+#: src/kamerka.qml:234
 msgid "Show effects"
 msgstr "显示效果"
 
-#: src/kamerka.qml:272
+#: src/kamerka.qml:250
 msgid "Open directory"
 msgstr "打开目录"
+
+#: src/kamerka.qml:265
+msgid "Configure"
+msgstr "设置"
 
 #: src/kamerka.qml:464
 msgid "No Effect"
 msgstr "无效果"
 
-#: src/kamerka.qml:475
+#: src/kamerka.qml:479
 msgid "Grey"
 msgstr "灰度"
 
-#: src/kamerka.qml:486
+#: src/kamerka.qml:494
 msgid "Invert"
 msgstr "底片"
 
-#: src/kamerka.qml:497
-msgid "Mono"
-msgstr "单色"
+#: src/kamerka.qml:509
+msgid "Equalize"
+msgstr ""
 
-#: src/kamerka.qml:510
+#: src/kamerka.qml:524
 msgid "Smurf"
 msgstr "蓝精灵"
 
-#: src/kamerka.qml:522
+#: src/kamerka.qml:538
 msgid "Implode"
 msgstr ""
 
-#: src/kamerka.qml:534
+#: src/kamerka.qml:552
 msgid "Explode"
 msgstr ""
 
-#: src/kamerka.qml:546
+#: src/kamerka.qml:566
 msgid "Charcoal"
 msgstr ""
 
-#: src/kamerka.qml:558
+#: src/kamerka.qml:580
 msgid "Edge"
 msgstr ""
 
-#: src/kamerka.qml:570
+#: src/kamerka.qml:594
 msgid "Emboss"
 msgstr ""
 
-#: src/kamerka.qml:582
+#: src/kamerka.qml:608
 msgid "Swirl"
 msgstr ""
 
-#: src/kamerka.qml:594
+#: src/kamerka.qml:622
 msgid "Oil Paint"
 msgstr ""
 
-#: src/kamerka.qml:606
+#: src/kamerka.qml:636
 msgid "Wave"
 msgstr ""
 
@@ -173,58 +173,62 @@ msgid "Framerate limit:"
 msgstr "帧率限制:"
 
 #: src/settingsdialog.cpp:82
+msgid "Enhance contrast"
+msgstr ""
+
+#: src/settingsdialog.cpp:85
 msgid "Lock aspect ratio"
 msgstr "锁定纵横比"
 
-#: src/settingsdialog.cpp:85
+#: src/settingsdialog.cpp:88
 msgid "Mirror output"
 msgstr "镜面输出"
 
-#: src/settingsdialog.cpp:88
+#: src/settingsdialog.cpp:91
 msgid "Flip output"
 msgstr "翻转输出"
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera"
 msgstr "摄像头"
 
-#: src/settingsdialog.cpp:93
+#: src/settingsdialog.cpp:96
 msgid "Camera settings"
 msgstr "摄像头设置"
 
-#: src/settingsdialog.cpp:100
+#: src/settingsdialog.cpp:103
 msgid "Use default pictures directory"
 msgstr "使用默认的图片目录"
 
-#: src/settingsdialog.cpp:107
+#: src/settingsdialog.cpp:110
 msgid "Use subdirectory:"
 msgstr "使用子目录:"
 
-#: src/settingsdialog.cpp:120
+#: src/settingsdialog.cpp:123
 msgid "Photo directory:"
 msgstr "照片目录:"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Storage"
 msgstr "存储"
 
-#: src/settingsdialog.cpp:122
+#: src/settingsdialog.cpp:125
 msgid "Photo storage"
 msgstr "照片存储"
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:131
 msgid "Play sound on taking photo"
 msgstr "拍照时播放音效"
 
-#: src/settingsdialog.cpp:131
+#: src/settingsdialog.cpp:134
 msgid "Play timer sounds"
 msgstr "播放计时音效"
 
-#: src/settingsdialog.cpp:134
+#: src/settingsdialog.cpp:137
 msgid "Show notification on taking photo"
 msgstr "拍照时显示通知"
 
-#: src/settingsdialog.cpp:138
+#: src/settingsdialog.cpp:141
 msgid "Behaviour"
 msgstr "行为"
 
@@ -247,6 +251,9 @@ msgstr "用GIMP打开"
 #: src/videowidget.cpp:165
 msgid "Open in Inkscape"
 msgstr "用Inkscape打开"
+
+#~ msgid "Mono"
+#~ msgstr "单色"
 
 #~ msgid "Less"
 #~ msgstr "较少显示"
