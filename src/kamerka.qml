@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-import QtQuick 1.0;
+import QtQuick 1.1;
 import Effects 1.0;
 
 
@@ -45,6 +45,7 @@ Rectangle {
         source: "fonts/fontawesome-webfont.ttf";
         id: fontAwesome;
     }
+
 
     Rectangle {
         effect: DropShadow {
@@ -100,13 +101,16 @@ Rectangle {
             opacity: 1;
             width: parent.width-20;
             height: parent.height-50;
-            color: "black";
+            color: "white";
             smooth: true;
             Image {
                 id: preview;
                 anchors.fill: parent;
+                fillMode: Image.PreserveAspectFit;
                 source: fileName;
                 smooth: true;
+                asynchronous: true;
+                cache: false;
             }
         }
 
