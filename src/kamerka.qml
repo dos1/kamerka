@@ -195,8 +195,8 @@ Rectangle {
         id: toolbar;
         y: page.height-height;
         anchors.horizontalCenter: page.horizontalCenter;
-        width: 0.60*page.width;
-        height: (width/5);
+        width: height*5-24;
+        height: Math.max(Math.min(144, Math.min(page.height,page.width)/5),26);
         opacity: 1;
         color: "transparent";
 
@@ -205,7 +205,6 @@ Rectangle {
             anchors.left: parent.left;
             anchors.bottom: parent.bottom;
             anchors.bottomMargin: 4;
-            anchors.leftMargin: 12;
             width: parent.height-8;
             height: parent.height-8;
             tooltip: i18n("Take a photo");
