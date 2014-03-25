@@ -27,7 +27,7 @@ Rectangle {
     id: button;
     width: 100; height: 30;
     border.width: 1;
-    radius: 5;
+    radius: 3;
     smooth: true;
     opacity: 0.7;
     z:10;
