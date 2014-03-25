@@ -20,6 +20,7 @@
 #include <Qt>
 #include <QRgb>
 #include "imageeffect.h"
+#include <qimageblitz/qimageblitz.h>
 
 void ImageEffect::grey(QImage &i) {
 
@@ -49,6 +50,16 @@ void ImageEffect::smurf(QImage &i) {
     i = i.rgbSwapped();
 }
 
+void ImageEffect::implode(QImage &i) {
+    i = Blitz::implode(i, 0.3);
+
+}
+
+void ImageEffect::explode(QImage &i) {
+    i = Blitz::implode(i, -0.3);
+
+}
+
 void ImageEffect::applyEffect(QImage &i, int effect) {
     switch(effect)
     {
@@ -62,6 +73,10 @@ void ImageEffect::applyEffect(QImage &i, int effect) {
             mono(i); break;
         case ImageEffect::Effect_Smurf:
             smurf(i); break;
+        case ImageEffect::Effect_Implode:
+            implode(i); break;
+        case ImageEffect::Effect_Explode:
+            explode(i); break;
     }
 }
 

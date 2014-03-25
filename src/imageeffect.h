@@ -33,13 +33,17 @@ public:
         Effect_Grey,
         Effect_Invert,
         Effect_Mono,
-        Effect_Smurf
+        Effect_Smurf,
+        Effect_Implode,
+        Effect_Explode
     };
 
     static void invert(QImage &image);
     static void mono(QImage &image);
     static void grey(QImage &image);
     static void smurf(QImage &image);
+    static void implode(QImage &image);
+    static void explode(QImage &image);
     static void applyEffect(QImage &image, int effect = Effect_None);
 
 };

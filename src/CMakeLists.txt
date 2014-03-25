@@ -7,7 +7,6 @@ SET(kamerka_SRCS
   Button.qml
   settingsdialog.cpp
   kamerka.kcfg
-  imageeffect.cpp
 )
 
 SET(kamerka_RCCS kamerka.qrc)
@@ -20,7 +19,7 @@ qt4_add_resources(kamerka_RCC_SRCS ${kamerka_RCCS})
 kde4_add_kcfg_files(kamerka_SRCS ${kamerka_KCFGCS})
 
 kde4_add_executable(kamerka ${kamerka_SRCS} ${kamerka_RCC_SRCS})
-target_link_libraries(kamerka ${KDE4_KDEUI_LIBS} ${KDE4_KIO_LIBS} ${QT_QTDECLARATIVE_LIBRARY} ${QT_QTSCRIPT_LIBRARY} ${KDE4_PHONON_LIBS} ${LIBV4L2_LIBRARY} ${LIBV4LCONVERT_LIBRARY})
+target_link_libraries(kamerka ${KDE4_KDEUI_LIBS} ${KDE4_KIO_LIBS} ${QT_QTDECLARATIVE_LIBRARY} ${QT_QTSCRIPT_LIBRARY} ${KDE4_PHONON_LIBS} ${LIBV4L2_LIBRARY} ${LIBV4LCONVERT_LIBRARY} qimageblitz)
 
 install(TARGETS kamerka DESTINATION ${BIN_INSTALL_DIR})
 install(FILES ${kamerka_KCFGS} DESTINATION ${KCFG_INSTALL_DIR})

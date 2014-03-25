@@ -18,20 +18,24 @@
 
 import Qt 4.7;
 
+
 Rectangle {
     property alias text: textItem.text;
     property alias mouse: mouseArea;
+    property alias font: textItem.font;
+    property alias tooltip: toolTipText.text;
     id: button;
     width: 100; height: 30;
     border.width: 1;
     radius: 5;
     smooth: true;
-    opacity: 0.5;
+    opacity: 0.7;
+    z:10;
 
     gradient: Gradient {
-        GradientStop { position: 0.0; color: "darkGray"; }
-        GradientStop { position: 0.5; color: "black"; }
-        GradientStop { position: 1.0; color: "darkGray"; }
+        GradientStop { position: 0.0; color: "#888"; }
+        //GradientStop { position: 0.5; color: "black"; }
+        GradientStop { position: 1.0; color: "#575757"; }
     }
 
     MouseArea {
@@ -55,18 +59,45 @@ Rectangle {
     }
 
 
+    Rectangle{
+        id: toolTip;
+        color: "#fff";
+        border.color: "#000";
+        border.width: 1;
+        x: mouse.mouseX + 10;
+        y: mouse.mouseY - toolTip.height;
+        z:parent.z + 10
+        height: toolTipText.paintedHeight + 4
+        width: toolTipText.paintedWidth + 4
+        opacity:0;
+
+        Text {
+            id: toolTipText;
+            anchors.centerIn: parent;
+            color: "#000";
+            z: parent.z + 10;
+            wrapMode: Text.WordWrap;
+        }
+    }
+
+
+
     states: State {
         name: "down"; when: mouse.containsMouse;
         PropertyChanges {
             target: button;
             opacity: 1;
         }
+        PropertyChanges {
+            target: toolTip;
+            opacity: toolTipText.text ? 1 : 0;
+        }
     }
 
     transitions: Transition {
         from: ""; to: "down"; reversible: true;
         SequentialAnimation {
-            NumberAnimation { property: "opacity"; duration: 400; easing.type: Easing.OutQuad; }
+            NumberAnimation { property: "opacity"; duration: 400; easing.type: Easing.OutQuad; target:button}
         }
 
     }
