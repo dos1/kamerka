@@ -50,7 +50,7 @@ void Notification::openFile (unsigned int i) {
 
 videowidget::videowidget(QWidget *parent) : QWidget(parent) {
 	storeImage=false;
-	effect=NULL;
+	effect=0;
 	connect(&thread, SIGNAL(renderedImage(QImage)),
 					this, SLOT(setPicture(QImage)));
 
@@ -117,7 +117,7 @@ void videowidget::setPicture(QImage i) {
 
 		// play sound
 		if (Settings::soundontaking()) {
-			media->setCurrentSource(KStandardDirs::locate("data", "kamerka/camera_click.ogg"));
+			media->setCurrentSource(QUrl(KStandardDirs::locate("data", "kamerka/camera_click.ogg")));
 			media->play();
 		}
 
