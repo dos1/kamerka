@@ -24,13 +24,14 @@ Rectangle {
     property alias mouse: mouseArea;
     property alias font: textItem.font;
     property alias tooltip: toolTipText.text;
+    property bool active;
     id: button;
     width: 100; height: 30;
     border.width: 1;
     radius: 3;
     smooth: true;
-    opacity: 0.7;
-    z:10;
+    opacity: active ? 1.0 : 0.7;
+    z: 10;
 
     gradient: Gradient {
         GradientStop { position: 0.0; color: "#888"; }
@@ -82,20 +83,22 @@ Rectangle {
 
 
 
-    states: State {
-        name: "down"; when: mouse.containsMouse;
-        PropertyChanges {
-            target: button;
-            opacity: 1;
+    states: [
+        State {
+            name: "down"; when: mouse.containsMouse;
+            PropertyChanges {
+                target: button;
+                opacity: 1;
+            }
+            PropertyChanges {
+                target: toolTip;
+                opacity: toolTipText.text ? 1 : 0;
+            }
         }
-        PropertyChanges {
-            target: toolTip;
-            opacity: toolTipText.text ? 1 : 0;
-        }
-    }
+    ]
 
     transitions: Transition {
-        from: ""; to: "down"; reversible: true;
+        from: "*"; to: "down"; reversible: true;
         SequentialAnimation {
             NumberAnimation { property: "opacity"; duration: 400; easing.type: Easing.OutQuad; target:button}
         }

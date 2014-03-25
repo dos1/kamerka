@@ -29,6 +29,7 @@ Rectangle {
     property bool canvasVisible: false;
     property bool recording: false;
     property bool effects: false;
+    property int currentEffect: 0;
 
     signal takePhoto();
     signal timerCounter(int count);
@@ -43,8 +44,6 @@ Rectangle {
     FontLoader {
         source: "fonts/fontawesome-webfont.ttf";
         id: fontAwesome;
-        onStatusChanged: if (loader.status == FontLoader.Ready) console.log('Loaded')
-
     }
 
     Rectangle {
@@ -103,17 +102,6 @@ Rectangle {
             height: parent.height-50;
             color: "black";
             smooth: true;
-            /*
-             Image {
-                 effect: Blur {
-                   blurRadius: 8
-                 }
-                 opacity: 0.75;
-                anchors.fill: parent;
-                source: fileName;
-                smooth: true;
-             }
-             */
             Image {
                 id: preview;
                 anchors.fill: parent;
@@ -123,6 +111,11 @@ Rectangle {
         }
 
     }
+    function setEffect(id) {
+        page.currentEffect = id;
+        page.applyEffect(id);
+    }
+
     function doPhoto() {
         take=false;
         page.takePhoto();
@@ -231,23 +224,8 @@ Rectangle {
         }
 
         Button {
-            id: configure;
-            anchors.left: autoshot.right;
-            anchors.bottom: parent.bottom;
-            anchors.bottomMargin: 4;
-            anchors.leftMargin: 4;
-            width: parent.height-8;
-            height: parent.height-8;
-            tooltip: i18n("Configure");
-            font.pointSize: width/2;
-            font.family: fontAwesome.name;
-            text: "\uf013";
-            mouse.onClicked: showConfiguration();
-            z: 8;
-        }
-        Button {
             id: effectsBtn;
-            anchors.left: configure.right;
+            anchors.left: autoshot.right;
             anchors.bottom: parent.bottom;
             anchors.bottomMargin: 4;
             anchors.leftMargin: 4;
@@ -258,7 +236,8 @@ Rectangle {
             font.family: fontAwesome.name;
             text: "\uf0d0";
             mouse.onClicked: toggleEffects();
-            z: 7;
+            active: effects;
+            z: 8;
         }
         Button {
             id: dolphin;
@@ -273,9 +252,23 @@ Rectangle {
             text: "\uf115";
             font.pointSize: width/2;
             mouse.onClicked: showDirectory();
+            z: 7;
+        }
+        Button {
+            id: configure;
+            anchors.left: dolphin.right;
+            anchors.bottom: parent.bottom;
+            anchors.bottomMargin: 4;
+            anchors.leftMargin: 4;
+            width: parent.height-8;
+            height: parent.height-8;
+            tooltip: i18n("Configure");
+            font.pointSize: width/2;
+            font.family: fontAwesome.name;
+            text: "\uf013";
+            mouse.onClicked: showConfiguration();
             z: 6;
         }
-
 
         states: [
             State {
@@ -448,20 +441,30 @@ Rectangle {
         id: effectHolder;
         x: 0 - effectHolder.width;
         y: 20;
-        height: 180;
-        width: 110;
+        height: page.height-40;
+        width: 140;
         color: "transparent";
         radius: 6;
+
+        MouseArea {
+            id: mouseArea;
+            anchors.fill: parent;
+            hoverEnabled: true;
+        }
 
         Button {
             id: effect_none;
             x: 0;
             anchors.top: parent.top;
             anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("No Effect");
-            mouse.onClicked: applyEffect(0);
+            mouse.onClicked: setEffect(0);
+            active: currentEffect === 0;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
 
         Button {
@@ -469,10 +472,14 @@ Rectangle {
             x: 0;
             anchors.top: effect_none.bottom;
             anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Grey");
-            mouse.onClicked: applyEffect(1);
+            mouse.onClicked: setEffect(1);
+            active: currentEffect === 1;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
 
         Button {
@@ -480,10 +487,14 @@ Rectangle {
             x: 0;
             anchors.top: effect_grey.bottom;
             anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Invert");
-            mouse.onClicked: applyEffect(2);
+            mouse.onClicked: setEffect(2);
+            active: currentEffect === 2;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
 
         Button {
@@ -491,10 +502,14 @@ Rectangle {
             x: 0;
             anchors.top: effect_invert.bottom;
             anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Mono");
-            mouse.onClicked: applyEffect(3);
+            mouse.onClicked: setEffect(3);
+            active: currentEffect === 3;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
 
         Button {
@@ -507,7 +522,9 @@ Rectangle {
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Smurf");
-            mouse.onClicked: applyEffect(4);
+            mouse.onClicked: setEffect(4);
+            active: currentEffect === 4;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
         Button {
             id: effect_implode;
@@ -519,7 +536,9 @@ Rectangle {
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Implode");
-            mouse.onClicked: applyEffect(5);
+            mouse.onClicked: setEffect(5);
+            active: currentEffect === 5;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
         Button {
             id: effect_explode;
@@ -531,7 +550,9 @@ Rectangle {
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Explode");
-            mouse.onClicked: applyEffect(6);
+            mouse.onClicked: setEffect(6);
+            active: currentEffect === 6;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
         Button {
             id: effect_charcoal;
@@ -543,7 +564,9 @@ Rectangle {
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Charcoal");
-            mouse.onClicked: applyEffect(7);
+            mouse.onClicked: setEffect(7);
+            active: currentEffect === 7;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
         Button {
             id: effect_edge;
@@ -555,7 +578,9 @@ Rectangle {
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Edge");
-            mouse.onClicked: applyEffect(8);
+            mouse.onClicked: setEffect(8);
+            active: currentEffect === 8;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
         Button {
             id: effect_emboss;
@@ -567,7 +592,9 @@ Rectangle {
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Emboss");
-            mouse.onClicked: applyEffect(9);
+            mouse.onClicked: setEffect(9);
+            active: currentEffect === 9;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
         Button {
             id: effect_swirl;
@@ -579,7 +606,9 @@ Rectangle {
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Swirl");
-            mouse.onClicked: applyEffect(10);
+            mouse.onClicked: setEffect(10);
+            active: currentEffect === 10;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
         Button {
             id: effect_oilpaint;
@@ -591,7 +620,9 @@ Rectangle {
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Oil Paint");
-            mouse.onClicked: applyEffect(11);
+            mouse.onClicked: setEffect(11);
+            active: currentEffect === 11;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
         Button {
             id: effect_wave;
@@ -603,7 +634,9 @@ Rectangle {
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Wave");
-            mouse.onClicked: applyEffect(12);
+            mouse.onClicked: setEffect(12);
+            active: currentEffect === 12;
+            font.weight: active ? Font.Bold : Font.Normal;
         }
 
 
