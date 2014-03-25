@@ -76,7 +76,6 @@ void MainWindow::showDirectory() {
 	dir.mkpath(Settings::photodir());
 	dir.setPath(Settings::photodir());
 	QProcess::startDetached("xdg-open", QStringList() << dir.absolutePath());
-	QApplication::quit();
 }
 
 void MainWindow::closeCanvasLayer() {
