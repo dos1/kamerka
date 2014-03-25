@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2012-10-21 02:02+0200\n"
+"POT-Creation-Date: 2014-03-25 17:05+0100\n"
 "PO-Revision-Date: 2012-10-21 12:37+0300\n"
 "Last-Translator: Frank Schäfer\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -17,58 +17,92 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/kamerka.qml:208
+#: po/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frank Schäfer"
+
+#: po/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "fschaefer.oss@googlemail.com"
+
+#: src/kamerka.qml:211
 msgid "Take a photo"
 msgstr "Foto machen"
 
-#: src/kamerka.qml:218
+#: src/kamerka.qml:226
 msgid "Self-timer"
 msgstr "Selbstauslöser"
 
-#: src/kamerka.qml:229
-msgid "Less"
-msgstr "Weniger"
-
-#: src/kamerka.qml:229
-msgid "More"
-msgstr "Mehr"
-
-#: src/kamerka.qml:239
+#: src/kamerka.qml:242
 msgid "Configure"
 msgstr "Konfigurieren"
 
-#: src/kamerka.qml:249
+#: src/kamerka.qml:257
 msgid "Hide effects"
 msgstr "Effekte ausblenden"
 
-#: src/kamerka.qml:249
+#: src/kamerka.qml:257
 msgid "Show effects"
 msgstr "Zeige Effekte"
 
-#: src/kamerka.qml:260
+#: src/kamerka.qml:272
 msgid "Open directory"
 msgstr "Verzeichnis öffnen"
 
-#: src/kamerka.qml:449
+#: src/kamerka.qml:464
 msgid "No Effect"
 msgstr "Kein Effekt"
 
-#: src/kamerka.qml:460
+#: src/kamerka.qml:475
 msgid "Grey"
 msgstr "Grau"
 
-#: src/kamerka.qml:471
+#: src/kamerka.qml:486
 msgid "Invert"
 msgstr "Invertiert"
 
-#: src/kamerka.qml:482
+#: src/kamerka.qml:497
 msgid "Mono"
 msgstr "Mono"
 
 # Schlumpf
-#: src/kamerka.qml:495
+#: src/kamerka.qml:510
 msgid "Smurf"
 msgstr "Smurf"
+
+#: src/kamerka.qml:522
+msgid "Implode"
+msgstr ""
+
+#: src/kamerka.qml:534
+msgid "Explode"
+msgstr ""
+
+#: src/kamerka.qml:546
+msgid "Charcoal"
+msgstr ""
+
+#: src/kamerka.qml:558
+msgid "Edge"
+msgstr ""
+
+#: src/kamerka.qml:570
+msgid "Emboss"
+msgstr ""
+
+#: src/kamerka.qml:582
+msgid "Swirl"
+msgstr ""
+
+#: src/kamerka.qml:594
+msgid "Oil Paint"
+msgstr ""
+
+#: src/kamerka.qml:606
+msgid "Wave"
+msgstr ""
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -81,7 +115,8 @@ msgstr ""
 "Benutzeroberfläche"
 
 #: src/main.cpp:38
-msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
+#, fuzzy
+msgid "Copyright (C) 2011-2014 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
 
 #: src/mainwindow.cpp:36
@@ -92,15 +127,15 @@ msgstr "i18n() benötigt mindestens ein Argument"
 msgid "Could not load QML interface!"
 msgstr "QML-Interface konnte nicht geladen werden !"
 
-#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:146
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:129 src/mainwindow.cpp:145
 msgid "Error"
 msgstr "Fehler"
 
-#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:146
+#: src/mainwindow.cpp:125 src/mainwindow.cpp:129 src/mainwindow.cpp:145
 msgid "Could not connect to V4L device!"
 msgstr "V4L-Gerät konnte nicht verbunden werden !"
 
-#: src/mainwindow.cpp:175
+#: src/mainwindow.cpp:174
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
@@ -168,31 +203,31 @@ msgstr "Verwende Standard-Bilderverzeichnis"
 msgid "Use subdirectory:"
 msgstr "Verwende Unterverzeichnis:"
 
-#: src/settingsdialog.cpp:119
+#: src/settingsdialog.cpp:120
 msgid "Photo directory:"
 msgstr "Bilderverzeichnis:"
 
-#: src/settingsdialog.cpp:121
+#: src/settingsdialog.cpp:122
 msgid "Storage"
 msgstr "Speicherung"
 
-#: src/settingsdialog.cpp:121
+#: src/settingsdialog.cpp:122
 msgid "Photo storage"
 msgstr "Foto-Speicherung"
 
-#: src/settingsdialog.cpp:127
+#: src/settingsdialog.cpp:128
 msgid "Play sound on taking photo"
 msgstr "Sound beim Fotografieren abspielen"
 
-#: src/settingsdialog.cpp:130
+#: src/settingsdialog.cpp:131
 msgid "Play timer sounds"
 msgstr "Timer-Sounds abspielen"
 
-#: src/settingsdialog.cpp:133
+#: src/settingsdialog.cpp:134
 msgid "Show notification on taking photo"
 msgstr "Benachrichtigung beim Fotografieren anzeigen"
 
-#: src/settingsdialog.cpp:137
+#: src/settingsdialog.cpp:138
 msgid "Behaviour"
 msgstr "Verhalten"
 
@@ -216,14 +251,8 @@ msgstr "Mit GIMP öffnen"
 msgid "Open in Inkscape"
 msgstr "Mit Inkscape öffnen"
 
-#: tools/rc.cpp:1 rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Frank Schäfer"
+#~ msgid "Less"
+#~ msgstr "Weniger"
 
-#: tools/rc.cpp:2 rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "fschaefer.oss@googlemail.com"
-
-
+#~ msgid "More"
+#~ msgstr "Mehr"
