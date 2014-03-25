@@ -3,6 +3,7 @@ SET(kamerka_SRCS
   mainwindow.cpp
   videowidget.cpp
   capturethread.cpp
+  imageeffect.cpp
   kamerka.qml
   Button.qml
   settingsdialog.cpp

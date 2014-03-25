@@ -23,7 +23,7 @@
 
 #include "settings.h"
 #include "videowidget.h"
-#include "imageeffect.cpp"
+#include "imageeffect.h"
 
 // Notification class is used to connect to notification signal
 Notification::Notification (QString name, QString filename) : KNotification(name) {

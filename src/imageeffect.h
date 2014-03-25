@@ -20,7 +20,7 @@
 #define IMAGEEFFECT_H
 
 #include <QObject>
-
+#include <QImage>
 
 class ImageEffect: public QObject{
     Q_OBJECT
