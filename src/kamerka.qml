@@ -40,6 +40,14 @@ Rectangle {
     width: parent.width; height: parent.height;
     color: "transparent";
 
+    // Load the "FontAwesome" font for the monochrome icons.
+    FontLoader {
+        source: "fonts/fontawesome-webfont.ttf";
+        id: fontAwesome;
+        onStatusChanged: if (loader.status == FontLoader.Ready) console.log('Loaded')
+
+    }
+
     Rectangle {
         effect: DropShadow {
             blurRadius: 8;
@@ -147,10 +155,6 @@ Rectangle {
         page.timercount--;
         page.timeranim=true;
     }
-    function moreOrLess() {
-        if (more) { more=false; }
-        else { more=true; }
-    }
     function showCanvasBackground() {
         canvasVisible=true;
     }
@@ -190,74 +194,103 @@ Rectangle {
 
     Rectangle {
         id: toolbar;
-        y: page.height-(height/2);
+        y: page.height-height;
         anchors.horizontalCenter: page.horizontalCenter;
-        width: 0.75*page.width;
-        height: 75;
+        width: 0.60*page.width;
+        height: (width/5);
         color: "#33000000";
-        radius: 10;
+        radius: 6;
         opacity: 1;
 
         Button {
             id: shot;
             anchors.left: parent.left;
-            anchors.bottom: parent.verticalCenter;
+            anchors.bottom: parent.bottom;
             anchors.bottomMargin: 4;
-            anchors.leftMargin: 4;
-            width: (parent.width/3)-8;
-            text: i18n("Take a photo");
+            anchors.leftMargin: 12;
+            width: parent.height-8;
+            height: parent.height-8;
+            //text: i18n("Take a photo");
+            Text{
+                anchors.centerIn: parent;
+                font.pointSize: parent.width/2;
+                font.family: fontAwesome.name;
+                text: "\uF083";
+                color: "#fff";
+            }
             mouse.onClicked: doPhoto();
         }
         Button {
             id: autoshot;
             anchors.left: shot.right;
-            anchors.bottom: parent.verticalCenter;
+            anchors.bottom: parent.bottom;
             anchors.bottomMargin: 4;
-            anchors.leftMargin: 2;
-            width: (parent.width/3)-8;
-            text: i18n("Self-timer");
+            anchors.leftMargin: 4;
+            width: parent.height-8;
+            height: parent.height-8;
+            //text: i18n("Self-timer");
+            Text{
+                anchors.centerIn: parent;
+                font.pointSize: parent.width/2;
+                font.family: fontAwesome.name;
+                text: "\uf017";
+                color: "#fff";
+            }
             mouse.onClicked: timerGo();
         }
-        Button {
-            id: moreBtn;
-            anchors.left: autoshot.right;
-            anchors.bottom: parent.verticalCenter;
-            anchors.bottomMargin: 4;
-            anchors.leftMargin: 2;
-            anchors.right:  parent.right;
-            anchors.rightMargin:  4;
-            text: more ? i18n("Less") : i18n("More");
-            mouse.onClicked: moreOrLess();
-        }
+
         Button {
             id: configure;
-            anchors.left: parent.left;
-            anchors.top: parent.verticalCenter;
-            anchors.topMargin: 4;
+            anchors.left: autoshot.right;
+            anchors.bottom: parent.bottom;
+            anchors.bottomMargin: 4;
             anchors.leftMargin: 4;
-            width: (parent.width/3)-8;
-            text: i18n("Configure");
+            width: parent.height-8;
+            height: parent.height-8;
+            //text: i18n("Configure");
+            Text{
+                anchors.centerIn: parent;
+                font.pointSize: parent.width/2;
+                font.family: fontAwesome.name;
+                text: "\uf013";
+                color: "#fff";
+            }
             mouse.onClicked: showConfiguration();
         }
         Button {
             id: effectsBtn;
             anchors.left: configure.right;
-            anchors.top: parent.verticalCenter;
-            anchors.topMargin: 4;
-            anchors.leftMargin: 2;
-            width: (parent.width/3)-8;
-            text: effects ? i18n("Hide effects") : i18n("Show effects");
+            anchors.bottom: parent.bottom;
+            anchors.bottomMargin: 4;
+            anchors.leftMargin: 4;
+            width: parent.height-8;
+            height: parent.height-8;
+            //text: effects ? i18n("Hide effects") : i18n("Show effects");
+            Text{
+                anchors.centerIn: parent;
+                font.pointSize: parent.width/2;
+                font.family: fontAwesome.name;
+                text: "\uf0d0";
+                color: "#fff";
+            }
             mouse.onClicked: toggleEffects();
         }
         Button {
             id: dolphin;
             anchors.left: effectsBtn.right;
-            anchors.top: parent.verticalCenter;
-            anchors.topMargin: 4;
-            anchors.leftMargin: 2;
-            anchors.right:  parent.right;
-            anchors.rightMargin:  4;
-            text: i18n("Open directory");
+            anchors.bottom: parent.bottom;
+            anchors.bottomMargin: 4;
+            anchors.leftMargin: 4;
+            width: parent.height-8;
+            height: parent.height-8;
+            //text: i18n("Open directory");
+            Text{
+                anchors.centerIn: parent;
+                font.pointSize: parent.width/2;
+                font.family: fontAwesome.name;
+                text: "\uf115";
+                color: "#fff";
+            }
             mouse.onClicked: showDirectory();
         }
 
@@ -512,7 +545,7 @@ Rectangle {
                 }
             },
             State {
-                name: "effects"; when: effects == true && more == true;
+                name: "effects"; when: effects == true;
                 PropertyChanges {
                     target: effectHolder;
                     x: 4;

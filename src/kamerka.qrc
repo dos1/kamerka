@@ -2,6 +2,7 @@
     <qresource prefix="/qml">
         <file>kamerka.qml</file>
         <file>Button.qml</file>
+        <file>fonts/fontawesome-webfont.ttf</file>
     </qresource>
     <qresource prefix="/icons">
         <file alias="kamerka.png">../data/kamerka.png</file>

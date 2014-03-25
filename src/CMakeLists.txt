@@ -7,6 +7,7 @@ SET(kamerka_SRCS
   Button.qml
   settingsdialog.cpp
   kamerka.kcfg
+  imageeffect.cpp
 )
 
 SET(kamerka_RCCS kamerka.qrc)
