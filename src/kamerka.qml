@@ -498,7 +498,7 @@ Rectangle {
         }
 
         Button {
-            id: effect_mono;
+            id: effect_equalize;
             x: 0;
             anchors.top: effect_invert.bottom;
             anchors.topMargin: 4;
@@ -506,7 +506,7 @@ Rectangle {
             anchors.leftMargin: 5;
             anchors.right: parent.right;
             anchors.rightMargin: 5;
-            text: i18n("Mono");
+            text: i18n("Equalize");
             mouse.onClicked: setEffect(3);
             active: currentEffect === 3;
             font.weight: active ? Font.Bold : Font.Normal;
@@ -515,7 +515,7 @@ Rectangle {
         Button {
             id: effect_smurf;
             x: 0;
-            anchors.top: effect_mono.bottom;
+            anchors.top: effect_equalize.bottom;
             anchors.topMargin: 4;
             anchors.left: parent.left;
             anchors.leftMargin: 5;

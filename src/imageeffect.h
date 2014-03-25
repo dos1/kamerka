@@ -32,9 +32,8 @@ class ImageEffect: public QObject{
 			Effect_None,
 			Effect_Grey,
 			Effect_Invert,
-			Effect_Mono,
+			Effect_Equalize,
 			Effect_Smurf,
-			//Effect_Equalize,
 			Effect_Implode,
 			Effect_Explode,
 			Effect_Charcoal,
@@ -45,11 +44,10 @@ class ImageEffect: public QObject{
 			Effect_Wave
 		};
 
-		static void invert(QImage &image);
-		static void mono(QImage &image);
 		static void grey(QImage &image);
+		static void invert(QImage &image);
+		static void equalize(QImage &image);
 		static void smurf(QImage &image);
-		//static void equalize(QImage &image);
 		static void implode(QImage &image);
 		static void explode(QImage &image);
 		static void charcoal(QImage &image);

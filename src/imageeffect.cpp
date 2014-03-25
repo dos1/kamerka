@@ -30,13 +30,9 @@ void ImageEffect::invert(QImage &i) {
 	Blitz::invert(i);
 }
 
-void ImageEffect::mono(QImage &i) {
-	i = i.convertToFormat(QImage::Format_Mono);
+void ImageEffect::equalize(QImage &i) {
+	Blitz::equalize(i);
 }
-
-//void ImageEffect::equalize(QImage &i) {
-//	Blitz::equalize(i);
-//}
 
 void ImageEffect::smurf(QImage &i) {
 	i = i.rgbSwapped();
@@ -83,12 +79,10 @@ void ImageEffect::applyEffect(QImage &i, int effect) {
 			grey(i); break;
 		case ImageEffect::Effect_Invert:
 			invert(i); break;
-		case ImageEffect::Effect_Mono:
-			mono(i); break;
+		case ImageEffect::Effect_Equalize:
+			equalize(i); break;
 		case ImageEffect::Effect_Smurf:
 			smurf(i); break;
-		//case ImageEffect::Effect_Equalize:
-		//	equalize(i); break;
 		case ImageEffect::Effect_Implode:
 			implode(i); break;
 		case ImageEffect::Effect_Explode:
