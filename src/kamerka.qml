@@ -40,6 +40,14 @@ Rectangle {
     width: parent.width; height: parent.height;
     color: "transparent";
 
+    // Load the "FontAwesome" font for the monochrome icons.
+    FontLoader {
+        source: "fonts/fontawesome-webfont.ttf";
+        id: fontAwesome;
+        onStatusChanged: if (loader.status == FontLoader.Ready) console.log('Loaded')
+
+    }
+
     Rectangle {
         effect: DropShadow {
             blurRadius: 8;
@@ -147,10 +155,6 @@ Rectangle {
         page.timercount--;
         page.timeranim=true;
     }
-    function moreOrLess() {
-        if (more) { more=false; }
-        else { more=true; }
-    }
     function showCanvasBackground() {
         canvasVisible=true;
     }
@@ -190,75 +194,88 @@ Rectangle {
 
     Rectangle {
         id: toolbar;
-        y: page.height-(height/2);
+        y: page.height-height;
         anchors.horizontalCenter: page.horizontalCenter;
-        width: 0.75*page.width;
-        height: 75;
-        color: "#33000000";
-        radius: 10;
+        width: 0.60*page.width;
+        height: (width/5);
         opacity: 1;
+        color: "transparent";
 
         Button {
             id: shot;
             anchors.left: parent.left;
-            anchors.bottom: parent.verticalCenter;
+            anchors.bottom: parent.bottom;
             anchors.bottomMargin: 4;
-            anchors.leftMargin: 4;
-            width: (parent.width/3)-8;
-            text: i18n("Take a photo");
+            anchors.leftMargin: 12;
+            width: parent.height-8;
+            height: parent.height-8;
+            tooltip: i18n("Take a photo");
+            font.pointSize: width/2;
+            font.family: fontAwesome.name;
+            text: "\uF083";
             mouse.onClicked: doPhoto();
+            z: 10;
         }
         Button {
             id: autoshot;
             anchors.left: shot.right;
-            anchors.bottom: parent.verticalCenter;
+            anchors.bottom: parent.bottom;
             anchors.bottomMargin: 4;
-            anchors.leftMargin: 2;
-            width: (parent.width/3)-8;
-            text: i18n("Self-timer");
+            anchors.leftMargin: 4;
+            width: parent.height-8;
+            height: parent.height-8;
+            tooltip: i18n("Self-timer");
+            font.pointSize: width/2;
+            font.family: fontAwesome.name;
+            text: "\uf017";
             mouse.onClicked: timerGo();
+            z: 9;
         }
-        Button {
-            id: moreBtn;
-            anchors.left: autoshot.right;
-            anchors.bottom: parent.verticalCenter;
-            anchors.bottomMargin: 4;
-            anchors.leftMargin: 2;
-            anchors.right:  parent.right;
-            anchors.rightMargin:  4;
-            text: more ? i18n("Less") : i18n("More");
-            mouse.onClicked: moreOrLess();
-        }
+
         Button {
             id: configure;
-            anchors.left: parent.left;
-            anchors.top: parent.verticalCenter;
-            anchors.topMargin: 4;
+            anchors.left: autoshot.right;
+            anchors.bottom: parent.bottom;
+            anchors.bottomMargin: 4;
             anchors.leftMargin: 4;
-            width: (parent.width/3)-8;
-            text: i18n("Configure");
+            width: parent.height-8;
+            height: parent.height-8;
+            tooltip: i18n("Configure");
+            font.pointSize: width/2;
+            font.family: fontAwesome.name;
+            text: "\uf013";
             mouse.onClicked: showConfiguration();
+            z: 8;
         }
         Button {
             id: effectsBtn;
             anchors.left: configure.right;
-            anchors.top: parent.verticalCenter;
-            anchors.topMargin: 4;
-            anchors.leftMargin: 2;
-            width: (parent.width/3)-8;
-            text: effects ? i18n("Hide effects") : i18n("Show effects");
+            anchors.bottom: parent.bottom;
+            anchors.bottomMargin: 4;
+            anchors.leftMargin: 4;
+            width: parent.height-8;
+            height: parent.height-8;
+            tooltip: effects ? i18n("Hide effects") : i18n("Show effects");
+            font.pointSize: width/2;
+            font.family: fontAwesome.name;
+            text: "\uf0d0";
             mouse.onClicked: toggleEffects();
+            z: 7;
         }
         Button {
             id: dolphin;
             anchors.left: effectsBtn.right;
-            anchors.top: parent.verticalCenter;
-            anchors.topMargin: 4;
-            anchors.leftMargin: 2;
-            anchors.right:  parent.right;
-            anchors.rightMargin:  4;
-            text: i18n("Open directory");
+            anchors.bottom: parent.bottom;
+            anchors.bottomMargin: 4;
+            anchors.leftMargin: 4;
+            width: parent.height-8;
+            height: parent.height-8;
+            tooltip: i18n("Open directory");
+            font.family: fontAwesome.name;
+            text: "\uf115";
+            font.pointSize: width/2;
             mouse.onClicked: showDirectory();
+            z: 6;
         }
 
 
@@ -282,7 +299,6 @@ Rectangle {
                 PropertyChanges {
                     target: toolbar;
                     y: page.height-height-4;
-                    color: "#AA000000";
                 }
             }
         ]
@@ -434,16 +450,16 @@ Rectangle {
         id: effectHolder;
         x: 0 - effectHolder.width;
         y: 20;
-        height: 210;
+        height: 180;
         width: 110;
-        color: "#AA000000";
-        radius: 10;
+        color: "transparent";
+        radius: 6;
 
         Button {
             id: effect_none;
             x: 0;
             anchors.top: parent.top;
-            anchors.topMargin: 10;
+            anchors.topMargin: 4;
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("No Effect");
@@ -454,7 +470,7 @@ Rectangle {
             id: effect_grey;
             x: 0;
             anchors.top: effect_none.bottom;
-            anchors.topMargin: 10;
+            anchors.topMargin: 4;
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Grey");
@@ -465,7 +481,7 @@ Rectangle {
             id: effect_invert;
             x: 0;
             anchors.top: effect_grey.bottom;
-            anchors.topMargin: 10;
+            anchors.topMargin: 4;
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Invert");
@@ -476,7 +492,7 @@ Rectangle {
             id: effect_mono;
             x: 0;
             anchors.top: effect_invert.bottom;
-            anchors.topMargin: 10;
+            anchors.topMargin: 4;
             anchors.right: parent.right;
             anchors.rightMargin: 5;
             text: i18n("Mono");
@@ -487,7 +503,7 @@ Rectangle {
             id: effect_smurf;
             x: 0;
             anchors.top: effect_mono.bottom;
-            anchors.topMargin: 10;
+            anchors.topMargin: 4;
             anchors.left: parent.left;
             anchors.leftMargin: 5;
             anchors.right: parent.right;
@@ -495,6 +511,103 @@ Rectangle {
             text: i18n("Smurf");
             mouse.onClicked: applyEffect(4);
         }
+        Button {
+            id: effect_implode;
+            x: 0;
+            anchors.top: effect_smurf.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Implode");
+            mouse.onClicked: applyEffect(5);
+        }
+        Button {
+            id: effect_explode;
+            x: 0;
+            anchors.top: effect_implode.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Explode");
+            mouse.onClicked: applyEffect(6);
+        }
+        Button {
+            id: effect_charcoal;
+            x: 0;
+            anchors.top: effect_explode.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Charcoal");
+            mouse.onClicked: applyEffect(7);
+        }
+        Button {
+            id: effect_edge;
+            x: 0;
+            anchors.top: effect_charcoal.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Edge");
+            mouse.onClicked: applyEffect(8);
+        }
+        Button {
+            id: effect_emboss;
+            x: 0;
+            anchors.top: effect_edge.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Emboss");
+            mouse.onClicked: applyEffect(9);
+        }
+        Button {
+            id: effect_swirl;
+            x: 0;
+            anchors.top: effect_emboss.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Swirl");
+            mouse.onClicked: applyEffect(10);
+        }
+        Button {
+            id: effect_oilpaint;
+            x: 0;
+            anchors.top: effect_swirl.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Oil Paint");
+            mouse.onClicked: applyEffect(11);
+        }
+        Button {
+            id: effect_wave;
+            x: 0;
+            anchors.top: effect_oilpaint.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Wave");
+            mouse.onClicked: applyEffect(12);
+        }
+
 
         states: [
             State {
@@ -512,7 +625,7 @@ Rectangle {
                 }
             },
             State {
-                name: "effects"; when: effects == true && more == true;
+                name: "effects"; when: effects == true;
                 PropertyChanges {
                     target: effectHolder;
                     x: 4;

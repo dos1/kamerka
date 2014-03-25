@@ -33,13 +33,29 @@ public:
         Effect_Grey,
         Effect_Invert,
         Effect_Mono,
-        Effect_Smurf
+        Effect_Smurf,
+        Effect_Implode,
+        Effect_Explode,
+        Effect_Charcoal,
+        Effect_Edge,
+        Effect_Emboss,
+        Effect_Swirl,
+        Effect_OilPaint,
+        Effect_Wave
     };
 
     static void invert(QImage &image);
     static void mono(QImage &image);
     static void grey(QImage &image);
     static void smurf(QImage &image);
+    static void implode(QImage &image);
+    static void explode(QImage &image);
+    static void charcoal(QImage &image);
+    static void edge(QImage &image);
+    static void emboss(QImage &image);
+    static void swirl(QImage &image);
+    static void oilPaint(QImage &image);
+    static void wave(QImage &image);
     static void applyEffect(QImage &image, int effect = Effect_None);
 
 };

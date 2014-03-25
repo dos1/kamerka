@@ -12,6 +12,7 @@ find_package(KDE4 REQUIRED)
 include(KDE4Defaults)
 include_directories(${KDE4_INCLUDES})
 
+
 find_package(LibV4L2 REQUIRED)
 include_directories(${LIBV2L2_INCLUDE_DIR})
 
