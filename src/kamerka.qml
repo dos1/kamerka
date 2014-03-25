@@ -535,6 +535,79 @@ Rectangle {
             text: i18n("Explode");
             mouse.onClicked: applyEffect(6);
         }
+        Button {
+            id: effect_charcoal;
+            x: 0;
+            anchors.top: effect_explode.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Charcoal");
+            mouse.onClicked: applyEffect(7);
+        }
+        Button {
+            id: effect_edge;
+            x: 0;
+            anchors.top: effect_charcoal.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Edge");
+            mouse.onClicked: applyEffect(8);
+        }
+        Button {
+            id: effect_emboss;
+            x: 0;
+            anchors.top: effect_edge.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Emboss");
+            mouse.onClicked: applyEffect(9);
+        }
+        Button {
+            id: effect_swirl;
+            x: 0;
+            anchors.top: effect_emboss.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Swirl");
+            mouse.onClicked: applyEffect(10);
+        }
+        Button {
+            id: effect_oilpaint;
+            x: 0;
+            anchors.top: effect_swirl.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Oil Paint");
+            mouse.onClicked: applyEffect(11);
+        }
+        Button {
+            id: effect_wave;
+            x: 0;
+            anchors.top: effect_oilpaint.bottom;
+            anchors.topMargin: 4;
+            anchors.left: parent.left;
+            anchors.leftMargin: 5;
+            anchors.right: parent.right;
+            anchors.rightMargin: 5;
+            text: i18n("Wave");
+            mouse.onClicked: applyEffect(12);
+        }
+
 
         states: [
             State {
