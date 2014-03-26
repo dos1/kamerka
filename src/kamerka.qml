@@ -157,7 +157,7 @@ Rectangle {
     }
 
     function doBurstPhoto(){
-        burstshot.active = false;
+        burstshot.active = true;
         if(page.burstPhotosDone < page.burstPhotoNumber){
             doPhoto();
             page.burstPhotosDone ++;
@@ -165,7 +165,7 @@ Rectangle {
         else{
             burstPhotosTimer.stop();
             page.burstPhotosDone = 0;
-            burstshot.active = true;
+            burstshot.active = false;
         }
     }
 
@@ -243,7 +243,7 @@ Rectangle {
             text: "\uF00a";
             mouse.onClicked: burstPhotosTimer.start();
             z: 10;
-            Timer{
+            Timer {
                 id: burstPhotosTimer;
                 interval: page.delayBetweenPhotosBurst * 1000;
                 running: false;
