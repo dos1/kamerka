@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-25 20:04+0100\n"
+"POT-Creation-Date: 2014-03-27 00:55+0100\n"
 "PO-Revision-Date: 2012-10-21 12:37+0300\n"
 "Last-Translator: Frank Schäfer\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -27,80 +27,84 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "fschaefer.oss@googlemail.com"
 
-#: src/kamerka.qml:203
+#: src/kamerka.qml:225
 msgid "Take a photo"
 msgstr "Foto machen"
 
-#: src/kamerka.qml:218
+#: src/kamerka.qml:240 src/settingsdialog.cpp:114
+msgid "Burst mode"
+msgstr ""
+
+#: src/kamerka.qml:263 src/settingsdialog.cpp:102
 msgid "Self-timer"
 msgstr "Selbstauslöser"
 
-#: src/kamerka.qml:234
+#: src/kamerka.qml:279
 msgid "Hide effects"
 msgstr "Effekte ausblenden"
 
-#: src/kamerka.qml:234
+#: src/kamerka.qml:279
 msgid "Show effects"
 msgstr "Zeige Effekte"
 
-#: src/kamerka.qml:250
+#: src/kamerka.qml:295
 msgid "Open directory"
 msgstr "Verzeichnis öffnen"
 
-#: src/kamerka.qml:265
+#: src/kamerka.qml:310
 msgid "Configure"
 msgstr "Konfigurieren"
 
-#: src/kamerka.qml:464
+#: src/kamerka.qml:509
 msgid "No Effect"
 msgstr "Kein Effekt"
 
-#: src/kamerka.qml:479
+#: src/kamerka.qml:524
 msgid "Grey"
 msgstr "Grau"
 
-#: src/kamerka.qml:494
+#: src/kamerka.qml:539
 msgid "Invert"
 msgstr "Invertiert"
 
-#: src/kamerka.qml:509
+#: src/kamerka.qml:554
 msgid "Equalize"
 msgstr ""
 
 # Schlumpf
-#: src/kamerka.qml:524
+#: src/kamerka.qml:569
 msgid "Smurf"
 msgstr "Smurf"
 
-#: src/kamerka.qml:538
+#: src/kamerka.qml:583
 msgid "Implode"
 msgstr ""
 
-#: src/kamerka.qml:552
+#: src/kamerka.qml:597
 msgid "Explode"
 msgstr ""
 
-#: src/kamerka.qml:566
+#: src/kamerka.qml:611
 msgid "Charcoal"
 msgstr ""
 
-#: src/kamerka.qml:580
+#: src/kamerka.qml:625
 msgid "Edge"
 msgstr ""
 
-#: src/kamerka.qml:594
+#: src/kamerka.qml:639
 msgid "Emboss"
 msgstr ""
 
-#: src/kamerka.qml:608
+#: src/kamerka.qml:653
 msgid "Swirl"
 msgstr ""
 
-#: src/kamerka.qml:622
+#: src/kamerka.qml:667
 msgid "Oil Paint"
 msgstr ""
 
-#: src/kamerka.qml:636
+#: src/kamerka.qml:681
 msgid "Wave"
 msgstr ""
 
@@ -127,15 +131,15 @@ msgstr "i18n() benötigt mindestens ein Argument"
 msgid "Could not load QML interface!"
 msgstr "QML-Interface konnte nicht geladen werden !"
 
-#: src/mainwindow.cpp:54 src/mainwindow.cpp:129 src/mainwindow.cpp:145
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:129 src/mainwindow.cpp:148
 msgid "Error"
 msgstr "Fehler"
 
-#: src/mainwindow.cpp:125 src/mainwindow.cpp:129 src/mainwindow.cpp:145
+#: src/mainwindow.cpp:125 src/mainwindow.cpp:129 src/mainwindow.cpp:148
 msgid "Could not connect to V4L device!"
 msgstr "V4L-Gerät konnte nicht verbunden werden !"
 
-#: src/mainwindow.cpp:174
+#: src/mainwindow.cpp:177
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
@@ -199,59 +203,80 @@ msgstr "Kamera"
 msgid "Camera settings"
 msgstr "Kamera-Einstellungen"
 
-#: src/settingsdialog.cpp:103
+#: src/settingsdialog.cpp:107 src/settingsdialog.cpp:125
+msgid " seconds"
+msgstr ""
+
+#: src/settingsdialog.cpp:110
+#, fuzzy
+msgid "Self-timer timeout:"
+msgstr "Selbstauslöser"
+
+#: src/settingsdialog.cpp:121
+msgid "Number of photos:"
+msgstr ""
+
+#: src/settingsdialog.cpp:128
+msgid "Delay between photos:"
+msgstr ""
+
+#: src/settingsdialog.cpp:132
+msgid "Capture"
+msgstr ""
+
+#: src/settingsdialog.cpp:140
 msgid "Use default pictures directory"
 msgstr "Verwende Standard-Bilderverzeichnis"
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:147
 msgid "Use subdirectory:"
 msgstr "Verwende Unterverzeichnis:"
 
-#: src/settingsdialog.cpp:123
+#: src/settingsdialog.cpp:160
 msgid "Photo directory:"
 msgstr "Bilderverzeichnis:"
 
-#: src/settingsdialog.cpp:125
+#: src/settingsdialog.cpp:162
 msgid "Storage"
 msgstr "Speicherung"
 
-#: src/settingsdialog.cpp:125
+#: src/settingsdialog.cpp:162
 msgid "Photo storage"
 msgstr "Foto-Speicherung"
 
-#: src/settingsdialog.cpp:131
+#: src/settingsdialog.cpp:168
 msgid "Play sound on taking photo"
 msgstr "Sound beim Fotografieren abspielen"
 
-#: src/settingsdialog.cpp:134
+#: src/settingsdialog.cpp:171
 msgid "Play timer sounds"
 msgstr "Timer-Sounds abspielen"
 
-#: src/settingsdialog.cpp:137
+#: src/settingsdialog.cpp:174
 msgid "Show notification on taking photo"
 msgstr "Benachrichtigung beim Fotografieren anzeigen"
 
-#: src/settingsdialog.cpp:141
+#: src/settingsdialog.cpp:178
 msgid "Behaviour"
 msgstr "Verhalten"
 
-#: src/videowidget.cpp:98
+#: src/videowidget.cpp:96
 msgid "Starting up webcam..."
 msgstr "Starte webcam..."
 
-#: src/videowidget.cpp:160
+#: src/videowidget.cpp:156
 msgid "Photo has been stored in file %1"
 msgstr "Foto wurde in Datei %1 gespeichert"
 
-#: src/videowidget.cpp:165
+#: src/videowidget.cpp:161
 msgid "Show in directory"
 msgstr "In Verzeichnis anzeigen"
 
-#: src/videowidget.cpp:165
+#: src/videowidget.cpp:161
 msgid "Open in GIMP"
 msgstr "Mit GIMP öffnen"
 
-#: src/videowidget.cpp:165
+#: src/videowidget.cpp:161
 msgid "Open in Inkscape"
 msgstr "Mit Inkscape öffnen"
 

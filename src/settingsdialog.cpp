@@ -111,7 +111,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
 	layout->addRow(xdggroupbox);
 
 	xdggroupbox = new QGroupBox();
-	xdggroupbox->setTitle(i18n("Burst Mode"));
+	xdggroupbox->setTitle(i18n("Burst mode"));
 	xdggroupbox->setCheckable(false);
 	lay = new QFormLayout(xdggroupbox);
 	spinbox = new QSpinBox();
