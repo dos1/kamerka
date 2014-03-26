@@ -133,7 +133,7 @@ void MainWindow::loadSettings() {
 }
 
 void MainWindow::applyEffect(int effect) {
-	videoViewer -> effect = effect;
+	videoViewer->thread.effect = effect;
 }
 
 void MainWindow::tryVideoThread() {

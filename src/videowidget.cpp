@@ -23,7 +23,6 @@
 
 #include "settings.h"
 #include "videowidget.h"
-#include "imageeffect.h"
 
 // Notification class is used to connect to notification signal
 Notification::Notification (QString name, QString filename) : KNotification(name) {
@@ -50,7 +49,6 @@ void Notification::openFile (unsigned int i) {
 
 videowidget::videowidget(QWidget *parent) : QWidget(parent) {
 	storeImage=false;
-	effect=0;
 	connect(&thread, SIGNAL(renderedImage(QImage)),
 					this, SLOT(setPicture(QImage)));
 
@@ -103,8 +101,6 @@ void videowidget::paintEvent(QPaintEvent *) {
 
 // image was transfered from capturethread to us - display it and, if requested, store
 void videowidget::setPicture(QImage i) {
-
-	ImageEffect::applyEffect(i, effect);
 
 	pixmap=QPixmap::fromImage(i);
 	update();

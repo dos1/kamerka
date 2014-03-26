@@ -38,6 +38,7 @@ class CaptureThread : public QThread
 		int stop();
 		int start();
 		bool running;
+		int effect;
 	protected:
 		void run();
 	signals:

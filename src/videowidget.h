@@ -40,7 +40,6 @@ class videowidget : public QWidget
 		QDeclarativeView *ui;
 		Phonon::MediaObject* media;
 		bool storeImage;
-		int effect;
 		void resize(const QSize& size);
 	protected:
 		void paintEvent(QPaintEvent *event);

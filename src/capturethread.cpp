@@ -20,6 +20,7 @@
 #include <qimageblitz/qimageblitz.h>
 #include "capturethread.h"
 #include "settings.h"
+#include "imageeffect.h"
 
 #define CLEAR(x) memset(&(x), 0, sizeof(x))
 
@@ -87,6 +88,8 @@ void CaptureThread::run() {
 				Blitz::normalize(*qq);
 			}
 
+			ImageEffect::applyEffect(*qq, effect);
+
 			QTransform outTransform;
 			outTransform.scale(Settings::mirror() ? -1 : 1, Settings::flip() ? -1 : 1);
 
@@ -124,6 +127,7 @@ int CaptureThread::start() {
 
 	devam=false;
 	fd = -1;
+	effect = 0;
 
 	// read config
 	dev_name = Settings::node();
