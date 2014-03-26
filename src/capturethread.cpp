@@ -37,6 +37,7 @@ void xioctl(int fh, int request, void *arg) {
 }
 
 CaptureThread::CaptureThread() {
+	effect = 0;
 	running = false;
 }
 
@@ -127,7 +128,6 @@ int CaptureThread::start() {
 
 	devam=false;
 	fd = -1;
-	effect = 0;
 
 	// read config
 	dev_name = Settings::node();
