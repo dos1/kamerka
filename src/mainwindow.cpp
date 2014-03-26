@@ -248,10 +248,10 @@ MainWindow::MainWindow() {
 	ui->setStyleSheet("background: transparent");
 	videoViewer->setStyleSheet("background: transparent");
 
-    // Burst mode settings
-    videoViewer->ui->rootObject()->setProperty("burstPhotoNumber", Settings::burstnumphotos());
-    videoViewer->ui->rootObject()->setProperty("delayBetweenPhotosBurst", Settings::delaybetweenphotos());
-    videoViewer->ui->rootObject()->setProperty("selftimer", Settings::selftimer());
+	// Burst mode settings
+	videoViewer->ui->rootObject()->setProperty("burstPhotoNumber", Settings::burstnumphotos());
+	videoViewer->ui->rootObject()->setProperty("delayBetweenPhotosBurst", Settings::delaybetweenphotos());
+	videoViewer->ui->rootObject()->setProperty("selftimer", Settings::selftimer());
 
 	// resize QML UI together with window
 	ui->setResizeMode(QDeclarativeView::SizeRootObjectToView);
