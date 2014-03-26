@@ -129,9 +129,9 @@ void MainWindow::loadSettings() {
 			KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
 		}
 	}
-    videoViewer->ui->rootObject()->setProperty("burstPhotoNumber", Settings::burstnumphotos());
-    videoViewer->ui->rootObject()->setProperty("delayBetweenPhotosBurst", Settings::delaybetweenphotos());
-    videoViewer->ui->rootObject()->setProperty("selftimer", Settings::selftimer());
+	videoViewer->ui->rootObject()->setProperty("burstPhotoNumber", Settings::burstnumphotos());
+	videoViewer->ui->rootObject()->setProperty("delayBetweenPhotosBurst", Settings::delaybetweenphotos());
+	videoViewer->ui->rootObject()->setProperty("selftimer", Settings::selftimer());
 	videoViewer->resize(this->size());
 }
 
