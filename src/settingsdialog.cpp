@@ -95,6 +95,44 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
 
 	this->addPage(page, i18n("Camera"), "camera-web", i18n("Camera settings") );
 
+
+    // Capture page
+    page = new QWidget(this);
+    layout = new QFormLayout(page);
+    xdggroupbox = new QGroupBox();
+    xdggroupbox->setTitle(i18n("Self-timer"));
+    xdggroupbox->setCheckable(false);
+    QFormLayout *lay = new QFormLayout(xdggroupbox);
+    spinbox = new QSpinBox();
+    spinbox->setObjectName("kcfg_selftimer");
+    spinbox->setSuffix(i18n(" seconds"));
+    spinbox->setMinimum(1);
+    spinbox->setMaximum(360);
+    lay->addRow(i18n("Self-timer timeout:"), spinbox);
+    layout->addRow(xdggroupbox);
+
+    xdggroupbox = new QGroupBox();
+    xdggroupbox->setTitle(i18n("Burst Mode"));
+    xdggroupbox->setCheckable(false);
+    lay = new QFormLayout(xdggroupbox);
+    spinbox = new QSpinBox();
+    spinbox->setObjectName("kcfg_burstnumphotos");
+    spinbox->setMinimum(2);
+    spinbox->setMaximum(20);
+    lay->addRow(i18n("Number of photos:"), spinbox);
+
+    spinbox = new QSpinBox();
+    spinbox->setObjectName("kcfg_delaybetweenphotos");
+    spinbox->setSuffix(i18n(" seconds"));
+    spinbox->setMinimum(1);
+    spinbox->setMaximum(3600);
+    lay->addRow(i18n("Delay between photos:"), spinbox);
+
+    layout->addRow(xdggroupbox);
+
+
+    this->addPage(page, i18n("Capture"), "camera-photo", i18n("Capture") );
+
 	// storage page
 	page = new QWidget(this);
 	layout = new QFormLayout(page);
@@ -104,7 +142,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
 	xdggroupbox->setCheckable(true);
 	xdggroupbox->setObjectName("kcfg_usexdgpictures");
 	connect(xdggroupbox, SIGNAL(toggled(bool)), this, SLOT(updateUrl()));
-	QFormLayout *lay = new QFormLayout(xdggroupbox);
+    lay = new QFormLayout(xdggroupbox);
 	xdggroupbox->setLayout(lay);
 
 	subdircheck = new QCheckBox(i18n("Use subdirectory:"));
@@ -143,5 +181,5 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
 	updateUrl();
 	config->writeConfig();
 	connect(this, SIGNAL(settingsChanged(const QString&)), this, SLOT(updateUrl()));
-	connect(this, SIGNAL(settingsChanged(const QString&)), this, SLOT(checkDir()));
+    connect(this, SIGNAL(settingsChanged(const QString&)), this, SLOT(checkDir()));
 }

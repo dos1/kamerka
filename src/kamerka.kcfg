@@ -38,6 +38,20 @@
         <default>false</default>
     </entry>
   </group>
+  <group name="Capture">
+    <entry name="selftimer" type="Int">
+        <label>Self-timer timeout in seconds.</label>
+        <default>5</default>
+    </entry>
+    <entry name="burstnumphotos" type="Int">
+      <label>Number of photos to shoot in burst.</label>
+      <default>3</default>
+    </entry>
+    <entry name="delaybetweenphotos" type="Int">
+      <label>Delay between photos shot in burst (seconds).</label>
+      <default>1</default>
+    </entry>
+  </group>
   <group name="Storage">
     <entry name="usexdgpictures" type="Bool">
       <label>Tells Kamerka to use XDG Pictures folder to store photos.</label>
