@@ -129,6 +129,9 @@ void MainWindow::loadSettings() {
 			KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
 		}
 	}
+	videoViewer->ui->rootObject()->setProperty("burstPhotoNumber", Settings::burstnumphotos());
+	videoViewer->ui->rootObject()->setProperty("delayBetweenPhotosBurst", Settings::delaybetweenphotos());
+	videoViewer->ui->rootObject()->setProperty("selftimer", Settings::selftimer());
 	videoViewer->resize(this->size());
 }
 
@@ -244,6 +247,11 @@ MainWindow::MainWindow() {
 	// let widgets have transparent background
 	ui->setStyleSheet("background: transparent");
 	videoViewer->setStyleSheet("background: transparent");
+
+	// Burst mode settings
+	videoViewer->ui->rootObject()->setProperty("burstPhotoNumber", Settings::burstnumphotos());
+	videoViewer->ui->rootObject()->setProperty("delayBetweenPhotosBurst", Settings::delaybetweenphotos());
+	videoViewer->ui->rootObject()->setProperty("selftimer", Settings::selftimer());
 
 	// resize QML UI together with window
 	ui->setResizeMode(QDeclarativeView::SizeRootObjectToView);

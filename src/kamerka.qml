@@ -23,6 +23,7 @@ import Effects 1.0;
 Rectangle {
     property int rand: 0;
     property bool take: true;
+    property int selftimer;
     property int timercount: 5;
     property bool timeranim: false;
     property bool more: false;
@@ -30,6 +31,9 @@ Rectangle {
     property bool recording: false;
     property bool effects: false;
     property int currentEffect: 0;
+    property int burstPhotoNumber;
+    property int burstPhotosDone: 0;
+    property int delayBetweenPhotosBurst;
 
     signal takePhoto();
     signal timerCounter(int count);
@@ -134,7 +138,7 @@ Rectangle {
 
     function timerGo() {
         timer.running = true;
-        page.timercount=5;
+        page.timercount=page.selftimer;
         timerTriggered();
     }
     function timerTriggered() {
@@ -151,6 +155,20 @@ Rectangle {
         page.timercount--;
         page.timeranim=true;
     }
+
+    function doBurstPhoto(){
+        burstshot.active = false;
+        if(page.burstPhotosDone < page.burstPhotoNumber){
+            doPhoto();
+            page.burstPhotosDone ++;
+        }
+        else{
+            burstPhotosTimer.stop();
+            page.burstPhotosDone = 0;
+            burstshot.active = true;
+        }
+    }
+
     function showCanvasBackground() {
         canvasVisible=true;
     }
@@ -192,8 +210,8 @@ Rectangle {
         id: toolbar;
         y: page.height-height;
         anchors.horizontalCenter: page.horizontalCenter;
-        width: height*5-24;
-        height: Math.max(Math.min(144, Math.min(page.height,page.width)/5),26);
+        width: height*6-24;
+        height: Math.max(Math.min(144, Math.min(page.height,page.width)/6),26);
         opacity: 1;
         color: "transparent";
 
@@ -209,11 +227,34 @@ Rectangle {
             font.family: fontAwesome.name;
             text: "\uF083";
             mouse.onClicked: doPhoto();
+            z: 11;
+        }
+        Button {
+            id: burstshot;
+            anchors.left: shot.right;
+            anchors.bottom: parent.bottom;
+            anchors.bottomMargin: 4;
+            anchors.leftMargin: 4;
+            width: parent.height-8;
+            height: parent.height-8;
+            tooltip: i18n("Burst mode");
+            font.pointSize: width/2;
+            font.family: fontAwesome.name;
+            text: "\uF00a";
+            mouse.onClicked: burstPhotosTimer.start();
             z: 10;
+            Timer{
+                id: burstPhotosTimer;
+                interval: page.delayBetweenPhotosBurst * 1000;
+                running: false;
+                repeat: true;
+                triggeredOnStart: true;
+                onTriggered: doBurstPhoto();
+            }
         }
         Button {
             id: autoshot;
-            anchors.left: shot.right;
+            anchors.left: burstshot.right;
             anchors.bottom: parent.bottom;
             anchors.bottomMargin: 4;
             anchors.leftMargin: 4;
