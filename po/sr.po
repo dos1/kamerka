@@ -1,15 +1,14 @@
 # Kamerka Serbian Translation.
-# Copyright (C) 2011 Sebastian Krzyszkowiak
+# Copyright (C) 2011-2014 Sebastian Krzyszkowiak
 #
-# Urs Fleisch <dos@dosowisko.net>, 2011.
-# Mladen Pejaković <pejakm@gmail.com>, 2011.
+# Mladen Pejaković <pejakm@autistici.org>, 2011, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
 "POT-Creation-Date: 2014-03-27 00:55+0100\n"
-"PO-Revision-Date: 2011-06-07 21:24+0100\n"
-"Last-Translator: Mladen Pejaković <pejakm@gmail.com>\n"
+"PO-Revision-Date: 2014-03-27 12:46+0100\n"
+"Last-Translator: Mladen Pejaković <pejakm@autistici.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +26,7 @@ msgstr "Младен Пејаковић"
 #: po/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "pejakm@gmail.com"
+msgstr "pejakm@autistici.org"
 
 #: src/kamerka.qml:225
 msgid "Take a photo"
@@ -35,11 +34,11 @@ msgstr "Фотографиши"
 
 #: src/kamerka.qml:240 src/settingsdialog.cpp:114
 msgid "Burst mode"
-msgstr ""
+msgstr "Режим узастопног окидања"
 
 #: src/kamerka.qml:263 src/settingsdialog.cpp:102
 msgid "Self-timer"
-msgstr "Тајмер"
+msgstr "Самоокидач"
 
 #: src/kamerka.qml:279
 msgid "Hide effects"
@@ -71,7 +70,7 @@ msgstr "Изврнуто"
 
 #: src/kamerka.qml:554
 msgid "Equalize"
-msgstr ""
+msgstr "Уједначено"
 
 #: src/kamerka.qml:569
 msgid "Smurf"
@@ -79,35 +78,35 @@ msgstr "Штрумф"
 
 #: src/kamerka.qml:583
 msgid "Implode"
-msgstr ""
+msgstr "Имплозија"
 
 #: src/kamerka.qml:597
 msgid "Explode"
-msgstr ""
+msgstr "Експлозија"
 
 #: src/kamerka.qml:611
 msgid "Charcoal"
-msgstr ""
+msgstr "Угаљ"
 
 #: src/kamerka.qml:625
 msgid "Edge"
-msgstr ""
+msgstr "Ивице"
 
 #: src/kamerka.qml:639
 msgid "Emboss"
-msgstr ""
+msgstr "Уклесано"
 
 #: src/kamerka.qml:653
 msgid "Swirl"
-msgstr ""
+msgstr "Ковитлац"
 
 #: src/kamerka.qml:667
 msgid "Oil Paint"
-msgstr ""
+msgstr "Уље на платну"
 
 #: src/kamerka.qml:681
 msgid "Wave"
-msgstr ""
+msgstr "Талас"
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -119,9 +118,8 @@ msgstr ""
 "Једноставна апликација за хватање фотографија са лепим анимираним сучељем"
 
 #: src/main.cpp:38
-#, fuzzy
 msgid "Copyright (C) 2011-2014 Sebastian Krzyszkowiak"
-msgstr "© 2011-2012 Себастијан Кшишковијак (Sebastian Krzyszkowiak)"
+msgstr "© 2011-2014 Себастијан Кшишковијак (Sebastian Krzyszkowiak)"
 
 #: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
@@ -137,7 +135,7 @@ msgstr "Грешка"
 
 #: src/mainwindow.cpp:125 src/mainwindow.cpp:129 src/mainwindow.cpp:148
 msgid "Could not connect to V4L device!"
-msgstr "Не могу да се повежем са V4L сучењем!"
+msgstr "Не могу да се повежем са В4Л уређајем!"
 
 #: src/mainwindow.cpp:177
 msgid ""
@@ -145,11 +143,11 @@ msgid ""
 "Please check your configuration."
 msgstr ""
 "Захтевана резолуција (%1x%2) није доступна. Драјвер је користио %3x%4.\n"
-"Проверите подешавања."
+"Проверите ваше поставке."
 
 #: src/settingsdialog.cpp:42
 msgid "Selected path does not exists. Do you want to create it?"
-msgstr "Изабрана путања не постоји. Да ли желите да је направите?"
+msgstr "Изабрана путања не постоји. Желите ли да је направите?"
 
 #: src/settingsdialog.cpp:59
 msgid "Device node:"
@@ -181,7 +179,7 @@ msgstr "Ограничење брзине кадрова:"
 
 #: src/settingsdialog.cpp:82
 msgid "Enhance contrast"
-msgstr ""
+msgstr "Побољшај контраст"
 
 #: src/settingsdialog.cpp:85
 msgid "Lock aspect ratio"
@@ -201,28 +199,27 @@ msgstr "Камера"
 
 #: src/settingsdialog.cpp:96
 msgid "Camera settings"
-msgstr "Подешавања камере"
+msgstr "Поставке камере"
 
 #: src/settingsdialog.cpp:107 src/settingsdialog.cpp:125
 msgid " seconds"
-msgstr ""
+msgstr " секунди"
 
 #: src/settingsdialog.cpp:110
-#, fuzzy
 msgid "Self-timer timeout:"
-msgstr "Тајмер"
+msgstr "Време самоокидача:"
 
 #: src/settingsdialog.cpp:121
 msgid "Number of photos:"
-msgstr ""
+msgstr "Број фотографија:"
 
 #: src/settingsdialog.cpp:128
 msgid "Delay between photos:"
-msgstr ""
+msgstr "Застој окидања:"
 
 #: src/settingsdialog.cpp:132
 msgid "Capture"
-msgstr ""
+msgstr "Хватање"
 
 #: src/settingsdialog.cpp:140
 msgid "Use default pictures directory"
@@ -274,17 +271,8 @@ msgstr "Покажи у фасцикли"
 
 #: src/videowidget.cpp:161
 msgid "Open in GIMP"
-msgstr "Отвори помоћу ГИМПа"
+msgstr "Отвори у Гимпу"
 
 #: src/videowidget.cpp:161
 msgid "Open in Inkscape"
-msgstr "Отвори помоћу Инкскејпа"
-
-#~ msgid "Mono"
-#~ msgstr "Једнобојно"
-
-#~ msgid "Less"
-#~ msgstr "Мање"
-
-#~ msgid "More"
-#~ msgstr "Више"
+msgstr "Отвори у Инкскејпу"
