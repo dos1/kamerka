@@ -33,7 +33,7 @@ msgstr "拍照"
 
 #: src/kamerka.qml:240 src/settingsdialog.cpp:114
 msgid "Burst mode"
-msgstr ""
+msgstr "连拍"
 
 #: src/kamerka.qml:263 src/settingsdialog.cpp:102
 msgid "Self-timer"
@@ -69,7 +69,7 @@ msgstr "底片"
 
 #: src/kamerka.qml:554
 msgid "Equalize"
-msgstr ""
+msgstr "均衡"
 
 #: src/kamerka.qml:569
 msgid "Smurf"
@@ -77,35 +77,35 @@ msgstr "蓝精灵"
 
 #: src/kamerka.qml:583
 msgid "Implode"
-msgstr ""
+msgstr "汇聚"
 
 #: src/kamerka.qml:597
 msgid "Explode"
-msgstr ""
+msgstr "发散"
 
 #: src/kamerka.qml:611
 msgid "Charcoal"
-msgstr ""
+msgstr "炭笔"
 
 #: src/kamerka.qml:625
 msgid "Edge"
-msgstr ""
+msgstr "像缘"
 
 #: src/kamerka.qml:639
 msgid "Emboss"
-msgstr ""
+msgstr "浮雕"
 
 #: src/kamerka.qml:653
 msgid "Swirl"
-msgstr ""
+msgstr "漩涡"
 
 #: src/kamerka.qml:667
 msgid "Oil Paint"
-msgstr ""
+msgstr "油画"
 
 #: src/kamerka.qml:681
 msgid "Wave"
-msgstr ""
+msgstr "波浪"
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -178,7 +178,7 @@ msgstr "帧率限制:"
 
 #: src/settingsdialog.cpp:82
 msgid "Enhance contrast"
-msgstr ""
+msgstr "增强对比度"
 
 #: src/settingsdialog.cpp:85
 msgid "Lock aspect ratio"
@@ -202,24 +202,24 @@ msgstr "摄像头设置"
 
 #: src/settingsdialog.cpp:107 src/settingsdialog.cpp:125
 msgid " seconds"
-msgstr ""
+msgstr "秒"
 
 #: src/settingsdialog.cpp:110
 #, fuzzy
 msgid "Self-timer timeout:"
-msgstr "自拍"
+msgstr "自拍延迟"
 
 #: src/settingsdialog.cpp:121
 msgid "Number of photos:"
-msgstr ""
+msgstr "照片数量"
 
 #: src/settingsdialog.cpp:128
 msgid "Delay between photos:"
-msgstr ""
+msgstr "连拍间隔"
 
 #: src/settingsdialog.cpp:132
 msgid "Capture"
-msgstr ""
+msgstr "拍照"
 
 #: src/settingsdialog.cpp:140
 msgid "Use default pictures directory"
@@ -276,12 +276,3 @@ msgstr "用GIMP打开"
 #: src/videowidget.cpp:161
 msgid "Open in Inkscape"
 msgstr "用Inkscape打开"
-
-#~ msgid "Mono"
-#~ msgstr "单色"
-
-#~ msgid "Less"
-#~ msgstr "较少显示"
-
-#~ msgid "More"
-#~ msgstr "显示更多"
