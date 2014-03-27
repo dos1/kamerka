@@ -128,8 +128,17 @@ void videowidget::setPicture(QImage i) {
 			counter >> c;
 		}
 		else kWarning() << "Could not open .counter file!";
-		c++;
 		counterfile.close();
+
+		// determine file name
+		QString imagepath;
+		do {
+			c++;
+			imagepath = "image";
+			imagepath += QString::number(c);
+			imagepath += ".png";
+			imagepath = dir.absoluteFilePath(imagepath);
+		} while (QFile::exists(imagepath));
 
 		// store incremented value in counter file
 		counterfile.open(QIODevice::WriteOnly);
@@ -138,13 +147,10 @@ void videowidget::setPicture(QImage i) {
 		counterfile.close();
 
 		// save image
-		QString imagepath;
-		imagepath = "image";
-		imagepath += QString::number(c);
-		imagepath += ".png";
-		imagepath = dir.absoluteFilePath(imagepath);
 		kDebug() << QString("%1").arg(imagepath);
 		i.save(imagepath, "PNG");
+
+
 
 		// show taken photo and trigger animation in QML UI
 		ui->rootContext()->setContextProperty("fileName", "file:"+imagepath);
