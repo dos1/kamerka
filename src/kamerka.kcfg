@@ -21,6 +21,22 @@
       <label>Framerate limit.</label>
       <default>0</default>
     </entry>
+    <entry name="brightness" type="Int">
+      <label>Image brightness.</label>
+      <default>50</default>
+    </entry>
+    <entry name="contrast" type="Int">
+      <label>Image contrast.</label>
+      <default>50</default>
+    </entry>
+    <entry name="saturation" type="Int">
+      <label>Image saturation.</label>
+      <default>30</default>
+    </entry>
+    <entry name="hue" type="Int">
+      <label>Image hue.</label>
+      <default>50</default>
+    </entry>
     <entry name="mirror" type="Bool">
 			<label>Mirror output</label>
       <default>false</default>

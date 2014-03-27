@@ -41,6 +41,7 @@ class CaptureThread : public QThread
 		int effect;
 	protected:
 		void run();
+		void updateImageSettings();
 	signals:
 		void renderedImage(const QImage &image);
 		void startedCapture(int width, int height);
