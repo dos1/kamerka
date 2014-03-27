@@ -205,9 +205,8 @@ msgid " seconds"
 msgstr "秒"
 
 #: src/settingsdialog.cpp:110
-#, fuzzy
 msgid "Self-timer timeout:"
-msgstr "自拍延迟"
+msgstr "自拍延时"
 
 #: src/settingsdialog.cpp:121
 msgid "Number of photos:"
