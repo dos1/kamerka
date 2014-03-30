@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Daniel Halens Rodriguez <DanielHalens@gmail.com>, 2011, 2012.
+# Daniel Halens Rodriguez <DanielHalens@gmail.com>, 2011, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
 "POT-Creation-Date: 2014-03-27 00:55+0100\n"
-"PO-Revision-Date: 2012-10-22 01:09+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2014-03-30 16:56+0100\n"
+"Last-Translator: Daniel\n"
 "Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgstr "Tomar una foto"
 
 #: src/kamerka.qml:240 src/settingsdialog.cpp:114
 msgid "Burst mode"
-msgstr ""
+msgstr "Modo ráfaga"
 
 #: src/kamerka.qml:263 src/settingsdialog.cpp:102
 msgid "Self-timer"
@@ -69,7 +69,7 @@ msgstr "Invertir"
 
 #: src/kamerka.qml:554
 msgid "Equalize"
-msgstr ""
+msgstr "Ecualizado"
 
 #: src/kamerka.qml:569
 msgid "Smurf"
@@ -77,35 +77,35 @@ msgstr "Pitufo"
 
 #: src/kamerka.qml:583
 msgid "Implode"
-msgstr ""
+msgstr "Implosionar"
 
 #: src/kamerka.qml:597
 msgid "Explode"
-msgstr ""
+msgstr "Explosionar"
 
 #: src/kamerka.qml:611
 msgid "Charcoal"
-msgstr ""
+msgstr "Carboncillo"
 
 #: src/kamerka.qml:625
 msgid "Edge"
-msgstr ""
+msgstr "Bordeado"
 
 #: src/kamerka.qml:639
 msgid "Emboss"
-msgstr ""
+msgstr "Repujar"
 
 #: src/kamerka.qml:653
 msgid "Swirl"
-msgstr ""
+msgstr "Remolino"
 
 #: src/kamerka.qml:667
 msgid "Oil Paint"
-msgstr ""
+msgstr "Óleo"
 
 #: src/kamerka.qml:681
 msgid "Wave"
-msgstr ""
+msgstr "Ondulado"
 
 #: src/main.cpp:36
 msgid "Kamerka"
@@ -116,9 +116,8 @@ msgid "Simple photo taking application with fancy animated interface"
 msgstr "Aplicación sencilla para tomar fotos con un atractivo interfaz animado"
 
 #: src/main.cpp:38
-#, fuzzy
 msgid "Copyright (C) 2011-2014 Sebastian Krzyszkowiak"
-msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
+msgstr "Copyright (C) 2011-2014 Sebastian Krzyszkowiak"
 
 #: src/mainwindow.cpp:36
 msgid "i18n() takes at least one argument"
@@ -178,7 +177,7 @@ msgstr "Tasa de fotogramas:"
 
 #: src/settingsdialog.cpp:82
 msgid "Enhance contrast"
-msgstr ""
+msgstr "Mejorar contraste"
 
 #: src/settingsdialog.cpp:85
 msgid "Lock aspect ratio"
@@ -202,24 +201,23 @@ msgstr "Ajustes de cámara"
 
 #: src/settingsdialog.cpp:107 src/settingsdialog.cpp:125
 msgid " seconds"
-msgstr ""
+msgstr " segundos"
 
 #: src/settingsdialog.cpp:110
-#, fuzzy
 msgid "Self-timer timeout:"
-msgstr "Cuenta atrás"
+msgstr "Tiempo para cuenta atrás"
 
 #: src/settingsdialog.cpp:121
 msgid "Number of photos:"
-msgstr ""
+msgstr "Número de fotos"
 
 #: src/settingsdialog.cpp:128
 msgid "Delay between photos:"
-msgstr ""
+msgstr "Retraso entre fotos"
 
 #: src/settingsdialog.cpp:132
 msgid "Capture"
-msgstr ""
+msgstr "Captura"
 
 #: src/settingsdialog.cpp:140
 msgid "Use default pictures directory"
@@ -275,13 +273,4 @@ msgstr "Abrir en GIMP"
 
 #: src/videowidget.cpp:161
 msgid "Open in Inkscape"
-msgstr "Abrir con Inkscape"
-
-#~ msgid "Mono"
-#~ msgstr "Mono"
-
-#~ msgid "Less"
-#~ msgstr "Menos"
-
-#~ msgid "More"
-#~ msgstr "Más"
+msgstr "Abrir en Inkscape"
