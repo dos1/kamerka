@@ -1,0 +1,228 @@
+# Kamerka Serbian Translation.
+# Copyright (C) 2011 Sebastian Krzyszkowiak
+#
+# Urs Fleisch <dos@dosowisko.net>, 2011.
+# Mladen Pejaković <pejakm@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kamerka\n"
+"Report-Msgid-Bugs-To: dos@dosowisko.net\n"
+"POT-Creation-Date: 2012-10-21 02:02+0200\n"
+"PO-Revision-Date: 2014-04-26 00:24+0300\n"
+"Last-Translator: Сергей Головко <cappelikan@gmail.com>\n"
+"Language-Team: Russian <kde-i18n-ru@lists.kde.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: src/kamerka.qml:208
+msgid "Take a photo"
+msgstr "Сфотографируйте"
+
+#: src/kamerka.qml:218
+msgid "Self-timer"
+msgstr "Таймер"
+
+#: src/kamerka.qml:229
+msgid "Less"
+msgstr "Менее"
+
+#: src/kamerka.qml:229
+msgid "More"
+msgstr "Более"
+
+#: src/kamerka.qml:239
+msgid "Configure"
+msgstr "Конфигурация"
+
+#: src/kamerka.qml:249
+msgid "Hide effects"
+msgstr "Скрыть еффекты"
+
+#: src/kamerka.qml:249
+msgid "Show effects"
+msgstr "Показать еффекты"
+
+#: src/kamerka.qml:260
+msgid "Open directory"
+msgstr "Открыть папку"
+
+#: src/kamerka.qml:449
+msgid "No Effect"
+msgstr "Без еффекта"
+
+#: src/kamerka.qml:460
+msgid "Grey"
+msgstr "Серый"
+
+#: src/kamerka.qml:471
+msgid "Invert"
+msgstr "Искажение"
+
+#: src/kamerka.qml:482
+msgid "Mono"
+msgstr "монохромный"
+
+#: src/kamerka.qml:495
+msgid "Smurf"
+msgstr "Штрумф"
+
+#: src/main.cpp:36
+msgid "Kamerka"
+msgstr "Камерка"
+
+#: src/main.cpp:37
+msgid "Simple photo taking application with fancy animated interface"
+msgstr ""
+"Простое приложение для захвата изображения с красивым анимированным "
+"интерфейсом"
+
+#: src/main.cpp:38
+msgid "Copyright (c) 2011-2012 Sebastian Krzyszkowiak"
+msgstr "© 2011-2012 Себастиан Кшишковияк (Sebastian Krzyszkowiak)"
+
+#: src/mainwindow.cpp:36
+msgid "i18n() takes at least one argument"
+msgstr "i18n() требуется как минимум один аргумент"
+
+#: src/mainwindow.cpp:54
+msgid "Could not load QML interface!"
+msgstr "Не удается загрузить интерфейс QML!"
+
+#: src/mainwindow.cpp:54 src/mainwindow.cpp:130 src/mainwindow.cpp:146
+msgid "Error"
+msgstr "Ошибка"
+
+#: src/mainwindow.cpp:126 src/mainwindow.cpp:130 src/mainwindow.cpp:146
+msgid "Could not connect to V4L device!"
+msgstr "Я не могу подключиться к устройству V4L!"
+
+#: src/mainwindow.cpp:175
+msgid ""
+"Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
+"Please check your configuration."
+msgstr ""
+"Запрашиваемое разрешение (% 1x% 2) не доступно. Драйвер использовал 3x%% 4 \n"
+" Проверьте настройки."
+
+#: src/settingsdialog.cpp:42
+msgid "Selected path does not exists. Do you want to create it?"
+msgstr "Выбранный путь не существует. Вы хотите его создать?"
+
+#: src/settingsdialog.cpp:59
+msgid "Device node:"
+msgstr "Узел ( имя ) устройства:"
+
+#: src/settingsdialog.cpp:66
+msgid "x"
+msgstr "x"
+
+#: src/settingsdialog.cpp:71
+msgid "px"
+msgstr "px"
+
+#: src/settingsdialog.cpp:72
+msgid "Resolution:"
+msgstr "Разрешение:"
+
+#: src/settingsdialog.cpp:77
+msgid "Disabled"
+msgstr "Отключено"
+
+#: src/settingsdialog.cpp:78
+msgid " fps"
+msgstr " fps"
+
+#: src/settingsdialog.cpp:80
+msgid "Framerate limit:"
+msgstr "Ограничение скорости:"
+
+#: src/settingsdialog.cpp:82
+msgid "Lock aspect ratio"
+msgstr "Блокировка соотношения сторон"
+
+#: src/settingsdialog.cpp:85
+msgid "Mirror output"
+msgstr "Зеркальный вывод"
+
+#: src/settingsdialog.cpp:88
+msgid "Flip output"
+msgstr "Вывод наоборот"
+
+#: src/settingsdialog.cpp:93
+msgid "Camera"
+msgstr "Камера"
+
+#: src/settingsdialog.cpp:93
+msgid "Camera settings"
+msgstr "Настройка камеры"
+
+#: src/settingsdialog.cpp:100
+msgid "Use default pictures directory"
+msgstr "Используйте папку для изображений по умолчанию"
+
+#: src/settingsdialog.cpp:107
+msgid "Use subdirectory:"
+msgstr "Откройте вложенную папку:"
+
+#: src/settingsdialog.cpp:119
+msgid "Photo directory:"
+msgstr "Папка изображения:"
+
+#: src/settingsdialog.cpp:121
+msgid "Storage"
+msgstr "Хранилище"
+
+#: src/settingsdialog.cpp:121
+msgid "Photo storage"
+msgstr "Хранилище изображений"
+
+#: src/settingsdialog.cpp:127
+msgid "Play sound on taking photo"
+msgstr "Воспроизведение звука при съемке"
+
+#: src/settingsdialog.cpp:130
+msgid "Play timer sounds"
+msgstr "Играть звуки таймера"
+
+#: src/settingsdialog.cpp:133
+msgid "Show notification on taking photo"
+msgstr "Показывать уведомление при съемке"
+
+#: src/settingsdialog.cpp:137
+msgid "Behaviour"
+msgstr "Поведение"
+
+#: src/videowidget.cpp:98
+msgid "Starting up webcam..."
+msgstr "Запуск веб-камеры ..."
+
+#: src/videowidget.cpp:160
+msgid "Photo has been stored in file %1"
+msgstr "Фото расположено в файле% 1"
+
+#: src/videowidget.cpp:165
+msgid "Show in directory"
+msgstr "Показать в папке"
+
+#: src/videowidget.cpp:165
+msgid "Open in GIMP"
+msgstr "Открыть в ГИМПе"
+
+#: src/videowidget.cpp:165
+msgid "Open in Inkscape"
+msgstr "Открыть в Инкскейпе"
+
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Сергей Головко"
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "cappelikan@gmail.com"
