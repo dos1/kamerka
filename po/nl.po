@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-27 00:55+0100\n"
+"POT-Creation-Date: 2014-07-27 22:55+0200\n"
 "PO-Revision-Date: 2011-08-07 23:05+0200\n"
 "Last-Translator: Kenny Verstraete <verstraete_kenny@skynet.be>\n"
 "Language-Team: Dutch <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: po/rc.cpp:1 rc.cpp:1
+#: rc.cpp:1 tools/rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Kenny Verstraete"
 
-#: po/rc.cpp:2 rc.cpp:2
+#: rc.cpp:2 tools/rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "verstraete_kenny@skynet.be"
@@ -262,19 +262,19 @@ msgstr "Gedrag"
 msgid "Starting up webcam..."
 msgstr "Webcam aan het starten..."
 
-#: src/videowidget.cpp:156
+#: src/videowidget.cpp:162
 msgid "Photo has been stored in file %1"
 msgstr "Foto is opgeslagen in bestand %1"
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Show in directory"
 msgstr "Geef weer in map"
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Open in GIMP"
 msgstr "Openen in GIMP"
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Open in Inkscape"
 msgstr "Openen in Inkscape"
 

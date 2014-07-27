@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-27 00:55+0100\n"
+"POT-Creation-Date: 2014-07-27 22:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: po/rc.cpp:1 rc.cpp:1 rc.cpp:1
+#: rc.cpp:1 tools/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: po/rc.cpp:2 rc.cpp:2 rc.cpp:2
+#: rc.cpp:2 tools/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
@@ -257,18 +257,18 @@ msgstr ""
 msgid "Starting up webcam..."
 msgstr ""
 
-#: src/videowidget.cpp:156
+#: src/videowidget.cpp:162
 msgid "Photo has been stored in file %1"
 msgstr ""
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Show in directory"
 msgstr ""
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Open in GIMP"
 msgstr ""
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Open in Inkscape"
 msgstr ""

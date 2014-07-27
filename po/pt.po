@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-27 00:55+0100\n"
+"POT-Creation-Date: 2014-07-27 22:55+0200\n"
 "PO-Revision-Date: 2012-10-23 03:29-0300\n"
 "Last-Translator: Jurasampaio <jura_sampaio@hotmail.com>\n"
 "Language-Team: Jurasampaio <jur_sampaio@hotmail.com>\n"
@@ -15,12 +15,12 @@ msgstr ""
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: BRAZIL\n"
 
-#: po/rc.cpp:1 rc.cpp:1
+#: rc.cpp:1 tools/rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Seus nomes"
 
-#: po/rc.cpp:2 rc.cpp:2
+#: rc.cpp:2 tools/rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Seu email"
@@ -259,19 +259,19 @@ msgstr "Comportamento"
 msgid "Starting up webcam..."
 msgstr "Iniciando a webcam..."
 
-#: src/videowidget.cpp:156
+#: src/videowidget.cpp:162
 msgid "Photo has been stored in file %1"
 msgstr "Foto guardada como %1"
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Show in directory"
 msgstr "Mostrar no diretório"
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Open in GIMP"
 msgstr "Abrir com GIMP"
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Open in Inkscape"
 msgstr "Abrir com Inkscape"
 

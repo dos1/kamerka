@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-03-27 00:55+0100\n"
+"POT-Creation-Date: 2014-07-27 22:55+0200\n"
 "PO-Revision-Date: 2011-10-28 12:53+0800\n"
 "Last-Translator: zcj <zcjsjz@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: po/rc.cpp:1 rc.cpp:1
+#: rc.cpp:1 tools/rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "zcj"
 
-#: po/rc.cpp:2 rc.cpp:2
+#: rc.cpp:2 tools/rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zcjsjz@gmail.com"
@@ -260,18 +260,18 @@ msgstr "行为"
 msgid "Starting up webcam..."
 msgstr "启动摄像头..."
 
-#: src/videowidget.cpp:156
+#: src/videowidget.cpp:162
 msgid "Photo has been stored in file %1"
 msgstr "照片已存储到文件 %1"
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Show in directory"
 msgstr "在目录中显示"
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Open in GIMP"
 msgstr "用GIMP打开"
 
-#: src/videowidget.cpp:161
+#: src/videowidget.cpp:167
 msgid "Open in Inkscape"
 msgstr "用Inkscape打开"
