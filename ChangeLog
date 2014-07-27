@@ -1,3 +1,87 @@
+2014-07-27  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
+  po/ru.po, po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po,
+  po/sr@latin.po, po/uk.po, po/zh_CN.po, po/zh_TW.po: update po(t) files 
+
+2014-05-20  Sergiy Golovko <cappelikan@gmail.com>
+
+  * po/ru.po, po/uk.po: RU and UK locale
+
+2014-03-27  Mladen Pejaković <pejakm@autistici.org>
+
+  * po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po:
+  [Translations] Serbian files update
+
+2014-03-27  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
+  po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po,
+  po/zh_CN.po, po/zh_TW.po, src/settingsdialog.cpp: update polish translation
+
+2014-03-26  Dejan Noveski <dr.mote@gmail.com>
+
+  * src/mainwindow.cpp, src/settingsdialog.cpp: Fixed tabs.
+
+  * src/kamerka.kcfg, src/kamerka.qml, src/mainwindow.cpp,
+  src/settingsdialog.cpp: Added burst mode; Added Capture Group in settings
+  with setting for Timer timeout, Burst shot number of pictures and burst shot
+  delay
+
+2014-03-26  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * src/capturethread.cpp, src/capturethread.h, src/mainwindow.cpp,
+  src/videowidget.cpp, src/videowidget.h: move effect processing into capture
+  thread  This fixes unresponsiveness of the whole UI when using CPU-intensive
+  effects (like emboss or oil paint) with large resolution.
+
+2014-03-25  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
+  po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po,
+  po/zh_CN.po, po/zh_TW.po: update polish translation
+
+  * src/imageeffect.cpp, src/imageeffect.h, src/kamerka.qml: replace "mono"
+  effect with histogram equalization
+
+  * src/capturethread.cpp, src/kamerka.kcfg, src/settingsdialog.cpp: add
+  configuration option for contrast enhancement
+
+  * src/imageeffect.cpp, src/imageeffect.h: use qimageblitz library for more
+  effect; it seems to be able to use some cpu optimization pure QImage can't
+
+  * src/CMakeLists.txt, src/imageeffect.h, src/videowidget.cpp: don't include
+  imageeffect.cpp file from videowidget.cpp; include header and compile it
+  properly
+
+  * src/Button.qml, src/kamerka.qml: ui tweaks for buttons
+
+  * AUTHORS, src/kamerka.qml: better scaling of toolbar buttons
+
+  * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
+  po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po,
+  po/zh_CN.po, po/zh_TW.po: update pot file and polish translation
+
+  * src/Button.qml, src/kamerka.qml, src/main.cpp, src/mainwindow.cpp,
+  src/videowidget.cpp: Fix compiler and QML runtime warnings
+
+2014-03-25  Dejan Noveski <dr.mote@gmail.com>
+
+  * src/imageeffect.cpp, src/imageeffect.h, src/kamerka.qml: Added several more
+  effects
+
+  * CMakeLists.txt, src/Button.qml, src/CMakeLists.txt, src/imageeffect.cpp,
+  src/imageeffect.h, src/kamerka.qml: Pretty buttons with icons, tooltips on
+  buttons with icons, added implode and explode effects, added qimageblits(KDE
+  lib) dependency to get more effects
+
+  * src/CMakeLists.txt, src/fonts/fontawesome-webfont.ttf, src/kamerka.qml,
+  src/kamerka.qrc: Changed button labels to icons
+
+2012-12-21  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * AUTHORS, ChangeLog, src/main.cpp: This is Kamerka 0.8.5
+
 2012-10-22  Mladen Pejaković <pejakm@gmail.com>
 
   * po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po:

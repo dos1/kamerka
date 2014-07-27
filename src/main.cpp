@@ -23,7 +23,7 @@
 
 #include "mainwindow.h"
 
-#define VERSION "0.8.5"
+#define VERSION "0.10"
 
 int main(int argc, char *argv[]) {
 	printf("Kamerka version %s\n    Copyright (C) 2011-2014 Sebastian Krzyszkowiak\n", VERSION);

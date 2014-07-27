@@ -1,15 +1,11 @@
 For 1.0:
  * investigate using phonon for getting video data
  * brightness, colors, contrast
- * better scalling ui
- * animated preview of already taken photos
- * some basic management of taken photos
+ * animated preview and some basic management of taken photos
  * maybe some moar effects
- * consecutive image taking
  * "About Kamerka" button (probably in configuration dialog)
  * moar configuration:
   * buttons in notifications (for instance to set Krita instead of GIMP)
-  * consecutive image taking
   * allow using custom sounds
   * time of previews
   * image format
