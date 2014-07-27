@@ -92,6 +92,47 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
 	checkbox->setObjectName("kcfg_flip");
 	layout->addRow(checkbox);
 
+	xdggroupbox = new QGroupBox();
+	xdggroupbox->setTitle(i18n("Image Settings"));
+	xdggroupbox->setCheckable(false);
+	QFormLayout *lay = new QFormLayout(xdggroupbox);
+	QSlider *slider = new QSlider();
+	slider->setObjectName("kcfg_brightness");
+	slider->setMinimum(-100);
+	slider->setMaximum(100);
+	slider->setTickInterval(10);
+	slider->setTickPosition(QSlider::TicksBelow);
+	slider->setOrientation(Qt::Horizontal);
+	lay->addRow(i18n("Brightness:"), slider);
+
+	slider = new QSlider();
+	slider->setObjectName("kcfg_contrast");
+	slider->setMinimum(0);
+	slider->setMaximum(100);
+	slider->setTickInterval(10);
+	slider->setTickPosition(QSlider::TicksBelow);
+	slider->setOrientation(Qt::Horizontal);
+	lay->addRow(i18n("Contrast:"), slider);
+
+	slider = new QSlider();
+	slider->setObjectName("kcfg_saturation");
+	slider->setMinimum(0);
+	slider->setMaximum(100);
+	slider->setTickInterval(10);
+	slider->setTickPosition(QSlider::TicksBelow);
+	slider->setOrientation(Qt::Horizontal);
+	lay->addRow(i18n("Saturation:"), slider);
+
+	slider = new QSlider();
+	slider->setObjectName("kcfg_hue");
+	slider->setMinimum(-100);
+	slider->setMaximum(100);
+	slider->setTickInterval(10);
+	slider->setTickPosition(QSlider::TicksBelow);
+	slider->setOrientation(Qt::Horizontal);
+	lay->addRow(i18n("Hue:"), slider);
+
+	layout->addRow(xdggroupbox);
 
 	this->addPage(page, i18n("Camera"), "camera-web", i18n("Camera settings") );
 
@@ -101,7 +142,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *c
 	xdggroupbox = new QGroupBox();
 	xdggroupbox->setTitle(i18n("Self-timer"));
 	xdggroupbox->setCheckable(false);
-	QFormLayout *lay = new QFormLayout(xdggroupbox);
+	lay = new QFormLayout(xdggroupbox);
 	spinbox = new QSpinBox();
 	spinbox->setObjectName("kcfg_selftimer");
 	spinbox->setSuffix(i18n(" seconds"));

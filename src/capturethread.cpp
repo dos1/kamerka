@@ -41,6 +41,104 @@ CaptureThread::CaptureThread() {
 	running = false;
 }
 
+void CaptureThread::updateImageSettings() {
+
+	struct v4l2_queryctrl queryctrl;
+	struct v4l2_control control;
+
+	memset (&queryctrl, 0, sizeof (queryctrl));
+	memset (&control, 0, sizeof (control));
+	queryctrl.id = V4L2_CID_BRIGHTNESS;
+	control.id = V4L2_CID_BRIGHTNESS;
+
+	if (-1 == v4l2_ioctl(fd, VIDIOC_QUERYCTRL, &queryctrl)) {
+		if (errno != EINVAL) {
+			kError() << "VIDIOC_QUERYCTRL";
+			exit (EXIT_FAILURE);
+		} else {
+			kDebug() << "V4L2_CID_BRIGHTNESS is not supported.";
+		}
+	} else if (queryctrl.flags & V4L2_CTRL_FLAG_DISABLED) {
+		kDebug() << "V4L2_CID_BRIGHTNESS is not supported.";
+	} else {
+		control.value = (queryctrl.maximum - queryctrl.minimum) * Settings::brightness()/100;
+		if (-1 == v4l2_ioctl (fd, VIDIOC_S_CTRL, &control)) {
+			kError() << "VIDIOC_S_CTRL";
+			exit (EXIT_FAILURE);
+		}
+	}
+
+	memset (&queryctrl, 0, sizeof (queryctrl));
+	memset (&control, 0, sizeof (control));
+	queryctrl.id = V4L2_CID_CONTRAST;
+	control.id = V4L2_CID_CONTRAST;
+
+	if (-1 == v4l2_ioctl(fd, VIDIOC_QUERYCTRL, &queryctrl)) {
+		if (errno != EINVAL) {
+			kError() << "VIDIOC_QUERYCTRL";
+			exit (EXIT_FAILURE);
+		} else {
+			kDebug() << "V4L2_CID_CONTRAST is not supported.";
+		}
+	} else if (queryctrl.flags & V4L2_CTRL_FLAG_DISABLED) {
+		kDebug() << "V4L2_CID_CONTRAST is not supported.";
+	} else {
+		control.value = (queryctrl.maximum - queryctrl.minimum) * Settings::contrast()/100;
+		if (-1 == v4l2_ioctl (fd, VIDIOC_S_CTRL, &control)) {
+			kError() << "VIDIOC_S_CTRL";
+			exit (EXIT_FAILURE);
+		}
+	}
+
+
+	memset (&queryctrl, 0, sizeof (queryctrl));
+	memset (&control, 0, sizeof (control));
+	queryctrl.id = V4L2_CID_SATURATION;
+	control.id = V4L2_CID_SATURATION;
+
+	if (-1 == v4l2_ioctl(fd, VIDIOC_QUERYCTRL, &queryctrl)) {
+		if (errno != EINVAL) {
+			kError() << "VIDIOC_QUERYCTRL";
+			exit (EXIT_FAILURE);
+		} else {
+			kDebug() << "V4L2_CID_SATURATION is not supported.";
+		}
+	} else if (queryctrl.flags & V4L2_CTRL_FLAG_DISABLED) {
+		kDebug() << "V4L2_CID_SATURATION is not supported.";
+	} else {
+		control.value = (queryctrl.maximum - queryctrl.minimum) * Settings::saturation()/100;
+		if (-1 == v4l2_ioctl (fd, VIDIOC_S_CTRL, &control)) {
+			kError() << "VIDIOC_S_CTRL";
+			exit (EXIT_FAILURE);
+		}
+	}
+
+
+	memset (&queryctrl, 0, sizeof (queryctrl));
+	memset (&control, 0, sizeof (control));
+	queryctrl.id = V4L2_CID_HUE;
+	control.id = V4L2_CID_HUE;
+
+	if (-1 == v4l2_ioctl(fd, VIDIOC_QUERYCTRL, &queryctrl)) {
+		if (errno != EINVAL) {
+			kError() << "VIDIOC_QUERYCTRL";
+			exit (EXIT_FAILURE);
+		} else {
+			kDebug() << "V4L2_CID_HUE is not supported.";
+		}
+	} else if (queryctrl.flags & V4L2_CTRL_FLAG_DISABLED) {
+		kDebug() << "V4L2_CID_HUE is not supported.";
+	} else {
+		control.value = (queryctrl.maximum - queryctrl.minimum) * Settings::hue()/100;
+		if (-1 == v4l2_ioctl (fd, VIDIOC_S_CTRL, &control)) {
+			kError() << "VIDIOC_S_CTRL";
+			exit (EXIT_FAILURE);
+		}
+	}
+
+}
+
+
 // process video data
 void CaptureThread::run() {
 	while (devam) {
@@ -146,6 +244,8 @@ int CaptureThread::start() {
 		quit();
 		return 1;
 	}
+
+	updateImageSettings();
 
 	CLEAR(fmt);
 	fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
