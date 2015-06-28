@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-07-27 22:55+0200\n"
+"POT-Creation-Date: 2015-06-28 21:40+0200\n"
 "PO-Revision-Date: 2014-03-30 16:56+0100\n"
 "Last-Translator: Daniel\n"
 "Language-Team: Spanish <kde-i18n-doc@kde.org>\n"
@@ -17,25 +17,15 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: rc.cpp:1 tools/rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Daniel Halens Rodríguez"
-
-#: rc.cpp:2 tools/rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "DanielHalens@gmail.com"
-
 #: src/kamerka.qml:225
 msgid "Take a photo"
 msgstr "Tomar una foto"
 
-#: src/kamerka.qml:240 src/settingsdialog.cpp:114
+#: src/kamerka.qml:240 src/settingsdialog.cpp:155
 msgid "Burst mode"
 msgstr "Modo ráfaga"
 
-#: src/kamerka.qml:263 src/settingsdialog.cpp:102
+#: src/kamerka.qml:263 src/settingsdialog.cpp:143
 msgid "Self-timer"
 msgstr "Cuenta atrás"
 
@@ -59,51 +49,51 @@ msgstr "Configurar"
 msgid "No Effect"
 msgstr "Ninguno"
 
-#: src/kamerka.qml:524
+#: src/kamerka.qml:525
 msgid "Grey"
 msgstr "Gris"
 
-#: src/kamerka.qml:539
+#: src/kamerka.qml:541
 msgid "Invert"
 msgstr "Invertir"
 
-#: src/kamerka.qml:554
+#: src/kamerka.qml:557
 msgid "Equalize"
 msgstr "Ecualizado"
 
-#: src/kamerka.qml:569
+#: src/kamerka.qml:573
 msgid "Smurf"
 msgstr "Pitufo"
 
-#: src/kamerka.qml:583
+#: src/kamerka.qml:588
 msgid "Implode"
 msgstr "Implosionar"
 
-#: src/kamerka.qml:597
+#: src/kamerka.qml:603
 msgid "Explode"
 msgstr "Explosionar"
 
-#: src/kamerka.qml:611
+#: src/kamerka.qml:618
 msgid "Charcoal"
 msgstr "Carboncillo"
 
-#: src/kamerka.qml:625
+#: src/kamerka.qml:633
 msgid "Edge"
 msgstr "Bordeado"
 
-#: src/kamerka.qml:639
+#: src/kamerka.qml:648
 msgid "Emboss"
 msgstr "Repujar"
 
-#: src/kamerka.qml:653
+#: src/kamerka.qml:663
 msgid "Swirl"
 msgstr "Remolino"
 
-#: src/kamerka.qml:667
+#: src/kamerka.qml:678
 msgid "Oil Paint"
 msgstr "Óleo"
 
-#: src/kamerka.qml:681
+#: src/kamerka.qml:693
 msgid "Wave"
 msgstr "Ondulado"
 
@@ -192,66 +182,87 @@ msgid "Flip output"
 msgstr "Bocabajo"
 
 #: src/settingsdialog.cpp:96
+#, fuzzy
+msgid "Image Settings"
+msgstr "Ajustes de cámara"
+
+#: src/settingsdialog.cpp:106
+msgid "Brightness:"
+msgstr ""
+
+#: src/settingsdialog.cpp:115
+msgid "Contrast:"
+msgstr ""
+
+#: src/settingsdialog.cpp:124
+msgid "Saturation:"
+msgstr ""
+
+#: src/settingsdialog.cpp:133
+msgid "Hue:"
+msgstr ""
+
+#: src/settingsdialog.cpp:137
 msgid "Camera"
 msgstr "Cámara"
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:137
 msgid "Camera settings"
 msgstr "Ajustes de cámara"
 
-#: src/settingsdialog.cpp:107 src/settingsdialog.cpp:125
+#: src/settingsdialog.cpp:148 src/settingsdialog.cpp:166
 msgid " seconds"
 msgstr " segundos"
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:151
 msgid "Self-timer timeout:"
 msgstr "Tiempo para cuenta atrás"
 
-#: src/settingsdialog.cpp:121
+#: src/settingsdialog.cpp:162
 msgid "Number of photos:"
 msgstr "Número de fotos"
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:169
 msgid "Delay between photos:"
 msgstr "Retraso entre fotos"
 
-#: src/settingsdialog.cpp:132
+#: src/settingsdialog.cpp:173
 msgid "Capture"
 msgstr "Captura"
 
-#: src/settingsdialog.cpp:140
+#: src/settingsdialog.cpp:181
 msgid "Use default pictures directory"
 msgstr "Usar el directorio de imágenes por defecto"
 
-#: src/settingsdialog.cpp:147
+#: src/settingsdialog.cpp:188
 msgid "Use subdirectory:"
 msgstr "Usar subdirectorio:"
 
-#: src/settingsdialog.cpp:160
+#: src/settingsdialog.cpp:201
 msgid "Photo directory:"
 msgstr "Directorio de imágenes:"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Storage"
 msgstr "Almacenamiento"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Photo storage"
 msgstr "Almacenamiento de imágenes"
 
-#: src/settingsdialog.cpp:168
+#: src/settingsdialog.cpp:209
 msgid "Play sound on taking photo"
 msgstr "Reproducir sonido al tomar una foto"
 
-#: src/settingsdialog.cpp:171
+#: src/settingsdialog.cpp:212
 msgid "Play timer sounds"
 msgstr "Reproducir sonido en la cuenta atrás"
 
-#: src/settingsdialog.cpp:174
+#: src/settingsdialog.cpp:215
 msgid "Show notification on taking photo"
 msgstr "Mostrar nota al tomar una foto"
 
-#: src/settingsdialog.cpp:178
+#: src/settingsdialog.cpp:219
 msgid "Behaviour"
 msgstr "Comportamiento"
 
@@ -274,3 +285,13 @@ msgstr "Abrir en GIMP"
 #: src/videowidget.cpp:167
 msgid "Open in Inkscape"
 msgstr "Abrir en Inkscape"
+
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Daniel Halens Rodríguez"
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "DanielHalens@gmail.com"

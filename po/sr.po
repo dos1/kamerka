@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-07-27 22:55+0200\n"
+"POT-Creation-Date: 2015-06-28 21:40+0200\n"
 "PO-Revision-Date: 2014-03-27 12:46+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@autistici.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
@@ -18,25 +18,15 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: rc.cpp:1 tools/rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Младен Пејаковић"
-
-#: rc.cpp:2 tools/rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "pejakm@autistici.org"
-
 #: src/kamerka.qml:225
 msgid "Take a photo"
 msgstr "Фотографиши"
 
-#: src/kamerka.qml:240 src/settingsdialog.cpp:114
+#: src/kamerka.qml:240 src/settingsdialog.cpp:155
 msgid "Burst mode"
 msgstr "Режим узастопног окидања"
 
-#: src/kamerka.qml:263 src/settingsdialog.cpp:102
+#: src/kamerka.qml:263 src/settingsdialog.cpp:143
 msgid "Self-timer"
 msgstr "Самоокидач"
 
@@ -60,51 +50,51 @@ msgstr "Подеси"
 msgid "No Effect"
 msgstr "Без ефекта"
 
-#: src/kamerka.qml:524
+#: src/kamerka.qml:525
 msgid "Grey"
 msgstr "Сивило"
 
-#: src/kamerka.qml:539
+#: src/kamerka.qml:541
 msgid "Invert"
 msgstr "Изврнуто"
 
-#: src/kamerka.qml:554
+#: src/kamerka.qml:557
 msgid "Equalize"
 msgstr "Уједначено"
 
-#: src/kamerka.qml:569
+#: src/kamerka.qml:573
 msgid "Smurf"
 msgstr "Штрумф"
 
-#: src/kamerka.qml:583
+#: src/kamerka.qml:588
 msgid "Implode"
 msgstr "Имплозија"
 
-#: src/kamerka.qml:597
+#: src/kamerka.qml:603
 msgid "Explode"
 msgstr "Експлозија"
 
-#: src/kamerka.qml:611
+#: src/kamerka.qml:618
 msgid "Charcoal"
 msgstr "Угаљ"
 
-#: src/kamerka.qml:625
+#: src/kamerka.qml:633
 msgid "Edge"
 msgstr "Ивице"
 
-#: src/kamerka.qml:639
+#: src/kamerka.qml:648
 msgid "Emboss"
 msgstr "Уклесано"
 
-#: src/kamerka.qml:653
+#: src/kamerka.qml:663
 msgid "Swirl"
 msgstr "Ковитлац"
 
-#: src/kamerka.qml:667
+#: src/kamerka.qml:678
 msgid "Oil Paint"
 msgstr "Уље на платну"
 
-#: src/kamerka.qml:681
+#: src/kamerka.qml:693
 msgid "Wave"
 msgstr "Талас"
 
@@ -194,66 +184,87 @@ msgid "Flip output"
 msgstr "Обрнуто"
 
 #: src/settingsdialog.cpp:96
+#, fuzzy
+msgid "Image Settings"
+msgstr "Поставке камере"
+
+#: src/settingsdialog.cpp:106
+msgid "Brightness:"
+msgstr ""
+
+#: src/settingsdialog.cpp:115
+msgid "Contrast:"
+msgstr ""
+
+#: src/settingsdialog.cpp:124
+msgid "Saturation:"
+msgstr ""
+
+#: src/settingsdialog.cpp:133
+msgid "Hue:"
+msgstr ""
+
+#: src/settingsdialog.cpp:137
 msgid "Camera"
 msgstr "Камера"
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:137
 msgid "Camera settings"
 msgstr "Поставке камере"
 
-#: src/settingsdialog.cpp:107 src/settingsdialog.cpp:125
+#: src/settingsdialog.cpp:148 src/settingsdialog.cpp:166
 msgid " seconds"
 msgstr " секунди"
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:151
 msgid "Self-timer timeout:"
 msgstr "Време самоокидача:"
 
-#: src/settingsdialog.cpp:121
+#: src/settingsdialog.cpp:162
 msgid "Number of photos:"
 msgstr "Број фотографија:"
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:169
 msgid "Delay between photos:"
 msgstr "Застој окидања:"
 
-#: src/settingsdialog.cpp:132
+#: src/settingsdialog.cpp:173
 msgid "Capture"
 msgstr "Хватање"
 
-#: src/settingsdialog.cpp:140
+#: src/settingsdialog.cpp:181
 msgid "Use default pictures directory"
 msgstr "Користи подразумевану фасциклу слика"
 
-#: src/settingsdialog.cpp:147
+#: src/settingsdialog.cpp:188
 msgid "Use subdirectory:"
 msgstr "Отвори подфасциклу"
 
-#: src/settingsdialog.cpp:160
+#: src/settingsdialog.cpp:201
 msgid "Photo directory:"
 msgstr "Фасцикла фотографија:"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Storage"
 msgstr "Спремиште"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Photo storage"
 msgstr "Спремиште фотографија"
 
-#: src/settingsdialog.cpp:168
+#: src/settingsdialog.cpp:209
 msgid "Play sound on taking photo"
 msgstr "Пусти звук при фотографисању"
 
-#: src/settingsdialog.cpp:171
+#: src/settingsdialog.cpp:212
 msgid "Play timer sounds"
 msgstr "Пуштај звуке тајмера"
 
-#: src/settingsdialog.cpp:174
+#: src/settingsdialog.cpp:215
 msgid "Show notification on taking photo"
 msgstr "Прикажи обавештење при фотографисању"
 
-#: src/settingsdialog.cpp:178
+#: src/settingsdialog.cpp:219
 msgid "Behaviour"
 msgstr "Понашање"
 
@@ -276,3 +287,13 @@ msgstr "Отвори у Гимпу"
 #: src/videowidget.cpp:167
 msgid "Open in Inkscape"
 msgstr "Отвори у Инкскејпу"
+
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Младен Пејаковић"
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "pejakm@autistici.org"

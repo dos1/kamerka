@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-07-27 22:55+0200\n"
+"POT-Creation-Date: 2015-06-28 21:40+0200\n"
 "PO-Revision-Date: 2014-04-26 00:50+0300\n"
 "Last-Translator: Сергей Головко <cappelikan@gmail.com>\n"
 "Language-Team: Russian <kde-i18n-ru@lists.kde.org>\n"
@@ -19,25 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: rc.cpp:1 tools/rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Сергій Головко"
-
-#: rc.cpp:2 tools/rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "cappelikan@gmail.com"
-
 #: src/kamerka.qml:225
 msgid "Take a photo"
 msgstr "Зфотографуйте"
 
-#: src/kamerka.qml:240 src/settingsdialog.cpp:114
+#: src/kamerka.qml:240 src/settingsdialog.cpp:155
 msgid "Burst mode"
 msgstr ""
 
-#: src/kamerka.qml:263 src/settingsdialog.cpp:102
+#: src/kamerka.qml:263 src/settingsdialog.cpp:143
 msgid "Self-timer"
 msgstr "Таймер"
 
@@ -61,51 +51,51 @@ msgstr "Конфігурація"
 msgid "No Effect"
 msgstr "Без еффекту"
 
-#: src/kamerka.qml:524
+#: src/kamerka.qml:525
 msgid "Grey"
 msgstr "Сірий"
 
-#: src/kamerka.qml:539
+#: src/kamerka.qml:541
 msgid "Invert"
 msgstr "Спотворення"
 
-#: src/kamerka.qml:554
+#: src/kamerka.qml:557
 msgid "Equalize"
 msgstr ""
 
-#: src/kamerka.qml:569
+#: src/kamerka.qml:573
 msgid "Smurf"
 msgstr "Штрумф"
 
-#: src/kamerka.qml:583
+#: src/kamerka.qml:588
 msgid "Implode"
 msgstr ""
 
-#: src/kamerka.qml:597
+#: src/kamerka.qml:603
 msgid "Explode"
 msgstr ""
 
-#: src/kamerka.qml:611
+#: src/kamerka.qml:618
 msgid "Charcoal"
 msgstr ""
 
-#: src/kamerka.qml:625
+#: src/kamerka.qml:633
 msgid "Edge"
 msgstr ""
 
-#: src/kamerka.qml:639
+#: src/kamerka.qml:648
 msgid "Emboss"
 msgstr ""
 
-#: src/kamerka.qml:653
+#: src/kamerka.qml:663
 msgid "Swirl"
 msgstr ""
 
-#: src/kamerka.qml:667
+#: src/kamerka.qml:678
 msgid "Oil Paint"
 msgstr ""
 
-#: src/kamerka.qml:681
+#: src/kamerka.qml:693
 msgid "Wave"
 msgstr ""
 
@@ -197,67 +187,88 @@ msgid "Flip output"
 msgstr "Вивід навпаки"
 
 #: src/settingsdialog.cpp:96
+#, fuzzy
+msgid "Image Settings"
+msgstr "Налаштування камери"
+
+#: src/settingsdialog.cpp:106
+msgid "Brightness:"
+msgstr ""
+
+#: src/settingsdialog.cpp:115
+msgid "Contrast:"
+msgstr ""
+
+#: src/settingsdialog.cpp:124
+msgid "Saturation:"
+msgstr ""
+
+#: src/settingsdialog.cpp:133
+msgid "Hue:"
+msgstr ""
+
+#: src/settingsdialog.cpp:137
 msgid "Camera"
 msgstr "Камера"
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:137
 msgid "Camera settings"
 msgstr "Налаштування камери"
 
-#: src/settingsdialog.cpp:107 src/settingsdialog.cpp:125
+#: src/settingsdialog.cpp:148 src/settingsdialog.cpp:166
 msgid " seconds"
 msgstr ""
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:151
 #, fuzzy
 msgid "Self-timer timeout:"
 msgstr "Таймер"
 
-#: src/settingsdialog.cpp:121
+#: src/settingsdialog.cpp:162
 msgid "Number of photos:"
 msgstr ""
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:169
 msgid "Delay between photos:"
 msgstr ""
 
-#: src/settingsdialog.cpp:132
+#: src/settingsdialog.cpp:173
 msgid "Capture"
 msgstr ""
 
-#: src/settingsdialog.cpp:140
+#: src/settingsdialog.cpp:181
 msgid "Use default pictures directory"
 msgstr "Використовуйте теку для зображень по умовчанню"
 
-#: src/settingsdialog.cpp:147
+#: src/settingsdialog.cpp:188
 msgid "Use subdirectory:"
 msgstr "Відкрийте вкладену теку:"
 
-#: src/settingsdialog.cpp:160
+#: src/settingsdialog.cpp:201
 msgid "Photo directory:"
 msgstr "Тека зображення:"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Storage"
 msgstr "Сховище"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Photo storage"
 msgstr "Сховище зображень"
 
-#: src/settingsdialog.cpp:168
+#: src/settingsdialog.cpp:209
 msgid "Play sound on taking photo"
 msgstr "Відтворення звуку при зйомці"
 
-#: src/settingsdialog.cpp:171
+#: src/settingsdialog.cpp:212
 msgid "Play timer sounds"
 msgstr "Грати звуки таймера"
 
-#: src/settingsdialog.cpp:174
+#: src/settingsdialog.cpp:215
 msgid "Show notification on taking photo"
 msgstr "Показувати повідомлення при зйомці"
 
-#: src/settingsdialog.cpp:178
+#: src/settingsdialog.cpp:219
 msgid "Behaviour"
 msgstr "Поведінка"
 
@@ -280,6 +291,16 @@ msgstr "Відкрити у ГИМПе"
 #: src/videowidget.cpp:167
 msgid "Open in Inkscape"
 msgstr "Відкрити у Инкскейпі"
+
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Сергій Головко"
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "cappelikan@gmail.com"
 
 #~ msgid "Less"
 #~ msgstr "Менше"

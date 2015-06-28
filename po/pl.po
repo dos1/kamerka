@@ -7,35 +7,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-07-27 22:55+0200\n"
-"PO-Revision-Date: 2014-03-27 00:56+0100\n"
+"POT-Creation-Date: 2015-06-28 21:40+0200\n"
+"PO-Revision-Date: 2015-06-28 21:42+0100\n"
 "Last-Translator: Sebastian Krzyszkowiak <dos@dosowisko.net>\n"
 "Language-Team: pl_PL <dos@dosowisko.net>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
-
-#: rc.cpp:1 tools/rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Sebastian Krzyszkowiak"
-
-#: rc.cpp:2 tools/rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "dos@dosowisko.net"
+"X-Generator: Poedit 1.8.1\n"
 
 #: src/kamerka.qml:225
 msgid "Take a photo"
 msgstr "Zrób zdjęcie"
 
-#: src/kamerka.qml:240 src/settingsdialog.cpp:114
+#: src/kamerka.qml:240 src/settingsdialog.cpp:155
 msgid "Burst mode"
 msgstr "Zdjęcia seryjne"
 
-#: src/kamerka.qml:263 src/settingsdialog.cpp:102
+#: src/kamerka.qml:263 src/settingsdialog.cpp:143
 msgid "Self-timer"
 msgstr "Samowyzwalacz"
 
@@ -59,51 +49,51 @@ msgstr "Konfiguracja"
 msgid "No Effect"
 msgstr "Bez efektów"
 
-#: src/kamerka.qml:524
+#: src/kamerka.qml:525
 msgid "Grey"
 msgstr "Szarość"
 
-#: src/kamerka.qml:539
+#: src/kamerka.qml:541
 msgid "Invert"
 msgstr "Inwersja"
 
-#: src/kamerka.qml:554
+#: src/kamerka.qml:557
 msgid "Equalize"
 msgstr "Wyrównanie"
 
-#: src/kamerka.qml:569
+#: src/kamerka.qml:573
 msgid "Smurf"
 msgstr "Smerf"
 
-#: src/kamerka.qml:583
+#: src/kamerka.qml:588
 msgid "Implode"
 msgstr "Implozja"
 
-#: src/kamerka.qml:597
+#: src/kamerka.qml:603
 msgid "Explode"
 msgstr "Eksplozja"
 
-#: src/kamerka.qml:611
+#: src/kamerka.qml:618
 msgid "Charcoal"
 msgstr "Rysunek węglem"
 
-#: src/kamerka.qml:625
+#: src/kamerka.qml:633
 msgid "Edge"
 msgstr "Krawędzie"
 
-#: src/kamerka.qml:639
+#: src/kamerka.qml:648
 msgid "Emboss"
 msgstr "Płaskorzeźba"
 
-#: src/kamerka.qml:653
+#: src/kamerka.qml:663
 msgid "Swirl"
 msgstr "Wir"
 
-#: src/kamerka.qml:667
+#: src/kamerka.qml:678
 msgid "Oil Paint"
 msgstr "Farba olejna"
 
-#: src/kamerka.qml:681
+#: src/kamerka.qml:693
 msgid "Wave"
 msgstr "Fala"
 
@@ -137,7 +127,8 @@ msgstr "Nie można połączyć się z urządzeniem V4L!"
 
 #: src/mainwindow.cpp:177
 msgid ""
-"Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
+"Requested resolution (%1x%2) was not available. Driver used %3x%4 "
+"instead.\n"
 "Please check your configuration."
 msgstr ""
 "Żądana rozdzielczość (%1x%2) nie była dostępna. Sterownik użył "
@@ -193,66 +184,86 @@ msgid "Flip output"
 msgstr "Odbij obraz pionowo"
 
 #: src/settingsdialog.cpp:96
+msgid "Image Settings"
+msgstr "Ustawienia obrazu"
+
+#: src/settingsdialog.cpp:106
+msgid "Brightness:"
+msgstr "Jasność:"
+
+#: src/settingsdialog.cpp:115
+msgid "Contrast:"
+msgstr "Kontrast:"
+
+#: src/settingsdialog.cpp:124
+msgid "Saturation:"
+msgstr "Nasycenie:"
+
+#: src/settingsdialog.cpp:133
+msgid "Hue:"
+msgstr "Barwa:"
+
+#: src/settingsdialog.cpp:137
 msgid "Camera"
 msgstr "Kamera"
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:137
 msgid "Camera settings"
 msgstr "Ustawienia kamery"
 
-#: src/settingsdialog.cpp:107 src/settingsdialog.cpp:125
+#: src/settingsdialog.cpp:148 src/settingsdialog.cpp:166
 msgid " seconds"
 msgstr " sek."
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:151
 msgid "Self-timer timeout:"
 msgstr "Czas samowyzwalacza:"
 
-#: src/settingsdialog.cpp:121
+#: src/settingsdialog.cpp:162
 msgid "Number of photos:"
 msgstr "Liczba ujęć:"
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:169
 msgid "Delay between photos:"
 msgstr "Opóźnienie między ujęciami:"
 
-#: src/settingsdialog.cpp:132
+#: src/settingsdialog.cpp:173
 msgid "Capture"
 msgstr "Przechwytywanie"
 
-#: src/settingsdialog.cpp:140
+#: src/settingsdialog.cpp:181
 msgid "Use default pictures directory"
 msgstr "Użyj domyślnego folderu z obrazami"
 
-#: src/settingsdialog.cpp:147
+#: src/settingsdialog.cpp:188
 msgid "Use subdirectory:"
 msgstr "Użyj podfolderu:"
 
-#: src/settingsdialog.cpp:160
+#: src/settingsdialog.cpp:201
 msgid "Photo directory:"
 msgstr "Folder zdjęć:"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Storage"
 msgstr "Przechowywanie"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Photo storage"
 msgstr "Przechowywanie zdjęć"
 
-#: src/settingsdialog.cpp:168
+#: src/settingsdialog.cpp:209
 msgid "Play sound on taking photo"
 msgstr "Odtwarzaj dźwięk przy robieniu zdjęcia"
 
-#: src/settingsdialog.cpp:171
+#: src/settingsdialog.cpp:212
 msgid "Play timer sounds"
 msgstr "Odtwarzaj dźwięki samowyzwalacza"
 
-#: src/settingsdialog.cpp:174
+#: src/settingsdialog.cpp:215
 msgid "Show notification on taking photo"
 msgstr "Pokaż powiadomienie przy robieniu zdjęcia"
 
-#: src/settingsdialog.cpp:178
+#: src/settingsdialog.cpp:219
 msgid "Behaviour"
 msgstr "Zachowanie"
 
@@ -276,6 +287,16 @@ msgstr "Otwórz w GIMPie"
 msgid "Open in Inkscape"
 msgstr "Otwórz w Inkscape"
 
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sebastian Krzyszkowiak"
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "dos@dosowisko.net"
+
 #~ msgid "Mono"
 #~ msgstr "Mono"
 
@@ -284,6 +305,3 @@ msgstr "Otwórz w Inkscape"
 
 #~ msgid "More"
 #~ msgstr "Więcej"
-
-#~ msgid "Settings"
-#~ msgstr "Ustawienia"

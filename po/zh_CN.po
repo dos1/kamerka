@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2014-07-27 22:55+0200\n"
+"POT-Creation-Date: 2015-06-28 21:40+0200\n"
 "PO-Revision-Date: 2011-10-28 12:53+0800\n"
 "Last-Translator: zcj <zcjsjz@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-i18n-doc@kde.org>\n"
@@ -17,25 +17,15 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: rc.cpp:1 tools/rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "zcj"
-
-#: rc.cpp:2 tools/rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "zcjsjz@gmail.com"
-
 #: src/kamerka.qml:225
 msgid "Take a photo"
 msgstr "拍照"
 
-#: src/kamerka.qml:240 src/settingsdialog.cpp:114
+#: src/kamerka.qml:240 src/settingsdialog.cpp:155
 msgid "Burst mode"
 msgstr "连拍"
 
-#: src/kamerka.qml:263 src/settingsdialog.cpp:102
+#: src/kamerka.qml:263 src/settingsdialog.cpp:143
 msgid "Self-timer"
 msgstr "自拍"
 
@@ -59,51 +49,51 @@ msgstr "设置"
 msgid "No Effect"
 msgstr "无效果"
 
-#: src/kamerka.qml:524
+#: src/kamerka.qml:525
 msgid "Grey"
 msgstr "灰度"
 
-#: src/kamerka.qml:539
+#: src/kamerka.qml:541
 msgid "Invert"
 msgstr "底片"
 
-#: src/kamerka.qml:554
+#: src/kamerka.qml:557
 msgid "Equalize"
 msgstr "均衡"
 
-#: src/kamerka.qml:569
+#: src/kamerka.qml:573
 msgid "Smurf"
 msgstr "蓝精灵"
 
-#: src/kamerka.qml:583
+#: src/kamerka.qml:588
 msgid "Implode"
 msgstr "汇聚"
 
-#: src/kamerka.qml:597
+#: src/kamerka.qml:603
 msgid "Explode"
 msgstr "发散"
 
-#: src/kamerka.qml:611
+#: src/kamerka.qml:618
 msgid "Charcoal"
 msgstr "炭笔"
 
-#: src/kamerka.qml:625
+#: src/kamerka.qml:633
 msgid "Edge"
 msgstr "像缘"
 
-#: src/kamerka.qml:639
+#: src/kamerka.qml:648
 msgid "Emboss"
 msgstr "浮雕"
 
-#: src/kamerka.qml:653
+#: src/kamerka.qml:663
 msgid "Swirl"
 msgstr "漩涡"
 
-#: src/kamerka.qml:667
+#: src/kamerka.qml:678
 msgid "Oil Paint"
 msgstr "油画"
 
-#: src/kamerka.qml:681
+#: src/kamerka.qml:693
 msgid "Wave"
 msgstr "波浪"
 
@@ -193,66 +183,87 @@ msgid "Flip output"
 msgstr "翻转输出"
 
 #: src/settingsdialog.cpp:96
+#, fuzzy
+msgid "Image Settings"
+msgstr "摄像头设置"
+
+#: src/settingsdialog.cpp:106
+msgid "Brightness:"
+msgstr ""
+
+#: src/settingsdialog.cpp:115
+msgid "Contrast:"
+msgstr ""
+
+#: src/settingsdialog.cpp:124
+msgid "Saturation:"
+msgstr ""
+
+#: src/settingsdialog.cpp:133
+msgid "Hue:"
+msgstr ""
+
+#: src/settingsdialog.cpp:137
 msgid "Camera"
 msgstr "摄像头"
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:137
 msgid "Camera settings"
 msgstr "摄像头设置"
 
-#: src/settingsdialog.cpp:107 src/settingsdialog.cpp:125
+#: src/settingsdialog.cpp:148 src/settingsdialog.cpp:166
 msgid " seconds"
 msgstr "秒"
 
-#: src/settingsdialog.cpp:110
+#: src/settingsdialog.cpp:151
 msgid "Self-timer timeout:"
 msgstr "自拍延时"
 
-#: src/settingsdialog.cpp:121
+#: src/settingsdialog.cpp:162
 msgid "Number of photos:"
 msgstr "照片数量"
 
-#: src/settingsdialog.cpp:128
+#: src/settingsdialog.cpp:169
 msgid "Delay between photos:"
 msgstr "连拍间隔"
 
-#: src/settingsdialog.cpp:132
+#: src/settingsdialog.cpp:173
 msgid "Capture"
 msgstr "拍照"
 
-#: src/settingsdialog.cpp:140
+#: src/settingsdialog.cpp:181
 msgid "Use default pictures directory"
 msgstr "使用默认的图片目录"
 
-#: src/settingsdialog.cpp:147
+#: src/settingsdialog.cpp:188
 msgid "Use subdirectory:"
 msgstr "使用子目录:"
 
-#: src/settingsdialog.cpp:160
+#: src/settingsdialog.cpp:201
 msgid "Photo directory:"
 msgstr "照片目录:"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Storage"
 msgstr "存储"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:203
 msgid "Photo storage"
 msgstr "照片存储"
 
-#: src/settingsdialog.cpp:168
+#: src/settingsdialog.cpp:209
 msgid "Play sound on taking photo"
 msgstr "拍照时播放音效"
 
-#: src/settingsdialog.cpp:171
+#: src/settingsdialog.cpp:212
 msgid "Play timer sounds"
 msgstr "播放计时音效"
 
-#: src/settingsdialog.cpp:174
+#: src/settingsdialog.cpp:215
 msgid "Show notification on taking photo"
 msgstr "拍照时显示通知"
 
-#: src/settingsdialog.cpp:178
+#: src/settingsdialog.cpp:219
 msgid "Behaviour"
 msgstr "行为"
 
@@ -275,3 +286,13 @@ msgstr "用GIMP打开"
 #: src/videowidget.cpp:167
 msgid "Open in Inkscape"
 msgstr "用Inkscape打开"
+
+#: tools/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "zcj"
+
+#: tools/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zcjsjz@gmail.com"
