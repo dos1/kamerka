@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 '''
  * Copyright (c) 2008 Marcus D. Hanwell <marcus@cryos.org>
  *
@@ -37,7 +37,7 @@ prevAuthorLine = ""
 # The main part of the loop
 for line in fin:
     # The commit line marks the start of a new commit object.
-    if string.find(line, 'commit') >= 0:
+    if line.find('commit') >= 0:
         # Start all over again...
         authorFound = False
         dateFound = False
