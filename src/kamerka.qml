@@ -223,7 +223,7 @@ Rectangle {
             width: parent.height-8;
             height: parent.height-8;
             tooltip: i18n("Take a photo");
-            font.pointSize: width/2;
+            font.pixelSize: width/2;
             font.family: fontAwesome.name;
             text: "\uF083";
             mouse.onClicked: doPhoto();
@@ -238,7 +238,7 @@ Rectangle {
             width: parent.height-8;
             height: parent.height-8;
             tooltip: i18n("Burst mode");
-            font.pointSize: width/2;
+            font.pixelSize: width/2;
             font.family: fontAwesome.name;
             text: "\uF00a";
             mouse.onClicked: burstPhotosTimer.start();
@@ -261,7 +261,7 @@ Rectangle {
             width: parent.height-8;
             height: parent.height-8;
             tooltip: i18n("Self-timer");
-            font.pointSize: width/2;
+            font.pixelSize: width/2;
             font.family: fontAwesome.name;
             text: "\uf017";
             mouse.onClicked: timerGo();
@@ -277,7 +277,7 @@ Rectangle {
             width: parent.height-8;
             height: parent.height-8;
             tooltip: effects ? i18n("Hide effects") : i18n("Show effects");
-            font.pointSize: width/2;
+            font.pixelSize: width/2;
             font.family: fontAwesome.name;
             text: "\uf0d0";
             mouse.onClicked: toggleEffects();
@@ -295,7 +295,7 @@ Rectangle {
             tooltip: i18n("Open directory");
             font.family: fontAwesome.name;
             text: "\uf115";
-            font.pointSize: width/2;
+            font.pixelSize: width/2;
             mouse.onClicked: showDirectory();
             z: 7;
         }
@@ -308,7 +308,7 @@ Rectangle {
             width: parent.height-8;
             height: parent.height-8;
             tooltip: i18n("Configure");
-            font.pointSize: width/2;
+            font.pixelSize: width/2;
             font.family: fontAwesome.name;
             text: "\uf013";
             mouse.onClicked: showConfiguration();
@@ -372,7 +372,7 @@ Rectangle {
     Text {
         id: timerText;
         anchors.centerIn: parent;
-        font.pointSize: 200;
+        font.pixelSize: 200;
         color: "white";
         opacity: 0;
         text: "5";
@@ -409,7 +409,7 @@ Rectangle {
         anchors.top: parent.top;
         anchors.topMargin: 25;
         anchors.rightMargin: 25;
-        font.pointSize: 40;
+        font.pixelSize: 40;
         font.bold: true;
         font.family: "Sans";
         color: "red";
@@ -439,7 +439,7 @@ Rectangle {
         anchors.top: parent.top;
         anchors.topMargin: 20;
         anchors.rightMargin: 10;
-        font.pointSize: 40;
+        font.pixelSize: 40;
         font.bold: true;
         font.family: "Sans";
         color: "red";
@@ -510,6 +510,7 @@ Rectangle {
             mouse.onClicked: setEffect(0);
             active: currentEffect === 0;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
 
         Button {
@@ -525,6 +526,7 @@ Rectangle {
             mouse.onClicked: setEffect(1);
             active: currentEffect === 1;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
 
         Button {
@@ -540,6 +542,7 @@ Rectangle {
             mouse.onClicked: setEffect(2);
             active: currentEffect === 2;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
 
         Button {
@@ -555,6 +558,7 @@ Rectangle {
             mouse.onClicked: setEffect(3);
             active: currentEffect === 3;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
 
         Button {
@@ -570,6 +574,7 @@ Rectangle {
             mouse.onClicked: setEffect(4);
             active: currentEffect === 4;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
         Button {
             id: effect_implode;
@@ -584,6 +589,7 @@ Rectangle {
             mouse.onClicked: setEffect(5);
             active: currentEffect === 5;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
         Button {
             id: effect_explode;
@@ -598,6 +604,7 @@ Rectangle {
             mouse.onClicked: setEffect(6);
             active: currentEffect === 6;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
         Button {
             id: effect_charcoal;
@@ -612,6 +619,7 @@ Rectangle {
             mouse.onClicked: setEffect(7);
             active: currentEffect === 7;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
         Button {
             id: effect_edge;
@@ -626,6 +634,7 @@ Rectangle {
             mouse.onClicked: setEffect(8);
             active: currentEffect === 8;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
         Button {
             id: effect_emboss;
@@ -640,6 +649,7 @@ Rectangle {
             mouse.onClicked: setEffect(9);
             active: currentEffect === 9;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
         Button {
             id: effect_swirl;
@@ -654,6 +664,7 @@ Rectangle {
             mouse.onClicked: setEffect(10);
             active: currentEffect === 10;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
         Button {
             id: effect_oilpaint;
@@ -668,6 +679,7 @@ Rectangle {
             mouse.onClicked: setEffect(11);
             active: currentEffect === 11;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
         Button {
             id: effect_wave;
@@ -682,6 +694,7 @@ Rectangle {
             mouse.onClicked: setEffect(12);
             active: currentEffect === 12;
             font.weight: active ? Font.Bold : Font.Normal;
+            font.pixelSize: 14;
         }
 
 
