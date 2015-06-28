@@ -113,7 +113,7 @@ void videowidget::setPicture(QImage i) {
 
 		// play sound
 		if (Settings::soundontaking()) {
-			media->setCurrentSource(QUrl(KStandardDirs::locate("data", "kamerka/camera_click.ogg")));
+			media->setCurrentSource(QUrl::fromLocalFile(KStandardDirs::locate("data", "kamerka/camera_click.ogg")));
 			media->play();
 		}
 

@@ -65,7 +65,7 @@ void MainWindow::takePhoto() {
 void MainWindow::timerCounter(int count) {
 	//kDebug(QString::number(count).toStdString().c_str());
 	if ((count==5) && (Settings::soundontimer())) {
-		videoViewer->media->setCurrentSource(QUrl(KStandardDirs::locate("data", "kamerka/timer.ogg")));
+		videoViewer->media->setCurrentSource(QUrl::fromLocalFile(KStandardDirs::locate("data", "kamerka/timer.ogg")));
 		videoViewer->media->play();
 	}
 }
