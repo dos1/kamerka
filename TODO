@@ -1,6 +1,5 @@
 For 1.0:
  * investigate using phonon for getting video data
- * brightness, colors, contrast
  * animated preview and some basic management of taken photos
  * maybe some moar effects
  * "About Kamerka" button (probably in configuration dialog)

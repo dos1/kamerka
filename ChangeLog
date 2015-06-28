@@ -1,4 +1,15 @@
+2015-06-28  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
+  po/ru.po, po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po,
+  po/sr@latin.po, po/uk.po, po/zh_CN.po, po/zh_TW.po: update polish translation
+
+  * src/mainwindow.cpp, src/videowidget.cpp: Apply patch for finding sound
+  files from issue #24 by akien-mga
+
 2014-07-27  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * ChangeLog, TODO, src/main.cpp: This is Kamerka 0.10 
 
   * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
   po/ru.po, po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po,
@@ -7,6 +18,12 @@
 2014-05-20  Sergiy Golovko <cappelikan@gmail.com>
 
   * po/ru.po, po/uk.po: RU and UK locale
+
+2014-03-27  Dejan Noveski <dr.mote@gmail.com>
+
+  * src/capturethread.cpp, src/capturethread.h, src/kamerka.kcfg,
+  src/settingsdialog.cpp: Image controlls in settings dialog - Brightness,
+  contrast, saturation and hueueueueue
 
 2014-03-27  Mladen Pejaković <pejakm@autistici.org>
 
