@@ -23,6 +23,7 @@
 #include <QDir>
 #include <QQuickItem>
 #include <KLocalizedString>
+#include <QDesktopServices>
 #include <phonon/AudioOutput>
 
 #include "settings.h"
@@ -35,20 +36,14 @@ Notification::Notification (QString name, QString filename) : KNotification(name
 
 void Notification::openFile (unsigned int i) {
     // qDebug(QString::number(i).toStdString().c_str());
-    QString app;
-    QStringList arg;
     if (i==1) {
-        app = "dolphin";
-        arg << "--select";
+        QDesktopServices::openUrl(this->filename);
     }
     else if (i==2) {
-        app = "gimp";
+        if (!QProcess::startDetached("dolphin", {"--select", this->filename})) {
+            QDesktopServices::openUrl(Settings::photodir());
+        }
     }
-    else {
-        app = "inkscape";
-    }
-    arg << this->filename;
-    QProcess::startDetached(app, arg);
 }
 
 videowidget::videowidget(QWidget *parent) : QWidget(parent) {
@@ -177,7 +172,7 @@ void videowidget::setPicture(QImage i) {
             notification->setText( s );
             notification->setPixmap( pixmap );
             QStringList list;
-            list << i18n("Show in directory") << i18n("Open in GIMP") << i18n("Open in Inkscape");
+            list << i18n("Open") << i18n("Show in directory");
             notification->setActions( list );
             notification->setFlags(KNotification::SkipGrouping);
             connect(notification, SIGNAL(activated(unsigned int)), notification , SLOT(openFile(unsigned int)) );
