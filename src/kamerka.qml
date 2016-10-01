@@ -61,6 +61,7 @@ Rectangle {
         color: "white";
         smooth: true;
         opacity: 0;
+        visible: false;
 
         states: State {
             name: "down"; when: take == true;
@@ -85,6 +86,7 @@ Rectangle {
             SequentialAnimation {
                 id: animacja;
                 NumberAnimation { target: picture; property: "opacity"; duration: 500; }
+                NumberAnimation { duration: 250; }
                 NumberAnimation { properties: "width,height,x,y,rotation"; duration: 1000; easing.type: Easing.OutQuad; }
                 NumberAnimation { duration: 1000; }
                 NumberAnimation { target: photo; property: "opacity"; duration: 1500; easing.type:Easing.InQuad; }
@@ -96,7 +98,7 @@ Rectangle {
             id: picture;
             x: 10;
             y: 10;
-            opacity: 1;
+            opacity: 0;
             width: parent.width-20;
             height: parent.height-50;
             color: "white";
@@ -114,9 +116,13 @@ Rectangle {
 
     }
     DropShadow {
+        id: photoWithShadow;
         radius: 8;
+        anchors.fill: source;
         color: "black";
         source: photo;
+        rotation: photo.rotation;
+        opacity: photo.opacity;
     }
 
     function setEffect(id) {
@@ -374,14 +380,25 @@ Rectangle {
         anchors.centerIn: parent;
         font.pixelSize: 200;
         color: "white";
-        opacity: 0;
         text: "5";
+        visible: false;
+
+    }
+    DropShadow {
+        id: timerTextShadow;
+        anchors.fill: source;
+        radius: 8;
+        color: "black";
+        source: timerText;
+        horizontalOffset: 0;
+        verticalOffset: 0;
+        opacity: 0;
         visible: false;
 
         states: State {
             name: "down"; when: page.timeranim == true;
             PropertyChanges {
-                target: timerText;
+                target: timerTextShadow;
                 opacity: 1;
                 visible: true;
             }
@@ -394,11 +411,7 @@ Rectangle {
             }
 
         }
-    }
-    DropShadow {
-        radius: 8;
-        color: "black";
-        source: timerText;
+
     }
 
     Text {
