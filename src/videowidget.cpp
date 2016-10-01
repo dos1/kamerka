@@ -179,6 +179,7 @@ void videowidget::setPicture(QImage i) {
             QStringList list;
             list << i18n("Show in directory") << i18n("Open in GIMP") << i18n("Open in Inkscape");
             notification->setActions( list );
+            notification->setFlags(KNotification::SkipGrouping);
             connect(notification, SIGNAL(activated(unsigned int)), notification , SLOT(openFile(unsigned int)) );
             notification->sendEvent();
         }
