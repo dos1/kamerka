@@ -38,20 +38,20 @@
       <default>50</default>
     </entry>
     <entry name="mirror" type="Bool">
-			<label>Mirror output</label>
+      <label>Mirror output</label>
       <default>false</default>
     </entry>
     <entry name="flip" type="Bool">
-			<label>Flip output (upside down)</label>
+      <label>Flip output (upside down)</label>
       <default>false</default>
     </entry>
-		<entry name="normalize" type="Bool">
-			<label>Enhance contrast (histogram normalization)</label>
-			<default>true</default>
-		</entry>
-		<entry name="aspectlock" type="Bool">
+    <entry name="normalize" type="Bool">
+      <label>Enhance contrast (histogram normalization)</label>
+      <default>false</default>
+    </entry>
+    <entry name="aspectlock" type="Bool">
       <label>Lock aspect ratio</label>
-        <default>false</default>
+      <default>true</default>
     </entry>
   </group>
   <group name="Capture">
