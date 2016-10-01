@@ -92,6 +92,11 @@ videowidget::~videowidget() {
         thread.stop();
 }
 
+void videowidget::takeImage() {
+    storeImage = true;
+    imageDelay = 3;
+}
+
 // draw picture from webcam (pixmap) on repaint
 void videowidget::paintEvent(QPaintEvent *) {
     QPainter* painter = new QPainter(this);
@@ -110,6 +115,10 @@ void videowidget::setPicture(QImage i) {
     update();
 
     if (storeImage) {
+        imageDelay--;
+        if (imageDelay) {
+            return;
+        }
         // we're taking a photo!
         QDir dir;
         dir.mkpath(Settings::photodir());

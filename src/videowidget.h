@@ -21,7 +21,6 @@
 #define VIDEOWIDGET_H
 
 #include <KNotification>
-#include <QWidget>
 #include <QPainter>
 #include <QtQuickWidgets/QQuickWidget>
 #include <phonon/MediaObject>
@@ -39,13 +38,17 @@ public:
     CaptureThread thread;
     QQuickWidget *ui;
     Phonon::MediaObject* media;
-    bool storeImage;
     void resize(const QSize& size);
+    void takeImage();
 protected:
     void paintEvent(QPaintEvent *event);
 
 public slots:
     void setPicture(QImage);
+
+private:
+    bool storeImage;
+    int imageDelay;
 };
 
 class Notification : public KNotification {

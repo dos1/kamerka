@@ -67,7 +67,7 @@ void MainWindow::QMLStatus(QQuickWidget::Status status) {
 
 // slot for UI button - scheldule photo to be taken from next processed frame
 void MainWindow::takePhoto() {
-    videoViewer->storeImage=true;
+    videoViewer->takeImage();
 }
 
 // slot for UI button - play timer sound
