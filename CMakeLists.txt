@@ -15,8 +15,8 @@ include(KDECompilerSettings)
 
 include(FeatureSummary)
 
-find_package(KF5 REQUIRED COMPONENTS CoreAddons WidgetsAddons Config I18n KIO Notifications KDE4Support Declarative)
-include_directories(${KF5CoreAddons_INCLUDES} ${KF5Config_INCLUDES} ${KF5I18n_INCLUDES} ${KF5KIO_INCLUDES} ${KF5Notifications_INCLUDES} ${KF5KDE4Support_INCLUDES} ${KF5Declarative_INCLUDES})
+find_package(KF5 REQUIRED COMPONENTS CoreAddons WidgetsAddons Config I18n KIO Notifications KDELibs4Support Declarative)
+include_directories(${KF5CoreAddons_INCLUDES} ${KF5Config_INCLUDES} ${KF5I18n_INCLUDES} ${KF5KIO_INCLUDES} ${KF5Notifications_INCLUDES} ${KF5KDELibs4Support_INCLUDES} ${KF5Declarative_INCLUDES})
 
 find_package(Phonon4Qt5 REQUIRED)
 include_directories(${PHONON_INCLUDE_DIR})
