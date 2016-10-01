@@ -31,49 +31,49 @@
 
 class CaptureThread : public QThread
 {
-		Q_OBJECT
+    Q_OBJECT
 
-	public:
-		CaptureThread();
-		int stop();
-		int start();
-		bool running;
-		int effect;
-	protected:
-		void run();
-		void updateImageSettings();
-	signals:
-		void renderedImage(const QImage &image);
-		void startedCapture(int width, int height);
+public:
+    CaptureThread();
+    int stop();
+    int start();
+    bool running;
+    int effect;
+protected:
+    void run();
+    void updateImageSettings();
+signals:
+    void renderedImage(const QImage &image);
+    void startedCapture(int width, int height);
 
-	private:
-		QMutex mutex;
+private:
+    QMutex mutex;
 
-		int width, height, fps, delay;
+    int width, height, fps, delay;
 
-		bool devam;
+    bool devam;
 
-		struct buffer {
-				void   *start;
-				size_t length;
-		};
-		struct buffer                   *buffers;
+    struct buffer {
+        void   *start;
+        size_t length;
+    };
+    struct buffer                   *buffers;
 
-		struct v4l2_format              fmt;
-		struct v4l2_buffer              buf;
-		struct v4l2_requestbuffers      req;
-		enum v4l2_buf_type              type;
-		fd_set                          fds;
-		struct timeval                  tv;
-		int                             r, fd;
-		unsigned int                    n_buffers;
-		QString                         dev_name;
+    struct v4l2_format              fmt;
+    struct v4l2_buffer              buf;
+    struct v4l2_requestbuffers      req;
+    enum v4l2_buf_type              type;
+    fd_set                          fds;
+    struct timeval                  tv;
+    int                             r, fd;
+    unsigned int                    n_buffers;
+    QString                         dev_name;
 
-		struct v4l2_format src_fmt;
-		unsigned char *dst_buf;
-		struct v4lconvert_data *v4lconvert_data;
-		int di;
-		char header [50];
+    struct v4l2_format src_fmt;
+    unsigned char *dst_buf;
+    struct v4lconvert_data *v4lconvert_data;
+    int di;
+    char header [50];
 };
 
 #endif // CAPTURETHREAD_H

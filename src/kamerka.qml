@@ -16,8 +16,8 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-import QtQuick 1.1;
-import Effects 1.0;
+import QtQuick 2.0;
+import QtGraphicalEffects 1.0;
 
 
 Rectangle {
@@ -52,12 +52,6 @@ Rectangle {
 
 
     Rectangle {
-        effect: DropShadow {
-            blurRadius: 8;
-            offset.x: 0;
-            offset.y: 0;
-            color: "black";
-        }
         id: photo;
         x: -10;
         y: -10;
@@ -119,6 +113,12 @@ Rectangle {
         }
 
     }
+    DropShadow {
+        radius: 8;
+        color: "black";
+        source: photo;
+    }
+
     function setEffect(id) {
         page.currentEffect = id;
         page.applyEffect(id);
@@ -378,13 +378,6 @@ Rectangle {
         text: "5";
         visible: false;
 
-        effect: DropShadow {
-            blurRadius: 8;
-            offset.x: 0;
-            offset.y: 0;
-            color: "black";
-        }
-
         states: State {
             name: "down"; when: page.timeranim == true;
             PropertyChanges {
@@ -401,6 +394,11 @@ Rectangle {
             }
 
         }
+    }
+    DropShadow {
+        radius: 8;
+        color: "black";
+        source: timerText;
     }
 
     Text {

@@ -16,30 +16,28 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <KApplication>
-#include <KLocale>
-#include <KCmdLineArgs>
-#include <KAboutData>
+#include <KCoreAddons/KAboutData>
+#include <KLocalizedString>
 
 #include "mainwindow.h"
 
-#define VERSION "0.12"
+#define VERSION "0.19"
 
 int main(int argc, char *argv[]) {
-	printf("Kamerka version %s\n    Copyright (C) 2011-2014 Sebastian Krzyszkowiak\n", VERSION);
-	printf("    Kamerka comes with ABSOLUTELY NO WARRANTY.\n");
-	printf("    This is free software, and you are welcome to redistribute it\n");
-	printf("    under certain conditions; type `./kamerka --license' for details.\n\n");
-	fflush(stdout);
+    printf("Kamerka version %s\n    Copyright (C) 2011-2016 Sebastian Krzyszkowiak\n", VERSION);
+    printf("    Kamerka comes with ABSOLUTELY NO WARRANTY.\n");
+    printf("    This is free software, and you are welcome to redistribute it\n");
+    printf("    under certain conditions; type `./kamerka --license' for details.\n\n");
+    fflush(stdout);
 
-	QApplication::setGraphicsSystem("raster"); // improves performance a lot, should be default on modern systems
-	KAboutData aboutData("kamerka", 0, ki18n("Kamerka"), VERSION,
-											 ki18n("Simple photo taking application with fancy animated interface"),
-											 KAboutData::License_GPL, ki18n("Copyright (C) 2011-2014 Sebastian Krzyszkowiak") );
-	KCmdLineArgs::init(argc, argv, &aboutData);
-	KApplication a;
-	QIcon icon(":/icons/kamerka.png");
-	a.setWindowIcon(icon);
-	new MainWindow();
-	return a.exec();
+    QApplication a(argc, argv);
+    a.setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
+    KAboutData aboutData("kamerka", i18n("Kamerka"), VERSION,
+                         i18n("Simple photo taking application with fancy animated interface"),
+                         KAboutLicense::GPL, i18n("Copyright (C) 2011-2014 Sebastian Krzyszkowiak") );
+    KAboutData::setApplicationData(aboutData);
+    QIcon icon(":/icons/kamerka.png");
+    a.setWindowIcon(icon);
+    new MainWindow();
+    return a.exec();
 }

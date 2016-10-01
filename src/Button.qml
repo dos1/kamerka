@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-import QtQuick 1.0;
+import QtQuick 2.0;
 
 
 Rectangle {

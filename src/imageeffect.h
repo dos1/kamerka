@@ -23,40 +23,40 @@
 #include <QImage>
 
 class ImageEffect: public QObject{
-		Q_OBJECT
-		Q_ENUMS(Effect)
+    Q_OBJECT
+    Q_ENUMS(Effect)
 
-	public:
+public:
 
-		enum Effect {
-			Effect_None,
-			Effect_Grey,
-			Effect_Invert,
-			Effect_Equalize,
-			Effect_Smurf,
-			Effect_Implode,
-			Effect_Explode,
-			Effect_Charcoal,
-			Effect_Edge,
-			Effect_Emboss,
-			Effect_Swirl,
-			Effect_OilPaint,
-			Effect_Wave
-		};
+    enum Effect {
+        Effect_None,
+        Effect_Grey,
+        Effect_Invert,
+        Effect_Equalize,
+        Effect_Smurf,
+        Effect_Implode,
+        Effect_Explode,
+        Effect_Charcoal,
+        Effect_Edge,
+        Effect_Emboss,
+        Effect_Swirl,
+        Effect_OilPaint,
+        Effect_Wave
+    };
 
-		static void grey(QImage &image);
-		static void invert(QImage &image);
-		static void equalize(QImage &image);
-		static void smurf(QImage &image);
-		static void implode(QImage &image);
-		static void explode(QImage &image);
-		static void charcoal(QImage &image);
-		static void edge(QImage &image);
-		static void emboss(QImage &image);
-		static void swirl(QImage &image);
-		static void oilPaint(QImage &image);
-		static void wave(QImage &image);
-		static void applyEffect(QImage &image, int effect = Effect_None);
+    static void grey(QImage &image);
+    static void invert(QImage &image);
+    static void equalize(QImage &image);
+    static void smurf(QImage &image);
+    static void implode(QImage &image);
+    static void explode(QImage &image);
+    static void charcoal(QImage &image);
+    static void edge(QImage &image);
+    static void emboss(QImage &image);
+    static void swirl(QImage &image);
+    static void oilPaint(QImage &image);
+    static void wave(QImage &image);
+    static void applyEffect(QImage &image, int effect = Effect_None);
 
 };
 

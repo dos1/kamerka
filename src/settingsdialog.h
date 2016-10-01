@@ -16,9 +16,10 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#include <QtGui>
+#include <QtWidgets>
 #include <KLineEdit>
 #include <KConfigDialog>
+#include <KConfigSkeleton>
 #include <KUrlRequester>
 
 #ifndef SETTINGSDIALOG_H
@@ -26,20 +27,20 @@
 
 class SettingsDialog : public KConfigDialog
 {
-		Q_OBJECT
-	public:
-		explicit SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *config);
-	private:
-		KLineEdit *subdir;
-		KUrlRequester *urledit;
-		KConfigSkeleton *config;
-		QCheckBox *subdircheck;
-		QGroupBox *xdggroupbox;
-	signals:
+    Q_OBJECT
+public:
+    explicit SettingsDialog(QWidget *parent, QString name, KConfigSkeleton *config);
+private:
+    KLineEdit *subdir;
+    KUrlRequester *urledit;
+    KConfigSkeleton *config;
+    QCheckBox *subdircheck;
+    QGroupBox *xdggroupbox;
+signals:
 
-	public slots:
-		void updateUrl();
-		void checkDir();
+public slots:
+    void updateUrl();
+    void checkDir();
 };
 
 #endif // SETTINGSDIALOG_H
