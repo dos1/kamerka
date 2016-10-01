@@ -89,7 +89,7 @@ void MainWindow::showDirectory() {
 
 // slot for UI button
 void MainWindow::showConfiguration() {
-    KConfigDialog::showDialog("settings");
+    confdial->show();
 }
 
 // resize video widget together with window
@@ -111,7 +111,7 @@ void MainWindow::loadSettings() {
         //KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
         if (this->isVisible()) {
             dialoglabel->setText( i18n("Could not connect to V4L device!") );
-            //dialog->show();
+            kdialog->show();
         }
         else {
             KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
@@ -136,10 +136,11 @@ void MainWindow::tryVideoThread() {
             KMessageBox::error(this, i18n("Could not connect to V4L device!"), i18n("Error"), KMessageBox::Dangerous);
         }
         confdial->setFaceType(KConfigDialog::Plain);
-        KConfigDialog::showDialog("settings");
-        connect(confdial, SIGNAL(cancelClicked()), this, SLOT(close()));
-        connect(confdial, SIGNAL(closeClicked()), this, SLOT(close()));
-        connect(confdial, SIGNAL(okClicked()), this, SLOT(tryVideoThread()));
+        if (confdial->exec()) {
+            tryVideoThread();
+        } else {
+            close();
+        }
     }
     else {
         this->show();
@@ -152,9 +153,9 @@ void MainWindow::startedCapture(int width, int height) {
                     QString::number(width), QString::number(height));
     if ((width!=Settings::width()) || (height!=Settings::height())) {
         dialoglabel->setText(i18n("Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\nPlease check your configuration.", Settings::width(), Settings::height(), width, height));
-        //dialog->show();
+        kdialog->show();
     }
-    //else dialog->hide();
+    else kdialog->hide();
 }
 
 MainWindow::MainWindow() {
@@ -182,9 +183,13 @@ MainWindow::MainWindow() {
     videoViewer->ui = ui;
     videoViewer->show();
 
-    //QWidget *container = QWidget::createWindowContainer(ui, this);
-    //container->setStyleSheet("background-color: transparent");
-    this->setCentralWidget(ui);
+    QVBoxLayout *layout = new QVBoxLayout();
+    QWidget *widget = new QWidget(this);
+    widget->setLayout(layout);
+    layout->setSpacing(0);
+    layout->setContentsMargins(0,0,0,0);
+    widget->show();
+    this->setCentralWidget(widget);
 
     ui->rootContext()->setContextProperty("fileName", "qrc:/icons/kamerka.png");
     ui->setSource(QUrl("qrc:/qml/kamerka.qml"));
@@ -204,17 +209,23 @@ MainWindow::MainWindow() {
     // setup info dialog on top of screen
     kdialog = new KDialog( this );
     kdialog->setButtons( KDialog::Ok );
-    dialoglabel = new QLabel();
+    dialoglabel = new QLabel(kdialog);
     dialoglabel->setWordWrap(true);
     dialoglabel->setAlignment(Qt::AlignCenter);
     kdialog->setMainWidget( dialoglabel );
     kdialog->setStyleSheet("QDialog { background-color: rgba(64,64,64,64); border-bottom: 1px solid white; } QLabel { color: white; }");
     //dialog = ui->scene()->addWidget(kdialog);
     //dialog->hide();
+
     QGraphicsDropShadowEffect* shadow = new QGraphicsDropShadowEffect();
     shadow->setOffset(QPointF(0, 0));
     shadow->setBlurRadius(8);
-    //dialog->setGraphicsEffect(shadow);
+    kdialog->setGraphicsEffect(shadow);
+    kdialog->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Maximum);
+    //kdialog->show();
+    layout->addWidget(kdialog);
+    layout->addWidget(ui);
+
 
     // connect UI button signals to slots in this class
     connect(ui->rootObject(), SIGNAL(takePhoto()), this, SLOT(takePhoto()));
