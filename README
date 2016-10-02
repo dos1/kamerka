@@ -1,5 +1,12 @@
 Kamerka - take photos using your webcam and shiny animated QML interface.
 
-Kamerka is a Qt4 app that uses KDE4 libraries. It uses Video4Linux to get
+Kamerka is a Qt5 app that uses KF5 libraries. It uses Video4Linux to get
 images from a webcam and is able to save photos. The interface is based
 on QML and uses its possibilities to show an easy-to-use animated UI.
+
+Note:
+You need to have QImageBlitz built with Qt5. Most distributions provide
+it only in Qt4 version.
+
+You can get it from svn repo:
+  svn://anonsvn.kde.org/home/kde/trunk/kdesupport/qimageblitz
