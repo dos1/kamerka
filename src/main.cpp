@@ -24,7 +24,9 @@
 #define VERSION "0.19"
 
 int main(int argc, char *argv[]) {
-    printf("Kamerka version %s\n    Copyright (C) 2011-2016 Sebastian Krzyszkowiak\n", VERSION);
+    printf("Kamerka version %s\n", VERSION);
+    printf("    Copyright (C) 2011-2016 Sebastian Krzyszkowiak\n");
+    printf("                            https://dosowisko.net/\n");
     printf("    Kamerka comes with ABSOLUTELY NO WARRANTY.\n");
     printf("    This is free software, and you are welcome to redistribute it\n");
     printf("    under certain conditions; type `./kamerka --license' for details.\n\n");

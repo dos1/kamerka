@@ -80,6 +80,11 @@ Rectangle {
                 target: picture;
                 opacity: 1;
             }
+            PropertyChanges {
+                target: mousePhoto;
+                enabled: false;
+                cursorShape: Qt.ArrowCursor;
+            }
         }
 
         transitions: Transition {
@@ -91,6 +96,7 @@ Rectangle {
                 NumberAnimation { properties: "width,height,x,y,rotation"; duration: 1000; easing.type: Easing.OutQuad; }
                 NumberAnimation { duration: 1000; }
                 NumberAnimation { target: photo; property: "opacity"; duration: 1500; easing.type:Easing.InQuad; }
+                NumberAnimation { target: mousePhoto; properties: "enabled,cursorShape"; }
             }
 
         }
@@ -128,9 +134,9 @@ Rectangle {
         MouseArea {
             id: mousePhoto;
             anchors.fill: parent;
-            hoverEnabled: true;
-            cursorShape: Qt.PointingHandCursor;
             onClicked: openFile(fileName);
+            cursorShape: Qt.ArrowCursor;
+            enabled: false;
         }
     }
 
@@ -146,6 +152,8 @@ Rectangle {
         page.rand=Math.random()*60;
         picture.opacity=0;
         photo.opacity=1;
+        mousePhoto.enabled = true;
+        mousePhoto.cursorShape = Qt.PointingHandCursor;
     }
     function photoTaken() {
         take=true;
