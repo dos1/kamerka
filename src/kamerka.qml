@@ -40,6 +40,7 @@ Rectangle {
     signal showDirectory();
     signal showConfiguration();
     signal applyEffect(int efx);
+    signal openFile(string filename);
 
     id: page;
     color: "transparent";
@@ -123,6 +124,14 @@ Rectangle {
         source: photo;
         rotation: photo.rotation;
         opacity: photo.opacity;
+
+        MouseArea {
+            id: mousePhoto;
+            anchors.fill: parent;
+            hoverEnabled: true;
+            cursorShape: Qt.PointingHandCursor;
+            onClicked: openFile(fileName);
+        }
     }
 
     function setEffect(id) {

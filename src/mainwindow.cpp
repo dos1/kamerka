@@ -29,6 +29,7 @@
 #include <QScriptValueIterator>
 #include <KDeclarative/KDeclarative>
 #include <QUrl>
+#include <QDesktopServices>
 
 #include "mainwindow.h"
 #include "settings.h"
@@ -125,6 +126,10 @@ void MainWindow::loadSettings() {
 
 void MainWindow::applyEffect(int effect) {
     videoViewer->thread.effect = effect;
+}
+
+void MainWindow::openFile(QString filename) {
+    QDesktopServices::openUrl(filename);
 }
 
 void MainWindow::tryVideoThread() {
@@ -233,6 +238,7 @@ MainWindow::MainWindow() {
     connect(ui->rootObject(), SIGNAL(showDirectory()), this, SLOT(showDirectory()));
     connect(ui->rootObject(), SIGNAL(showConfiguration()), this, SLOT(showConfiguration()));
     connect(ui->rootObject(), SIGNAL(applyEffect(int)), this, SLOT(applyEffect(int)));
+    connect(ui->rootObject(), SIGNAL(openFile(QString)), this, SLOT(openFile(QString)));
 
     connect(&(videoViewer->thread), SIGNAL(startedCapture(int, int)), this, SLOT(startedCapture(int, int)));
 

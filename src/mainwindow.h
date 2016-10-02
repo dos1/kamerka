@@ -57,5 +57,6 @@ public slots:
     void loadSettings();
     void applyEffect(int effect);
     void startedCapture(int width, int height);
+    void openFile(QString filename);
 };
 
