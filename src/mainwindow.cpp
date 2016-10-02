@@ -82,10 +82,7 @@ void MainWindow::timerCounter(int count) {
 
 // slot for UI button - open file manager
 void MainWindow::showDirectory() {
-    QDir dir;
-    dir.mkpath(Settings::photodir());
-    dir.setPath(Settings::photodir());
-    QProcess::startDetached("xdg-open", QStringList() << dir.absolutePath());
+    openFile(Settings::photodir());
 }
 
 // slot for UI button
