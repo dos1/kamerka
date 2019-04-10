@@ -1,4 +1,41 @@
+2019-04-10  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
+  po/ru.po, po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po,
+  po/sr@latin.po, po/uk.po, po/zh_CN.po, po/zh_TW.po: update translations
+
+2016-10-02  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * src/kamerka.qml, src/main.cpp: prevent preview from being clicked when
+  hidden
+
+  * src/kamerka.qml, src/mainwindow.cpp, src/mainwindow.h: add ability to open
+  the photo by clicking on the preview
+
+  * src/mainwindow.cpp, src/videowidget.cpp, src/videowidget.h: wait 3 frames
+  before taking photo  useful on laptops, so the white screen can work like a
+  flash
+
+  * src/kamerka.kcfg, src/settingsdialog.cpp: config: flip defaults for
+  normalization and aspect ratio lock
+
+2016-10-01  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * CMakeLists.txt, src/CMakeLists.txt: cmake: KDE4Support is deprecated; use
+  KDELibs4Support
+
+  * CMakeLists.txt, modules/FindQImageBlitz.cmake, src/Button.qml,
+  src/CMakeLists.txt, src/capturethread.cpp, src/capturethread.h,
+  src/imageeffect.cpp, src/imageeffect.h, src/kamerka.qml, src/main.cpp,
+  src/mainwindow.cpp, src/mainwindow.h, src/settingsdialog.cpp,
+  src/settingsdialog.h, src/videowidget.cpp, src/videowidget.h: initial Qt5/KF5
+  port  Still left TODO: - fix top bar with status - fix sounds - fix
+  SettingsDialog signals when run due to incorrect config - don't use
+  kdelibs4support
+
 2015-06-28  Sebastian Krzyszkowiak <dos@dosowisko.net>
+
+  * ChangeLog, TODO, src/main.cpp: This is Kamerka 0.12 
 
   * po/cs.po, po/de.po, po/es.po, po/kamerka.pot, po/nl.po, po/pl.po, po/pt.po,
   po/ru.po, po/sr.po, po/sr@ijekavian.po, po/sr@ijekavianlatin.po,
@@ -142,11 +179,11 @@
 
 2012-07-26  Michael Palimaka <kensington@gentoo.org>
 
-  * po/cs.po, po/de.po, po/es.po, po/kamerka_cs.po, po/kamerka_de.po,
-  po/kamerka_es.po, po/kamerka_nl.po, po/kamerka_pl.po, po/kamerka_sr.po,
-  po/kamerka_sr@ijekavian.po, po/kamerka_sr@ijekavianlatin.po,
-  po/kamerka_sr@latin.po, po/kamerka_zh_TW.po, po/nl.po, po/pl.po, po/sr.po,
-  po/sr@ijekavian.po, po/sr@ijekavianlatin.po, po/sr@latin.po, po/zh_TW.po:
+  * po/{kamerka_cs.po => cs.po}, po/{kamerka_de.po => de.po}, po/{kamerka_es.po
+  => es.po}, po/{kamerka_nl.po => nl.po}, po/{kamerka_pl.po => pl.po},
+  po/{kamerka_sr.po => sr.po}, po/{kamerka_sr@ijekavian.po => sr@ijekavian.po},
+  po/{kamerka_sr@ijekavianlatin.po => sr@ijekavianlatin.po},
+  po/{kamerka_sr@latin.po => sr@latin.po}, po/{kamerka_zh_TW.po => zh_TW.po}:
   Rename PO files as per KDE convention.
 
 2012-03-03  Sebastian Krzyszkowiak <dos@dosowisko.net>
@@ -262,15 +299,15 @@
 
 2011-06-14  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
-  * src/CMakeLists.txt, src/kamerka.kcfg, src/kamerka.kcfgc,
-  src/mainwindow.cpp, src/settings.kcfgc, src/settingsdialog.cpp: various tries
+  * src/CMakeLists.txt, src/kamerka.kcfg, src/mainwindow.cpp,
+  src/{kamerka.kcfgc => settings.kcfgc}, src/settingsdialog.cpp: various tries
   ;x
 
   * src/mainwindow.cpp, src/settingsdialog.cpp, src/settingsdialog.h: move
   attaching settings dialog back to MainWindow class
 
-  * src/CMakeLists.txt, src/KamerkaSettings.kcfg, src/KamerkaSettings.kcfgc,
-  src/kamerka.kcfg, src/kamerka.kcfgc, src/mainwindow.cpp,
+  * src/CMakeLists.txt, src/{KamerkaSettings.kcfg => kamerka.kcfg},
+  src/{KamerkaSettings.kcfgc => kamerka.kcfgc}, src/mainwindow.cpp,
   src/settingsdialog.cpp, src/settingsdialog.h: move settings dialog to its own
   class
 
@@ -326,7 +363,7 @@
   * src/capturethread.cpp, src/main.cpp, src/videowidget.cpp: cosmetics in
   formatting
 
-  * ChangeLog, NEWS, debian/rules, debian/watch, tools/gitlog2changelog.py:
+  * NEWS => ChangeLog, debian/rules, debian/watch, tools/gitlog2changelog.py:
   little fixes for correct Debian packaging
 
   * src/kamerka.qrc, src/main.cpp, src/mainwindow.cpp, src/videowidget.cpp:
@@ -369,9 +406,8 @@
 
 2011-06-06  Sebastian Krzyszkowiak <dos@dosowisko.net>
 
-  * NEWS, po/extract-messages.sh, tools/extract-messages.sh,
-  tools/gitlog2changelog.py: add gitlog2changelog script (also, add "tools"
-  folder for such usefull scripts)
+  * NEWS, {po => tools}/extract-messages.sh, tools/gitlog2changelog.py: add
+  gitlog2changelog script (also, add "tools" folder for such usefull scripts)
 
   * data/kamerka.1, data/kamerka.desktop, src/main.cpp: bump version number to
   testing 0.7 Odd minor numbers are testing, even are stable :)
@@ -428,16 +464,17 @@
   src/mainwindow.cpp, src/mainwindow.h, src/videowidget.cpp, src/videowidget.h:
   better wording on GPL2+ license in code
 
-  * Button.qml, CMakeLists.txt, camera_click.ogg, capturethread.cpp,
-  capturethread.h, data/CMakeLists.txt, data/camera_click.ogg,
-  data/kamerka.desktop, data/kamerka.notifyrc, data/kamerka.png,
-  data/timer.ogg, extract-messages.sh, kamerka.desktop, kamerka.notifyrc,
-  kamerka.png, kamerka.pot, kamerka.qml, kamerka.qrc, main.cpp, mainwindow.cpp,
-  mainwindow.h, po/extract-messages.sh, po/kamerka.pot, po/kamerka_pl.po,
-  src/Button.qml, src/CMakeLists.txt, src/capturethread.cpp,
-  src/capturethread.h, src/kamerka.qml, src/kamerka.qrc, src/main.cpp,
-  src/mainwindow.cpp, src/mainwindow.h, src/videowidget.cpp, src/videowidget.h,
-  timer.ogg, videowidget.cpp, videowidget.h: reorganize source directories
+  * CMakeLists.txt, data/CMakeLists.txt, camera_click.ogg =>
+  data/camera_click.ogg, kamerka.desktop => data/kamerka.desktop,
+  kamerka.notifyrc => data/kamerka.notifyrc, kamerka.png => data/kamerka.png,
+  timer.ogg => data/timer.ogg, extract-messages.sh => po/extract-messages.sh,
+  kamerka.pot => po/kamerka.pot, po/kamerka_pl.po, Button.qml =>
+  src/Button.qml, src/CMakeLists.txt, capturethread.cpp =>
+  src/capturethread.cpp, capturethread.h => src/capturethread.h, kamerka.qml =>
+  src/kamerka.qml, kamerka.qrc => src/kamerka.qrc, main.cpp => src/main.cpp,
+  mainwindow.cpp => src/mainwindow.cpp, mainwindow.h => src/mainwindow.h,
+  videowidget.cpp => src/videowidget.cpp, videowidget.h => src/videowidget.h:
+  reorganize source directories
 
   * capturethread.cpp, videowidget.cpp: cosmetics
 
@@ -446,7 +483,7 @@
   * CMakeLists.txt, TODO, kamerka.desktop, mainwindow.cpp, videowidget.cpp:
   make "make install" working
 
-  * kamerka.pot, mainwindow.cpp, po/kamerka.pot, po/kamerka_pl.po: update
+  * po/kamerka.pot => kamerka.pot, mainwindow.cpp, po/kamerka_pl.po: update
   translations with QML strings (dirty hack :()
 
   * CMakeLists.txt, extract-messages.sh, po/CMakeLists.txt, po/kamerka.pot:

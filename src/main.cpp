@@ -21,11 +21,11 @@
 
 #include "mainwindow.h"
 
-#define VERSION "0.19"
+#define VERSION "0.20"
 
 int main(int argc, char *argv[]) {
     printf("Kamerka version %s\n", VERSION);
-    printf("    Copyright (C) 2011-2016 Sebastian Krzyszkowiak\n");
+    printf("    Copyright (C) 2011-2019 Sebastian Krzyszkowiak\n");
     printf("                            https://dosowisko.net/\n");
     printf("    Kamerka comes with ABSOLUTELY NO WARRANTY.\n");
     printf("    This is free software, and you are welcome to redistribute it\n");
