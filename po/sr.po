@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2015-06-28 21:40+0200\n"
+"POT-Creation-Date: 2019-04-10 21:34+0200\n"
 "PO-Revision-Date: 2014-03-27 12:46+0100\n"
 "Last-Translator: Mladen Pejaković <pejakm@autistici.org>\n"
 "Language-Team: Serbian <kde-i18n-sr@lists.kde.org>\n"
@@ -18,116 +18,116 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: src/kamerka.qml:225
+#: src/kamerka.qml:248
 msgid "Take a photo"
 msgstr "Фотографиши"
 
-#: src/kamerka.qml:240 src/settingsdialog.cpp:155
+#: src/kamerka.qml:263 src/settingsdialog.cpp:156
 msgid "Burst mode"
 msgstr "Режим узастопног окидања"
 
-#: src/kamerka.qml:263 src/settingsdialog.cpp:143
+#: src/kamerka.qml:286 src/settingsdialog.cpp:144
 msgid "Self-timer"
 msgstr "Самоокидач"
 
-#: src/kamerka.qml:279
+#: src/kamerka.qml:302
 msgid "Hide effects"
 msgstr "Сакриј ефекте"
 
-#: src/kamerka.qml:279
+#: src/kamerka.qml:302
 msgid "Show effects"
 msgstr "Прикажи ефекте"
 
-#: src/kamerka.qml:295
+#: src/kamerka.qml:318
 msgid "Open directory"
 msgstr "Отвори фасциклу"
 
-#: src/kamerka.qml:310
+#: src/kamerka.qml:333
 msgid "Configure"
 msgstr "Подеси"
 
-#: src/kamerka.qml:509
+#: src/kamerka.qml:537
 msgid "No Effect"
 msgstr "Без ефекта"
 
-#: src/kamerka.qml:525
+#: src/kamerka.qml:553
 msgid "Grey"
 msgstr "Сивило"
 
-#: src/kamerka.qml:541
+#: src/kamerka.qml:569
 msgid "Invert"
 msgstr "Изврнуто"
 
-#: src/kamerka.qml:557
+#: src/kamerka.qml:585
 msgid "Equalize"
 msgstr "Уједначено"
 
-#: src/kamerka.qml:573
+#: src/kamerka.qml:601
 msgid "Smurf"
 msgstr "Штрумф"
 
-#: src/kamerka.qml:588
+#: src/kamerka.qml:616
 msgid "Implode"
 msgstr "Имплозија"
 
-#: src/kamerka.qml:603
+#: src/kamerka.qml:631
 msgid "Explode"
 msgstr "Експлозија"
 
-#: src/kamerka.qml:618
+#: src/kamerka.qml:646
 msgid "Charcoal"
 msgstr "Угаљ"
 
-#: src/kamerka.qml:633
+#: src/kamerka.qml:661
 msgid "Edge"
 msgstr "Ивице"
 
-#: src/kamerka.qml:648
+#: src/kamerka.qml:676
 msgid "Emboss"
 msgstr "Уклесано"
 
-#: src/kamerka.qml:663
+#: src/kamerka.qml:691
 msgid "Swirl"
 msgstr "Ковитлац"
 
-#: src/kamerka.qml:678
+#: src/kamerka.qml:706
 msgid "Oil Paint"
 msgstr "Уље на платну"
 
-#: src/kamerka.qml:693
+#: src/kamerka.qml:721
 msgid "Wave"
 msgstr "Талас"
 
-#: src/main.cpp:36
+#: src/main.cpp:37
 msgid "Kamerka"
 msgstr "Камерка"
 
-#: src/main.cpp:37
+#: src/main.cpp:38
 msgid "Simple photo taking application with fancy animated interface"
 msgstr ""
 "Једноставна апликација за хватање фотографија са лепим анимираним сучељем"
 
-#: src/main.cpp:38
+#: src/main.cpp:39
 msgid "Copyright (C) 2011-2014 Sebastian Krzyszkowiak"
 msgstr "© 2011-2014 Себастијан Кшишковијак (Sebastian Krzyszkowiak)"
 
-#: src/mainwindow.cpp:36
+#: src/mainwindow.cpp:46
 msgid "i18n() takes at least one argument"
 msgstr "i18n() захтева бар један аргумент"
 
-#: src/mainwindow.cpp:54
+#: src/mainwindow.cpp:64
 msgid "Could not load QML interface!"
 msgstr "Не могу да учитам QML сучеље!"
 
-#: src/mainwindow.cpp:54 src/mainwindow.cpp:129 src/mainwindow.cpp:148
+#: src/mainwindow.cpp:64 src/mainwindow.cpp:115 src/mainwindow.cpp:138
 msgid "Error"
 msgstr "Грешка"
 
-#: src/mainwindow.cpp:125 src/mainwindow.cpp:129 src/mainwindow.cpp:148
+#: src/mainwindow.cpp:111 src/mainwindow.cpp:115 src/mainwindow.cpp:138
 msgid "Could not connect to V4L device!"
 msgstr "Не могу да се повежем са В4Л уређајем!"
 
-#: src/mainwindow.cpp:177
+#: src/mainwindow.cpp:157
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
@@ -135,158 +135,154 @@ msgstr ""
 "Захтевана резолуција (%1x%2) није доступна. Драјвер је користио %3x%4.\n"
 "Проверите ваше поставке."
 
-#: src/settingsdialog.cpp:42
+#: src/settingsdialog.cpp:43
 msgid "Selected path does not exists. Do you want to create it?"
 msgstr "Изабрана путања не постоји. Желите ли да је направите?"
 
-#: src/settingsdialog.cpp:59
+#: src/settingsdialog.cpp:60
 msgid "Device node:"
 msgstr "Чвор уређаја:"
 
-#: src/settingsdialog.cpp:66
+#: src/settingsdialog.cpp:67
 msgid "x"
 msgstr "x"
 
-#: src/settingsdialog.cpp:71
+#: src/settingsdialog.cpp:72
 msgid "px"
 msgstr "px"
 
-#: src/settingsdialog.cpp:72
+#: src/settingsdialog.cpp:73
 msgid "Resolution:"
 msgstr "Резолуција"
 
-#: src/settingsdialog.cpp:77
+#: src/settingsdialog.cpp:78
 msgid "Disabled"
 msgstr "Онемогућено"
 
-#: src/settingsdialog.cpp:78
+#: src/settingsdialog.cpp:79
 msgid " fps"
 msgstr " fps"
 
-#: src/settingsdialog.cpp:80
+#: src/settingsdialog.cpp:81
 msgid "Framerate limit:"
 msgstr "Ограничење брзине кадрова:"
 
-#: src/settingsdialog.cpp:82
-msgid "Enhance contrast"
-msgstr "Побољшај контраст"
-
-#: src/settingsdialog.cpp:85
+#: src/settingsdialog.cpp:83
 msgid "Lock aspect ratio"
 msgstr "Задржи размеру"
 
-#: src/settingsdialog.cpp:88
+#: src/settingsdialog.cpp:86
+msgid "Enhance contrast"
+msgstr "Побољшај контраст"
+
+#: src/settingsdialog.cpp:89
 msgid "Mirror output"
 msgstr "Пресликано"
 
-#: src/settingsdialog.cpp:91
+#: src/settingsdialog.cpp:92
 msgid "Flip output"
 msgstr "Обрнуто"
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:97
 #, fuzzy
 msgid "Image Settings"
 msgstr "Поставке камере"
 
-#: src/settingsdialog.cpp:106
+#: src/settingsdialog.cpp:107
 msgid "Brightness:"
 msgstr ""
 
-#: src/settingsdialog.cpp:115
+#: src/settingsdialog.cpp:116
 msgid "Contrast:"
 msgstr ""
 
-#: src/settingsdialog.cpp:124
+#: src/settingsdialog.cpp:125
 msgid "Saturation:"
 msgstr ""
 
-#: src/settingsdialog.cpp:133
+#: src/settingsdialog.cpp:134
 msgid "Hue:"
 msgstr ""
 
-#: src/settingsdialog.cpp:137
+#: src/settingsdialog.cpp:138
 msgid "Camera"
 msgstr "Камера"
 
-#: src/settingsdialog.cpp:137
+#: src/settingsdialog.cpp:138
 msgid "Camera settings"
 msgstr "Поставке камере"
 
-#: src/settingsdialog.cpp:148 src/settingsdialog.cpp:166
+#: src/settingsdialog.cpp:149 src/settingsdialog.cpp:167
 msgid " seconds"
 msgstr " секунди"
 
-#: src/settingsdialog.cpp:151
+#: src/settingsdialog.cpp:152
 msgid "Self-timer timeout:"
 msgstr "Време самоокидача:"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:163
 msgid "Number of photos:"
 msgstr "Број фотографија:"
 
-#: src/settingsdialog.cpp:169
+#: src/settingsdialog.cpp:170
 msgid "Delay between photos:"
 msgstr "Застој окидања:"
 
-#: src/settingsdialog.cpp:173
+#: src/settingsdialog.cpp:174
 msgid "Capture"
 msgstr "Хватање"
 
-#: src/settingsdialog.cpp:181
+#: src/settingsdialog.cpp:182
 msgid "Use default pictures directory"
 msgstr "Користи подразумевану фасциклу слика"
 
-#: src/settingsdialog.cpp:188
+#: src/settingsdialog.cpp:189
 msgid "Use subdirectory:"
 msgstr "Отвори подфасциклу"
 
-#: src/settingsdialog.cpp:201
+#: src/settingsdialog.cpp:202
 msgid "Photo directory:"
 msgstr "Фасцикла фотографија:"
 
-#: src/settingsdialog.cpp:203
+#: src/settingsdialog.cpp:204
 msgid "Storage"
 msgstr "Спремиште"
 
-#: src/settingsdialog.cpp:203
+#: src/settingsdialog.cpp:204
 msgid "Photo storage"
 msgstr "Спремиште фотографија"
 
-#: src/settingsdialog.cpp:209
+#: src/settingsdialog.cpp:210
 msgid "Play sound on taking photo"
 msgstr "Пусти звук при фотографисању"
 
-#: src/settingsdialog.cpp:212
+#: src/settingsdialog.cpp:213
 msgid "Play timer sounds"
 msgstr "Пуштај звуке тајмера"
 
-#: src/settingsdialog.cpp:215
+#: src/settingsdialog.cpp:216
 msgid "Show notification on taking photo"
 msgstr "Прикажи обавештење при фотографисању"
 
-#: src/settingsdialog.cpp:219
+#: src/settingsdialog.cpp:220
 msgid "Behaviour"
 msgstr "Понашање"
 
-#: src/videowidget.cpp:96
+#: src/videowidget.cpp:100
 msgid "Starting up webcam..."
 msgstr "Покрећем веб-камеру..."
 
-#: src/videowidget.cpp:162
+#: src/videowidget.cpp:170
 msgid "Photo has been stored in file %1"
 msgstr "Фотографија је смештена у фајл %1"
 
-#: src/videowidget.cpp:167
+#: src/videowidget.cpp:175
+msgid "Open"
+msgstr ""
+
+#: src/videowidget.cpp:175
 msgid "Show in directory"
 msgstr "Покажи у фасцикли"
-
-#: src/videowidget.cpp:167
-msgid "Open in GIMP"
-msgstr "Отвори у Гимпу"
-
-#: src/videowidget.cpp:167
-msgid "Open in Inkscape"
-msgstr "Отвори у Инкскејпу"
 
 #: tools/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -297,3 +293,9 @@ msgstr "Младен Пејаковић"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pejakm@autistici.org"
+
+#~ msgid "Open in GIMP"
+#~ msgstr "Отвори у Гимпу"
+
+#~ msgid "Open in Inkscape"
+#~ msgstr "Отвори у Инкскејпу"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
-"POT-Creation-Date: 2015-06-28 21:40+0200\n"
+"POT-Creation-Date: 2019-04-10 21:34+0200\n"
 "PO-Revision-Date: 2011-08-07 23:05+0200\n"
 "Last-Translator: Kenny Verstraete <verstraete_kenny@skynet.be>\n"
 "Language-Team: Dutch <kde-i18n-doc@kde.org>\n"
@@ -17,116 +17,116 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/kamerka.qml:225
+#: src/kamerka.qml:248
 msgid "Take a photo"
 msgstr "Neem een foto"
 
-#: src/kamerka.qml:240 src/settingsdialog.cpp:155
+#: src/kamerka.qml:263 src/settingsdialog.cpp:156
 msgid "Burst mode"
 msgstr ""
 
-#: src/kamerka.qml:263 src/settingsdialog.cpp:143
+#: src/kamerka.qml:286 src/settingsdialog.cpp:144
 msgid "Self-timer"
 msgstr "Zelfontspanner"
 
-#: src/kamerka.qml:279
+#: src/kamerka.qml:302
 msgid "Hide effects"
 msgstr ""
 
-#: src/kamerka.qml:279
+#: src/kamerka.qml:302
 msgid "Show effects"
 msgstr ""
 
-#: src/kamerka.qml:295
+#: src/kamerka.qml:318
 msgid "Open directory"
 msgstr "Map openen"
 
-#: src/kamerka.qml:310
+#: src/kamerka.qml:333
 msgid "Configure"
 msgstr "Configureer"
 
-#: src/kamerka.qml:509
+#: src/kamerka.qml:537
 msgid "No Effect"
 msgstr ""
 
-#: src/kamerka.qml:525
+#: src/kamerka.qml:553
 msgid "Grey"
 msgstr ""
 
-#: src/kamerka.qml:541
+#: src/kamerka.qml:569
 msgid "Invert"
 msgstr ""
 
-#: src/kamerka.qml:557
+#: src/kamerka.qml:585
 msgid "Equalize"
 msgstr ""
 
-#: src/kamerka.qml:573
+#: src/kamerka.qml:601
 msgid "Smurf"
 msgstr ""
 
-#: src/kamerka.qml:588
+#: src/kamerka.qml:616
 msgid "Implode"
 msgstr ""
 
-#: src/kamerka.qml:603
+#: src/kamerka.qml:631
 msgid "Explode"
 msgstr ""
 
-#: src/kamerka.qml:618
+#: src/kamerka.qml:646
 msgid "Charcoal"
 msgstr ""
 
-#: src/kamerka.qml:633
+#: src/kamerka.qml:661
 msgid "Edge"
 msgstr ""
 
-#: src/kamerka.qml:648
+#: src/kamerka.qml:676
 msgid "Emboss"
 msgstr ""
 
-#: src/kamerka.qml:663
+#: src/kamerka.qml:691
 msgid "Swirl"
 msgstr ""
 
-#: src/kamerka.qml:678
+#: src/kamerka.qml:706
 msgid "Oil Paint"
 msgstr ""
 
-#: src/kamerka.qml:693
+#: src/kamerka.qml:721
 msgid "Wave"
 msgstr ""
 
-#: src/main.cpp:36
+#: src/main.cpp:37
 msgid "Kamerka"
 msgstr "Kamerka"
 
-#: src/main.cpp:37
+#: src/main.cpp:38
 msgid "Simple photo taking application with fancy animated interface"
 msgstr "Simpele toepassing om foto's te nemen met een geanimeerde interface"
 
-#: src/main.cpp:38
+#: src/main.cpp:39
 #, fuzzy
 msgid "Copyright (C) 2011-2014 Sebastian Krzyszkowiak"
 msgstr "Copyright (c) 2011 Sebastian Krzyszkowiak"
 
-#: src/mainwindow.cpp:36
+#: src/mainwindow.cpp:46
 msgid "i18n() takes at least one argument"
 msgstr "i18n() neemt op zijn minst één argument"
 
-#: src/mainwindow.cpp:54
+#: src/mainwindow.cpp:64
 msgid "Could not load QML interface!"
 msgstr "Kon QML interface niet laden!"
 
-#: src/mainwindow.cpp:54 src/mainwindow.cpp:129 src/mainwindow.cpp:148
+#: src/mainwindow.cpp:64 src/mainwindow.cpp:115 src/mainwindow.cpp:138
 msgid "Error"
 msgstr "Fout"
 
-#: src/mainwindow.cpp:125 src/mainwindow.cpp:129 src/mainwindow.cpp:148
+#: src/mainwindow.cpp:111 src/mainwindow.cpp:115 src/mainwindow.cpp:138
 msgid "Could not connect to V4L device!"
 msgstr "Kon niet verbinden met V4L apparaat!"
 
-#: src/mainwindow.cpp:177
+#: src/mainwindow.cpp:157
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
@@ -135,159 +135,155 @@ msgstr ""
 "in de plaats.\n"
 "Kijk uw configuratie na."
 
-#: src/settingsdialog.cpp:42
+#: src/settingsdialog.cpp:43
 msgid "Selected path does not exists. Do you want to create it?"
 msgstr "Geselecteerde pad bestaat niet. Wilt u het nu aanmaken?"
 
-#: src/settingsdialog.cpp:59
+#: src/settingsdialog.cpp:60
 msgid "Device node:"
 msgstr "Aankoppelingspunt apparaat:"
 
-#: src/settingsdialog.cpp:66
+#: src/settingsdialog.cpp:67
 msgid "x"
 msgstr "x"
 
-#: src/settingsdialog.cpp:71
+#: src/settingsdialog.cpp:72
 msgid "px"
 msgstr "px"
 
-#: src/settingsdialog.cpp:72
+#: src/settingsdialog.cpp:73
 msgid "Resolution:"
 msgstr "Resolutie:"
 
-#: src/settingsdialog.cpp:77
+#: src/settingsdialog.cpp:78
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
-#: src/settingsdialog.cpp:78
+#: src/settingsdialog.cpp:79
 msgid " fps"
 msgstr " fps"
 
-#: src/settingsdialog.cpp:80
+#: src/settingsdialog.cpp:81
 msgid "Framerate limit:"
 msgstr "Framerate limiet:"
 
-#: src/settingsdialog.cpp:82
-msgid "Enhance contrast"
-msgstr ""
-
-#: src/settingsdialog.cpp:85
+#: src/settingsdialog.cpp:83
 msgid "Lock aspect ratio"
 msgstr ""
 
-#: src/settingsdialog.cpp:88
+#: src/settingsdialog.cpp:86
+msgid "Enhance contrast"
+msgstr ""
+
+#: src/settingsdialog.cpp:89
 msgid "Mirror output"
 msgstr ""
 
-#: src/settingsdialog.cpp:91
+#: src/settingsdialog.cpp:92
 msgid "Flip output"
 msgstr ""
 
-#: src/settingsdialog.cpp:96
+#: src/settingsdialog.cpp:97
 #, fuzzy
 msgid "Image Settings"
 msgstr "Camera instellingen"
 
-#: src/settingsdialog.cpp:106
+#: src/settingsdialog.cpp:107
 msgid "Brightness:"
 msgstr ""
 
-#: src/settingsdialog.cpp:115
+#: src/settingsdialog.cpp:116
 msgid "Contrast:"
 msgstr ""
 
-#: src/settingsdialog.cpp:124
+#: src/settingsdialog.cpp:125
 msgid "Saturation:"
 msgstr ""
 
-#: src/settingsdialog.cpp:133
+#: src/settingsdialog.cpp:134
 msgid "Hue:"
 msgstr ""
 
-#: src/settingsdialog.cpp:137
+#: src/settingsdialog.cpp:138
 msgid "Camera"
 msgstr "Camera"
 
-#: src/settingsdialog.cpp:137
+#: src/settingsdialog.cpp:138
 msgid "Camera settings"
 msgstr "Camera instellingen"
 
-#: src/settingsdialog.cpp:148 src/settingsdialog.cpp:166
+#: src/settingsdialog.cpp:149 src/settingsdialog.cpp:167
 msgid " seconds"
 msgstr ""
 
-#: src/settingsdialog.cpp:151
+#: src/settingsdialog.cpp:152
 #, fuzzy
 msgid "Self-timer timeout:"
 msgstr "Zelfontspanner"
 
-#: src/settingsdialog.cpp:162
+#: src/settingsdialog.cpp:163
 msgid "Number of photos:"
 msgstr ""
 
-#: src/settingsdialog.cpp:169
+#: src/settingsdialog.cpp:170
 msgid "Delay between photos:"
 msgstr ""
 
-#: src/settingsdialog.cpp:173
+#: src/settingsdialog.cpp:174
 msgid "Capture"
 msgstr ""
 
-#: src/settingsdialog.cpp:181
+#: src/settingsdialog.cpp:182
 msgid "Use default pictures directory"
 msgstr "Gebruik de standaardmap voor afbeeldingen"
 
-#: src/settingsdialog.cpp:188
+#: src/settingsdialog.cpp:189
 msgid "Use subdirectory:"
 msgstr "Gebruik submap:"
 
-#: src/settingsdialog.cpp:201
+#: src/settingsdialog.cpp:202
 msgid "Photo directory:"
 msgstr "fotomap:"
 
-#: src/settingsdialog.cpp:203
+#: src/settingsdialog.cpp:204
 msgid "Storage"
 msgstr "Opslag"
 
-#: src/settingsdialog.cpp:203
+#: src/settingsdialog.cpp:204
 msgid "Photo storage"
 msgstr "Foto opslag"
 
-#: src/settingsdialog.cpp:209
+#: src/settingsdialog.cpp:210
 msgid "Play sound on taking photo"
 msgstr "Speel geluid af bij het nemen van een foto"
 
-#: src/settingsdialog.cpp:212
+#: src/settingsdialog.cpp:213
 msgid "Play timer sounds"
 msgstr "Speel timer geluiden af"
 
-#: src/settingsdialog.cpp:215
+#: src/settingsdialog.cpp:216
 msgid "Show notification on taking photo"
 msgstr "Toon notificatie bij het nemen van een foto"
 
-#: src/settingsdialog.cpp:219
+#: src/settingsdialog.cpp:220
 msgid "Behaviour"
 msgstr "Gedrag"
 
-#: src/videowidget.cpp:96
+#: src/videowidget.cpp:100
 msgid "Starting up webcam..."
 msgstr "Webcam aan het starten..."
 
-#: src/videowidget.cpp:162
+#: src/videowidget.cpp:170
 msgid "Photo has been stored in file %1"
 msgstr "Foto is opgeslagen in bestand %1"
 
-#: src/videowidget.cpp:167
+#: src/videowidget.cpp:175
+msgid "Open"
+msgstr ""
+
+#: src/videowidget.cpp:175
 msgid "Show in directory"
 msgstr "Geef weer in map"
-
-#: src/videowidget.cpp:167
-msgid "Open in GIMP"
-msgstr "Openen in GIMP"
-
-#: src/videowidget.cpp:167
-msgid "Open in Inkscape"
-msgstr "Openen in Inkscape"
 
 #: tools/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -298,6 +294,12 @@ msgstr "Kenny Verstraete"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "verstraete_kenny@skynet.be"
+
+#~ msgid "Open in GIMP"
+#~ msgstr "Openen in GIMP"
+
+#~ msgid "Open in Inkscape"
+#~ msgstr "Openen in Inkscape"
 
 #~ msgid "Less"
 #~ msgstr "Minder"
