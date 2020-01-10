@@ -3,29 +3,30 @@
 #
 # Urs Fleisch <dos@dosowisko.net>, 2011.
 # Mladen Pejaković <pejakm@gmail.com>, 2011.
+# Olesya Gerasimenko <gammaray@basealt.ru>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: Kamerka\n"
 "Report-Msgid-Bugs-To: dos@dosowisko.net\n"
 "POT-Creation-Date: 2019-04-10 21:34+0200\n"
-"PO-Revision-Date: 2014-04-26 00:24+0300\n"
-"Last-Translator: Сергей Головко <cappelikan@gmail.com>\n"
-"Language-Team: Russian <kde-i18n-ru@lists.kde.org>\n"
+"PO-Revision-Date: 2020-01-10 18:06MSK\n"
+"Last-Translator: Olesya Gerasimenko <gammaray@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: src/kamerka.qml:248
 msgid "Take a photo"
-msgstr "Сфотографируйте"
+msgstr "Сделать снимок"
 
 #: src/kamerka.qml:263 src/settingsdialog.cpp:156
 msgid "Burst mode"
-msgstr ""
+msgstr "Серия снимков"
 
 #: src/kamerka.qml:286 src/settingsdialog.cpp:144
 msgid "Self-timer"
@@ -33,11 +34,11 @@ msgstr "Таймер"
 
 #: src/kamerka.qml:302
 msgid "Hide effects"
-msgstr "Скрыть еффекты"
+msgstr "Скрыть эффекты"
 
 #: src/kamerka.qml:302
 msgid "Show effects"
-msgstr "Показать еффекты"
+msgstr "Показать эффекты"
 
 #: src/kamerka.qml:318
 msgid "Open directory"
@@ -45,59 +46,59 @@ msgstr "Открыть папку"
 
 #: src/kamerka.qml:333
 msgid "Configure"
-msgstr "Конфигурация"
+msgstr "Настройка"
 
 #: src/kamerka.qml:537
 msgid "No Effect"
-msgstr "Без еффекта"
+msgstr "Без эффекта"
 
 #: src/kamerka.qml:553
 msgid "Grey"
-msgstr "Серый"
+msgstr "Серые тона"
 
 #: src/kamerka.qml:569
 msgid "Invert"
-msgstr "Искажение"
+msgstr "Инверсия"
 
 #: src/kamerka.qml:585
 msgid "Equalize"
-msgstr ""
+msgstr "Эквалайзер"
 
 #: src/kamerka.qml:601
 msgid "Smurf"
-msgstr "Штрумф"
+msgstr "Смурф"
 
 #: src/kamerka.qml:616
 msgid "Implode"
-msgstr ""
+msgstr "Вогнутость"
 
 #: src/kamerka.qml:631
 msgid "Explode"
-msgstr ""
+msgstr "Выпуклость"
 
 #: src/kamerka.qml:646
 msgid "Charcoal"
-msgstr ""
+msgstr "Уголь"
 
 #: src/kamerka.qml:661
 msgid "Edge"
-msgstr ""
+msgstr "Края"
 
 #: src/kamerka.qml:676
 msgid "Emboss"
-msgstr ""
+msgstr "Рельеф"
 
 #: src/kamerka.qml:691
 msgid "Swirl"
-msgstr ""
+msgstr "Водоворот"
 
 #: src/kamerka.qml:706
 msgid "Oil Paint"
-msgstr ""
+msgstr "Масло"
 
 #: src/kamerka.qml:721
 msgid "Wave"
-msgstr ""
+msgstr "Волна"
 
 #: src/main.cpp:37
 msgid "Kamerka"
@@ -106,13 +107,12 @@ msgstr "Камерка"
 #: src/main.cpp:38
 msgid "Simple photo taking application with fancy animated interface"
 msgstr ""
-"Простое приложение для захвата изображения с красивым анимированным "
+"Простое приложение для получения снимков с красивым анимированным "
 "интерфейсом"
 
 #: src/main.cpp:39
-#, fuzzy
 msgid "Copyright (C) 2011-2014 Sebastian Krzyszkowiak"
-msgstr "© 2011-2012 Себастиан Кшишковияк (Sebastian Krzyszkowiak)"
+msgstr "© Sebastian Krzyszkowiak, 2011—2014"
 
 #: src/mainwindow.cpp:46
 msgid "i18n() takes at least one argument"
@@ -120,7 +120,7 @@ msgstr "i18n() требуется как минимум один аргумен�
 
 #: src/mainwindow.cpp:64
 msgid "Could not load QML interface!"
-msgstr "Не удается загрузить интерфейс QML!"
+msgstr "Не удалось загрузить интерфейс QML!"
 
 #: src/mainwindow.cpp:64 src/mainwindow.cpp:115 src/mainwindow.cpp:138
 msgid "Error"
@@ -128,23 +128,24 @@ msgstr "Ошибка"
 
 #: src/mainwindow.cpp:111 src/mainwindow.cpp:115 src/mainwindow.cpp:138
 msgid "Could not connect to V4L device!"
-msgstr "Я не могу подключиться к устройству V4L!"
+msgstr "Не удалось подключиться к устройству V4L!"
 
 #: src/mainwindow.cpp:157
 msgid ""
 "Requested resolution (%1x%2) was not available. Driver used %3x%4 instead.\n"
 "Please check your configuration."
 msgstr ""
-"Запрашиваемое разрешение (% 1x% 2) не доступно. Драйвер использовал 3x%% 4 \n"
-" Проверьте настройки."
+"Запрашиваемое разрешение (%1x%2) недоступно. Драйвером было использовано"
+" разрешение %3x%4.\n"
+"Проверьте параметры настройки."
 
 #: src/settingsdialog.cpp:43
 msgid "Selected path does not exists. Do you want to create it?"
-msgstr "Выбранный путь не существует. Вы хотите его создать?"
+msgstr "Выбранный путь не существует. Создать его?"
 
 #: src/settingsdialog.cpp:60
 msgid "Device node:"
-msgstr "Узел ( имя ) устройства:"
+msgstr "Узел устройства:"
 
 #: src/settingsdialog.cpp:67
 msgid "x"
@@ -164,7 +165,7 @@ msgstr "Отключено"
 
 #: src/settingsdialog.cpp:79
 msgid " fps"
-msgstr " fps"
+msgstr " кадров/сек."
 
 #: src/settingsdialog.cpp:81
 msgid "Framerate limit:"
@@ -172,40 +173,39 @@ msgstr "Ограничение скорости:"
 
 #: src/settingsdialog.cpp:83
 msgid "Lock aspect ratio"
-msgstr "Блокировка соотношения сторон"
+msgstr "Сохранять пропорции"
 
 #: src/settingsdialog.cpp:86
 msgid "Enhance contrast"
-msgstr ""
+msgstr "Улучшать контрастность"
 
 #: src/settingsdialog.cpp:89
 msgid "Mirror output"
-msgstr "Зеркальный вывод"
+msgstr "Зеркально отражать изображение"
 
 #: src/settingsdialog.cpp:92
 msgid "Flip output"
-msgstr "Вывод наоборот"
+msgstr "Переворачивать изображение"
 
 #: src/settingsdialog.cpp:97
-#, fuzzy
 msgid "Image Settings"
-msgstr "Настройка камеры"
+msgstr "Параметры изображения"
 
 #: src/settingsdialog.cpp:107
 msgid "Brightness:"
-msgstr ""
+msgstr "Яркость:"
 
 #: src/settingsdialog.cpp:116
 msgid "Contrast:"
-msgstr ""
+msgstr "Контрастность:"
 
 #: src/settingsdialog.cpp:125
 msgid "Saturation:"
-msgstr ""
+msgstr "Насыщенность:"
 
 #: src/settingsdialog.cpp:134
 msgid "Hue:"
-msgstr ""
+msgstr "Оттенок:"
 
 #: src/settingsdialog.cpp:138
 msgid "Camera"
@@ -213,40 +213,39 @@ msgstr "Камера"
 
 #: src/settingsdialog.cpp:138
 msgid "Camera settings"
-msgstr "Настройка камеры"
+msgstr "Параметры камеры"
 
 #: src/settingsdialog.cpp:149 src/settingsdialog.cpp:167
 msgid " seconds"
-msgstr ""
+msgstr " сек."
 
 #: src/settingsdialog.cpp:152
-#, fuzzy
 msgid "Self-timer timeout:"
-msgstr "Таймер"
+msgstr "Время ожидания таймера:"
 
 #: src/settingsdialog.cpp:163
 msgid "Number of photos:"
-msgstr ""
+msgstr "Количество снимков:"
 
 #: src/settingsdialog.cpp:170
 msgid "Delay between photos:"
-msgstr ""
+msgstr "Задержка между снимками:"
 
 #: src/settingsdialog.cpp:174
 msgid "Capture"
-msgstr ""
+msgstr "Съёмка"
 
 #: src/settingsdialog.cpp:182
 msgid "Use default pictures directory"
-msgstr "Используйте папку для изображений по умолчанию"
+msgstr "Использовать папку для изображений по умолчанию"
 
 #: src/settingsdialog.cpp:189
 msgid "Use subdirectory:"
-msgstr "Откройте вложенную папку:"
+msgstr "Использовать вложенную папку:"
 
 #: src/settingsdialog.cpp:202
 msgid "Photo directory:"
-msgstr "Папка изображения:"
+msgstr "Папка для снимков:"
 
 #: src/settingsdialog.cpp:204
 msgid "Storage"
@@ -254,19 +253,19 @@ msgstr "Хранилище"
 
 #: src/settingsdialog.cpp:204
 msgid "Photo storage"
-msgstr "Хранилище изображений"
+msgstr "Хранение снимков"
 
 #: src/settingsdialog.cpp:210
 msgid "Play sound on taking photo"
-msgstr "Воспроизведение звука при съемке"
+msgstr "Воспроизводить звук при съёмке"
 
 #: src/settingsdialog.cpp:213
 msgid "Play timer sounds"
-msgstr "Играть звуки таймера"
+msgstr "Воспроизводить звуки таймера"
 
 #: src/settingsdialog.cpp:216
 msgid "Show notification on taking photo"
-msgstr "Показывать уведомление при съемке"
+msgstr "Показывать уведомление при съёмке"
 
 #: src/settingsdialog.cpp:220
 msgid "Behaviour"
@@ -274,15 +273,15 @@ msgstr "Поведение"
 
 #: src/videowidget.cpp:100
 msgid "Starting up webcam..."
-msgstr "Запуск веб-камеры ..."
+msgstr "Запуск веб-камеры..."
 
 #: src/videowidget.cpp:170
 msgid "Photo has been stored in file %1"
-msgstr "Фото расположено в файле% 1"
+msgstr "Снимок сохранён в файл %1"
 
 #: src/videowidget.cpp:175
 msgid "Open"
-msgstr ""
+msgstr "Открыть"
 
 #: src/videowidget.cpp:175
 msgid "Show in directory"
@@ -291,12 +290,12 @@ msgstr "Показать в папке"
 #: tools/rc.cpp:1 rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Сергей Головко"
+msgstr "Сергей Головко,Олеся Герасименко"
 
 #: tools/rc.cpp:2 rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "cappelikan@gmail.com"
+msgstr "cappelikan@gmail.com,gammaray@basealt.ru"
 
 #~ msgid "Open in GIMP"
 #~ msgstr "Открыть в ГИМПе"
